@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Teams Dashboard - Test</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      padding: 20px;
+    }
+    .test { background: #1a1a1a; padding: 20px; border-radius: 8px; margin: 20px 0; }
+    h1 { color: #4a9eff; }
+  </style>
+</head>
+<body>
+  <h1>Dashboard Test Page</h1>
+  <div class="test">
+    <h2>Server Status: <span id="status">Testing...</span></h2>
+    <div id="results"></div>
+  </div>
+
+  <script>
+    const results = document.getElementById('results');
+    const status = document.getElementById('status');
+
+    async function test() {
+      try {
+        const response = await fetch('http://localhost:4747/api/teams');
+        const teams = await response.json();
+        status.textContent = 'Working!';
+        status.style.color = '#4aff9e';
+        results.innerHTML = `
+          <p>Found ${teams.length} teams:</p>
+          <ul>
+            ${teams.map(t => `<li>${t.name} (${t.memberCount} members)</li>`).join('')}
+          </ul>
+        `;
+      } catch (error) {
+        status.textContent = 'Error!';
+        status.style.color = '#ff4a4a';
+        results.innerHTML = `<p>Error: ${error.message}</p>`;
+      }
+    }
+
+    test();
+  </script>
+</body>
+</html>

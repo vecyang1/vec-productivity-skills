@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Teams Dashboard</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#f5f6f8;--bg-card:#fff;--bg-hover:#f0f1f4;
+  --text:#1a1d26;--text-muted:#5f6577;--text-dim:#8b90a0;
+  --border:#e2e4ea;--border-light:#ecedf2;
+  --accent:#4f6ef7;--accent-soft:#eef1fe;
+  --green:#22a06b;--green-soft:#e6f9f0;
+  --amber:#cf8600;--amber-soft:#fff7e6;
+  --red:#e34935;--red-soft:#ffeae6;
+  --purple:#8250df;--purple-soft:#f1eefe;
+  --radius:10px;--radius-sm:6px;
+  --shadow:0 1px 3px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.03);
+  --shadow-lg:0 4px 12px rgba(0,0,0,.07);
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+}
+
+[data-theme="dark"]{
+  --bg:#0d1117;--bg-card:#161b22;--bg-hover:#1c2129;
+  --text:#e6edf3;--text-muted:#8b949e;--text-dim:#484f58;
+  --border:#30363d;--border-light:#21262d;
+  --accent:#6e8efb;--accent-soft:rgba(110,142,251,.12);
+  --green:#3fb950;--green-soft:rgba(63,185,80,.12);
+  --amber:#d29922;--amber-soft:rgba(210,153,34,.12);
+  --red:#f85149;--red-soft:rgba(248,81,73,.12);
+  --purple:#a371f7;--purple-soft:rgba(163,113,247,.12);
+  --shadow:0 1px 3px rgba(0,0,0,.2);--shadow-lg:0 4px 12px rgba(0,0,0,.3);
+}
+
+html{font-family:var(--font);font-size:15px;line-height:1.5;color:var(--text);background:var(--bg);transition:background .2s,color .2s}
+body{min-height:100vh}
+
+/* Shell */
+.shell{max-width:1340px;margin:0 auto;padding:24px 20px 40px}
+
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+header h1{font-size:1.3rem;font-weight:700;display:flex;align-items:center;gap:10px;letter-spacing:-.02em}
+header h1 .logo-icon{color:var(--accent)}
+.header-right{display:flex;align-items:center;gap:10px}
+
+/* Connection badge */
+.conn-badge{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:500;padding:5px 12px;border-radius:20px;background:var(--green-soft);color:var(--green);transition:all .2s}
+.conn-badge.disconnected{background:var(--red-soft);color:var(--red)}
+.conn-badge .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.conn-badge:not(.disconnected) .dot{animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* Theme toggle */
+.theme-toggle{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 8px;cursor:pointer;color:var(--text-muted);display:flex;align-items:center;transition:all .15s}
+.theme-toggle:hover{background:var(--bg-hover);color:var(--text)}
+
+/* Stats bar */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+@media(max-width:700px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
+.stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
+.stat-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
+.stat-icon{width:40px;height:40px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.stat-icon.blue{background:var(--accent-soft);color:var(--accent)}
+.stat-icon.green{background:var(--green-soft);color:var(--green)}
+.stat-icon.amber{background:var(--amber-soft);color:var(--amber)}
+.stat-icon.purple{background:var(--purple-soft);color:var(--purple)}
+.stat-value{font-size:1.5rem;font-weight:700;line-height:1.1}
+.stat-label{font-size:.76rem;color:var(--text-muted);font-weight:500}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+/* Cards */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border-light);flex-shrink:0}
+.card-title{font-size:.9rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.card-title i{color:var(--text-muted)}
+.card-count{font-size:.72rem;font-weight:600;background:var(--accent-soft);color:var(--accent);padding:2px 9px;border-radius:10px;min-width:22px;text-align:center}
+.card-body{flex:1;overflow-y:auto;max-height:440px;min-height:320px}
+.card-body::-webkit-scrollbar{width:5px}
+.card-body::-webkit-scrollbar-track{background:transparent}
+.card-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+
+/* Empty state */
+.empty{padding:48px 20px;text-align:center;color:var(--text-dim)}
+.empty i{margin-bottom:8px;opacity:.4}
+.empty p{font-size:.84rem}
+
+/* Team items */
+.team-item{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--border-light);transition:background .1s}
+.team-item:last-child{border-bottom:none}
+.team-item:hover{background:var(--bg-hover)}
+.team-color{width:10px;height:10px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 3px var(--bg-card),0 0 0 4px var(--border)}
+.team-info{flex:1;min-width:0}
+.team-name{font-weight:600;font-size:.88rem}
+.team-meta{font-size:.74rem;color:var(--text-muted);display:flex;align-items:center;gap:6px;margin-top:2px}
+.team-role{font-size:.68rem;font-weight:600;padding:2px 8px;border-radius:10px;background:var(--accent-soft);color:var(--accent)}
+.team-activity{font-size:.66rem;font-weight:600;padding:2px 8px;border-radius:10px;margin-left:auto;flex-shrink:0}
+.team-activity.active{background:var(--green-soft);color:var(--green)}
+.team-activity.recent{background:var(--amber-soft);color:var(--amber)}
+.team-activity.stale{background:var(--bg-hover);color:var(--text-dim)}
+
+/* Member items */
+.member-item{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--border-light);transition:background .1s}
+.member-item:last-child{border-bottom:none}
+.member-item:hover{background:var(--bg-hover)}
+.member-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#fff;flex-shrink:0;text-transform:uppercase}
+.member-info{flex:1;min-width:0}
+.member-name{font-weight:600;font-size:.85rem;display:flex;align-items:center;gap:6px}
+.member-desc{font-size:.74rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.member-team{font-size:.68rem;color:var(--text-dim);margin-top:2px}
+.member-status{font-size:.66rem;font-weight:600;padding:2px 8px;border-radius:10px}
+.member-status.active{background:var(--green-soft);color:var(--green)}
+.member-status.idle{background:var(--amber-soft);color:var(--amber)}
+
+/* Message items */
+.msg-item{display:flex;gap:12px;padding:14px 18px;border-bottom:1px solid var(--border-light);transition:background .1s}
+.msg-item:last-child{border-bottom:none}
+.msg-item:hover{background:var(--bg-hover)}
+.msg-item.unread{background:var(--accent-soft)}
+.msg-icon{width:32px;height:32px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--bg-hover);color:var(--text-muted)}
+.msg-item.unread .msg-icon{background:var(--accent-soft);color:var(--accent)}
+.msg-content{flex:1;min-width:0}
+.msg-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:2px}
+.msg-from{font-weight:600;font-size:.82rem;display:flex;align-items:center;gap:6px}
+.msg-time{font-size:.7rem;color:var(--text-dim);white-space:nowrap}
+.msg-body{font-size:.8rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.msg-type{font-size:.62rem;font-weight:600;padding:1px 6px;border-radius:8px;text-transform:uppercase;letter-spacing:.03em}
+.msg-type.dm{background:var(--accent-soft);color:var(--accent)}
+.msg-type.broadcast{background:var(--purple-soft);color:var(--purple)}
+.msg-type.protocol{background:var(--amber-soft);color:var(--amber)}
+
+/* Task items */
+.task-item{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;border-bottom:1px solid var(--border-light);transition:background .1s}
+.task-item:last-child{border-bottom:none}
+.task-item:hover{background:var(--bg-hover)}
+.task-check{margin-top:2px;flex-shrink:0;color:var(--text-dim)}
+.task-check.completed{color:var(--green)}
+.task-check.in_progress{color:var(--amber)}
+.task-info{flex:1;min-width:0}
+.task-subject{font-weight:600;font-size:.85rem}
+.task-item.completed .task-subject{text-decoration:line-through;opacity:.55}
+.task-desc{font-size:.74rem;color:var(--text-muted);margin-top:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.task-badges{display:flex;align-items:center;gap:5px;margin-top:6px;flex-wrap:wrap}
+.badge{font-size:.66rem;font-weight:600;padding:2px 8px;border-radius:10px}
+.badge.pending{background:var(--bg-hover);color:var(--text-muted)}
+.badge.in_progress{background:var(--amber-soft);color:var(--amber)}
+.badge.completed{background:var(--green-soft);color:var(--green)}
+.badge.owner{background:var(--purple-soft);color:var(--purple)}
+.badge.blocked{background:var(--red-soft);color:var(--red)}
+
+/* Flash animation for updates */
+@keyframes flash{0%{background:var(--accent-soft)}100%{background:transparent}}
+.flash{animation:flash .5s ease-out}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:1000;padding:20px}
+.modal-overlay.active{display:flex}
+.modal{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);max-width:600px;width:100%;max-height:80vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-lg)}
+.modal-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light)}
+.modal-title{font-size:1rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.modal-close{background:transparent;border:none;color:var(--text-muted);cursor:pointer;padding:4px;display:flex;align-items:center;transition:color .15s}
+.modal-close:hover{color:var(--text)}
+.modal-body{flex:1;overflow-y:auto;padding:20px}
+.modal-body::-webkit-scrollbar{width:5px}
+.modal-body::-webkit-scrollbar-track{background:transparent}
+.modal-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.modal-field{margin-bottom:16px}
+.modal-field:last-child{margin-bottom:0}
+.modal-label{font-size:.76rem;font-weight:600;color:var(--text-muted);margin-bottom:6px;display:block}
+.modal-value{font-size:.88rem;color:var(--text);line-height:1.6;white-space:pre-wrap;word-break:break-word}
+.modal-value code{background:var(--bg-hover);padding:2px 6px;border-radius:4px;font-size:.85em;font-family:monospace}
+
+/* Clickable items */
+.msg-item{cursor:pointer}
+.team-item{cursor:pointer}
+.member-item{cursor:pointer}
+.member-item.selected{background:var(--accent-soft);border-left:3px solid var(--accent)}
+.member-item.selected:hover{background:var(--accent-soft)}
+
+/* Filter indicator on card headers */
+.filter-badge{display:inline-flex;align-items:center;gap:4px;font-size:.68rem;font-weight:600;padding:2px 8px;border-radius:10px;background:var(--accent-soft);color:var(--accent);margin-left:8px;cursor:pointer;transition:opacity .15s}
+.filter-badge:hover{opacity:.7}
+.filter-badge i{width:10px;height:10px}
+
+/* Member detail sections in modal */
+.member-detail-profile{display:flex;align-items:center;gap:14px;padding-bottom:16px;border-bottom:1px solid var(--border-light);margin-bottom:16px}
+.member-detail-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;color:#fff;flex-shrink:0;text-transform:uppercase}
+.member-detail-name{font-size:1.05rem;font-weight:700}
+.member-detail-meta{font-size:.78rem;color:var(--text-muted);margin-top:2px}
+.member-detail-section{margin-bottom:18px}
+.member-detail-section:last-child{margin-bottom:0}
+.member-detail-section-title{font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.member-detail-section-title i{width:14px;height:14px}
+.member-detail-tag{display:inline-flex;align-items:center;gap:5px;font-size:.74rem;font-weight:500;padding:4px 10px;border-radius:var(--radius-sm);background:var(--accent-soft);color:var(--accent);margin-right:6px;margin-bottom:4px}
+.member-detail-empty{font-size:.8rem;color:var(--text-dim);font-style:italic;padding:8px 0}
+.member-detail-msg{display:flex;gap:10px;padding:8px 10px;border-radius:var(--radius-sm);background:var(--bg-hover);margin-bottom:6px;font-size:.8rem}
+.member-detail-msg:last-child{margin-bottom:0}
+.member-detail-msg-from{font-weight:600;white-space:nowrap;flex-shrink:0}
+.member-detail-msg-body{color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+.member-detail-msg-time{font-size:.7rem;color:var(--text-dim);white-space:nowrap;flex-shrink:0}
+.member-detail-task{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:var(--radius-sm);background:var(--bg-hover);margin-bottom:6px;font-size:.8rem}
+.member-detail-task:last-child{margin-bottom:0}
+.member-detail-task-subject{font-weight:600;flex:1;min-width:0}
+
+/* Footer */
+.footer{text-align:center;padding:14px;font-size:.73rem;color:var(--text-dim)}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <h1>
+      <i data-lucide="cpu" class="logo-icon"></i>
+      Agent Teams Dashboard
+    </h1>
+    <div class="header-right">
+      <span id="connBadge" class="conn-badge disconnected">
+        <span class="dot"></span>
+        <span id="connText">Connecting...</span>
+      </span>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <i data-lucide="moon" id="themeIcon"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-icon blue"><i data-lucide="network"></i></div>
+      <div><div class="stat-value" id="statTeams">0</div><div class="stat-label">Active Teams</div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon green"><i data-lucide="user-check"></i></div>
+      <div><div class="stat-value" id="statMembers">0</div><div class="stat-label">Members</div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon amber"><i data-lucide="mail"></i></div>
+      <div><div class="stat-value" id="statMessages">0</div><div class="stat-label">Messages</div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon purple"><i data-lucide="list-checks"></i></div>
+      <div><div class="stat-value" id="statTasks">0</div><div class="stat-label">Tasks</div></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title"><i data-lucide="network"></i> Active Teams</span>
+        <span class="card-count" id="teamCount">0</span>
+      </div>
+      <div class="card-body" id="teamList">
+        <div class="empty"><i data-lucide="radio"></i><p>No active teams detected</p></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title"><i data-lucide="users"></i> Team Members</span>
+        <span class="card-count" id="memberCount">0</span>
+      </div>
+      <div class="card-body" id="memberList">
+        <div class="empty"><i data-lucide="user-x"></i><p>No members found</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title"><i data-lucide="inbox"></i> Inbox Messages</span>
+        <span class="card-count" id="msgCount">0</span>
+      </div>
+      <div class="card-body" id="msgList">
+        <div class="empty"><i data-lucide="mail-x"></i><p>No messages yet</p></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title"><i data-lucide="list-checks"></i> Tasks</span>
+        <span class="card-count" id="taskCount">0</span>
+      </div>
+      <div class="card-body" id="taskList">
+        <div class="empty"><i data-lucide="clipboard-x"></i><p>No tasks created</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Last updated: <span id="lastUpdated">--</span></div>
+</div>
+
+<!-- Modal for message details -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="modalTitle">Message Details</span>
+      <button class="modal-close" id="modalClose">
+        <i data-lucide="x" style="width:20px;height:20px"></i>
+      </button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// ── State ──
+let state = { teams: [], members: [], messages: [], tasks: [] };
+let ws = null;
+let reconnectTimer = null;
+const PORT = location.port || 4747;
+const HOST = location.hostname || 'localhost';
+const API_BASE = `${location.protocol}//${HOST}:${PORT}`;
+const WS_URL = `ws://${HOST}:${PORT}`;
+let selectedTeam = null;
+let selectedMember = null;
+
+// ── Modal ──
+const modalOverlay = document.getElementById('modalOverlay');
+const modalClose = document.getElementById('modalClose');
+const modalTitle = document.getElementById('modalTitle');
+const modalBody = document.getElementById('modalBody');
+
+function openModal(title, content) {
+  modalTitle.textContent = title;
+  modalBody.innerHTML = content;
+  modalOverlay.classList.add('active');
+  lucide.createIcons();
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('active');
+}
+
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) closeModal();
+});
+
+// ── Theme ──
+const html = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const stored = localStorage.getItem('teams-dash-theme');
+if (stored) html.setAttribute('data-theme', stored);
+
+themeToggle.addEventListener('click', () => {
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('teams-dash-theme', next);
+  updateThemeIcon();
+});
+
+function updateThemeIcon() {
+  const el = document.getElementById('themeIcon');
+  el.setAttribute('data-lucide', html.getAttribute('data-theme') === 'dark' ? 'moon' : 'sun');
+  lucide.createIcons();
+}
+
+// ── WebSocket ──
+function connect() {
+  if (ws && (ws.readyState === WebSocket.OPEN || ws.readyState === WebSocket.CONNECTING)) return;
+  try { ws = new WebSocket(WS_URL); } catch(e) { scheduleReconnect(); return; }
+
+  ws.onopen = () => {
+    setConnected(true);
+    clearTimeout(reconnectTimer);
+  };
+
+  ws.onmessage = (evt) => {
+    try {
+      const msg = JSON.parse(evt.data);
+      if (msg.type === 'full-state' || msg.type === 'state') {
+        state = msg.data || msg;
+        renderAll();
+      } else if (msg.type === 'update') {
+        Object.assign(state, msg.data || {});
+        renderAll();
+      } else if (msg.type === 'file_change') {
+        pollREST();
+      }
+    } catch(e) { console.warn('WS parse error', e); }
+  };
+
+  ws.onclose = () => { setConnected(false); scheduleReconnect(); };
+  ws.onerror = () => { try { ws.close(); } catch(e){} };
+}
+
+function scheduleReconnect() {
+  clearTimeout(reconnectTimer);
+  reconnectTimer = setTimeout(connect, 3000);
+}
+
+function setConnected(ok) {
+  const badge = document.getElementById('connBadge');
+  const text = document.getElementById('connText');
+  badge.className = 'conn-badge' + (ok ? '' : ' disconnected');
+  text.textContent = ok ? 'Connected' : 'Reconnecting...';
+}
+
+// ── Helpers ──
+function esc(s) {
+  const d = document.createElement('div');
+  d.textContent = s == null ? '' : String(s);
+  return d.innerHTML;
+}
+
+function timeAgo(ts) {
+  if (!ts) return '';
+  const diff = (Date.now() - new Date(ts).getTime()) / 1000;
+  if (diff < 0) return 'just now';
+  if (diff < 60) return 'just now';
+  if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+  return Math.floor(diff / 86400) + 'd ago';
+}
+
+function hashColor(str) {
+  let h = 0;
+  for (let i = 0; i < (str || '').length; i++) h = str.charCodeAt(i) + ((h << 5) - h);
+  const hue = Math.abs(h) % 360;
+  return `hsl(${hue}, 55%, 48%)`;
+}
+
+function initials(name) {
+  return (name || '?').split(/[\s\-_]+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+}
+
+function flashEl(el) {
+  el.classList.remove('flash');
+  void el.offsetWidth;
+  el.classList.add('flash');
+}
+
+// ── Renderers ──
+function renderAll() {
+  renderStats();
+  renderTeams();
+  renderMembers();
+  renderMessages();
+  renderTasks();
+  document.getElementById('lastUpdated').textContent = new Date().toLocaleTimeString();
+  lucide.createIcons();
+}
+
+function renderStats() {
+  document.getElementById('statTeams').textContent = (state.teams || []).length;
+  document.getElementById('statMembers').textContent = (state.members || []).length;
+  document.getElementById('statMessages').textContent = (state.messages || []).length;
+  document.getElementById('statTasks').textContent = (state.tasks || []).length;
+}
+
+function renderTeams() {
+  const teams = state.teams || [];
+  document.getElementById('teamCount').textContent = teams.length;
+  const el = document.getElementById('teamList');
+
+  if (!teams.length) {
+    el.innerHTML = '<div class="empty"><i data-lucide="radio"></i><p>No active teams detected</p></div>';
+    return;
+  }
+
+  el.innerHTML = teams.map((t, idx) => {
+    const color = t.color || hashColor(t.name || t.id);
+    const mc = (t.members || []).length;
+    const selected = selectedTeam === t.name ? ' style="background:var(--accent-soft);border-left:3px solid var(--accent)"' : '';
+    const actStatus = t.status || 'stale';
+    const actLabel = actStatus === 'active' ? 'Active now' : actStatus === 'recent' ? timeAgo(t.lastActivityISO) : (t.ageHours ? Math.round(t.ageHours / 24) + 'd ago' : 'Unknown');
+    return `<div class="team-item" data-team-idx="${idx}"${selected}>
+      <span class="team-color" style="background:${esc(color)}"></span>
+      <div class="team-info">
+        <div class="team-name">${esc(t.name || t.id || 'Unnamed Team')}</div>
+        <div class="team-meta">
+          <i data-lucide="users" style="width:12px;height:12px"></i>
+          ${mc} member${mc !== 1 ? 's' : ''}
+          ${t.model ? ' &middot; ' + esc(t.model) : ''}
+          ${t.leadAgentId ? ' &middot; Lead: ' + esc(t.leadAgentId) : ''}
+        </div>
+      </div>
+      <span class="team-activity ${actStatus}">${actLabel}</span>
+    </div>`;
+  }).join('');
+
+  // Add click handlers
+  el.querySelectorAll('.team-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const idx = parseInt(item.dataset.teamIdx);
+      const team = teams[idx];
+      selectTeam(team.name);
+    });
+  });
+
+  flashEl(el);
+}
+
+async function selectTeam(teamName) {
+  if (selectedTeam === teamName) {
+    // Deselect - show all data
+    selectedTeam = null;
+    await pollREST();
+  } else {
+    // Select team - load team-specific data
+    selectedTeam = teamName;
+    await loadTeamData(teamName);
+  }
+  renderAll();
+}
+
+async function loadTeamData(teamName) {
+  try {
+    // Load team-specific inboxes and tasks
+    const [inboxesRes, tasksRes] = await Promise.allSettled([
+      fetch(API_BASE + '/api/teams/' + encodeURIComponent(teamName) + '/inboxes'),
+      fetch(API_BASE + '/api/tasks/' + encodeURIComponent(teamName))
+    ]);
+
+    // Process inboxes
+    if (inboxesRes.status === 'fulfilled' && inboxesRes.value.ok) {
+      const inboxes = await inboxesRes.value.json();
+      const messages = [];
+      for (const [agentName, msgs] of Object.entries(inboxes)) {
+        msgs.forEach(msg => {
+          messages.push({ ...msg, to: agentName });
+        });
+      }
+      state.messages = messages;
+    }
+
+    // Process tasks
+    if (tasksRes.status === 'fulfilled' && tasksRes.value.ok) {
+      const tasks = await tasksRes.value.json();
+      state.tasks = Array.isArray(tasks) ? tasks : [];
+    }
+
+    // Filter members to show only this team's members
+    const team = state.teams.find(t => t.name === teamName);
+    if (team && team.members) {
+      state.members = team.members.map(m => ({ ...m, team: teamName }));
+    }
+  } catch(e) {
+    console.error('Error loading team data:', e);
+  }
+}
+
+function renderMembers() {
+  let members = state.members || [];
+
+  // Filter by selected team if one is selected
+  if (selectedTeam) {
+    members = members.filter(m => m.team === selectedTeam);
+  }
+
+  document.getElementById('memberCount').textContent = members.length;
+  const el = document.getElementById('memberList');
+
+  if (!members.length) {
+    el.innerHTML = '<div class="empty"><i data-lucide="user-x"></i><p>No members found</p></div>';
+    return;
+  }
+
+  el.innerHTML = members.map((m, idx) => {
+    const color = m.color || hashColor(m.name || m.id);
+    const st = m.status === 'active' ? 'active' : 'idle';
+    const teamName = m.team || 'Unknown Team';
+    const sel = selectedMember === (m.name || m.id) ? ' selected' : '';
+    return `<div class="member-item${sel}" data-member-idx="${idx}">
+      <div class="member-avatar" style="background:${esc(color)}">${initials(m.name || m.id)}</div>
+      <div class="member-info">
+        <div class="member-name">
+          ${esc(m.name || m.id || 'Unknown')}
+          ${m.role ? `<span style="font-size:.7rem;color:var(--text-dim);font-weight:400">(${esc(m.role)})</span>` : ''}
+        </div>
+        <div class="member-desc">${esc(m.description || m.model || 'No description')}</div>
+        <div class="member-team"><i data-lucide="network" style="width:10px;height:10px"></i> ${esc(teamName)}</div>
+      </div>
+      <span class="member-status ${st}">${m.status || 'idle'}</span>
+    </div>`;
+  }).join('');
+
+  // Click to toggle member filter
+  el.querySelectorAll('.member-item').forEach(item => {
+    item.addEventListener('click', async () => {
+      const idx = parseInt(item.dataset.memberIdx);
+      const member = members[idx];
+      const name = member.name || member.id;
+      if (selectedMember === name) {
+        selectedMember = null;
+      } else {
+        selectedMember = name;
+        // If no team selected, fetch this member's team data
+        if (!selectedTeam && member.team) {
+          await loadTeamData(member.team);
+        }
+      }
+      renderMembers();
+      renderMessages();
+      renderTasks();
+      lucide.createIcons();
+    });
+  });
+
+  flashEl(el);
+}
+
+function renderMessages() {
+  let msgs = state.messages || [];
+
+  // Filter by selected member
+  if (selectedMember) {
+    msgs = msgs.filter(m =>
+      (m.to && m.to.toLowerCase() === selectedMember.toLowerCase()) ||
+      (m.from && m.from.toLowerCase() === selectedMember.toLowerCase())
+    );
+  }
+
+  document.getElementById('msgCount').textContent = msgs.length;
+
+  // Update card header with filter badge
+  const msgHeader = document.getElementById('msgList').closest('.card').querySelector('.card-header .card-title');
+  const existingBadge = msgHeader.querySelector('.filter-badge');
+  if (existingBadge) existingBadge.remove();
+  if (selectedMember) {
+    const badge = document.createElement('span');
+    badge.className = 'filter-badge';
+    badge.innerHTML = `<i data-lucide="user" style="width:10px;height:10px"></i> ${esc(selectedMember)} <i data-lucide="x" style="width:10px;height:10px"></i>`;
+    badge.addEventListener('click', (e) => { e.stopPropagation(); selectedMember = null; renderMembers(); renderMessages(); renderTasks(); lucide.createIcons(); });
+    msgHeader.appendChild(badge);
+  }
+
+  const el = document.getElementById('msgList');
+
+  if (!msgs.length) {
+    el.innerHTML = '<div class="empty"><i data-lucide="mail-x"></i><p>No messages yet</p></div>';
+    return;
+  }
+
+  const sorted = [...msgs].reverse();
+  el.innerHTML = sorted.map((m, idx) => {
+    const unread = m.read === false ? ' unread' : '';
+    const body = m.summary || m.content || m.text || m.body || '';
+
+    // Detect protocol messages by trying to parse JSON
+    let typeClass = 'dm', typeLabel = 'DM', iconName = 'message-square', displayBody = body;
+    let parsed = null;
+    try { parsed = JSON.parse(body); } catch {}
+
+    if (parsed && parsed.type) {
+      const pt = parsed.type;
+      if (pt === 'idle_notification') { typeClass = 'protocol'; typeLabel = 'Idle'; iconName = 'pause-circle'; displayBody = (parsed.idleReason || 'available'); }
+      else if (pt === 'shutdown_request') { typeClass = 'protocol'; typeLabel = 'Shutdown Req'; iconName = 'power'; displayBody = parsed.reason || 'Shutdown requested'; }
+      else if (pt === 'shutdown_approved') { typeClass = 'protocol'; typeLabel = 'Shutdown OK'; iconName = 'power-off'; displayBody = 'Shutdown approved'; }
+      else if (pt === 'task_assignment') { typeClass = 'broadcast'; typeLabel = 'Task'; iconName = 'clipboard-list'; displayBody = '#' + (parsed.taskId || '?') + ' ' + (parsed.subject || ''); }
+      else if (pt === 'plan_approval_request') { typeClass = 'protocol'; typeLabel = 'Plan'; iconName = 'file-check'; displayBody = 'Plan approval requested'; }
+      else if (pt === 'plan_approval_response') { typeClass = 'protocol'; typeLabel = 'Plan'; iconName = 'file-check-2'; displayBody = parsed.approve ? 'Plan approved' : 'Plan rejected'; }
+      else { typeClass = 'protocol'; typeLabel = esc(pt); iconName = 'shield'; displayBody = pt; }
+    } else if (m.type === 'broadcast') {
+      typeClass = 'broadcast'; typeLabel = 'Broadcast'; iconName = 'megaphone';
+    }
+
+    return `<div class="msg-item${unread}" data-msg-idx="${idx}">
+      <div class="msg-icon"><i data-lucide="${iconName}" style="width:16px;height:16px"></i></div>
+      <div class="msg-content">
+        <div class="msg-header">
+          <span class="msg-from">${esc(m.from || 'System')}${m.to ? ' &rarr; ' + esc(m.to) : ''}<span class="msg-type ${typeClass}">${typeLabel}</span></span>
+          <span class="msg-time">${timeAgo(m.timestamp)}</span>
+        </div>
+        <div class="msg-body">${esc(displayBody)}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Add click handlers
+  el.querySelectorAll('.msg-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const idx = parseInt(item.dataset.msgIdx);
+      const msg = sorted[idx];
+      showMessageDetails(msg);
+    });
+  });
+
+  flashEl(el);
+}
+
+function showMessageDetails(msg) {
+  const fullText = msg.text || msg.content || msg.summary || msg.body || '';
+
+  // Try to parse protocol messages
+  let parsed = null;
+  try { parsed = JSON.parse(fullText); } catch {}
+
+  let content = `
+    <div class="modal-field">
+      <div class="modal-label">From</div>
+      <div class="modal-value">${esc(msg.from || 'System')}</div>
+    </div>
+  `;
+
+  if (msg.to) {
+    content += `
+      <div class="modal-field">
+        <div class="modal-label">To</div>
+        <div class="modal-value">${esc(msg.to)}</div>
+      </div>
+    `;
+  }
+
+  content += `
+    <div class="modal-field">
+      <div class="modal-label">Timestamp</div>
+      <div class="modal-value">${msg.timestamp ? new Date(msg.timestamp).toLocaleString() : 'Unknown'}</div>
+    </div>
+  `;
+
+  if (parsed) {
+    // Render parsed protocol message nicely
+    content += `
+      <div class="modal-field">
+        <div class="modal-label">Type</div>
+        <div class="modal-value"><code>${esc(parsed.type || 'unknown')}</code></div>
+      </div>
+    `;
+    for (const [key, val] of Object.entries(parsed)) {
+      if (key === 'type' || key === 'from' || key === 'timestamp') continue;
+      content += `
+        <div class="modal-field">
+          <div class="modal-label">${esc(key)}</div>
+          <div class="modal-value">${esc(typeof val === 'object' ? JSON.stringify(val, null, 2) : String(val))}</div>
+        </div>
+      `;
+    }
+  } else {
+    content += `
+      <div class="modal-field">
+        <div class="modal-label">Message</div>
+        <div class="modal-value">${esc(fullText)}</div>
+      </div>
+    `;
+  }
+
+  if (msg.summary && msg.summary !== fullText) {
+    content += `
+      <div class="modal-field">
+        <div class="modal-label">Summary</div>
+        <div class="modal-value">${esc(msg.summary)}</div>
+      </div>
+    `;
+  }
+
+  openModal('Message Details', content);
+}
+
+function renderTasks() {
+  let tasks = state.tasks || [];
+
+  // Filter by selected member
+  if (selectedMember) {
+    tasks = tasks.filter(t => t.owner && t.owner.toLowerCase() === selectedMember.toLowerCase());
+  }
+
+  document.getElementById('taskCount').textContent = tasks.length;
+
+  // Update card header with filter badge
+  const taskHeader = document.getElementById('taskList').closest('.card').querySelector('.card-header .card-title');
+  const existingBadge = taskHeader.querySelector('.filter-badge');
+  if (existingBadge) existingBadge.remove();
+  if (selectedMember) {
+    const badge = document.createElement('span');
+    badge.className = 'filter-badge';
+    badge.innerHTML = `<i data-lucide="user" style="width:10px;height:10px"></i> ${esc(selectedMember)} <i data-lucide="x" style="width:10px;height:10px"></i>`;
+    badge.addEventListener('click', (e) => { e.stopPropagation(); selectedMember = null; renderMembers(); renderMessages(); renderTasks(); lucide.createIcons(); });
+    taskHeader.appendChild(badge);
+  }
+
+  const el = document.getElementById('taskList');
+
+  if (!tasks.length) {
+    el.innerHTML = '<div class="empty"><i data-lucide="clipboard-x"></i><p>No tasks created</p></div>';
+    return;
+  }
+
+  el.innerHTML = tasks.map(t => {
+    const status = t.status || 'pending';
+    const icon = status === 'completed' ? 'check-circle-2' : status === 'in_progress' ? 'loader' : 'circle';
+    const blocked = t.blockedBy && t.blockedBy.length;
+    return `<div class="task-item ${status}">
+      <div class="task-check ${status}"><i data-lucide="${icon}" style="width:18px;height:18px"></i></div>
+      <div class="task-info">
+        <div class="task-subject">${t.id != null ? '#' + t.id + ' ' : ''}${esc(t.subject || t.title || 'Untitled')}</div>
+        ${t.description ? `<div class="task-desc">${esc(t.description)}</div>` : ''}
+        <div class="task-badges">
+          <span class="badge ${status}">${status.replace(/_/g, ' ')}</span>
+          ${t.owner ? `<span class="badge owner">${esc(t.owner)}</span>` : ''}
+          ${blocked ? '<span class="badge blocked">blocked</span>' : ''}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  flashEl(el);
+}
+
+// ── REST fallback ──
+async function pollREST() {
+  // If a team is selected, load team-specific data instead
+  if (selectedTeam) {
+    // Still refresh the teams list
+    try {
+      const res = await fetch(API_BASE + '/api/teams');
+      if (res.ok) {
+        state.teams = await res.json();
+      }
+    } catch(e) {}
+    await loadTeamData(selectedTeam);
+    renderAll();
+    return;
+  }
+
+  try {
+    // Try unified state endpoint first
+    let res = await fetch(API_BASE + '/api/state');
+    if (res.ok) {
+      state = await res.json();
+      renderAll();
+      return;
+    }
+  } catch(e) {}
+
+  // Fallback: try individual endpoints
+  try {
+    const [teamsRes, tasksRes] = await Promise.allSettled([
+      fetch(API_BASE + '/api/teams'),
+      fetch(API_BASE + '/api/tasks')
+    ]);
+    if (teamsRes.status === 'fulfilled' && teamsRes.value.ok) {
+      const teams = await teamsRes.value.json();
+      state.teams = Array.isArray(teams) ? teams : [];
+      // Extract members from teams
+      const members = [];
+      state.teams.forEach(t => {
+        if (t.members) t.members.forEach(m => members.push({ ...m, team: t.name }));
+      });
+      if (members.length) state.members = members;
+    }
+    if (tasksRes.status === 'fulfilled' && tasksRes.value.ok) {
+      const tasks = await tasksRes.value.json();
+      state.tasks = Array.isArray(tasks) ? tasks : [];
+    }
+    // Clear messages when showing all teams (no unified messages endpoint)
+    state.messages = [];
+    renderAll();
+  } catch(e) {}
+}
+
+// ── Init ──
+updateThemeIcon();
+connect();
+pollREST();
+setInterval(pollREST, 5000);
+lucide.createIcons();
+</script>
+</body>
+</html>
