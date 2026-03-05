@@ -1,7 +1,7 @@
-# Vec's Claude Skills - Quick Reference
+# Vec's Productivity Skills - Quick Reference
 
 ## 📦 Repository
-**Main Repo**: https://github.com/vecyang1/vec-claude-skills
+**Main Repo**: https://github.com/vecyang1/vec-productivity-skills
 
 ## 🎯 Included Skills
 
@@ -27,32 +27,32 @@
 
 ```bash
 # Clone the unified collection
-git clone https://github.com/vecyang1/vec-claude-skills.git ~/vec-claude-skills
+git clone https://github.com/vecyang1/vec-productivity-skills.git ~/vec-productivity-skills
 
 # Install all skills
-ln -s ~/vec-claude-skills/* ~/.claude/skills/
+ln -s ~/vec-productivity-skills/* ~/.claude/skills/
 
 # Or install individual skills
-ln -s ~/vec-claude-skills/notion-mcp-connector ~/.claude/skills/notion-mcp-connector
+ln -s ~/vec-productivity-skills/notion-mcp-connector ~/.claude/skills/notion-mcp-connector
 ```
 
 ## 📝 Local Setup
 
 Your current setup:
-- **Unified Collection**: `~/Documents/Shared/vec-claude-skills/`
+- **Unified Collection**: `~/Documents/Shared/vec-productivity-skills/`
 - **Symlinks**: `~/.claude/skills/` → points to unified collection
 - **Original Skills**: `~/.gemini/antigravity/skills/` (keep as backup)
 
 ## 🔄 Updates
 
 ```bash
-cd ~/Documents/Shared/vec-claude-skills
+cd ~/Documents/Shared/vec-productivity-skills
 git pull origin main
 ```
 
 ## 🌐 Public URLs
 
-- **Main Collection**: https://github.com/vecyang1/vec-claude-skills
+- **Main Collection**: https://github.com/vecyang1/vec-productivity-skills
 - **Agent Teams**: https://github.com/vecyang1/agent-teams-dashboard (standalone)
 - **Skill Improver**: https://github.com/vecyang1/skill-improver (standalone)
 - **Notion Connector**: https://github.com/vecyang1/notion-mcp-connector (deprecated, redirects to collection)

@@ -1,6 +1,6 @@
-# Vec's Claude Skills Collection
+# Vec's Productivity Skills
 
-A curated collection of production-ready skills for Claude Code, created and maintained by [Vec Yang](https://github.com/vecyang1).
+A curated collection of production-ready productivity skills for Claude Code, created and maintained by [Vec Yang](https://github.com/vecyang1).
 
 ## 🎯 Skills Included
 
@@ -66,19 +66,19 @@ Comprehensive Notion integration via Model Context Protocol (MCP) and Direct API
 #### Option 1: Install All Skills
 ```bash
 # Clone the repository
-git clone https://github.com/vecyang1/vec-claude-skills.git
+git clone https://github.com/vecyang1/vec-productivity-skills.git
 
 # Symlink to Claude skills directory
-ln -s $(pwd)/vec-claude-skills/* ~/.claude/skills/
+ln -s $(pwd)/vec-productivity-skills/* ~/.claude/skills/
 ```
 
 #### Option 2: Install Individual Skills
 ```bash
 # Clone the repository
-git clone https://github.com/vecyang1/vec-claude-skills.git
+git clone https://github.com/vecyang1/vec-productivity-skills.git
 
 # Symlink specific skill
-ln -s $(pwd)/vec-claude-skills/notion-mcp-connector ~/.claude/skills/notion-mcp-connector
+ln -s $(pwd)/vec-productivity-skills/notion-mcp-connector ~/.claude/skills/notion-mcp-connector
 ```
 
 ### Usage
@@ -136,8 +136,8 @@ skill-name/
 ## 🤝 Community
 
 - **Author**: [Vec Yang](https://github.com/vecyang1)
-- **Issues**: [GitHub Issues](https://github.com/vecyang1/vec-claude-skills/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/vecyang1/vec-claude-skills/discussions)
+- **Issues**: [GitHub Issues](https://github.com/vecyang1/vec-productivity-skills/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/vecyang1/vec-productivity-skills/discussions)
 
 ---
 
