@@ -143,6 +143,17 @@ This skill includes a `chunk_mp3s_by_duration.py` script specifically designed t
 python scripts/chunk_mp3s_by_duration.py
 ```
 
+### Optimize Audio Size (The 32kbps Mono Protocol)
+
+Even if chunks are mathematically under the 6-Hour and 200MB limits, uploading 7GB of raw audio to NotebookLM will take hours. **LLMs do not need 320kbps Stereo MP3s to transcribe speech.** 
+
+To upload massive quantities of audio rapidly, use the `optimize_audio_for_llm.py` script. This script converts every MP3 in a folder to **32kbps Mono (24000Hz)**. This strips out high-frequency music data and stereo panning, preserving perfect vocal intelligibility while **reducing folder sizes by up to 90%.**
+
+```bash
+# Shrink all MP3s in the current directory to 32kbps Mono (saves into ./optimized_for_llm)
+python scripts/optimize_audio_for_llm.py -d /path/to/mp3s -w 4
+```
+
 ## Troubleshooting
 
 ### HTTP Error 403: Forbidden
