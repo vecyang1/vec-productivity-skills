@@ -115,6 +115,26 @@ The skill uses `yt-dlp`, a robust YouTube downloader that:
 - Only single videos are downloaded (playlists are skipped by default)
 - Higher quality videos may take longer to download and use more disk space
 
+## Handling Large Audio for NotebookLM and Gemini
+
+When transcribing massive amounts of audio (e.g., merging hundreds of videos) using Gemini or NotebookLM, you must respect the model's **1M Token Context Window limit**.
+
+**The Token Mathematics:**
+- Gemini's audio tokenization uses approximately **32 tokens per second** of audio.
+- 1,000,000 tokens / 32 tokens/sec = 31,250 seconds 
+- 31,250 seconds = **~8.6 Hours**
+
+**Maximum Safe Limit:**
+To leave enough room (~300k tokens) for system prompts and the generated transcribed text without crashing the context window, you should **never upload an audio file longer than 6 Hours** to Gemini 1.5 Pro/Flash.
+
+**The Solution:**
+This skill includes a `chunk_mp3s_by_duration.py` script specifically designed to solve this issue. It uses `ffprobe` to accurately calculate the duration of a folder of MP3s and concatenate them into perfectly sized chunks that will never exceed 6 hours.
+
+```bash
+# Combine a directory of MP3s into chunked files safe for NotebookLM
+python scripts/chunk_mp3s_by_duration.py
+```
+
 ## Troubleshooting
 
 ### HTTP Error 403: Forbidden
