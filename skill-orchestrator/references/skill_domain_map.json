@@ -1,0 +1,5334 @@
+{
+  "total_skills": 218,
+  "domains": {
+    "AI & ML": [
+      "302ai-integration",
+      "Claude CLI Guide",
+      "Gemini CLI Guide",
+      "Lifestyle Aesthetic Designer",
+      "Scientific Business Guide",
+      "agentic-vision-gemini",
+      "aippt",
+      "alias",
+      "allowance-application-and-alignment-check",
+      "best-minds",
+      "business-model-xray",
+      "chrome-devtools",
+      "city-cost-compare-nomad",
+      "claude-code-agent-teams",
+      "clawdbot-repair",
+      "codex-config",
+      "context-engineering-collection",
+      "continuous-learning-v2",
+      "document-skills",
+      "ecommerce-kv",
+      "general-song-writer",
+      "godaddy-dns-manager",
+      "google-deep-research",
+      "heif-converter",
+      "init-vault-method",
+      "life-trajectory-deduction",
+      "model-authenticity-verifier",
+      "model-intelligence",
+      "my-creative-writer",
+      "naturalize-text",
+      "producthunt",
+      "reddit",
+      "seedream-4-5",
+      "seo-geo",
+      "serpapi-mcp",
+      "skill-lookup",
+      "skill-orchestrator",
+      "skill-seekers",
+      "smart-illustrator",
+      "sora2-gen",
+      "template-skill"
+    ],
+    "Development & Code": [
+      "Flight Search",
+      "Google Cloud Integration",
+      "MCP Integration",
+      "OpenAI Codex Guide",
+      "Package Tracker",
+      "RL Training with PPO",
+      "Social Dynamics Mastery",
+      "academic-navigator",
+      "backend-patterns",
+      "bird",
+      "capability-evolver",
+      "china-global-deployment",
+      "clash-verge-guide",
+      "claude-code-agile-updater",
+      "coding-standards",
+      "connect",
+      "environment-manager",
+      "eval-harness",
+      "firewall-manager",
+      "google-docs-mcp-server",
+      "gsd-framework-guide",
+      "historical-mirror",
+      "mcp-builder",
+      "mermaid-visualizer",
+      "neck-care-specialist",
+      "postgres-patterns",
+      "repair-old-photo",
+      "skill-install",
+      "svg-icon-search",
+      "tampermonkey",
+      "teams-dashboard",
+      "tts-elevenlabs",
+      "verification-loop",
+      "vps-proxy-setup",
+      "web-design-guidelines",
+      "web-scraper-patterns",
+      "web-search-manager",
+      "wheel-check",
+      "zlibrary-to-notebooklm"
+    ],
+    "Content Creation": [
+      "Honest Deep Researcher",
+      "Interview-to-Article",
+      "cache-components",
+      "changelog-generator",
+      "content-research-writer",
+      "executing-marketing-campaigns",
+      "internal-comms",
+      "json-canvas",
+      "local-store-promotion",
+      "obsidian-canvas-creator",
+      "psychological-copywriter",
+      "site-url-extractor",
+      "twitter",
+      "vercel-react-best-practices",
+      "web-metadata-extractor",
+      "xhs-note-creator",
+      "youtube-plan-new-video",
+      "youtube-title"
+    ],
+    "Automation & Integration": [
+      "Life Learning Companion",
+      "Skill Improver",
+      "email-management",
+      "family-health-guardian",
+      "iterative-retrieval",
+      "notion-mcp-connector",
+      "personal-asset-manager",
+      "principle-driven-framework",
+      "system-git-discovery-sync",
+      "tdd-workflow"
+    ],
+    "Video & Media": [
+      "Manim Math Animator",
+      "Media Organizer",
+      "Nano-Banana",
+      "Read-Media-Gemini",
+      "creator-monetization-engine",
+      "cross-border-ai-strategist",
+      "dtc-brand-library",
+      "guitar-learning",
+      "gyroflow-stabilizer",
+      "media-to-notebooklm-artifacts",
+      "music-video-prep",
+      "music-video-title-generator",
+      "notebooklm-py",
+      "prompt-lookup",
+      "remotion",
+      "seller-browser-safe",
+      "seven-figure-course-builder",
+      "transcribe-media",
+      "videocut-Aroll",
+      "youtube-broll-illustrator",
+      "youtube-channel-scraper",
+      "youtube-downloader"
+    ],
+    "Social Media": [
+      "Post Social Media Image/Video with GetLate API",
+      "cross-border-product-selector",
+      "domain-hunter",
+      "travel-deal-hunter"
+    ],
+    "E-commerce": [
+      "SureCart Manager",
+      "ecommerce-product-refine",
+      "elon-musk-life-coach",
+      "japan-med-content-matrix",
+      "monetization-first-development"
+    ],
+    "Image & Design": [
+      "Topaz Photo AI Upscaler",
+      "amazon-operations-director",
+      "banner-creator",
+      "competitive-ads-extractor",
+      "curation-expert",
+      "ecommerce-lp-generator",
+      "enhance-prompt",
+      "etsy-seller-general",
+      "excalidraw-diagram",
+      "file-organizer",
+      "gemini-watermark-remover",
+      "image-enhancer",
+      "knowledge-card-generator",
+      "lan-connection-manager",
+      "logo-creator",
+      "model-library-generator",
+      "performance-ads-writer",
+      "reference-photo-expander",
+      "remotion-ads-producer",
+      "remove-bg",
+      "reverse-prompt-engineer",
+      "svg-generator",
+      "theme-factory",
+      "theme-serial-gen",
+      "trademark-guard",
+      "visa-itinerary-pro",
+      "visual-prompt-engineer",
+      "youtube-thumbnail",
+      "youtube-video-hook"
+    ],
+    "": [
+      "baoyang-guide",
+      "company-asset-isolation",
+      "polyamory-rules"
+    ],
+    "Business & Productivity": [
+      "cloudflare-dns-manager",
+      "general-analysis-5w1h",
+      "japan-tax-planning",
+      "memory-vault",
+      "planning-with-files",
+      "strategic-compact",
+      "team-composition-analysis"
+    ],
+    "Data & Analytics": [
+      "consultant-friend",
+      "creating-financial-models",
+      "language-teacher",
+      "market-sizing-analysis",
+      "onecontext-manager",
+      "prd",
+      "qingdouyun-manual",
+      "site-accessibility-judge",
+      "startup-metrics-framework",
+      "wp-phpstan",
+      "youtube-research-video-topic"
+    ],
+    "Web Development": [
+      "design-md",
+      "frontend-design",
+      "frontend-patterns",
+      "init-blast-method",
+      "interview-user",
+      "obsidian-cli",
+      "react:components",
+      "security-review",
+      "shadcn-ui",
+      "skill-creator",
+      "stitch",
+      "stitch-loop",
+      "wordpress-router",
+      "world-inspire-lab",
+      "wp-block-development",
+      "wp-block-themes",
+      "wp-cli-expert",
+      "wp-interactivity-api",
+      "wp-performance",
+      "wp-playground",
+      "wp-plugin-development",
+      "wp-project-triage",
+      "wp-rest-api",
+      "wp-site-manager",
+      "wp-wpcli-and-ops",
+      "wpds"
+    ],
+    "Research & Knowledge": [
+      "know-an-industry-fast"
+    ],
+    "Infrastructure & DevOps": [
+      "vercel-deployment-guide",
+      "vps-manager-ssh"
+    ]
+  },
+  "domain_counts": {
+    "AI & ML": 41,
+    "Development & Code": 39,
+    "Content Creation": 18,
+    "Automation & Integration": 10,
+    "Video & Media": 22,
+    "Social Media": 4,
+    "E-commerce": 5,
+    "Image & Design": 29,
+    "": 3,
+    "Business & Productivity": 7,
+    "Data & Analytics": 11,
+    "Web Development": 26,
+    "Research & Knowledge": 1,
+    "Infrastructure & DevOps": 2
+  },
+  "tags": {
+    "python": [
+      "302ai-integration",
+      "Flight Search",
+      "Google Cloud Integration",
+      "MCP Integration",
+      "Manim Math Animator",
+      "Media Organizer",
+      "OpenAI Codex Guide",
+      "Package Tracker",
+      "RL Training with PPO",
+      "Skill Improver",
+      "Topaz Photo AI Upscaler",
+      "agentic-vision-gemini",
+      "china-global-deployment",
+      "clash-verge-guide",
+      "clawdbot-repair",
+      "connect",
+      "ecommerce-lp-generator",
+      "email-management",
+      "environment-manager",
+      "firewall-manager",
+      "gemini-watermark-remover",
+      "godaddy-dns-manager",
+      "google-deep-research",
+      "gyroflow-stabilizer",
+      "init-blast-method",
+      "interview-user",
+      "knowledge-card-generator",
+      "mcp-builder",
+      "media-to-notebooklm-artifacts",
+      "music-video-prep",
+      "notebooklm-py",
+      "onecontext-manager",
+      "reddit",
+      "remove-bg",
+      "skill-creator",
+      "skill-lookup",
+      "skill-orchestrator",
+      "skill-seekers",
+      "svg-icon-search",
+      "system-git-discovery-sync",
+      "transcribe-media",
+      "verification-loop",
+      "vps-proxy-setup",
+      "web-scraper-patterns",
+      "web-search-manager",
+      "wheel-check",
+      "world-inspire-lab",
+      "wp-site-manager",
+      "xhs-note-creator",
+      "youtube-downloader",
+      "youtube-thumbnail",
+      "youtube-title",
+      "youtube-video-hook",
+      "zlibrary-to-notebooklm"
+    ],
+    "nodejs": [
+      "302ai-integration",
+      "Skill Improver",
+      "aippt",
+      "backend-patterns",
+      "capability-evolver",
+      "china-global-deployment",
+      "clash-verge-guide",
+      "claude-code-agent-teams",
+      "clawdbot-repair",
+      "coding-standards",
+      "environment-manager",
+      "firewall-manager",
+      "google-docs-mcp-server",
+      "json-canvas",
+      "mcp-builder",
+      "mermaid-visualizer",
+      "obsidian-canvas-creator",
+      "remotion",
+      "skill-orchestrator",
+      "tampermonkey",
+      "vps-manager-ssh",
+      "vps-proxy-setup",
+      "wordpress-router",
+      "wp-block-development",
+      "wp-block-themes",
+      "wp-interactivity-api",
+      "wp-performance",
+      "wp-phpstan",
+      "wp-playground",
+      "wp-plugin-development",
+      "wp-project-triage",
+      "wp-rest-api",
+      "wp-wpcli-and-ops",
+      "xhs-note-creator"
+    ],
+    "bash": [
+      "302ai-integration",
+      "Claude CLI Guide",
+      "Flight Search",
+      "Gemini CLI Guide",
+      "Google Cloud Integration",
+      "Honest Deep Researcher",
+      "MCP Integration",
+      "Manim Math Animator",
+      "Media Organizer",
+      "Nano-Banana",
+      "OpenAI Codex Guide",
+      "Package Tracker",
+      "Post Social Media Image/Video with GetLate API",
+      "RL Training with PPO",
+      "Read-Media-Gemini",
+      "Skill Improver",
+      "SureCart Manager",
+      "Topaz Photo AI Upscaler",
+      "academic-navigator",
+      "agentic-vision-gemini",
+      "aippt",
+      "alias",
+      "allowance-application-and-alignment-check",
+      "banner-creator",
+      "cache-components",
+      "capability-evolver",
+      "china-global-deployment",
+      "chrome-devtools",
+      "city-cost-compare-nomad",
+      "clash-verge-guide",
+      "claude-code-agent-teams",
+      "claude-code-agile-updater",
+      "clawdbot-repair",
+      "cloudflare-dns-manager",
+      "codex-config",
+      "connect",
+      "continuous-learning-v2",
+      "creator-monetization-engine",
+      "domain-hunter",
+      "ecommerce-lp-generator",
+      "email-management",
+      "environment-manager",
+      "eval-harness",
+      "family-health-guardian",
+      "file-organizer",
+      "firewall-manager",
+      "gemini-watermark-remover",
+      "godaddy-dns-manager",
+      "google-deep-research",
+      "gsd-framework-guide",
+      "gyroflow-stabilizer",
+      "heif-converter",
+      "init-blast-method",
+      "init-vault-method",
+      "knowledge-card-generator",
+      "lan-connection-manager",
+      "language-teacher",
+      "logo-creator",
+      "media-to-notebooklm-artifacts",
+      "memory-vault",
+      "model-intelligence",
+      "model-library-generator",
+      "monetization-first-development",
+      "music-video-prep",
+      "neck-care-specialist",
+      "notebooklm-py",
+      "notion-mcp-connector",
+      "obsidian-cli",
+      "onecontext-manager",
+      "planning-with-files",
+      "principle-driven-framework",
+      "producthunt",
+      "react:components",
+      "reddit",
+      "remotion",
+      "remove-bg",
+      "repair-old-photo",
+      "security-review",
+      "seedream-4-5",
+      "seo-geo",
+      "shadcn-ui",
+      "site-accessibility-judge",
+      "site-url-extractor",
+      "skill-creator",
+      "skill-install",
+      "skill-lookup",
+      "skill-orchestrator",
+      "skill-seekers",
+      "smart-illustrator",
+      "sora2-gen",
+      "stitch",
+      "stitch-loop",
+      "svg-icon-search",
+      "system-git-discovery-sync",
+      "tdd-workflow",
+      "teams-dashboard",
+      "theme-serial-gen",
+      "trademark-guard",
+      "transcribe-media",
+      "tts-elevenlabs",
+      "twitter",
+      "vercel-deployment-guide",
+      "verification-loop",
+      "visual-prompt-engineer",
+      "vps-manager-ssh",
+      "vps-proxy-setup",
+      "web-metadata-extractor",
+      "web-scraper-patterns",
+      "web-search-manager",
+      "wheel-check",
+      "wordpress-router",
+      "world-inspire-lab",
+      "wp-block-development",
+      "wp-block-themes",
+      "wp-cli-expert",
+      "wp-interactivity-api",
+      "wp-playground",
+      "wp-plugin-development",
+      "wp-project-triage",
+      "wp-rest-api",
+      "wp-site-manager",
+      "wp-wpcli-and-ops",
+      "xhs-note-creator",
+      "youtube-broll-illustrator",
+      "youtube-channel-scraper",
+      "youtube-downloader",
+      "zlibrary-to-notebooklm"
+    ],
+    "javascript": [
+      "302ai-integration",
+      "Skill Improver",
+      "aippt",
+      "backend-patterns",
+      "cache-components",
+      "capability-evolver",
+      "china-global-deployment",
+      "chrome-devtools",
+      "claude-code-agent-teams",
+      "coding-standards",
+      "frontend-design",
+      "frontend-patterns",
+      "google-docs-mcp-server",
+      "gsd-framework-guide",
+      "interview-user",
+      "iterative-retrieval",
+      "obsidian-cli",
+      "remotion",
+      "security-review",
+      "shadcn-ui",
+      "skill-creator",
+      "skill-seekers",
+      "tampermonkey",
+      "teams-dashboard",
+      "vercel-deployment-guide",
+      "vercel-react-best-practices",
+      "verification-loop",
+      "web-metadata-extractor",
+      "web-scraper-patterns",
+      "world-inspire-lab",
+      "wp-block-themes",
+      "wp-interactivity-api",
+      "wp-playground",
+      "wp-plugin-development",
+      "wp-rest-api",
+      "wp-site-manager",
+      "xhs-note-creator"
+    ],
+    "generation": [
+      "302ai-integration",
+      "Honest Deep Researcher",
+      "Interview-to-Article",
+      "MCP Integration",
+      "Manim Math Animator",
+      "Nano-Banana",
+      "OpenAI Codex Guide",
+      "Skill Improver",
+      "Social Dynamics Mastery",
+      "SureCart Manager",
+      "academic-navigator",
+      "aippt",
+      "amazon-operations-director",
+      "banner-creator",
+      "cache-components",
+      "capability-evolver",
+      "changelog-generator",
+      "connect",
+      "continuous-learning-v2",
+      "creating-financial-models",
+      "creator-monetization-engine",
+      "cross-border-product-selector",
+      "design-md",
+      "document-skills",
+      "domain-hunter",
+      "ecommerce-kv",
+      "ecommerce-lp-generator",
+      "email-management",
+      "enhance-prompt",
+      "etsy-seller-general",
+      "eval-harness",
+      "excalidraw-diagram",
+      "executing-marketing-campaigns",
+      "general-song-writer",
+      "google-deep-research",
+      "japan-med-content-matrix",
+      "json-canvas",
+      "know-an-industry-fast",
+      "knowledge-card-generator",
+      "logo-creator",
+      "mcp-builder",
+      "media-to-notebooklm-artifacts",
+      "mermaid-visualizer",
+      "model-library-generator",
+      "monetization-first-development",
+      "music-video-title-generator",
+      "notebooklm-py",
+      "obsidian-canvas-creator",
+      "performance-ads-writer",
+      "prd",
+      "psychological-copywriter",
+      "reference-photo-expander",
+      "remotion",
+      "remotion-ads-producer",
+      "remove-bg",
+      "reverse-prompt-engineer",
+      "seedream-4-5",
+      "seo-geo",
+      "skill-orchestrator",
+      "skill-seekers",
+      "smart-illustrator",
+      "sora2-gen",
+      "startup-metrics-framework",
+      "stitch",
+      "stitch-loop",
+      "svg-generator",
+      "tampermonkey",
+      "tdd-workflow",
+      "team-composition-analysis",
+      "theme-factory",
+      "theme-serial-gen",
+      "trademark-guard",
+      "tts-elevenlabs",
+      "vercel-react-best-practices",
+      "videocut-Aroll",
+      "visa-itinerary-pro",
+      "visual-prompt-engineer",
+      "vps-proxy-setup",
+      "world-inspire-lab",
+      "wp-performance",
+      "wp-phpstan",
+      "wp-site-manager",
+      "youtube-broll-illustrator",
+      "youtube-plan-new-video",
+      "youtube-research-video-topic",
+      "youtube-thumbnail",
+      "youtube-title",
+      "zlibrary-to-notebooklm"
+    ],
+    "image": [
+      "302ai-integration",
+      "Media Organizer",
+      "Nano-Banana",
+      "Post Social Media Image/Video with GetLate API",
+      "RL Training with PPO",
+      "Read-Media-Gemini",
+      "SureCart Manager",
+      "Topaz Photo AI Upscaler",
+      "agentic-vision-gemini",
+      "aippt",
+      "allowance-application-and-alignment-check",
+      "amazon-operations-director",
+      "banner-creator",
+      "clash-verge-guide",
+      "competitive-ads-extractor",
+      "design-md",
+      "document-skills",
+      "ecommerce-lp-generator",
+      "enhance-prompt",
+      "etsy-seller-general",
+      "file-organizer",
+      "firewall-manager",
+      "gemini-watermark-remover",
+      "heif-converter",
+      "image-enhancer",
+      "japan-tax-planning",
+      "json-canvas",
+      "knowledge-card-generator",
+      "logo-creator",
+      "media-to-notebooklm-artifacts",
+      "model-intelligence",
+      "model-library-generator",
+      "monetization-first-development",
+      "music-video-title-generator",
+      "performance-ads-writer",
+      "planning-with-files",
+      "prompt-lookup",
+      "react:components",
+      "reference-photo-expander",
+      "remove-bg",
+      "repair-old-photo",
+      "reverse-prompt-engineer",
+      "security-review",
+      "seedream-4-5",
+      "seo-geo",
+      "skill-creator",
+      "skill-orchestrator",
+      "smart-illustrator",
+      "sora2-gen",
+      "svg-generator",
+      "tampermonkey",
+      "theme-serial-gen",
+      "trademark-guard",
+      "vercel-deployment-guide",
+      "visual-prompt-engineer",
+      "vps-manager-ssh",
+      "web-metadata-extractor",
+      "world-inspire-lab",
+      "wp-cli-expert",
+      "wp-site-manager",
+      "youtube-broll-illustrator",
+      "youtube-thumbnail",
+      "youtube-title"
+    ],
+    "video": [
+      "302ai-integration",
+      "Manim Math Animator",
+      "Media Organizer",
+      "Nano-Banana",
+      "Post Social Media Image/Video with GetLate API",
+      "Read-Media-Gemini",
+      "clash-verge-guide",
+      "competitive-ads-extractor",
+      "creator-monetization-engine",
+      "cross-border-product-selector",
+      "etsy-seller-general",
+      "gemini-watermark-remover",
+      "gsd-framework-guide",
+      "gyroflow-stabilizer",
+      "japan-med-content-matrix",
+      "know-an-industry-fast",
+      "media-to-notebooklm-artifacts",
+      "model-intelligence",
+      "music-video-prep",
+      "music-video-title-generator",
+      "notebooklm-py",
+      "prompt-lookup",
+      "remotion",
+      "remotion-ads-producer",
+      "seven-figure-course-builder",
+      "skill-orchestrator",
+      "sora2-gen",
+      "transcribe-media",
+      "videocut-Aroll",
+      "visa-itinerary-pro",
+      "youtube-broll-illustrator",
+      "youtube-channel-scraper",
+      "youtube-downloader",
+      "youtube-plan-new-video",
+      "youtube-research-video-topic",
+      "youtube-thumbnail",
+      "youtube-title",
+      "youtube-video-hook"
+    ],
+    "audio": [
+      "302ai-integration",
+      "Nano-Banana",
+      "Read-Media-Gemini",
+      "etsy-seller-general",
+      "general-song-writer",
+      "gsd-framework-guide",
+      "media-to-notebooklm-artifacts",
+      "music-video-prep",
+      "music-video-title-generator",
+      "notebooklm-py",
+      "prompt-lookup",
+      "remotion",
+      "seven-figure-course-builder",
+      "skill-orchestrator",
+      "tampermonkey",
+      "transcribe-media",
+      "tts-elevenlabs",
+      "videocut-Aroll",
+      "visa-itinerary-pro",
+      "visual-prompt-engineer",
+      "youtube-broll-illustrator",
+      "youtube-downloader",
+      "zlibrary-to-notebooklm"
+    ],
+    "data": [
+      "302ai-integration",
+      "Claude CLI Guide",
+      "Flight Search",
+      "Honest Deep Researcher",
+      "Life Learning Companion",
+      "MCP Integration",
+      "Nano-Banana",
+      "RL Training with PPO",
+      "SureCart Manager",
+      "academic-navigator",
+      "backend-patterns",
+      "cache-components",
+      "china-global-deployment",
+      "city-cost-compare-nomad",
+      "clash-verge-guide",
+      "clawdbot-repair",
+      "coding-standards",
+      "competitive-ads-extractor",
+      "connect",
+      "consultant-friend",
+      "content-research-writer",
+      "creating-financial-models",
+      "creator-monetization-engine",
+      "domain-hunter",
+      "email-management",
+      "excalidraw-diagram",
+      "executing-marketing-campaigns",
+      "family-health-guardian",
+      "file-organizer",
+      "frontend-patterns",
+      "google-deep-research",
+      "gyroflow-stabilizer",
+      "init-blast-method",
+      "init-vault-method",
+      "json-canvas",
+      "language-teacher",
+      "market-sizing-analysis",
+      "mcp-builder",
+      "media-to-notebooklm-artifacts",
+      "mermaid-visualizer",
+      "model-intelligence",
+      "model-library-generator",
+      "monetization-first-development",
+      "neck-care-specialist",
+      "notebooklm-py",
+      "notion-mcp-connector",
+      "onecontext-manager",
+      "planning-with-files",
+      "postgres-patterns",
+      "react:components",
+      "remotion",
+      "remotion-ads-producer",
+      "remove-bg",
+      "security-review",
+      "seo-geo",
+      "serpapi-mcp",
+      "seven-figure-course-builder",
+      "shadcn-ui",
+      "site-accessibility-judge",
+      "skill-creator",
+      "skill-orchestrator",
+      "startup-metrics-framework",
+      "svg-generator",
+      "system-git-discovery-sync",
+      "tampermonkey",
+      "tdd-workflow",
+      "team-composition-analysis",
+      "vercel-deployment-guide",
+      "vercel-react-best-practices",
+      "visa-itinerary-pro",
+      "vps-manager-ssh",
+      "web-metadata-extractor",
+      "web-scraper-patterns",
+      "wheel-check",
+      "wp-block-development",
+      "wp-cli-expert",
+      "wp-interactivity-api",
+      "wp-performance",
+      "wp-playground",
+      "wp-plugin-development",
+      "wp-rest-api",
+      "wp-site-manager",
+      "wp-wpcli-and-ops",
+      "wpds",
+      "youtube-channel-scraper",
+      "youtube-downloader",
+      "youtube-research-video-topic",
+      "youtube-title",
+      "zlibrary-to-notebooklm"
+    ],
+    "go": [
+      "Claude CLI Guide",
+      "Honest Deep Researcher",
+      "Nano-Banana",
+      "RL Training with PPO",
+      "SureCart Manager",
+      "china-global-deployment",
+      "clash-verge-guide",
+      "claude-code-agent-teams",
+      "clawdbot-repair",
+      "etsy-seller-general",
+      "executing-marketing-campaigns",
+      "family-health-guardian",
+      "file-organizer",
+      "init-vault-method",
+      "interview-user",
+      "japan-tax-planning",
+      "market-sizing-analysis",
+      "neck-care-specialist",
+      "performance-ads-writer",
+      "planning-with-files",
+      "skill-orchestrator",
+      "teams-dashboard",
+      "vercel-deployment-guide",
+      "visa-itinerary-pro",
+      "world-inspire-lab",
+      "wp-site-manager",
+      "youtube-thumbnail",
+      "youtube-title"
+    ],
+    "notion": [
+      "Claude CLI Guide",
+      "Gemini CLI Guide",
+      "Life Learning Companion",
+      "clash-verge-guide",
+      "competitive-ads-extractor",
+      "connect",
+      "email-management",
+      "init-blast-method",
+      "notion-mcp-connector",
+      "personal-asset-manager",
+      "skill-orchestrator",
+      "xhs-note-creator"
+    ],
+    "github": [
+      "Claude CLI Guide",
+      "Flight Search",
+      "Gemini CLI Guide",
+      "MCP Integration",
+      "OpenAI Codex Guide",
+      "RL Training with PPO",
+      "banner-creator",
+      "capability-evolver",
+      "changelog-generator",
+      "china-global-deployment",
+      "clash-verge-guide",
+      "connect",
+      "continuous-learning-v2",
+      "excalidraw-diagram",
+      "gemini-watermark-remover",
+      "google-docs-mcp-server",
+      "gsd-framework-guide",
+      "json-canvas",
+      "mermaid-visualizer",
+      "notebooklm-py",
+      "notion-mcp-connector",
+      "onecontext-manager",
+      "postgres-patterns",
+      "remotion",
+      "security-review",
+      "seo-geo",
+      "skill-install",
+      "skill-orchestrator",
+      "skill-seekers",
+      "stitch-loop",
+      "svg-icon-search",
+      "system-git-discovery-sync",
+      "tampermonkey",
+      "tdd-workflow",
+      "teams-dashboard",
+      "trademark-guard",
+      "vercel-deployment-guide",
+      "videocut-Aroll",
+      "vps-manager-ssh",
+      "vps-proxy-setup",
+      "web-search-manager",
+      "wheel-check",
+      "wp-playground",
+      "zlibrary-to-notebooklm"
+    ],
+    "optimization": [
+      "Claude CLI Guide",
+      "Honest Deep Researcher",
+      "Life Learning Companion",
+      "Media Organizer",
+      "Nano-Banana",
+      "OpenAI Codex Guide",
+      "RL Training with PPO",
+      "Read-Media-Gemini",
+      "Skill Improver",
+      "amazon-operations-director",
+      "backend-patterns",
+      "cache-components",
+      "capability-evolver",
+      "china-global-deployment",
+      "coding-standards",
+      "consultant-friend",
+      "context-engineering-collection",
+      "creator-monetization-engine",
+      "elon-musk-life-coach",
+      "etsy-seller-general",
+      "frontend-patterns",
+      "gyroflow-stabilizer",
+      "image-enhancer",
+      "japan-med-content-matrix",
+      "knowledge-card-generator",
+      "language-teacher",
+      "mermaid-visualizer",
+      "model-intelligence",
+      "model-library-generator",
+      "music-video-prep",
+      "music-video-title-generator",
+      "postgres-patterns",
+      "remotion",
+      "seo-geo",
+      "seven-figure-course-builder",
+      "skill-orchestrator",
+      "startup-metrics-framework",
+      "strategic-compact",
+      "svg-generator",
+      "tdd-workflow",
+      "vercel-deployment-guide",
+      "vercel-react-best-practices",
+      "wp-performance",
+      "wp-site-manager",
+      "youtube-thumbnail",
+      "youtube-title",
+      "youtube-video-hook"
+    ],
+    "automation": [
+      "Claude CLI Guide",
+      "Gemini CLI Guide",
+      "Post Social Media Image/Video with GetLate API",
+      "SureCart Manager",
+      "china-global-deployment",
+      "context-engineering-collection",
+      "creator-monetization-engine",
+      "document-skills",
+      "eval-harness",
+      "file-organizer",
+      "firewall-manager",
+      "init-blast-method",
+      "interview-user",
+      "market-sizing-analysis",
+      "music-video-prep",
+      "notebooklm-py",
+      "notion-mcp-connector",
+      "planning-with-files",
+      "seo-geo",
+      "seven-figure-course-builder",
+      "skill-lookup",
+      "skill-orchestrator",
+      "system-git-discovery-sync",
+      "tampermonkey",
+      "tdd-workflow",
+      "vps-manager-ssh",
+      "web-metadata-extractor",
+      "web-scraper-patterns",
+      "wp-cli-expert",
+      "wp-site-manager",
+      "wp-wpcli-and-ops"
+    ],
+    "text": [
+      "Claude CLI Guide",
+      "Honest Deep Researcher",
+      "Life Learning Companion",
+      "Manim Math Animator",
+      "Nano-Banana",
+      "Post Social Media Image/Video with GetLate API",
+      "Read-Media-Gemini",
+      "Social Dynamics Mastery",
+      "agentic-vision-gemini",
+      "banner-creator",
+      "bird",
+      "clash-verge-guide",
+      "claude-code-agent-teams",
+      "connect",
+      "consultant-friend",
+      "context-engineering-collection",
+      "cross-border-ai-strategist",
+      "dtc-brand-library",
+      "ecommerce-kv",
+      "ecommerce-lp-generator",
+      "enhance-prompt",
+      "excalidraw-diagram",
+      "image-enhancer",
+      "json-canvas",
+      "knowledge-card-generator",
+      "lan-connection-manager",
+      "mcp-builder",
+      "media-to-notebooklm-artifacts",
+      "memory-vault",
+      "mermaid-visualizer",
+      "model-authenticity-verifier",
+      "model-intelligence",
+      "model-library-generator",
+      "monetization-first-development",
+      "naturalize-text",
+      "obsidian-canvas-creator",
+      "obsidian-cli",
+      "performance-ads-writer",
+      "planning-with-files",
+      "postgres-patterns",
+      "prompt-lookup",
+      "react:components",
+      "remotion",
+      "reverse-prompt-engineer",
+      "seedream-4-5",
+      "seo-geo",
+      "seven-figure-course-builder",
+      "shadcn-ui",
+      "skill-creator",
+      "skill-orchestrator",
+      "sora2-gen",
+      "svg-generator",
+      "tampermonkey",
+      "tdd-workflow",
+      "teams-dashboard",
+      "theme-factory",
+      "trademark-guard",
+      "transcribe-media",
+      "tts-elevenlabs",
+      "videocut-Aroll",
+      "web-metadata-extractor",
+      "web-scraper-patterns",
+      "world-inspire-lab",
+      "wpds",
+      "youtube-broll-illustrator",
+      "youtube-plan-new-video",
+      "youtube-thumbnail",
+      "youtube-title"
+    ],
+    "google": [
+      "Flight Search",
+      "Gemini CLI Guide",
+      "Google Cloud Integration",
+      "Honest Deep Researcher",
+      "Nano-Banana",
+      "Package Tracker",
+      "Read-Media-Gemini",
+      "agentic-vision-gemini",
+      "china-global-deployment",
+      "chrome-devtools",
+      "clash-verge-guide",
+      "clawdbot-repair",
+      "connect",
+      "cross-border-ai-strategist",
+      "cross-border-product-selector",
+      "email-management",
+      "environment-manager",
+      "firewall-manager",
+      "google-deep-research",
+      "google-docs-mcp-server",
+      "init-blast-method",
+      "knowledge-card-generator",
+      "model-intelligence",
+      "model-library-generator",
+      "monetization-first-development",
+      "notebooklm-py",
+      "performance-ads-writer",
+      "react:components",
+      "repair-old-photo",
+      "seo-geo",
+      "serpapi-mcp",
+      "site-accessibility-judge",
+      "skill-orchestrator",
+      "smart-illustrator",
+      "stitch",
+      "trademark-guard",
+      "transcribe-media",
+      "travel-deal-hunter",
+      "videocut-Aroll",
+      "vps-manager-ssh",
+      "vps-proxy-setup",
+      "web-search-manager",
+      "world-inspire-lab",
+      "wp-site-manager",
+      "youtube-broll-illustrator",
+      "zlibrary-to-notebooklm"
+    ],
+    "research": [
+      "Honest Deep Researcher",
+      "claude-code-agent-teams",
+      "claude-code-agile-updater",
+      "competitive-ads-extractor",
+      "content-research-writer",
+      "context-engineering-collection",
+      "creator-monetization-engine",
+      "etsy-seller-general",
+      "google-deep-research",
+      "gsd-framework-guide",
+      "init-vault-method",
+      "json-canvas",
+      "know-an-industry-fast",
+      "market-sizing-analysis",
+      "mcp-builder",
+      "model-authenticity-verifier",
+      "monetization-first-development",
+      "music-video-title-generator",
+      "notebooklm-py",
+      "performance-ads-writer",
+      "planning-with-files",
+      "seo-geo",
+      "seven-figure-course-builder",
+      "site-url-extractor",
+      "skill-orchestrator",
+      "strategic-compact",
+      "visa-itinerary-pro",
+      "youtube-plan-new-video",
+      "youtube-research-video-topic"
+    ],
+    "analysis": [
+      "Honest Deep Researcher",
+      "Life Learning Companion",
+      "MCP Integration",
+      "Read-Media-Gemini",
+      "agentic-vision-gemini",
+      "amazon-operations-director",
+      "capability-evolver",
+      "china-global-deployment",
+      "competitive-ads-extractor",
+      "consultant-friend",
+      "content-research-writer",
+      "context-engineering-collection",
+      "continuous-learning-v2",
+      "creating-financial-models",
+      "design-md",
+      "dtc-brand-library",
+      "ecommerce-kv",
+      "etsy-seller-general",
+      "file-organizer",
+      "general-analysis-5w1h",
+      "gsd-framework-guide",
+      "gyroflow-stabilizer",
+      "historical-mirror",
+      "init-vault-method",
+      "know-an-industry-fast",
+      "language-teacher",
+      "market-sizing-analysis",
+      "mermaid-visualizer",
+      "model-authenticity-verifier",
+      "model-intelligence",
+      "model-library-generator",
+      "monetization-first-development",
+      "music-video-prep",
+      "onecontext-manager",
+      "performance-ads-writer",
+      "psychological-copywriter",
+      "repair-old-photo",
+      "reverse-prompt-engineer",
+      "seo-geo",
+      "site-accessibility-judge",
+      "skill-creator",
+      "skill-install",
+      "skill-orchestrator",
+      "skill-seekers",
+      "startup-metrics-framework",
+      "team-composition-analysis",
+      "teams-dashboard",
+      "visual-prompt-engineer",
+      "vps-manager-ssh",
+      "web-metadata-extractor",
+      "wp-phpstan",
+      "wp-site-manager",
+      "youtube-broll-illustrator",
+      "youtube-research-video-topic",
+      "youtube-title"
+    ],
+    "typescript": [
+      "OpenAI Codex Guide",
+      "backend-patterns",
+      "cache-components",
+      "claude-code-agent-teams",
+      "coding-standards",
+      "environment-manager",
+      "eval-harness",
+      "frontend-patterns",
+      "iterative-retrieval",
+      "mcp-builder",
+      "react:components",
+      "remotion",
+      "remotion-ads-producer",
+      "security-review",
+      "shadcn-ui",
+      "smart-illustrator",
+      "tdd-workflow",
+      "verification-loop",
+      "wp-interactivity-api",
+      "wpds"
+    ],
+    "twitter": [
+      "Post Social Media Image/Video with GetLate API",
+      "banner-creator",
+      "bird",
+      "connect",
+      "continuous-learning-v2",
+      "domain-hunter",
+      "image-enhancer",
+      "iterative-retrieval",
+      "know-an-industry-fast",
+      "monetization-first-development",
+      "seo-geo",
+      "skill-orchestrator",
+      "smart-illustrator",
+      "strategic-compact",
+      "teams-dashboard",
+      "trademark-guard",
+      "twitter",
+      "web-metadata-extractor"
+    ],
+    "youtube": [
+      "Read-Media-Gemini",
+      "banner-creator",
+      "clash-verge-guide",
+      "creator-monetization-engine",
+      "cross-border-ai-strategist",
+      "dtc-brand-library",
+      "japan-med-content-matrix",
+      "know-an-industry-fast",
+      "music-video-prep",
+      "music-video-title-generator",
+      "notebooklm-py",
+      "remotion",
+      "remotion-ads-producer",
+      "seven-figure-course-builder",
+      "site-accessibility-judge",
+      "skill-orchestrator",
+      "smart-illustrator",
+      "web-metadata-extractor",
+      "wp-site-manager",
+      "youtube-broll-illustrator",
+      "youtube-channel-scraper",
+      "youtube-downloader",
+      "youtube-plan-new-video",
+      "youtube-research-video-topic",
+      "youtube-thumbnail",
+      "youtube-title",
+      "youtube-video-hook"
+    ],
+    "wordpress": [
+      "SureCart Manager",
+      "cloudflare-dns-manager",
+      "creator-monetization-engine",
+      "skill-orchestrator",
+      "vps-manager-ssh",
+      "wordpress-router",
+      "world-inspire-lab",
+      "wp-block-development",
+      "wp-block-themes",
+      "wp-cli-expert",
+      "wp-interactivity-api",
+      "wp-performance",
+      "wp-phpstan",
+      "wp-playground",
+      "wp-plugin-development",
+      "wp-project-triage",
+      "wp-rest-api",
+      "wp-site-manager",
+      "wp-wpcli-and-ops",
+      "wpds"
+    ],
+    "nextjs": [
+      "backend-patterns",
+      "cache-components",
+      "china-global-deployment",
+      "claude-code-agent-teams",
+      "coding-standards",
+      "frontend-patterns",
+      "interview-user",
+      "security-review",
+      "shadcn-ui",
+      "vercel-react-best-practices"
+    ],
+    "react": [
+      "cache-components",
+      "china-global-deployment",
+      "claude-code-agent-teams",
+      "coding-standards",
+      "frontend-design",
+      "frontend-patterns",
+      "react:components",
+      "remotion",
+      "remotion-ads-producer",
+      "security-review",
+      "shadcn-ui",
+      "skill-creator",
+      "skill-orchestrator",
+      "stitch",
+      "svg-icon-search",
+      "tdd-workflow",
+      "vercel-react-best-practices",
+      "wpds"
+    ],
+    "reddit": [
+      "connect",
+      "domain-hunter",
+      "monetization-first-development",
+      "reddit",
+      "seo-geo",
+      "trademark-guard"
+    ]
+  },
+  "tag_counts": {
+    "python": 54,
+    "nodejs": 34,
+    "bash": 127,
+    "javascript": 37,
+    "generation": 88,
+    "image": 63,
+    "video": 38,
+    "audio": 23,
+    "data": 89,
+    "go": 28,
+    "notion": 12,
+    "github": 44,
+    "optimization": 47,
+    "automation": 31,
+    "text": 68,
+    "google": 46,
+    "research": 29,
+    "analysis": 55,
+    "typescript": 20,
+    "twitter": 18,
+    "youtube": 27,
+    "wordpress": 20,
+    "nextjs": 10,
+    "react": 18,
+    "reddit": 6
+  },
+  "skills": {
+    "302ai-integration": {
+      "name": "302ai-integration",
+      "description": "Use this skill to integrate or execute 302.ai APIs (LLM, Image, Video, Audio). Supports code generation AND direct execution from the CLI.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "nodejs",
+        "bash",
+        "javascript",
+        "generation",
+        "image",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "Claude CLI Guide": {
+      "name": "Claude CLI Guide",
+      "description": "Comprehensive guide for Claude Code CLI — installation, configuration, architecture, memory system, hooks, and disaster recovery. The single source of truth for rebuilding a Claude Code environment from scratch.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "go",
+        "bash",
+        "notion",
+        "github",
+        "optimization",
+        "automation",
+        "text",
+        "data"
+      ],
+      "dependencies": [
+        "--dangerously-skip-permissions",
+        "--verbose"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "Flight Search": {
+      "name": "Flight Search",
+      "description": "Quick flight search using SerpAPI Google Flights. Real-time pricing from airlines.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "google",
+        "github",
+        "data"
+      ],
+      "dependencies": [
+        "--days",
+        "--end-date",
+        "--interval",
+        "--return-date"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "Gemini CLI Guide": {
+      "name": "Gemini CLI Guide",
+      "description": "Comprehensive guide for Google's Gemini CLI - features, configuration, MCP setup, and troubleshooting",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "notion",
+        "google",
+        "github",
+        "automation"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "Google Cloud Integration": {
+      "name": "Google Cloud Integration",
+      "description": "Official integration for Google Cloud Platform (GCP) services via MCP and gcloud CLI. managing authentication, remote MCP connections (BigQuery, Compute, etc.), and environment stability.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "google"
+      ],
+      "dependencies": [
+        "bolt240206-1707214083328",
+        "gcp-vertex-ai"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "Honest Deep Researcher": {
+      "name": "Honest Deep Researcher",
+      "description": "A research specialist that prioritizes factual accuracy, data validation, and transparent reporting. It actively saves intermediate work, cross-validates findings, and produces high-quality, interactive HTML/Markdown reports.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "go",
+        "bash",
+        "google",
+        "research",
+        "generation",
+        "optimization",
+        "analysis",
+        "text",
+        "data"
+      ],
+      "dependencies": [
+        "competitive-ads-extractor",
+        "competitor-analysis",
+        "google-deep-research",
+        "market-sizing",
+        "market-sizing-analysis",
+        "memory-vault"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "Interview-to-Article": {
+      "name": "Interview-to-Article",
+      "description": "An interactive interview agent that acts as a reporter/editor to extract your thoughts and ghostwrite high-quality articles. Use it when the user has a rough idea but struggles to start writing, or wants to turn a conversation into a polished post.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "generation"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "Life Learning Companion": {
+      "name": "Life Learning Companion",
+      "description": "A strategic partner for life analysis. Summarizes experiences, extracts principles, and logs them to Notion.",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "notion",
+        "optimization",
+        "analysis",
+        "text",
+        "data"
+      ],
+      "dependencies": [
+        "19be1b43-2393-80fc-8ee7-cc4f46be2c95",
+        "222e1b43-2393-81c8-9d41-f8a95ef80d4f",
+        "27de1b43-2393-8081-b6e9-c786c8686150"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "Lifestyle Aesthetic Designer": {
+      "name": "Lifestyle Aesthetic Designer",
+      "description": "Proactive coaching and day-design based on the \"Life Aesthetic\" philosophy (Inner Glow, 60% Energy Rule, Dance Linkage).",
+      "primary_domain": "AI & ML",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "MCP Integration": {
+      "name": "MCP Integration",
+      "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${ANTIGRAVITY_SKILL_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Antigravity plugins for external tool and service integration.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "github",
+        "generation",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [
+        "--header"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "Manim Math Animator": {
+      "name": "Manim Math Animator",
+      "description": "Generate high-quality mathematical animations and visualizations using the Manim (Community Edition) Python library.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "python",
+        "bash",
+        "generation",
+        "text",
+        "video"
+      ],
+      "dependencies": [
+        "-pqh",
+        "-pql"
+      ],
+      "output_formats": [
+        "markdown",
+        "video"
+      ]
+    },
+    "Media Organizer": {
+      "name": "Media Organizer",
+      "description": "High-performance, multi-threaded toolkit for media ingestion, smart deduplication, and integrity validation.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "python",
+        "bash",
+        "optimization",
+        "image",
+        "video"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "video"
+      ]
+    },
+    "Nano-Banana": {
+      "name": "Nano-Banana",
+      "description": "name: Nano-Banana",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "go",
+        "bash",
+        "google",
+        "generation",
+        "optimization",
+        "text",
+        "image",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [
+        "--apimart",
+        "--caller",
+        "--fast",
+        "--flash",
+        "--google",
+        "--image",
+        "--kie",
+        "--pro",
+        "--proxy",
+        "--session"
+      ],
+      "output_formats": [
+        "audio",
+        "image",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "OpenAI Codex Guide": {
+      "name": "OpenAI Codex Guide",
+      "description": "Comprehensive guide for OpenAI Codex CLI — installation, configuration, usage patterns, model selection, and best practices. The single source of truth for OpenAI Codex environment setup.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "typescript",
+        "github",
+        "generation",
+        "optimization"
+      ],
+      "dependencies": [
+        "--dangerously-skip-permissions",
+        "--full-auto",
+        "danger-full-access",
+        "gpt-5-mini",
+        "gpt-5-nano",
+        "o3-mini"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "Package Tracker": {
+      "name": "Package Tracker",
+      "description": "A universal CLI tool and skill to track packages globally. Automatically scrapes supported carriers (Japan Post) and provides smart deep-links for all others (Universal).",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "google"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "Post Social Media Image/Video with GetLate API": {
+      "name": "Post Social Media Image/Video with GetLate API",
+      "description": "Automate social media posting via GetLate API. Use this skill when the user wants to post images or videos to multiple social media platforms (Twitter, LinkedIn, Instagram, etc.) simultaneously, repurposing content with platform-specific optimizations (\"tone\" or \"调性\"). It handles connection verification, media uploading, and bulk publishing.",
+      "primary_domain": "Social Media",
+      "tags": [
+        "bash",
+        "twitter",
+        "automation",
+        "text",
+        "image",
+        "video"
+      ],
+      "dependencies": [
+        "--profile-id"
+      ],
+      "output_formats": [
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "RL Training with PPO": {
+      "name": "RL Training with PPO",
+      "description": "Comprehensive guide for training reinforcement learning agents using Proximal Policy Optimization (PPO) with Stable-Baselines3",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "go",
+        "bash",
+        "github",
+        "optimization",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "Read-Media-Gemini": {
+      "name": "Read-Media-Gemini",
+      "description": "A specialized skill for Gemini 3 Flash and other models via Antigravity Local Proxy. Optimized for multimodal understanding. Supports local files, Google Drive URLs, and YouTube URLs. For spatial reasoning, counting, zooming, or programmatic image analysis, delegates to agentic-vision-gemini (agentic mode with code execution).",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "bash",
+        "youtube",
+        "google",
+        "optimization",
+        "analysis",
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "dependencies": [
+        "agentic-vision-gemini",
+        "gemini-3-flash-preview"
+      ],
+      "output_formats": [
+        "audio",
+        "image",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "Scientific Business Guide": {
+      "name": "Scientific Business Guide",
+      "description": "An expert business advisor skill based on the 'Scientific Entrepreneurship' methodology and psychological naming strategies.",
+      "primary_domain": "AI & ML",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "Skill Improver": {
+      "name": "Skill Improver",
+      "description": "A meta-skill for auditing, improving, refactoring, and verifying other Agent Skills. Handles script consolidation, error handling enhancement, and documentation updates.",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "python",
+        "nodejs",
+        "bash",
+        "javascript",
+        "generation",
+        "optimization"
+      ],
+      "dependencies": [
+        "skill-improver",
+        "skill-install"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "Social Dynamics Mastery": {
+      "name": "Social Dynamics Mastery",
+      "description": "An expert dating and social dynamics coach. Combines confident communication patterns with deep evolutionary psychology and attraction logic. Capable of analyzing complex social situations and generating \"Chat Bible\" responses.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "generation",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "SureCart Manager": {
+      "name": "SureCart Manager",
+      "description": "Full ecommerce automation for SureCart — catalog, orders, subscriptions, fulfillment, coupons, webhooks, analytics, licensing, affiliates, and WordPress PHP integration via REST API.",
+      "primary_domain": "E-commerce",
+      "tags": [
+        "go",
+        "bash",
+        "wordpress",
+        "generation",
+        "automation",
+        "image",
+        "data"
+      ],
+      "dependencies": [
+        "skill-improver",
+        "x-webhook-signature",
+        "x-webhook-timestamp"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "Topaz Photo AI Upscaler": {
+      "name": "Topaz Photo AI Upscaler",
+      "description": "Professional AI-powered image upscaling using Topaz Photo AI CLI. Better quality than Upscayl for camera photos, with intelligent autopilot and manual controls.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "python",
+        "bash",
+        "image"
+      ],
+      "dependencies": [
+        "95-98"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "academic-navigator": {
+      "name": "academic-navigator",
+      "description": "一个顶尖的终身学习与学业规划技能，旨在打破信息差。它涵盖从小学到博士的规划，根据学生背景、家庭经济状况和长期目标提供战略建议。适用于用户询问学业规划、留学建议、职业路径设计或教育策略时。",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "bash",
+        "generation",
+        "data"
+      ],
+      "dependencies": [
+        "memory-vault"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "agentic-vision-gemini": {
+      "name": "agentic-vision-gemini",
+      "description": "Google Gemini 3 Flash Agentic Vision — model writes and executes Python code to process images (zoom, crop, count, measure). Use when user needs spatial reasoning over images, NOT just description. Triggers on: \"zoom into X\", \"count Y in image\", \"measure Z\", \"compare regions\", or any task requiring programmatic image analysis.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "bash",
+        "google",
+        "analysis",
+        "text",
+        "image"
+      ],
+      "dependencies": [
+        "-",
+        "--image",
+        "--mime",
+        "--model",
+        "--no-steps",
+        "--prompt",
+        "gemini-3-flash-preview",
+        "google-genai"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "aippt": {
+      "name": "aippt",
+      "description": "AIPPT - 基于模板定制化生成 PPT。垫图约束风格 → Kie's nano banana pro 替换内容 → Antigravity IDE 生成每一页 → 打包 PPTX。",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "nodejs",
+        "bash",
+        "javascript",
+        "generation",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "alias": {
+      "name": "alias",
+      "description": "Reference for all custom shell aliases and functions in ~/.zshrc.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash"
+      ],
+      "dependencies": [
+        "--dangerously-skip-permissions",
+        "site-urls"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "allowance-application-and-alignment-check": {
+      "name": "allowance-application-and-alignment-check",
+      "description": "Bokksu 健康保险伤病津贴申请表视觉对齐检查 SOP。主要用于检查第 2 页填写的日期与第 4 页医生证明信息是否一致，确保个人信息无误，且申请周期无缝衔接。",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "image"
+      ],
+      "dependencies": [
+        "-o",
+        "agentic-vision-gemini"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "amazon-operations-director": {
+      "name": "amazon-operations-director",
+      "description": "Expert Amazon Operations Director skill (FBA & FBM). Helps with product development (cost/pricing/audience/supply chain), listing creation (SEO title, bullets, description), visual strategy (designer briefs), and customer service emails. Use when developing new Amazon products or optimizing listings/operations for any marketplace.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "generation",
+        "optimization",
+        "analysis",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image"
+      ]
+    },
+    "backend-patterns": {
+      "name": "backend-patterns",
+      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "nodejs",
+        "javascript",
+        "typescript",
+        "nextjs",
+        "optimization",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "banner-creator": {
+      "name": "banner-creator",
+      "description": "Create banners using AI image generation. Discuss format/style, generate variations, iterate with user feedback, crop to target ratio. Use when user wants to create a banner, header, hero image, cover image, GitHub banner, Twitter header, or readme banner.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "bash",
+        "youtube",
+        "github",
+        "twitter",
+        "generation",
+        "text",
+        "image"
+      ],
+      "dependencies": [
+        "--taobao"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "baoyang-guide": {
+      "name": "baoyang-guide",
+      "description": "包养关系深度解析技能。当用户询问包养、糖宝、金主、Sugar Baby/Sugar Daddy相关话题时使用。提供市场行情、双方需求、价格体系、寻找渠道、法律边界与情感风险的全面分析。",
+      "primary_domain": "",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "best-minds": {
+      "name": "best-minds",
+      "description": "模拟器思维：通过模拟领域顶级专家或生活教练的视角来回答问题。触发词：最强大脑、顶级专家、世界级、best minds、谁最懂这个、life-coach、生活教练",
+      "primary_domain": "AI & ML",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "bird": {
+      "name": "bird",
+      "description": "X/Twitter CLI for reading, searching, and posting via cookies or Sweetistics.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "twitter",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "business-model-xray": {
+      "name": "business-model-xray",
+      "description": "商业模式 X 光审计师。用于评估、拆解、压力测试任何商业模式或创业想法。识别资金盘、逆向选择、边际成本陷阱、SPV主体隔离红旗、崩盘前死亡信号等致命漏洞。当用户想验证一个商业模式、判断项目是否可行、或分析某个平台为何暴雷时使用。",
+      "primary_domain": "AI & ML",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "cache-components": {
+      "name": "cache-components",
+      "description": "|   Expert guidance for Next.js Cache Components and Partial Prerendering (PPR).    **PROACTIVE ACTIVATION**: Use this skill automatically when working in Next.js projects that have `cacheComponents: true` in their next.config.ts/next.config.js. When this config is detected, proactively apply Cache Components patterns and best practices to all React Server Component implementations.    **DETECTION**: At the start of a session in a Next.js project, check for `cacheComponents: true` in next.config. If enabled, this skill's patterns should guide all component authoring, data fetching, and caching decisions.    **USE CASES**: Implementing 'use cache' directive, configuring cache lifetimes with cacheLife(), tagging cached data with cacheTag(), invalidating caches with updateTag()/revalidateTag(), optimizing static vs dynamic content boundaries, debugging cache issues, and reviewing Cache Component implementations.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "bash",
+        "javascript",
+        "typescript",
+        "react",
+        "nextjs",
+        "generation",
+        "optimization",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "capability-evolver": {
+      "name": "capability-evolver",
+      "description": "A self-evolution engine for AI agents. Analyzes runtime history to identify improvements and applies protocol-constrained evolution.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "nodejs",
+        "bash",
+        "javascript",
+        "github",
+        "generation",
+        "optimization",
+        "analysis"
+      ],
+      "dependencies": [
+        "--loop",
+        "--review",
+        "early-stabilize",
+        "feishu-card",
+        "repair-only",
+        "steady-state"
+      ],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "changelog-generator": {
+      "name": "changelog-generator",
+      "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "github",
+        "generation"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "china-global-deployment": {
+      "name": "china-global-deployment",
+      "description": "A comprehensive skill for deploying static sites accessible from both China and globally, with emphasis on global performance while maintaining China accessibility.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "nodejs",
+        "go",
+        "bash",
+        "javascript",
+        "react",
+        "nextjs",
+        "google",
+        "github",
+        "optimization",
+        "automation",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [
+        "mcp-server-cloudflare"
+      ],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "chrome-devtools": {
+      "name": "chrome-devtools",
+      "description": "Control and inspect Chrome browser instances using Chrome DevTools Protocol via MCP.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "javascript",
+        "google"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "city-cost-compare-nomad": {
+      "name": "city-cost-compare-nomad",
+      "description": "Compare cost of living across cities using live Numbeo data. Fetches rent, meals, utilities, transport, and salary. Groups by country with flag headers in markdown output.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "data"
+      ],
+      "dependencies": [
+        "--local",
+        "--md",
+        "--no-cache",
+        "--no-color"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "clash-verge-guide": {
+      "name": "clash-verge-guide",
+      "description": "Manage Clash Verge configuration and rules.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "nodejs",
+        "go",
+        "bash",
+        "notion",
+        "youtube",
+        "google",
+        "github",
+        "text",
+        "image",
+        "video",
+        "data"
+      ],
+      "dependencies": [
+        "append-rules",
+        "cn-node-1",
+        "fake-ip",
+        "prepend-rules",
+        "redir-host"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "claude-code-agent-teams": {
+      "name": "claude-code-agent-teams",
+      "description": "Definitive reference for Claude Code's built-in Agent Teams system. Use when orchestrating multi-agent work — spawning teammates, assigning tasks, messaging, broadcasting, and coordinating parallel execution. Essential reading for any LLM engine (Claude, Gemini, GLM, OpenAI) powering Claude Code that needs to use teams.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "nodejs",
+        "go",
+        "bash",
+        "javascript",
+        "typescript",
+        "react",
+        "nextjs",
+        "research",
+        "text"
+      ],
+      "dependencies": [
+        "general-purpose"
+      ],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "claude-code-agile-updater": {
+      "name": "claude-code-agile-updater",
+      "description": "Agile, asynchronous auto-update system for Claude Code. Intelligently checks for updates every hour, logs all activity, sends notifications, and provides status monitoring. More responsive and transparent than simple cron-based updates. user-invocable: true allowed-tools:   - Bash   - Read   - Write",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "bash",
+        "research"
+      ],
+      "dependencies": [
+        "claude-cli-guide",
+        "environment-manager",
+        "system-git-discovery-sync"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "clawdbot-repair": {
+      "name": "clawdbot-repair",
+      "description": "Expert guide for troubleshooting and repairing Clawdbot installations. Use this skill when Clawdbot is not working, the agent is missing from the UI, or there are connection/authentication errors.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "nodejs",
+        "go",
+        "bash",
+        "google",
+        "data"
+      ],
+      "dependencies": [
+        "-",
+        "gemini-3-pro-high",
+        "google-antigravity-auth",
+        "openai-codex",
+        "openclaw-bot1",
+        "openclaw-bot3",
+        "openclaw-bot9",
+        "openclaw-gateway"
+      ],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "cloudflare-dns-manager": {
+      "name": "cloudflare-dns-manager",
+      "description": "Manage Cloudflare DNS records via local MCP server. CRUD operations on DNS records across all zones.",
+      "primary_domain": "Business & Productivity",
+      "tags": [
+        "bash",
+        "wordpress"
+      ],
+      "dependencies": [
+        "cloudflare-dns",
+        "cloudflare-dns-analytics"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "codex-config": {
+      "name": "codex-config",
+      "description": "OpenAI Codex CLI configuration reference. Use when setting up or troubleshooting Codex defaults, approval mode, sandbox, or model settings.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "coding-standards": {
+      "name": "coding-standards",
+      "description": "Universal coding standards, best practices, and patterns for TypeScript, JavaScript, React, and Node.js development.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "nodejs",
+        "javascript",
+        "typescript",
+        "react",
+        "nextjs",
+        "optimization",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "company-asset-isolation": {
+      "name": "company-asset-isolation",
+      "description": "公司架构与资产隔离专家。讲解如何通过SPV（特殊目的实体）、主体分离、控股架构等合法手段保护核心资产、隔离经营风险。当用户想了解公司架构设计、资产保护、风险隔离、或分析某公司如何做主体隔离时使用。",
+      "primary_domain": "",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "competitive-ads-extractor": {
+      "name": "competitive-ads-extractor",
+      "description": "Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "notion",
+        "research",
+        "analysis",
+        "image",
+        "video",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "connect": {
+      "name": "connect",
+      "description": "Connect Claude to any app. Send emails, create issues, post messages, update databases - take real actions across Gmail, Slack, GitHub, Notion, and 1000+ services.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "notion",
+        "google",
+        "github",
+        "twitter",
+        "reddit",
+        "generation",
+        "text",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "consultant-friend": {
+      "name": "consultant-friend",
+      "description": "A strategic advisor who thinks like a McKinsey partner (MECE, structured) but speaks like a close friend (natural, candid, jargon-free). Use when the user needs deep problem analysis or strategic advice without the corporate stiff upper lip.",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "optimization",
+        "analysis",
+        "text",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "content-research-writer": {
+      "name": "content-research-writer",
+      "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "research",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "context-engineering-collection": {
+      "name": "context-engineering-collection",
+      "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "research",
+        "optimization",
+        "automation",
+        "analysis",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "continuous-learning-v2": {
+      "name": "continuous-learning-v2",
+      "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "github",
+        "twitter",
+        "generation",
+        "analysis"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "creating-financial-models": {
+      "name": "creating-financial-models",
+      "description": "This skill provides an advanced financial modeling suite with DCF analysis, sensitivity testing, Monte Carlo simulations, and scenario planning for investment decisions",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "generation",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "creator-monetization-engine": {
+      "name": "creator-monetization-engine",
+      "description": "Comprehensive global creator monetization framework with multi-platform distribution, team-based content multiplication, local partnerships, and project-based planning. Use when planning creator business models, building distribution strategies across countries/platforms, setting up publisher matrices, diversifying income streams (courses, communities, services, affiliate marketing, local partnerships), or managing creator projects with revenue tracking. Covers platform courses (Skillshare, Coursera, Udemy), own-site LMS, paid/free communities, tutoring, consultation, local brand/scenic area partnerships, and content repurposing strategies.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "bash",
+        "wordpress",
+        "youtube",
+        "research",
+        "generation",
+        "optimization",
+        "automation",
+        "video",
+        "data"
+      ],
+      "dependencies": [
+        "content-research-writer",
+        "performance-ads-writer",
+        "youtube-thumbnail",
+        "youtube-title"
+      ],
+      "output_formats": [
+        "markdown",
+        "video"
+      ]
+    },
+    "cross-border-ai-strategist": {
+      "name": "cross-border-ai-strategist",
+      "description": "跨境电商多区域 AI 策略顾问。用户输入产品或想法，输出：市场适配评分、套利空间分析（信息差/视觉差/竞争差）、AI 图像生成策略（Nano Banana 2/Pro 选型 + 提示词框架）、各语种市场优先级排序与快速启动行动计划。覆盖英/德/日/法/阿拉伯/西班牙语六大语种市场。",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "youtube",
+        "google",
+        "text"
+      ],
+      "dependencies": [
+        "aippt-enterprise",
+        "creator-monetization-engine",
+        "cross-border-product-selector",
+        "dtc-brand-library",
+        "ecommerce-kv",
+        "ecommerce-lp-generator",
+        "ecommerce-product-refine",
+        "executing-marketing-campaigns",
+        "memory-vault",
+        "naturalize-text-localize"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "cross-border-product-selector": {
+      "name": "cross-border-product-selector",
+      "description": "跨境电商选品专家。应用\"轻小件 + 高溢价 + 情感价值\"选品逻辑，分析产品潜力、竞品格局、供应链策略，并生成具体的行动方案。当用户需要选择跨境电商产品、评估产品机会、寻找蓝海品类、分析定制化产品（水晶、相册、饰品等）、研究竞品独立站/亚马逊品牌时使用。",
+      "primary_domain": "Social Media",
+      "tags": [
+        "google",
+        "generation",
+        "video"
+      ],
+      "dependencies": [
+        "amazon-operations-director",
+        "competitive-ads-extractor",
+        "curation-expert",
+        "etsy-seller-general",
+        "psychological-copywriter"
+      ],
+      "output_formats": [
+        "markdown",
+        "video"
+      ]
+    },
+    "curation-expert": {
+      "name": "curation-expert",
+      "description": "Curation Director & Brand Alchemist. Transforms generic products into high-value concepts, bundles, and emotional experiences using strategies like Theme Engineering and Value Stacking. Use when the user wants to curate products, design gift sets, elevate brand concepts, or apply \"Bokksu/Sugoi Mart\" style marketing.",
+      "primary_domain": "Image & Design",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "design-md": {
+      "name": "design-md",
+      "description": "Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files allowed-tools:   - \"stitch*:*\"   - \"Read\"   - \"Write\"   - \"web_fetch\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "generation",
+        "analysis",
+        "image"
+      ],
+      "dependencies": [
+        "border-radius",
+        "rounded-full",
+        "rounded-lg",
+        "rounded-none"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "document-skills": {
+      "name": "document-skills",
+      "description": "Professional toolkit for PDF manipulation, Excel financial modeling, Word redlining/OOXML, and PPT automation.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "generation",
+        "automation",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "domain-hunter": {
+      "name": "domain-hunter",
+      "description": "Search domains, compare prices, find promo codes, get purchase recommendations. Use when user wants to buy a domain, check domain prices, find domain deals, compare registrars, or search for .ai/.com domains.",
+      "primary_domain": "Social Media",
+      "tags": [
+        "bash",
+        "twitter",
+        "reddit",
+        "generation",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "dtc-brand-library": {
+      "name": "dtc-brand-library",
+      "description": "DTC独立站品牌库管理系统。自动搜索、分析和存储优秀DTC品牌案例，用于跨境电商独立站参考。支持按niche/品牌名称查询、自动网页分析、结构化存储到Notion、深度流量和转化策略分析。当用户需要研究DTC品牌、分析独立站案例、寻找某个niche的标杆品牌、了解流量结构或转化逻辑时使用。触发词包括：\"研究XX品牌\"、\"找一些做XX的独立站\"、\"分析XX的流量结构\"、\"添加XX品牌到库里\"、\"有什么好的家居独立站\"、\"DTC案例\"、\"独立站参考\"。",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "youtube",
+        "analysis",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "ecommerce-kv": {
+      "name": "ecommerce-kv",
+      "description": "电商营销海报(KV)生成专家。当用户需要为产品生成带有模特、特定场景、营销文案的高级宣传海报时使用。智能分析产品属性，自动匹配模特与场景，全程严格保持产品原始结构。",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "generation",
+        "analysis",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "ecommerce-lp-generator": {
+      "name": "ecommerce-lp-generator",
+      "description": "专业的电商详情页(Landing Page)生成技能,采用网格生成技术确保一致性和效率。输入产品图片 -> 输出一系列切片的高清详情页设计图。",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "python",
+        "bash",
+        "generation",
+        "text",
+        "image"
+      ],
+      "dependencies": [
+        "--image",
+        "--resolution",
+        "--taobao"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "ecommerce-product-refine": {
+      "name": "ecommerce-product-refine",
+      "description": "电商产品精修与白底图制作专家。拥有 5 年电商产品精修经验，专精美妆、厨具、服饰、数码等全品类。当用户需要处理产品图片，进行材质优化、去瑕疵、生成符合电商标准的纯净白底图（RGB:255,255,255）时使用此技能。",
+      "primary_domain": "E-commerce",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "elon-musk-life-coach": {
+      "name": "elon-musk-life-coach",
+      "description": "Life coaching from Elon Musk's perspective. Use when the user asks for life advice, career guidance, problem-solving strategies, productivity tips, or wants to think through challenges using first principles. Mimics Elon's direct communication style and his philosophies on work, innovation, simplicity, and execution. Triggered by phrases like \"what would Elon do\", \"life coach\", \"career advice\", \"first principles\", \"how to approach [problem]\", or mentions of productivity/effectiveness.",
+      "primary_domain": "E-commerce",
+      "tags": [
+        "optimization"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "email-management": {
+      "name": "email-management",
+      "description": ">   Multi-account email configuration manager. Stores SMTP/IMAP/MX settings for all   accounts, detects misconfigurations (wrong MX, port changes, provider drift), and   auto-corrects configs by querying live DNS. Priority focus on business domains:   worldinspirelab.com, globalgrowthco.com, glintmuse.com, belovedpals.com, xinchaovi.com.   Use when: checking email health, adding/updating accounts, diagnosing delivery issues,   syncing configs after provider changes.",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "python",
+        "bash",
+        "notion",
+        "google",
+        "generation",
+        "data"
+      ],
+      "dependencies": [
+        "check-all",
+        "cloudflare-dns-manager",
+        "get-account",
+        "list-accounts",
+        "list-aliases",
+        "needs-verification"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "enhance-prompt": {
+      "name": "enhance-prompt",
+      "description": "Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results. allowed-tools:   - \"Read\"   - \"Write\"",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "generation",
+        "text",
+        "image"
+      ],
+      "dependencies": [
+        "design-md",
+        "stitch-loop"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "environment-manager": {
+      "name": "environment-manager",
+      "description": "Standardizes and maintains the local development environment for Agent skills. Use this skill when setting up a new machine, debugging missing dependencies, or ensuring all standard tools are installed.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "nodejs",
+        "bash",
+        "typescript",
+        "google"
+      ],
+      "dependencies": [
+        "env-manager",
+        "google-generativeai",
+        "puppeteer-core",
+        "skill-creator",
+        "ts-node",
+        "yt-dlp"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "etsy-seller-general": {
+      "name": "etsy-seller-general",
+      "description": "A comprehensive guide to researching, analyzing, and creating high-converting Etsy listings, focusing on platform, photo, and design tonality.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "go",
+        "research",
+        "generation",
+        "optimization",
+        "analysis",
+        "image",
+        "video",
+        "audio"
+      ],
+      "dependencies": [
+        "mcp-chrome-devtools"
+      ],
+      "output_formats": [
+        "audio",
+        "image",
+        "video"
+      ]
+    },
+    "eval-harness": {
+      "name": "eval-harness",
+      "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "bash",
+        "typescript",
+        "generation",
+        "automation"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "excalidraw-diagram": {
+      "name": "excalidraw-diagram",
+      "description": "Generate Excalidraw diagrams from text content for Obsidian. Use when user asks to create diagrams, flowcharts, mind maps, or visual representations in Excalidraw format. Triggers on \"Excalidraw\", \"画图\", \"流程图\", \"思维导图\", \"可视化\", \"diagram\".",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "github",
+        "generation",
+        "text",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "executing-marketing-campaigns": {
+      "name": "executing-marketing-campaigns",
+      "description": "Plans, creates, and optimizes marketing campaigns including content strategy, social media, email, and analytics. Helps develop go-to-market strategies, campaign messaging, and performance measurement.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "go",
+        "generation",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "family-health-guardian": {
+      "name": "family-health-guardian",
+      "description": "Act as a trusted Family Doctor and Health Guardian. Manage family health profiles, provide authentic medical advice considering budget/insurance, and track health history. Integration with memory-vault. Use when user mentions health, sickness, medical advice, family members' well-being, or \"档案\" (health records).",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "go",
+        "bash",
+        "data"
+      ],
+      "dependencies": [
+        "memory-vault"
+      ],
+      "output_formats": []
+    },
+    "file-organizer": {
+      "name": "file-organizer",
+      "description": "Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "go",
+        "bash",
+        "automation",
+        "analysis",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "firewall-manager": {
+      "name": "firewall-manager",
+      "description": "Comprehensive firewall management for Little Snitch, LuLu, and macOS built-in firewall. Designed for users with cracked/hacked apps who need to block update checks and license verification.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "nodejs",
+        "bash",
+        "google",
+        "automation",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "frontend-design": {
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "primary_domain": "Web Development",
+      "tags": [
+        "javascript",
+        "react"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "frontend-patterns": {
+      "name": "frontend-patterns",
+      "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+      "primary_domain": "Web Development",
+      "tags": [
+        "javascript",
+        "typescript",
+        "react",
+        "nextjs",
+        "optimization",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "gemini-watermark-remover": {
+      "name": "gemini-watermark-remover",
+      "description": "Watermark removal toolkit — Gemini invisible watermark, NotebookLM PDF/image, Seedance/Douyin video, general inpainting.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "python",
+        "bash",
+        "github",
+        "image",
+        "video"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "video"
+      ]
+    },
+    "general-analysis-5w1h": {
+      "name": "general-analysis-5w1h",
+      "description": "A universal 5W1H (What/Why/Who/When/Where/How) analysis framework for deconstructing any new technology, product, concept, or project into a structured, actionable model. Use this skill when asked to perform a deep, structured analysis or to provide a comprehensive overivew of a new topic.",
+      "primary_domain": "Business & Productivity",
+      "tags": [
+        "analysis"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "general-song-writer": {
+      "name": "general-song-writer",
+      "description": "Hit songwriter agent. Generates catchy, emotional, and memorable lyrics (hooks/spreadable points) and provides specific prompts for AI music generation (Suno/Udio). Use when the user asks to write a song, lyrics, or describes a music vibe.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "generation",
+        "audio"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "markdown"
+      ]
+    },
+    "godaddy-dns-manager": {
+      "name": "godaddy-dns-manager",
+      "description": "Manage GoDaddy DNS records via local MCP server using FastMCP.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "bash"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "google-deep-research": {
+      "name": "google-deep-research",
+      "description": "Conduct deep research using Google NotebookLM (and optionally Gemini Web). Automates web searching, source gathering, notebook creation, and report synthesis.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "bash",
+        "google",
+        "research",
+        "generation",
+        "data"
+      ],
+      "dependencies": [
+        "notebooklm-py"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "google-docs-mcp-server": {
+      "name": "google-docs-mcp-server",
+      "description": "MCP server for Google Docs, Sheets, and Drive integration. Allows reading, writing, and managing Google Docs and Sheets, as well as file management in Drive.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "nodejs",
+        "javascript",
+        "google",
+        "github"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "gsd-framework-guide": {
+      "name": "gsd-framework-guide",
+      "description": "Complete reference for Get Shit Done (GSD) framework installed globally in ~/.claude. Use when user asks about GSD commands, workflows, patterns, or needs help with discuss/plan/execute/verify phases. Covers installation details, command reference, workflow patterns, and integration with existing setup.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "bash",
+        "javascript",
+        "github",
+        "research",
+        "analysis",
+        "video",
+        "audio"
+      ],
+      "dependencies": [
+        "plan-cascade",
+        "planning-with-files"
+      ],
+      "output_formats": [
+        "audio",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "guitar-learning": {
+      "name": "guitar-learning",
+      "description": "吉他学习技能，涵盖和弦理论、指法练习、音阶训练、节奏型、调式理论和实战曲目。适用于初学者到中级学习者。当用户询问吉他学习、和弦构成、指法、音阶、节奏型、练习曲目、调式理论或吉他技巧时使用此技能。",
+      "primary_domain": "Video & Media",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "gyroflow-stabilizer": {
+      "name": "gyroflow-stabilizer",
+      "description": "Stabilize video footage (especially Sony S-Log3 with gyro data) using Gyroflow CLI. Supports batch processing, custom strength (smoothness), and high-quality output. Use when user asks to \"stabilize video\", \"use gyroflow\", or \"process slog3 footage\".",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "python",
+        "bash",
+        "optimization",
+        "analysis",
+        "video",
+        "data"
+      ],
+      "dependencies": [
+        "--keep",
+        "--lock-horizon",
+        "--quality",
+        "--strength"
+      ],
+      "output_formats": [
+        "video"
+      ]
+    },
+    "heif-converter": {
+      "name": "heif-converter",
+      "description": "Expert tool for converting HEIF/HIF images to compatible formats (PNG/JPG) while managing color profiles (sRGB/P3). Best for preparing Sony A7S3/iPhone footage for AI upscaling or social sharing.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image"
+      ]
+    },
+    "historical-mirror": {
+      "name": "historical-mirror",
+      "description": "A critical lens that evaluates modern phenomena by drawing sharp parallels to historical events, analyzing their backgrounds, theoretical underpinnings, and ultimate impacts. Use this when the user asks for deep social commentary, historical comparisons, or a \"truth bomb\" regarding current trends.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "analysis"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "image-enhancer": {
+      "name": "image-enhancer",
+      "description": "Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "twitter",
+        "optimization",
+        "text",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image"
+      ]
+    },
+    "init-blast-method": {
+      "name": "init-blast-method",
+      "description": "Initializes a workspace with the B.L.A.S.T. (Blueprint, Link, Architect, Stylize, Trigger) system architecture. Use this when starting a new automation or coding project to ensure reliability and self-healing capabilities.",
+      "primary_domain": "Web Development",
+      "tags": [
+        "python",
+        "bash",
+        "notion",
+        "google",
+        "automation",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "init-vault-method": {
+      "name": "init-vault-method",
+      "description": "\"Initializes a project with the V.A.U.L.T. (Vision, Audit, Update, Link, Transfer) knowledge management system. Designed for business projects (e-commerce, product dev, research) where multiple AI agents work across sessions. Solves context amnesia, data rot, and contradiction drift.\"",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "go",
+        "bash",
+        "research",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [
+        "planning-with-files"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "internal-comms": {
+      "name": "internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Agent should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "primary_domain": "Content Creation",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "interview-user": {
+      "name": "interview-user",
+      "description": "\"A specialized skill to guide the user when a task is unclear, but prioritizing proactive solution proposals. Use this skill to front-load clarifications at the START of a task, proposing a 'Best Guess' plan first to maintain agentic momentum and avoid mid-task interruptions.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "python",
+        "go",
+        "javascript",
+        "nextjs",
+        "automation"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "iterative-retrieval": {
+      "name": "iterative-retrieval",
+      "description": "Pattern for progressively refining context retrieval to solve the subagent context problem",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "javascript",
+        "typescript",
+        "twitter"
+      ],
+      "dependencies": [
+        "continuous-learning"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "japan-med-content-matrix": {
+      "name": "japan-med-content-matrix",
+      "description": "Strategy and content generator for Japan Medical/Insurance niche. Use for creating product matrices, video scripts (YouTube/IG), and sales funnel copy targeting expats/global audience.",
+      "primary_domain": "E-commerce",
+      "tags": [
+        "youtube",
+        "generation",
+        "optimization",
+        "video"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown",
+        "video"
+      ]
+    },
+    "japan-tax-planning": {
+      "name": "japan-tax-planning",
+      "description": "Japan 確定申告 (final tax return) planning and calculation for salary earners, freelancers, foreigners, and overseas residents. Covers deductions, furusato nozei, overseas dependents, residency status, and e-Tax filing.",
+      "primary_domain": "Business & Productivity",
+      "tags": [
+        "go",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "json-canvas": {
+      "name": "json-canvas",
+      "description": "Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "nodejs",
+        "github",
+        "research",
+        "generation",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "know-an-industry-fast": {
+      "name": "know-an-industry-fast",
+      "description": "\"A systematic workflow to quickly master a new industry or topic by identifying and analyzing three key types of information sources: Frontier Practitioners (KOLs), Educators (Systematizers), and Observers (Analysts). Use this skill when you need to rapidly build a high-quality, 'Information High Ground' understanding of a specific domain.\"",
+      "primary_domain": "Research & Knowledge",
+      "tags": [
+        "youtube",
+        "twitter",
+        "research",
+        "generation",
+        "analysis",
+        "video"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown",
+        "video"
+      ]
+    },
+    "knowledge-card-generator": {
+      "name": "knowledge-card-generator",
+      "description": "Generate consistent-style knowledge cards (infographics) for self-media using Nano Banana. Claude Code generates design docs directly (no API calls). 3-step workflow - build prompt → Claude generates design → batch generation. 30 layouts, 10 styles. Auto-detects image count from content. Defaults to Nano Banana 2 (Flash model). Cost-optimized ($0.0174/image via taobao flash).",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "python",
+        "bash",
+        "google",
+        "generation",
+        "optimization",
+        "text",
+        "image"
+      ],
+      "dependencies": [
+        "--auto",
+        "--batch",
+        "--design-only",
+        "--image",
+        "--no-flash",
+        "--parse-design",
+        "--preview",
+        "--session",
+        "--thinking"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "lan-connection-manager": {
+      "name": "lan-connection-manager",
+      "description": "Manage LAN network connections (SMB/NFS shares) with stored credentials and quick connect/disconnect. Use when the user needs to connect to network shares, manage LAN connections, save connection credentials, or work with SMB/NFS mounts on macOS.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "bash",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "language-teacher": {
+      "name": "language-teacher",
+      "description": "Act as a language teacher to extract vocabulary and expressions from transcripts/recordings analysis.",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "bash",
+        "optimization",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "life-trajectory-deduction": {
+      "name": "life-trajectory-deduction",
+      "description": "A \"Fate Modeler\" skill that performs a long-term causal deduction of a user's life trajectory (1-50 years). It analyzes current states, choices, and hidden costs to project future outcomes across four key stages (35-40, 40-50, 50-60, 60+), concluding with a \"Life Balance Sheet\" of assets versus irreversible debts.",
+      "primary_domain": "AI & ML",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "local-store-promotion": {
+      "name": "local-store-promotion",
+      "description": "本地实体门店全渠道推广技能。适用于餐饮、婚纱、美容、零售等本地商家，覆盖小红书/抖音/微信/大众点评/美团等平台的内容策划、发布节奏、活动设计与数据复盘。",
+      "primary_domain": "Content Creation",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "logo-creator": {
+      "name": "logo-creator",
+      "description": "Create logos using AI image generation. Discuss style/ratio, generate variations, iterate with user feedback, crop, remove background, and export as SVG. Use when user wants to create a logo, icon, favicon, brand mark, mascot, emblem, or design a logo.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "bash",
+        "generation",
+        "image"
+      ],
+      "dependencies": [
+        "--taobao",
+        "yyyy-mm-dd"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "market-sizing-analysis": {
+      "name": "market-sizing-analysis",
+      "description": "This skill should be used when the user asks to \"calculate TAM\", \"determine SAM\", \"estimate SOM\", \"size the market\", \"calculate market opportunity\", \"what's the total addressable market\", or requests market sizing analysis for a startup or business opportunity.",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "go",
+        "research",
+        "automation",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "mcp-builder": {
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "nodejs",
+        "typescript",
+        "research",
+        "generation",
+        "text",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "media-to-notebooklm-artifacts": {
+      "name": "media-to-notebooklm-artifacts",
+      "description": "Full pipeline — convert any local media/PDF/text/docs into a NotebookLM notebook, then auto-generate slide deck, data table, infographic, video overview, and mind map in the source material's language.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "python",
+        "bash",
+        "generation",
+        "text",
+        "image",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [
+        "--retry",
+        "--wait",
+        "data-table",
+        "mind-map",
+        "notebooklm-py",
+        "slide-deck"
+      ],
+      "output_formats": [
+        "audio",
+        "image",
+        "json",
+        "video"
+      ]
+    },
+    "memory-vault": {
+      "name": "memory-vault",
+      "description": "Store and retrieve long-term context memories for users, businesses, writing projects, personas, and topics without overloading the context window. Use when the user asks to \"add memory\", \"save context\", \"remember this\", \"check memory\", \"load context\", \"what do you know about\", or when working with recurring contexts (specific businesses, writing styles, character profiles, audiences). Essential for content creators, authors, business consultants, and anyone working across multiple domains who needs AI to remember specific contexts between conversations.",
+      "primary_domain": "Business & Productivity",
+      "tags": [
+        "bash",
+        "text"
+      ],
+      "dependencies": [
+        "2024-q1",
+        "client-facing",
+        "needs-review"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "mermaid-visualizer": {
+      "name": "mermaid-visualizer",
+      "description": "Transform text content into professional Mermaid diagrams for presentations and documentation. Use when users ask to visualize concepts, create flowcharts, or make diagrams from text. Supports process flows, system architectures, comparisons, mindmaps, and more with built-in syntax error prevention.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "nodejs",
+        "github",
+        "generation",
+        "optimization",
+        "analysis",
+        "text",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "model-authenticity-verifier": {
+      "name": "model-authenticity-verifier",
+      "description": "Verifies if the current Claude environment is genuine or a shadow API substitution. Use when user suspects their API provider is using cheaper models (GLM-4, DeepSeek) instead of real Claude Sonnet 4.6.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "research",
+        "analysis",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "model-intelligence": {
+      "name": "model-intelligence",
+      "description": "Comprehensive model selection, benchmarking, and recommendation system. Provides up-to-date information on AI models with human-judged quality (Arena.ai), automated benchmarks (Vals AI, AA API), and weighted scoring across use cases. Use for model recommendations, benchmark queries, and latest model data.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "google",
+        "optimization",
+        "analysis",
+        "text",
+        "image",
+        "video",
+        "data"
+      ],
+      "dependencies": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-4-6",
+        "claude-sonnet-4-6",
+        "gemini-3-flash-preview",
+        "gpt-4o",
+        "gpt-4o-mini",
+        "gpt-5-mini",
+        "gpt-5-nano",
+        "o3-mini"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "model-library-generator": {
+      "name": "model-library-generator",
+      "description": "**Use this skill when**: The user wants to create, manage, or reference a library of consistent character models for image generation, especially for e-commerce, branding, or content that needs human ",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "bash",
+        "google",
+        "generation",
+        "optimization",
+        "analysis",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [
+        "usa-asian-female-27-emma-chen-163cm-lean-001",
+        "usa-black-female-30-aisha-johnson-170cm-athletic-001",
+        "usa-caucasian-female-32-sophia-martinez-168cm-athletic-001",
+        "usa-latina-female-29-isabella-santos-165cm-curvy-001"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "monetization-first-development": {
+      "name": "monetization-first-development",
+      "description": "{",
+      "primary_domain": "E-commerce",
+      "tags": [
+        "bash",
+        "google",
+        "twitter",
+        "reddit",
+        "research",
+        "generation",
+        "analysis",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [
+        "ecommerce-landing-page",
+        "executing-marketing-campaigns",
+        "frontend-design",
+        "market-sizing-analysis",
+        "performance-ads-writer"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "music-video-prep": {
+      "name": "music-video-prep",
+      "description": "Professional music video quality assurance and guidance skill. Acts as an audio engineering consultant to analyze recordings and provide step-by-step instructions for processing in Logic Pro or Adobe Audition. Use when the user wants to understand audio quality issues in music videos, covers, or performances, and learn how to fix them properly in a DAW. Addresses low volume, excessive stereo width (环绕声太大), thin sound (单薄), breathing instability (气息不稳), pitch correction (走音), and lack of reverb with detailed DAW-specific guidance.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "python",
+        "bash",
+        "youtube",
+        "optimization",
+        "automation",
+        "analysis",
+        "video",
+        "audio"
+      ],
+      "dependencies": [
+        "gyroflow-stabilizer",
+        "music-video-title-generator",
+        "transcribe-media"
+      ],
+      "output_formats": [
+        "audio",
+        "markdown",
+        "video"
+      ]
+    },
+    "music-video-title-generator": {
+      "name": "music-video-title-generator",
+      "description": "Generate optimized titles and descriptions for music cover videos (singing/guitar) that trigger platform algorithms and audience psychology. Use when the user asks to create titles, captions, or descriptions for their music videos, covers, or performances, or mentions optimizing for Bilibili, YouTube, Douyin, or TikTok. Also use when the user provides a song name and wants content generated for posting.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "youtube",
+        "research",
+        "generation",
+        "optimization",
+        "image",
+        "video",
+        "audio"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "my-creative-writer": {
+      "name": "my-creative-writer",
+      "description": "一个通用的、可学习用户风格的“去 AI 味”写作助手。它不局限于特定风格，而是通过分析用户的过往作品建立“风格指纹”，并结合严格的“反 AI 腔”法则（拒绝陈词滥调、教科书结构），产出极具人情味、叙事感和个人色彩的高质量文章。适用于任何希望摆脱 AI 机械感的创作者。",
+      "primary_domain": "AI & ML",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "naturalize-text": {
+      "name": "naturalize-text",
+      "description": "全语言通用翻译与文本人性化。用于跨语言翻译、润色或改写任何语言的文本，重点在于使其地道、自然，移除 AI 味（套话、免责声明、过渡词），并通过简化词汇、短句化、情感细节和受众对齐来提升可信度。",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "neck-care-specialist": {
+      "name": "neck-care-specialist",
+      "description": "name: neck-care-specialist",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "go",
+        "bash",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "notebooklm-py": {
+      "name": "notebooklm-py",
+      "description": "Advanced Python API and CLI for Google NotebookLM. Supports deep research, multi-format content generation (podcasts, videos, quizzes), and batch artifact downloading.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "python",
+        "bash",
+        "youtube",
+        "google",
+        "github",
+        "research",
+        "generation",
+        "automation",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "notion-mcp-connector": {
+      "name": "notion-mcp-connector",
+      "description": "Guide and tools for interacting with Notion via the Model Context Protocol (MCP) or Direct API. Use this skill when you need to read, search, edit, or automate workflows within a Notion workspace, including handling databases, pages, and specific integrations like Expense tracking.",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "bash",
+        "notion",
+        "github",
+        "automation",
+        "data"
+      ],
+      "dependencies": [
+        "notion-create-comment",
+        "notion-create-database",
+        "notion-create-pages",
+        "notion-fetch",
+        "notion-get-comments",
+        "notion-move-pages",
+        "notion-ops",
+        "notion-search",
+        "notion-update-data-source",
+        "notion-update-page"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "obsidian-canvas-creator": {
+      "name": "obsidian-canvas-creator",
+      "description": "Create Obsidian Canvas files from text content, supporting both MindMap and freeform layouts. Use this skill when users want to visualize content as an interactive canvas, create mind maps, or organize information spatially in Obsidian format.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "nodejs",
+        "generation",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "obsidian-cli": {
+      "name": "obsidian-cli",
+      "description": "> Official Obsidian CLI (v1.12.4) — complete reference from https://help.obsidian.md/cli",
+      "primary_domain": "Web Development",
+      "tags": [
+        "bash",
+        "javascript",
+        "text"
+      ],
+      "dependencies": [
+        "--copy"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "onecontext-manager": {
+      "name": "onecontext-manager",
+      "description": "Manage OneContext (aline-ai) — agent session trajectory tracker with TUI dashboard, git-based versioning, and Claude Code Stop hook integration.",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "python",
+        "bash",
+        "github",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [
+        "aline-ai",
+        "aline-stop-hook",
+        "onecontext-ai",
+        "planning-with-files"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "performance-ads-writer": {
+      "name": "performance-ads-writer",
+      "description": "Writes high-conversion ads for Google Ads and Meta Ads (Facebook/Instagram). Performs deep research on target URLs to extract selling points, pain points, and customer personas. Generates platform-optimized copy with strict adherence to character limits and best practices (CTR/CVR focus). Also generates structured visual briefs using Nano Banana 2/Pro model selection logic for AI-powered creative assets — covering prompt engineering, creative volume strategy, and Asset Studio workflow.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "go",
+        "google",
+        "research",
+        "generation",
+        "analysis",
+        "text",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "personal-asset-manager": {
+      "name": "personal-asset-manager",
+      "description": "Analyze, organize, and leverage personal assets (Skills, Languages, Connections) to maximize potential. Integrated with Notion and Memory Vault.",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "notion"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "planning-with-files": {
+      "name": "planning-with-files",
+      "description": "Implements Manus-style file-based planning for complex tasks. Creates task_plan.md, findings.md, and progress.md. Use when starting complex multi-step tasks, research projects, or any task requiring >5 tool calls. user-invocable: true allowed-tools:   - Read   - Write   - Edit   - Bash   - Glob   - Grep   - WebFetch   - WebSearch",
+      "primary_domain": "Business & Productivity",
+      "tags": [
+        "go",
+        "bash",
+        "research",
+        "automation",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "polyamory-rules": {
+      "name": "polyamory-rules",
+      "description": "多边关系/开放关系的个人行为准则。用规则消解不平衡，保护自我能量，维护所有人的尊严与成长。",
+      "primary_domain": "",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "postgres-patterns": {
+      "name": "postgres-patterns",
+      "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "github",
+        "optimization",
+        "text",
+        "data"
+      ],
+      "dependencies": [
+        "backend-patterns",
+        "clickhouse-io",
+        "database-reviewer"
+      ],
+      "output_formats": []
+    },
+    "prd": {
+      "name": "prd",
+      "description": "\"Generate a Product Requirements Document (PRD) for a new feature. Use when planning a feature, starting a new project, or when asked to create a PRD. Triggers on: create a prd, write prd for, plan this feature, requirements for, spec out.\"",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "generation"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "principle-driven-framework": {
+      "name": "principle-driven-framework",
+      "description": "原则和初衷驱动框架。Ensures all project docs (specs, rules, marketing, design) are rooted in and linked to core principles/vision/brand story — like constitutional law powering normal law. Use when starting a project, auditing existing docs, or when a doc/decision seems to drift from original intent. Triggers on: \"原则\", \"初衷\", \"principles\", \"vision doc\", \"brand story\", \"doc linkage\", \"why are we doing this\", \"drift from intent\", \"principle audit\".",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "bash"
+      ],
+      "dependencies": [
+        "principles-version"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "producthunt": {
+      "name": "producthunt",
+      "description": "Search and retrieve content from Product Hunt. Get posts, topics, users, and collections via the GraphQL API. Use when user mentions Product Hunt, PH, or product launches.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "prompt-lookup": {
+      "name": "prompt-lookup",
+      "description": "Activates when the user asks about AI prompts, needs prompt templates, wants to search for prompts, or mentions prompts.chat. Use for discovering, retrieving, and improving prompts.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "image",
+        "video"
+      ]
+    },
+    "psychological-copywriter": {
+      "name": "psychological-copywriter",
+      "description": "Generates high-value marketing copy using psychological principles like \"Premium Anchoring\" and \"Mental Accounting\" (心理账户). Use this skill when the user wants to justify premium pricing, reframe a product's value, or write copy that shifts consumer perception from \"expense\" to \"investment\".",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "generation",
+        "analysis"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "qingdouyun-manual": {
+      "name": "qingdouyun-manual",
+      "description": "青豆云 v1.3.21 用户操作手册技能包。包含消息发送者标识、成员排班、人工优先接待开关及数据模块重构等核心功能的详细说明与操作指南。",
+      "primary_domain": "Data & Analytics",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "react:components": {
+      "name": "react:components",
+      "description": "Converts Stitch designs into modular Vite and React components using system-level networking and AST-based validation. allowed-tools:   - \"stitch*:*\"   - \"Bash\"   - \"Read\"   - \"Write\"   - \"web_fetch\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "bash",
+        "typescript",
+        "react",
+        "google",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "reddit": {
+      "name": "reddit",
+      "description": "Search and retrieve content from Reddit. Get posts, comments, subreddit info, and user profiles via the public JSON API. Use when user mentions Reddit, a subreddit, or r/ links.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "bash",
+        "reddit"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "reference-photo-expander": {
+      "name": "reference-photo-expander",
+      "description": "Generates a series of consistent photos based on a single reference photo. Maintains subject identity, environment, styling, and \"film-level\" lighting quality while allowing variations in pose and expression. Use when a user wants to expand a single good photo into a full \"photoshoot\" series.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "generation",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image"
+      ]
+    },
+    "remotion": {
+      "name": "remotion",
+      "description": "Generate walkthrough videos from Stitch projects using Remotion with smooth transitions, zooming, and text overlays allowed-tools:   - \"stitch*:*\"   - \"remotion*:*\"   - \"Bash\"   - \"Read\"   - \"Write\"   - \"web_fetch\"",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "nodejs",
+        "bash",
+        "javascript",
+        "typescript",
+        "react",
+        "youtube",
+        "github",
+        "generation",
+        "optimization",
+        "text",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [
+        "--concurrency",
+        "--quality"
+      ],
+      "output_formats": [
+        "audio",
+        "image",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "remotion-ads-producer": {
+      "name": "remotion-ads-producer",
+      "description": "Create programmatic video ads using Remotion (React-based video framework). Best for SaaS, structured data visualization, and web-style promotional videos.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "typescript",
+        "react",
+        "youtube",
+        "generation",
+        "video",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "video"
+      ]
+    },
+    "remove-bg": {
+      "name": "remove-bg",
+      "description": "Removes white backgrounds from images to create transparent PNGs. Use this for logos, product shots, or icons. If an image has a complex background, this skill first uses Antigravity IDE's built-in nano banana (generate_image tool) to regenerate it with a pure white background before applying transparency.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "python",
+        "bash",
+        "generation",
+        "image",
+        "data"
+      ],
+      "dependencies": [
+        "--threshold"
+      ],
+      "output_formats": [
+        "image"
+      ]
+    },
+    "repair-old-photo": {
+      "name": "repair-old-photo",
+      "description": "Restore and repair old, damaged, or low-quality photos. Use when the user provides an old photo and asks to \"fix\", \"repair\", or \"restore\" it while keeping the content (faces, clothes, poses) 100% identical.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "bash",
+        "google",
+        "analysis",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image"
+      ]
+    },
+    "reverse-prompt-engineer": {
+      "name": "reverse-prompt-engineer",
+      "description": "Generates detailed AI image generation prompts from descriptions or analysis of images/content. Use this skill when the user wants to recreate an image style, \"reverse engineer\" a prompt from an image, or turn a vague idea into a high-quality visualization prompt.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "generation",
+        "analysis",
+        "text",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "security-review": {
+      "name": "security-review",
+      "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+      "primary_domain": "Web Development",
+      "tags": [
+        "bash",
+        "javascript",
+        "typescript",
+        "react",
+        "nextjs",
+        "github",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "json"
+      ]
+    },
+    "seedream-4-5": {
+      "name": "seedream-4-5",
+      "description": "Advanced 4K image generation and semantic editing (material changes, pose preservation) using Seedream 4.5. Use when standard tools fail or for complex editing tasks requiring the 4.5 Edit model.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "generation",
+        "text",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "seller-browser-safe": {
+      "name": "seller-browser-safe",
+      "description": "跨境卖家多店铺安全浏览器管理。当用户需要管理多个跨境电商店铺账号、防止账号关联、选择指纹浏览器或代理IP方案时使用。支持中国卖家在国内/海外切换场景。",
+      "primary_domain": "Video & Media",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "seo-geo": {
+      "name": "seo-geo",
+      "description": "SEO & GEO (Generative Engine Optimization) for websites. Analyze keywords, generate schema markup, optimize for AI search engines (ChatGPT, Perplexity, Gemini, Copilot, Claude) and traditional search (Google, Bing). Use when user wants to improve search visibility, search optimization, search ranking, AI visibility, ChatGPT ranking, Google AI Overview, indexing, JSON-LD, meta tags, or keyword research.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "google",
+        "github",
+        "twitter",
+        "reddit",
+        "research",
+        "generation",
+        "optimization",
+        "automation",
+        "analysis",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "serpapi-mcp": {
+      "name": "serpapi-mcp",
+      "description": "> **Purpose**: Enables real-time web search when Claude Code's built-in WebSearch is unavailable (e.g., China API providers).",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "google",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "seven-figure-course-builder": {
+      "name": "seven-figure-course-builder",
+      "description": "Complete SOP for building, launching, and scaling seven-figure online courses. Use when the user wants to create an online course, digital product, knowledge business, launch educational content, set up course infrastructure, run webinars, or scale with paid advertising. Covers market research, product creation, legal setup, email funnels, webinar sales, Facebook ads, and automation.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "youtube",
+        "research",
+        "optimization",
+        "automation",
+        "text",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "markdown",
+        "video"
+      ]
+    },
+    "shadcn-ui": {
+      "name": "shadcn-ui",
+      "description": "Expert guidance for integrating and building applications with shadcn/ui components, including component discovery, installation, customization, and best practices. allowed-tools:   - \"shadcn*:*\"   - \"mcp_shadcn*\"   - \"Read\"   - \"Write\"   - \"Bash\"   - \"web_fetch\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "bash",
+        "javascript",
+        "typescript",
+        "react",
+        "nextjs",
+        "text",
+        "data"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "site-accessibility-judge": {
+      "name": "site-accessibility-judge",
+      "description": "Analyze if a website is accessible from Global (Overseas) and China locations. Provides IP, GeoIP, and connectivity details. Use this skill when the user asks \"is this site visitable from China\", \"check site accessibility\", \"is [url] blocked in China\", or wants to see IP/Location info for a site.",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "bash",
+        "youtube",
+        "google",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "site-url-extractor": {
+      "name": "site-url-extractor",
+      "description": "Extract all URLs from any website via sitemap parsing + optional crawl fallback",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "bash",
+        "research"
+      ],
+      "dependencies": [
+        "--output"
+      ],
+      "output_formats": []
+    },
+    "skill-creator": {
+      "name": "skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "primary_domain": "Web Development",
+      "tags": [
+        "python",
+        "bash",
+        "javascript",
+        "react",
+        "analysis",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [
+        "big-query",
+        "brand-guidelines",
+        "frontend-webapp-builder",
+        "pdf-editor"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "skill-install": {
+      "name": "skill-install",
+      "description": "Install Claude skills from GitHub repositories with automated security scanning. Triggers when users want to install skills from a GitHub URL, need to browse available skills in a repository, or want to safely add new skills to their Claude environment.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "bash",
+        "github",
+        "analysis"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "skill-lookup": {
+      "name": "skill-lookup",
+      "description": "Activates when the user asks about Agent Skills, wants to find reusable AI capabilities, needs to install skills, or mentions skills for Claude. Use for discovering, retrieving, and installing skills.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "bash",
+        "automation"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "skill-orchestrator": {
+      "name": "skill-orchestrator",
+      "description": "Manage skill relationships, workflows, domain mapping, and design coherence. Use when you need to discover skills by domain/tags, find which skills work together, track workflow chains, ensure consistent design language across related skills, or audit skill dependencies. Handles skill relationship mapping, domain categorization, workflow orchestration, design language enforcement, and cross-skill coordination.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "nodejs",
+        "go",
+        "bash",
+        "react",
+        "wordpress",
+        "notion",
+        "youtube",
+        "google",
+        "github",
+        "twitter",
+        "research",
+        "generation",
+        "optimization",
+        "automation",
+        "analysis",
+        "text",
+        "image",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [
+        "content-research-writer",
+        "ecommerce-lp-generator",
+        "honest-deep-researcher",
+        "notion-mcp-connector",
+        "performance-ads-writer",
+        "skill-creator",
+        "skill-improver",
+        "skill-lookup"
+      ],
+      "output_formats": [
+        "audio",
+        "image",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "skill-seekers": {
+      "name": "skill-seekers",
+      "description": "Generate LLM skills from documentation, codebases, and GitHub repositories",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "python",
+        "bash",
+        "javascript",
+        "github",
+        "generation",
+        "analysis"
+      ],
+      "dependencies": [
+        "--skip-patterns",
+        "--skip-test-examples"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "smart-illustrator": {
+      "name": "smart-illustrator",
+      "description": "智能配图与 PPT 信息图生成器。支持三种模式：(1) 文章配图模式 - 分析文章内容，生成插图；(2) PPT/Slides 模式 - 生成批量信息图；(3) Cover 模式 - 生成封面图。所有模式默认生成图片，`--prompt-only` 只输出 prompt。支持 Bento Grid 功能展示图风格（--style bento）。触发词：配图、插图、PPT、slides、封面图、thumbnail、cover、bento grid、功能展示图、feature showcase。",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "typescript",
+        "youtube",
+        "google",
+        "twitter",
+        "generation",
+        "image"
+      ],
+      "dependencies": [
+        "--engine",
+        "--flash",
+        "--mermaid-embed",
+        "--mode",
+        "--no-config",
+        "--no-cover",
+        "--platform",
+        "--prompt-only",
+        "--ref",
+        "--save-config"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "sora2-gen": {
+      "name": "sora2-gen",
+      "description": "Generate videos using the Sora 2 model via APIMart. Use this skill when the user wants to create videos from text prompts or images using Sora 2.",
+      "primary_domain": "AI & ML",
+      "tags": [
+        "bash",
+        "generation",
+        "text",
+        "image",
+        "video"
+      ],
+      "dependencies": [
+        "--duration",
+        "--model",
+        "--prompt",
+        "--style",
+        "sora-2",
+        "sora-2-pro"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "startup-metrics-framework": {
+      "name": "startup-metrics-framework",
+      "description": "This skill should be used when the user asks about \"key startup metrics\", \"SaaS metrics\", \"CAC and LTV\", \"unit economics\", \"burn multiple\", \"rule of 40\", \"marketplace metrics\", or requests guidance on tracking and optimizing business performance metrics.",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "generation",
+        "optimization",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "stitch": {
+      "name": "stitch",
+      "description": "Unified router for all Stitch workflows. Use when the user wants to design UI, generate pages, convert designs to code, or build multi-page sites with Stitch. allowed-tools:   - \"stitch*:*\"   - \"mcp__stitch__*\"   - \"Bash\"   - \"Read\"   - \"Write\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "bash",
+        "react",
+        "google",
+        "generation"
+      ],
+      "dependencies": [
+        "design-md",
+        "enhance-prompt",
+        "react-components",
+        "stitch-loop"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "stitch-loop": {
+      "name": "stitch-loop",
+      "description": "Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern allowed-tools:   - \"stitch*:*\"   - \"chrome*:*\"   - \"Read\"   - \"Write\"   - \"Bash\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "bash",
+        "github",
+        "generation"
+      ],
+      "dependencies": [
+        "design-md"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "strategic-compact": {
+      "name": "strategic-compact",
+      "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
+      "primary_domain": "Business & Productivity",
+      "tags": [
+        "twitter",
+        "research",
+        "optimization"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "svg-generator": {
+      "name": "svg-generator",
+      "description": "Generates high-quality, scalable vector graphics (SVG) code for icons, diagrams, and illustrations. Can save directly to .svg files.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "generation",
+        "optimization",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "svg-icon-search": {
+      "name": "svg-icon-search",
+      "description": "Search for elegant SVG icons (Lucide, Phosphor, Simple Icons) using the Iconify API. Returns raw SVG code ready for implementation.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "react",
+        "github"
+      ],
+      "dependencies": [
+        "--collection",
+        "--limit"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "system-git-discovery-sync": {
+      "name": "system-git-discovery-sync",
+      "description": "Background engine for discovering, auditing, and synchronizing widespread local Git repositories. Features \"dirty state\" detection to prevent over-writing local changes and provides a visual dashboard of the local repository constellation.",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "python",
+        "bash",
+        "github",
+        "automation",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "tampermonkey": {
+      "name": "tampermonkey",
+      "description": "Expert Tampermonkey/Greasemonkey userscript development for browser automation and web enhancement.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "nodejs",
+        "javascript",
+        "github",
+        "generation",
+        "automation",
+        "text",
+        "image",
+        "audio",
+        "data"
+      ],
+      "dependencies": [
+        "context-menu",
+        "document-body",
+        "document-end",
+        "document-idle",
+        "document-start",
+        "incognito-tabs",
+        "normal-tabs"
+      ],
+      "output_formats": [
+        "audio",
+        "image"
+      ]
+    },
+    "tdd-workflow": {
+      "name": "tdd-workflow",
+      "description": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.",
+      "primary_domain": "Automation & Integration",
+      "tags": [
+        "bash",
+        "typescript",
+        "react",
+        "github",
+        "generation",
+        "optimization",
+        "automation",
+        "text",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "team-composition-analysis": {
+      "name": "team-composition-analysis",
+      "description": "This skill should be used when the user asks to \"plan team structure\", \"determine hiring needs\", \"design org chart\", \"calculate compensation\", \"plan equity allocation\", or requests organizational design and headcount planning for a startup.",
+      "primary_domain": "Business & Productivity",
+      "tags": [
+        "generation",
+        "analysis",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "teams-dashboard": {
+      "name": "teams-dashboard",
+      "description": "Real-time web dashboard for monitoring Claude Code Agent Teams. Displays teams, members, inbox messages, and tasks with live updates.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "go",
+        "bash",
+        "javascript",
+        "github",
+        "twitter",
+        "analysis",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "template-skill": {
+      "name": "template-skill",
+      "description": "Replace with description of the skill and when Claude should use it.",
+      "primary_domain": "AI & ML",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "theme-factory": {
+      "name": "theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "generation",
+        "text"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "theme-serial-gen": {
+      "name": "theme-serial-gen",
+      "description": "Generate a consistent series of images (default 4) based on a theme/topic using Nano Banana Pro. Use this when the user wants multiple cohesive images for a story, presentation, or concept.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "bash",
+        "generation",
+        "image"
+      ],
+      "dependencies": [
+        "--output-dir",
+        "--style"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "trademark-guard": {
+      "name": "trademark-guard",
+      "description": "Comprehensive intellectual property protection system covering trademarks, copyright, patents, domain price comparison, promo codes, and defensive strategies to prevent legal conflicts and build defensible product lines.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "bash",
+        "google",
+        "github",
+        "twitter",
+        "reddit",
+        "generation",
+        "text",
+        "image"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image"
+      ]
+    },
+    "transcribe-media": {
+      "name": "transcribe-media",
+      "description": "Transcribe video or audio files into text using Google's Gemini 3 Flash. Preserves original language, identifies speakers, cleans noise, and formats for readability without timestamps.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "python",
+        "bash",
+        "google",
+        "text",
+        "video",
+        "audio"
+      ],
+      "dependencies": [
+        "gemini-3-flash-preview"
+      ],
+      "output_formats": [
+        "audio",
+        "video"
+      ]
+    },
+    "travel-deal-hunter": {
+      "name": "travel-deal-hunter",
+      "description": "智能找房与旅行套餐猎手。分层订房策略，帮助数字游民在中国大陆、越南及全球找到最实惠的住宿和机票方案。核心逻辑：平台只用来搜索，真正低价在私域和长租折扣里。当用户需要找房、订酒店、比较机票或规划旅行预算时使用。",
+      "primary_domain": "Social Media",
+      "tags": [
+        "google"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "tts-elevenlabs": {
+      "name": "tts-elevenlabs",
+      "description": "Text-to-speech using ElevenLabs. Vivid, human-like voice output. Use when user wants to speak text aloud, generate audio, or convert text to speech.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "bash",
+        "generation",
+        "text",
+        "audio"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio"
+      ]
+    },
+    "twitter": {
+      "name": "twitter",
+      "description": "Search and retrieve content from Twitter/X. Get user info, tweets, replies, followers, communities, spaces, and trends via twitterapi.io. Use when user mentions Twitter, X, or tweets.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "bash",
+        "twitter"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "vercel-deployment-guide": {
+      "name": "vercel-deployment-guide",
+      "description": "A comprehensive skill for deploying projects to Vercel and understanding pricing, limits, and accessibility considerations.",
+      "primary_domain": "Infrastructure & DevOps",
+      "tags": [
+        "go",
+        "bash",
+        "javascript",
+        "github",
+        "optimization",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "json"
+      ]
+    },
+    "vercel-react-best-practices": {
+      "name": "vercel-react-best-practices",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "javascript",
+        "react",
+        "nextjs",
+        "generation",
+        "optimization",
+        "data"
+      ],
+      "dependencies": [
+        "advanced-",
+        "advanced-event-handler-refs",
+        "advanced-use-latest",
+        "async-",
+        "async-api-routes",
+        "async-defer-await",
+        "async-dependencies",
+        "async-parallel",
+        "async-suspense-boundaries",
+        "bundle-"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "verification-loop": {
+      "name": "verification-loop",
+      "description": "A comprehensive verification system for Claude Code sessions.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "javascript",
+        "typescript"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "videocut-Aroll": {
+      "name": "videocut-Aroll",
+      "description": "Comprehensive video editing agent. Expert in transcribing, detecting bloopers/silences, generating review drafts, and programmatically cutting video based on text reviews. Use this skill when the user wants to \"cut\", \"edit\", \"shorten\", or \"caption\" a talking head (A-roll) video.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "google",
+        "github",
+        "generation",
+        "text",
+        "video",
+        "audio"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "json",
+        "markdown",
+        "video"
+      ]
+    },
+    "visa-itinerary-pro": {
+      "name": "visa-itinerary-pro",
+      "description": "\"Generate reliable, humanized, and consistent visa itineraries/invitation letters for ANY country. Strictly anti-AI tone, evidence-based (OCR), and formatted for clarity (Markdown/DOCX).\"",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "go",
+        "research",
+        "generation",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "markdown",
+        "video"
+      ]
+    },
+    "visual-prompt-engineer": {
+      "name": "visual-prompt-engineer",
+      "description": "专业的 AI 视频/图像提示词工程师 (Visual Prompt Engineer)，专注于 Seedance 2.0 (即梦/Dreamina) 等先进视频模型的提示词生成与优化。擅长运镜控制、分镜设计、角色一致性保持及“爆款复制”策略。",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "bash",
+        "generation",
+        "analysis",
+        "image",
+        "audio"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "audio",
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "vps-manager-ssh": {
+      "name": "vps-manager-ssh",
+      "description": "name: vps-manager-ssh",
+      "primary_domain": "Infrastructure & DevOps",
+      "tags": [
+        "nodejs",
+        "bash",
+        "wordpress",
+        "google",
+        "github",
+        "automation",
+        "analysis",
+        "image",
+        "data"
+      ],
+      "dependencies": [
+        "api-key",
+        "chrome-devtools",
+        "google-antigravity",
+        "google-cloud-integration",
+        "google-gemini-cli",
+        "openclaw-bot1",
+        "openclaw-bot3",
+        "openclaw-bot4",
+        "openclaw-bot5",
+        "openclaw-bot6"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "vps-proxy-setup": {
+      "name": "vps-proxy-setup",
+      "description": "自动为您新购买的廉价 VPS 部署 3x-ui + VLESS-Reality，并注入 Clash Verge / ClashMi iOS",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "nodejs",
+        "bash",
+        "google",
+        "github",
+        "generation"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "json"
+      ]
+    },
+    "web-design-guidelines": {
+      "name": "web-design-guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "primary_domain": "Development & Code",
+      "tags": [],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "web-metadata-extractor": {
+      "name": "web-metadata-extractor",
+      "description": "name: web-metadata-extractor",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "bash",
+        "javascript",
+        "youtube",
+        "twitter",
+        "automation",
+        "analysis",
+        "text",
+        "image",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "web-scraper-patterns": {
+      "name": "web-scraper-patterns",
+      "description": "Web scraping methodology with proven patterns for inspecting HTML structure, testing extraction logic, handling encoding (especially Chinese sites), rate limiting, and progress monitoring. Use when scraping websites, extracting content from HTML, or building data collection workflows.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "javascript",
+        "automation",
+        "text",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "web-search-manager": {
+      "name": "web-search-manager",
+      "description": "Unified web search with Brave Search (1,000/month) + SerpAPI fallback (100/month). Privacy-focused, unbiased results.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "google",
+        "github"
+      ],
+      "dependencies": [
+        "mcp-flight-search"
+      ],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "wheel-check": {
+      "name": "wheel-check",
+      "description": "Search GitHub + npm for existing high-star solutions before building. Use when about to implement something that likely has a popular open-source equivalent (HTTP clients, auth, parsers, ORMs, CLI frameworks, API wrappers, etc.). Skip for simple glue scripts or one-off transforms.",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "github",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "wordpress-router": {
+      "name": "wordpress-router",
+      "description": "\"Use when the user asks about WordPress codebases (plugins, themes, block themes, Gutenberg blocks, WP core checkouts) and you need to quickly classify the repo and route to the correct workflow/skill (blocks, theme.json, REST API, WP-CLI, performance, security, testing, release packaging).\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "wordpress"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "world-inspire-lab": {
+      "name": "world-inspire-lab",
+      "description": "\"Global Developer capability for World Inspire Lab. Handles Frontend Design , Marketing Page generation, and Responsiveness updates via WordPress API.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "python",
+        "go",
+        "bash",
+        "javascript",
+        "wordpress",
+        "google",
+        "generation",
+        "text",
+        "image"
+      ],
+      "dependencies": [
+        "chrome-devtools"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-block-development": {
+      "name": "wp-block-development",
+      "description": "\"Use when developing WordPress (Gutenberg) blocks: block.json metadata, register_block_type(_from_metadata), attributes/serialization, supports, dynamic rendering (render.php/render_callback), deprecations/migrations, viewScript vs viewScriptModule, and @wordpress/scripts/@wordpress/create-block build and test workflows.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "wordpress",
+        "data"
+      ],
+      "dependencies": [
+        "wp-env",
+        "wp-interactivity-api"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-block-themes": {
+      "name": "wp-block-themes",
+      "description": "\"Use when developing WordPress block themes: theme.json (global settings/styles), templates and template parts, patterns, style variations, and Site Editor troubleshooting (style hierarchy, overrides, caching).\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "javascript",
+        "wordpress"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-cli-expert": {
+      "name": "wp-cli-expert",
+      "description": "Expert WordPress management using WP-CLI. Use when the user wants to manage WordPress sites via command line, automate tasks, fix errors (WSOD), bulk update plugins, modify database entries safely, manage multisite networks, configure wp cron jobs, set up wp-cli.yml, or create automation scripts. Triggers include \"wp cli\", \"manage wordpress\", \"install plugin\", \"search replace db\", \"create user\", \"multisite\", \"wp cron\", \"wp-cli.yml\", \"automation script\".",
+      "primary_domain": "Web Development",
+      "tags": [
+        "bash",
+        "wordpress",
+        "automation",
+        "image",
+        "data"
+      ],
+      "dependencies": [
+        "--all-tables-with-prefix",
+        "--allow-root",
+        "--dry-run",
+        "--network",
+        "--precise",
+        "--quiet",
+        "--report-changed-only"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-interactivity-api": {
+      "name": "wp-interactivity-api",
+      "description": "\"Use when building or debugging WordPress Interactivity API features (data-wp-* directives, @wordpress/interactivity store/state/actions, block viewScriptModule integration, wp_interactivity_*()) including performance, hydration, and directive behavior.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "javascript",
+        "typescript",
+        "wordpress",
+        "data"
+      ],
+      "dependencies": [
+        "---",
+        "data-wp-context",
+        "data-wp-ignore",
+        "data-wp-interactive",
+        "wp-project-triage"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-performance": {
+      "name": "wp-performance",
+      "description": "\"Use when investigating or improving WordPress performance (backend-only agent): profiling and measurement (WP-CLI profile/doctor, Server-Timing, Query Monitor via REST headers), database/query optimization, autoloaded options, object caching, cron, HTTP API calls, and safe verification.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "wordpress",
+        "generation",
+        "optimization",
+        "data"
+      ],
+      "dependencies": [
+        "--url"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-phpstan": {
+      "name": "wp-phpstan",
+      "description": "\"Use when configuring, running, or fixing PHPStan static analysis in WordPress projects (plugins/themes/sites): phpstan.neon setup, baselines, WordPress-specific typing, and handling third-party plugin classes.\"",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "nodejs",
+        "wordpress",
+        "generation",
+        "analysis"
+      ],
+      "dependencies": [
+        "wp-project-triage"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "wp-playground": {
+      "name": "wp-playground",
+      "description": "\"Use for WordPress Playground workflows: fast disposable WP instances in the browser or locally via @wp-playground/cli (server, run-blueprint, build-snapshot), auto-mounting plugins/themes, switching WP/PHP versions, blueprints, and debugging (Xdebug).\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "javascript",
+        "wordpress",
+        "github",
+        "data"
+      ],
+      "dependencies": [
+        "--auto-mount",
+        "--blueprint-may-read-adjacent-files",
+        "--enable-xdebug",
+        "--experimental-multi-worker",
+        "--mount-before-install",
+        "--skip-wordpress-setup",
+        "--xdebug"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-plugin-development": {
+      "name": "wp-plugin-development",
+      "description": "\"Use when developing WordPress plugins: architecture and hooks, activation/deactivation/uninstall, admin UI and Settings API, data storage, cron/tasks, security (nonces/capabilities/sanitization/escaping), and release packaging.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "javascript",
+        "wordpress",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "wp-project-triage": {
+      "name": "wp-project-triage",
+      "description": "\"Use when you need a deterministic inspection of a WordPress repository (plugin/theme/block theme/WP core/Gutenberg/full site) including tooling/tests/version hints, and a structured JSON report to guide workflows and guardrails.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "wordpress"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "json"
+      ]
+    },
+    "wp-rest-api": {
+      "name": "wp-rest-api",
+      "description": "\"Use when building, extending, or debugging WordPress REST API endpoints/routes: register_rest_route, WP_REST_Controller/controller classes, schema/argument validation, permission_callback/authentication, response shaping, register_rest_field/register_meta, or exposing CPTs/taxonomies via show_in_rest.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "javascript",
+        "wordpress",
+        "data"
+      ],
+      "dependencies": [
+        "custom-fields"
+      ],
+      "output_formats": [
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-site-manager": {
+      "name": "wp-site-manager",
+      "description": "Generic WordPress site management — deploy pages, manage media, execute WP-CLI remotely, site operations, safety protocols. Triggers include \"deploy page\", \"upload media\", \"wp remote\", \"site operations\", \"wp safety\", \"sitemap sync\".",
+      "primary_domain": "Web Development",
+      "tags": [
+        "python",
+        "go",
+        "bash",
+        "javascript",
+        "wordpress",
+        "youtube",
+        "google",
+        "generation",
+        "optimization",
+        "automation",
+        "analysis",
+        "image",
+        "data"
+      ],
+      "dependencies": [
+        "--dry-run",
+        "-test",
+        "-v2",
+        "chrome-devtools",
+        "is-layout-constrained",
+        "max-width",
+        "wordpress-router",
+        "wp-block-development",
+        "wp-block-themes",
+        "wp-cli-expert"
+      ],
+      "output_formats": [
+        "image",
+        "json",
+        "markdown"
+      ]
+    },
+    "wp-wpcli-and-ops": {
+      "name": "wp-wpcli-and-ops",
+      "description": "\"Use when working with WP-CLI (wp) for WordPress operations: safe search-replace, db export/import, plugin/theme/user/content management, cron, cache flushing, multisite, and scripting/automation with wp-cli.yml.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "nodejs",
+        "bash",
+        "wordpress",
+        "automation",
+        "data"
+      ],
+      "dependencies": [
+        "--network",
+        "--path",
+        "--url",
+        "search-replace"
+      ],
+      "output_formats": [
+        "markdown"
+      ]
+    },
+    "wpds": {
+      "name": "wpds",
+      "description": "\"Use when building UIs leveraging the WordPress Design System (WPDS) and its components, tokens, patterns, etc.\"",
+      "primary_domain": "Web Development",
+      "tags": [
+        "typescript",
+        "react",
+        "wordpress",
+        "text",
+        "data"
+      ],
+      "dependencies": [],
+      "output_formats": []
+    },
+    "xhs-note-creator": {
+      "name": "xhs-note-creator",
+      "description": "小红书笔记素材创作技能。当用户需要创建小红书笔记素材时使用这个技能。技能包含：根据用户的需求和提供的资料，撰写小红书笔记内容（标题+正文），生成图片卡片（封面+正文卡片），以及发布小红书笔记。",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "python",
+        "nodejs",
+        "bash",
+        "javascript",
+        "notion"
+      ],
+      "dependencies": [
+        "---",
+        "--output-dir",
+        "--theme"
+      ],
+      "output_formats": [
+        "image",
+        "markdown"
+      ]
+    },
+    "youtube-broll-illustrator": {
+      "name": "youtube-broll-illustrator",
+      "description": "Generate consistent, timeline-mapped B-roll images for YouTube videos. Analyzes video scripts (text/audio/video), understands audience context, and produces professionally organized B-roll with visual consistency. Use when user asks to \"create B-roll for video\", \"illustrate video script\", or \"generate YouTube B-roll\".",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "bash",
+        "youtube",
+        "google",
+        "generation",
+        "analysis",
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "dependencies": [
+        "--image",
+        "planning-with-files",
+        "transcribe-media",
+        "visual-prompt-engineer-patten"
+      ],
+      "output_formats": [
+        "audio",
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "youtube-channel-scraper": {
+      "name": "youtube-channel-scraper",
+      "description": "Scrape all video metadata from a YouTube channel including titles, views, duration, and publish dates.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "bash",
+        "youtube",
+        "video",
+        "data"
+      ],
+      "dependencies": [
+        "--limit",
+        "yt-dlp"
+      ],
+      "output_formats": [
+        "json",
+        "video"
+      ]
+    },
+    "youtube-downloader": {
+      "name": "youtube-downloader",
+      "description": "Download YouTube videos with customizable quality and format options. Use this skill when the user asks to download, save, or grab YouTube videos. Supports various quality settings (best, 1080p, 720p, 480p, 360p), multiple formats (mp4, webm, mkv), and audio-only downloads as MP3.",
+      "primary_domain": "Video & Media",
+      "tags": [
+        "python",
+        "bash",
+        "youtube",
+        "video",
+        "audio",
+        "data"
+      ],
+      "dependencies": [
+        "--audio-only",
+        "--format",
+        "--output",
+        "--quality",
+        "-a",
+        "-f",
+        "-o",
+        "-q",
+        "yt-dlp"
+      ],
+      "output_formats": [
+        "audio",
+        "video"
+      ]
+    },
+    "youtube-plan-new-video": {
+      "name": "youtube-plan-new-video",
+      "description": "Generate a complete video plan with optimized title, thumbnail, and hook concepts based on research. Orchestrates specialized skills (youtube-title, youtube-thumbnail, youtube-video-hook) to create production-ready video plans. Use after research is complete or when the user wants to plan a new video.",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "youtube",
+        "research",
+        "generation",
+        "text",
+        "video"
+      ],
+      "dependencies": [
+        "youtube-research-video-topic",
+        "youtube-thumbnail",
+        "youtube-title",
+        "youtube-video-hook"
+      ],
+      "output_formats": [
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "youtube-research-video-topic": {
+      "name": "youtube-research-video-topic",
+      "description": "Conduct pure research for YouTube video topics by analyzing competitors, identifying content gaps, and documenting strategic insights. Use when you need to research a video topic before planning. Produces concise, insight-focused research documents that identify the biggest opportunities for video performance.",
+      "primary_domain": "Data & Analytics",
+      "tags": [
+        "youtube",
+        "research",
+        "generation",
+        "analysis",
+        "video",
+        "data"
+      ],
+      "dependencies": [
+        "youtube-plan-new-video"
+      ],
+      "output_formats": [
+        "markdown",
+        "video"
+      ]
+    },
+    "youtube-thumbnail": {
+      "name": "youtube-thumbnail",
+      "description": "\"Skill for creating and editing Youtube thumbnails that are optimized for click-through rate. This skill should not be used directly, instead use the Thumbnail Designer subagent who can also invoke this skill. Use when the user asks to create a thumbnail from scratch or edit an existing thumbnail.\"",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "python",
+        "go",
+        "youtube",
+        "generation",
+        "optimization",
+        "text",
+        "image",
+        "video"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "youtube-title": {
+      "name": "youtube-title",
+      "description": "\"Generate optimized YouTube video titles that maximize click-through rates by sparking curiosity and complementing thumbnails. This skill should be used when the user asks to create, improve, or brainstorm YouTube video titles, or when working on YouTube content that requires title optimization.\"",
+      "primary_domain": "Content Creation",
+      "tags": [
+        "python",
+        "go",
+        "youtube",
+        "generation",
+        "optimization",
+        "analysis",
+        "text",
+        "image",
+        "video",
+        "data"
+      ],
+      "dependencies": [
+        "youtube-thumbnail"
+      ],
+      "output_formats": [
+        "image",
+        "markdown",
+        "video"
+      ]
+    },
+    "youtube-video-hook": {
+      "name": "youtube-video-hook",
+      "description": "Skill for creating optimized YouTube video opening hooks (first 5-30 seconds) that maximize viewer retention and watch time. Use when planning video scripts, reviewing video openings, or optimizing existing content for better retention metrics.",
+      "primary_domain": "Image & Design",
+      "tags": [
+        "python",
+        "youtube",
+        "optimization",
+        "video"
+      ],
+      "dependencies": [],
+      "output_formats": [
+        "video"
+      ]
+    },
+    "zlibrary-to-notebooklm": {
+      "name": "zlibrary-to-notebooklm",
+      "description": "自动从 Z-Library 下载书籍并上传到 Google NotebookLM。支持 PDF/EPUB 格式，自动转换，一键创建知识库。",
+      "primary_domain": "Development & Code",
+      "tags": [
+        "python",
+        "bash",
+        "google",
+        "github",
+        "generation",
+        "audio",
+        "data"
+      ],
+      "dependencies": [
+        "--language",
+        "notebooklm-py"
+      ],
+      "output_formats": [
+        "audio",
+        "json",
+        "markdown"
+      ]
+    }
+  }
+}

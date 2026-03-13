@@ -1,7 +1,7 @@
 ---
 name: Skill Improver
-description: A meta-skill for auditing, improving, refactoring, and verifying other Agent Skills. Handles script consolidation, error handling enhancement, and documentation updates.
-version: 1.2.0
+description: A meta-skill for auditing, improving, refactoring, and verifying other Agent Skills. Handles script consolidation, error handling enhancement, documentation updates, and skill cleaning for public sharing.
+version: 1.3.0
 ---
 
 # Skill Improver
@@ -31,6 +31,38 @@ A meta-skill designed to elevate the quality, reliability, and maintainability o
     *   Does `SKILL.md` have a frontmatter?
     *   Is there a `CHANGELOG.md`?
     *   Is there source attribution (Where did this skill come from?)?
+
+### Phase 1.5: Cleaning for Public Sharing (Optional)
+
+If preparing a skill for public distribution:
+
+1.  **Audit First**: Run audit to identify what needs cleaning
+    ```bash
+    python3 scripts/audit_skill.py /path/to/skill
+    ```
+
+2.  **Dry Run**: Preview what will be cleaned
+    ```bash
+    python3 scripts/audit_skill.py /path/to/skill --clean --dry-run
+    ```
+
+3.  **Clean**: Create sanitized version
+    ```bash
+    python3 scripts/audit_skill.py /path/to/skill --clean --output /path/to/output
+    ```
+
+**What Gets Cleaned**:
+- API tokens and secrets → placeholders (`your_api_key_here`)
+- Personal paths → generic paths (`/Users/your_username/`)
+- Database IDs → template IDs (`your-database-id-here`)
+- Email addresses → example emails (`your-email@example.com`)
+- Creates `.env.example`, `databases.md.template`, `config.example.json`
+
+**Safety**:
+- Original skill is never modified (unless `--in-place` flag used)
+- Backup created automatically
+- Detailed report shows all changes
+- Dry-run mode available for preview
 
 ### Phase 2: Strategy Formulation
 
@@ -63,6 +95,10 @@ Propose a plan to the user if the changes are significant.
     *   *Python*: Create a `main.py` using `typer` to wrap multiple functions.
     *   *Node*: Create a `index.js` bin.
 4.  **Instruction Draft**: Update `SKILL.md` to reflect the new script usage (e.g., `python scripts/main.py command` instead of `python script1.py`).
+5.  **Safe Update Strategy**:
+    *   **Check Source**: If the original source/repo has updates, CHECK them but DO NOT auto-apply.
+    *   **Protect User Wisdom (PRIORITY)**: If the local skill has significant user edits or iterations, **THINK TWICE** before overwriting. User's local improvements are often more valuable than generic source updates.
+    *   **Conflict Resolution**: If unsure, backup the current version or ask the user. Do not blindly reset to the source. **Always prioritize preserving the user's custom logic.**
 
 ### Phase 4: Verification
 
@@ -97,7 +133,20 @@ Propose a plan to the user if the changes are significant.
         3. **Token Economy**: ... (Copy from Skill Improver)
         ```
     *   **Action**: Inject the `## ⚖️ Principles` section (Specific + Inherited) before the Self-Evolution section.
-3.  **Inject Protocol**: If missing, append the following section to the end of the target's `SKILL.md`:
+3.  **Memory Integration Check**:
+    *   Does the skill work with **recurring user contexts** (writing styles, personas, business info, project briefs)?
+    *   Look for signals: "across sessions", "remember", "recurring", repeated user input in prompts.
+    *   **If yes**: Inject the following hint into the target `SKILL.md`:
+        ```markdown
+        ## 💾 Memory Integration
+        This skill benefits from `memory:context-vault` for persisting recurring contexts across sessions.
+        - Save: `python3 ~/.claude/skills/memory:context-vault/scripts/memory_manager.py save <name> <category> --content "..."`
+        - Load: `python3 ~/.claude/skills/memory:context-vault/scripts/memory_manager.py load <name>`
+        - Use when: user references a known persona, project, or style that should persist.
+        ```
+    *   **If no** (one-shot tools, converters, formatters): skip.
+
+4.  **Inject Protocol**: If missing, append the following section to the end of the target's `SKILL.md`:
     ```markdown
     ## 🧬 Self-Evolution (Autopoiesis)
     
@@ -124,6 +173,7 @@ Propose a plan to the user if the changes are significant.
 3.  **Traceability**: Always leave breadcrumbs (comments, logs) for the next agent.
 4.  **Safety First**: backup files if unsure (simple `cp file file.bak`).
 5.  **Token Economy**: `SKILL.md` is read often. Move static, one-time setup info to subfolders.
+6.  **Safe Updating (User Wisdom > Source)**: Prioritize user customizations. If the user has heavily iterated, think twice before overwriting with source updates. User's specific wisdom is more valuable than generic upstream changes.
 
 ## 🧬 Self-Evolution (Autopoiesis)
 

@@ -1,0 +1,11 @@
+Loading model registry...
+Traceback (most recent call last):
+  File "/Users/vecsatfoxmailcom/.gemini/antigravity/skills/skill-orchestrator/scripts/scan_model_references.py", line 93, in <module>
+    main()
+  File "/Users/vecsatfoxmailcom/.gemini/antigravity/skills/skill-orchestrator/scripts/scan_model_references.py", line 69, in main
+    current_models, registry = load_registry()
+                               ^^^^^^^^^^^^^^^
+  File "/Users/vecsatfoxmailcom/.gemini/antigravity/skills/skill-orchestrator/scripts/scan_model_references.py", line 36, in load_registry
+    current_models.add(model['name'])
+                       ~~~~~^^^^^^^^
+TypeError: string indices must be integers, not 'str'

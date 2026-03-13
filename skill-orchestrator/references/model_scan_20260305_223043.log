@@ -1,0 +1,33 @@
+Loading model registry...
+Found 19 current models
+
+Scanning skills...
+
+📊 Found 19 model references needing attention:
+
+⚠️  2 OUTDATED models (upgrade available):
+
+  teams-dashboard: claude-sonnet-4-5 → claude-sonnet-4-6
+  vps-manager-ssh: claude-sonnet-4-5 → claude-sonnet-4-6
+
+❓ 17 UNKNOWN models (not in registry):
+
+  alias: gemini-3-flash
+  alias: gemini-3-pro-high
+  vps-manager-ssh: gemini-3.1-pro
+  vps-manager-ssh: gemini-3-flash
+  vps-manager-ssh: gemini-2-pro
+  vps-manager-ssh: gpt-5.3-codex
+  vps-manager-ssh: gpt-4
+  vps-manager-ssh: gpt-5.2
+  model-intelligence: gemini-1.5-flash
+  model-intelligence: o1
+  codex-config: gpt-5.3-codex
+  302ai-integration: GPT-4
+  clawdbot-repair: gemini-3-pro-high
+  clawdbot-repair: gemini-3-flash
+  clawdbot-repair: gemini-3.1-pro
+  clawdbot-repair: gpt-5.3-codex
+  Nano-Banana: gemini-3-pro-image-preview
+
+Run with --update to update these references (requires permission)
