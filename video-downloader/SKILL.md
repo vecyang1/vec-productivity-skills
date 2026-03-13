@@ -81,6 +81,14 @@ Options for batch downloading:
 - `-w` / `--workers`: Number of parallel downloads (defaults to 5)
 - `-a` / `--audio-only`: Download only audio as MP3
 
+### Incremental Scraping & Duplication Prevention (The Index)
+
+When you run `batch_download.py`, it automatically generates and maintains a local index file named `download_archive.txt` directly inside your target `--output` directory. 
+
+**This means you never have to worry about duplicate downloads.** 
+
+If a creator publishes new videos, simply run the *exact same batch download command* pointing to the *exact same output directory*. The script will parse the existing `download_archive.txt`, skip every video it has already downloaded, and flawlessly download only the newest uploads.
+
 ## Complete Examples
 
 1. Download video in 1080p as MP4:
