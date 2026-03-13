@@ -11,7 +11,7 @@ Stay current with AI models through multiple data sources: human-judged quality 
 
 **CRITICAL**: Agent knowledge is always behind. This skill's PRIMARY role is providing current, accurate model names for API calls and configurations.
 
-### Current Model Names (as of 2026-03-06)
+### Current Model Names (as of 2026-03-13)
 
 **OpenAI:**
 - Latest: `gpt-5.4` (released 2026-03-06)
@@ -23,13 +23,19 @@ Stay current with AI models through multiple data sources: human-judged quality 
 **Anthropic:**
 - Latest: `claude-opus-4-6`, `claude-sonnet-4-6`
 - Budget: `claude-haiku-4-5-20251001`
-- ⚠️ Deprecated: `claude-opus-4-6` (use 4-6 instead)
+- ⚠️ Deprecated: `claude-3-5-*` series (use 4-6 instead)
+- ⚠️ Old naming: `claude-opus-4-6-20250219` (use simple name without date)
 
 **Google Gemini:**
 - Latest Pro: `gemini-3.1-pro-preview`
 - Latest Flash: `gemini-3-flash-preview`
 - Image Gen: `gemini-3.1-flash-image-preview` (Nano Banana 2)
 - ⚠️ Retiring: `gemini-2.0-flash` (March 31, 2026)
+
+**Zhipu AI (智谱):**
+- Latest: `glm-5` (tested 2026-03-13)
+- Budget: `glm-4-flash`
+- ⚠️ Concurrency: ≤6 agents recommended (see benchmarks)
 
 **Before using ANY model name:**
 ```bash
