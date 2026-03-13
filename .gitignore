@@ -32,3 +32,4 @@ Thumbs.db
 !**/references/databases.md
 .env
 logs/
+.venv
