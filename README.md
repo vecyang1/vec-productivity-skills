@@ -59,6 +59,40 @@ Comprehensive Notion integration via Model Context Protocol (MCP) and Direct API
 
 ---
 
+### 4. [YouTube Channel Scraper](./youtube-channel-scraper/)
+High-performance scraper for extracting all video metadata from a YouTube channel.
+
+**Features:**
+- Blazing fast playlist parsing (~15 seconds for 500+ videos)
+- Extracts views, durations, upload dates, and URLs
+- Auto-generates summary statistics and CSV files
+- Perfect for creator research and monetization analysis
+
+**Use Cases:**
+- Scraping competitor channels
+- Bulk evaluating video performance
+
+[📖 Full Documentation](./youtube-channel-scraper/README.md)
+
+---
+
+### 5. [Video Downloader](./video-downloader/)
+Reliable batch downloading utility and skill for YouTube videos and audio.
+
+**Features:**
+- Parallel worker batch downloading from CSV
+- Android bypass for HTTP 403 blocks
+- Customizable formats (MP3 audio, MP4 video up to 4K)
+- Fault-tolerant retries and continuation archives
+
+**Use Cases:**
+- Archiving channels for offline research
+- Bulk extracting MP3s for background processing
+
+[📖 Full Documentation](./video-downloader/SKILL.md)
+
+---
+
 ## 🚀 Quick Start
 
 ### Installation
@@ -162,6 +196,8 @@ Built for the Claude Code community. Special thanks to:
 | Agent Teams Dashboard | Management | Medium | Python | ✅ |
 | Skill Improver | Meta | Low | Python | ❌ |
 | Notion MCP Connector | Integration | Medium | Python, requests | ✅ |
+| YouTube Channel Scraper | Data Extraction | Low | Python, yt-dlp | ❌ |
+| Video Downloader | Utility | Medium | Python, yt-dlp | ❌ |
 
 ---
 
