@@ -30,3 +30,5 @@ Thumbs.db
 
 # Keep templates
 !**/references/databases.md
+.env
+logs/

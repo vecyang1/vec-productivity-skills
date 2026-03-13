@@ -1,0 +1,19 @@
+# Model Intelligence - Daily Auto-Discovery Cron Job
+# Runs at 9 AM daily to discover new models and update registry
+
+# Add this to your crontab: crontab -e
+# Then paste the line below:
+
+0 9 * * * cd ~/.claude/skills/model-intelligence && /usr/bin/python3 scripts/discover_new_models.py >> logs/discovery.log 2>&1
+
+# To install:
+# 1. Create logs directory: mkdir -p ~/.claude/skills/model-intelligence/logs
+# 2. Add to crontab: crontab -e
+# 3. Paste the line above
+# 4. Save and exit
+
+# To verify cron job is installed:
+# crontab -l | grep discover_new_models
+
+# To view logs:
+# tail -f ~/.claude/skills/model-intelligence/logs/discovery.log
