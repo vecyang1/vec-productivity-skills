@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letterly Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FEF8FB;--bg-card:#ffffff;--bg-hover:#F9F0F5;
+  --text:#111022;--text-dim:#413B4D;--border:#F9DAE9;
+  --accent:#8B7FFF;--accent-hover:#241F37;
+  --pink-light:#F9DAE9;--pink-dark:#E2C6D6;
+  --radius-lg:1.5rem;--radius-md:0.75rem;--radius-sm:0.5rem;
+}
+body{font-family:'Onest',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);color:var(--text);padding:32px;line-height:1.6;
+  max-width:1200px;margin:0 auto}
+h1{font-size:1.6rem;font-weight:700;margin-bottom:4px;color:var(--text)}
+.subtitle{color:var(--text-dim);font-size:.85rem;margin-bottom:24px}
+.banner{background:#FFF3CD;color:#664D03;padding:12px 18px;border-radius:var(--radius-md);
+  margin-bottom:20px;font-size:.85rem;border:1px solid #FFE69C}
+.banner code{background:#664D03;color:#FFF3CD;padding:2px 6px;border-radius:4px;font-size:.8rem}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.stat{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);
+  padding:14px 20px;min-width:110px;text-align:center;
+  box-shadow:0 1px 3px rgba(17,16,34,.04)}
+.stat .num{font-size:1.7rem;font-weight:700;color:var(--text)}
+.stat .label{font-size:.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.6px;margin-top:2px}
+.stat.pushed .num{color:#059669}
+.stat.skipped .num{color:#D97706}
+.stat.rejected .num{color:#DC2626}
+.stat.pending .num{color:var(--accent)}
+.controls{display:flex;gap:12px;margin-bottom:18px;flex-wrap:wrap;align-items:center}
+.controls input,.controls select{
+  background:var(--bg-card);border:1px solid var(--border);color:var(--text);
+  padding:9px 14px;border-radius:var(--radius-md);font-size:.85rem;
+  font-family:'Onest',sans-serif;outline:none;transition:border-color .2s}
+.controls input{flex:1;min-width:220px}
+.controls input:focus,.controls select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(139,127,255,.15)}
+.controls select{cursor:pointer}
+table{width:100%;border-collapse:separate;border-spacing:0;
+  background:var(--bg-card);border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--border);box-shadow:0 1px 4px rgba(17,16,34,.05)}
+thead{background:#F9F0F5}
+th{padding:12px 16px;text-align:left;font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.6px;color:var(--text-dim);cursor:pointer;user-select:none;
+  border-bottom:1px solid var(--border);font-weight:600}
+th:hover{color:var(--text)}
+th .arrow{margin-left:4px;opacity:.3;font-size:.65rem}
+th.active .arrow{opacity:1;color:var(--accent)}
+td{padding:12px 16px;border-bottom:1px solid #F5E8F0;font-size:.85rem;
+  vertical-align:top;max-width:320px}
+tr:hover{background:var(--bg-hover)}
+tr:last-child td{border-bottom:none}
+.badge{display:inline-block;padding:3px 10px;border-radius:var(--radius-sm);
+  font-size:.72rem;font-weight:600;letter-spacing:.3px}
+.badge.pushed{background:#D1FAE5;color:#065F46}
+.badge.skipped{background:#FEF3C7;color:#92400E}
+.badge.rejected{background:#FEE2E2;color:#991B1B}
+.badge.pending{background:#EDE9FE;color:#5B21B6}
+.badge.content{background:#E0E7FF;color:#3730A3}
+.badge.note{background:#EDE9FE;color:#6D28D9}
+.badge.spark{background:#FEF3C7;color:#92400E}
+.badge.snippet{background:#F3F4F6;color:#6B7280}
+.badge.unknown{background:#F3F4F6;color:#9CA3AF}
+.link{color:var(--accent);text-decoration:none;font-weight:600;font-size:1rem}
+.link:hover{color:var(--accent-hover)}
+.preview{color:var(--text-dim);font-size:.78rem;margin-top:3px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:300px}
+.title-cell{font-weight:500;color:var(--text)}
+.empty{text-align:center;padding:48px;color:var(--text-dim);font-size:.9rem}
+.footer{margin-top:20px;text-align:center;color:var(--text-dim);font-size:.75rem}
+.footer code{background:var(--pink-light);color:var(--text);padding:2px 6px;
+  border-radius:4px;font-size:.7rem}
+@media(max-width:768px){
+  body{padding:14px}
+  .stats{gap:8px}
+  .stat{padding:10px 14px;min-width:75px}
+  .stat .num{font-size:1.3rem}
+  td,th{padding:8px 10px;font-size:.8rem}
+}
+</style>
+</head>
+<body>
+<h1>Letterly Dashboard</h1>
+<p class="subtitle">Last sync: 2026-04-04 &nbsp;|&nbsp; Total notes indexed: 2</p>
+
+<div class='banner'>Showing limited data. Run <code>sync letterly</code> in Claude Code to index all ~113 notes.</div>
+
+<div class="stats">
+  <div class="stat"><div class="num">2</div><div class="label">Total</div></div>
+  <div class="stat pushed"><div class="num">2</div><div class="label">Pushed</div></div>
+  <div class="stat skipped"><div class="num">0</div><div class="label">Skipped</div></div>
+  <div class="stat rejected"><div class="num">0</div><div class="label">Rejected</div></div>
+  <div class="stat pending"><div class="num">0</div><div class="label">Pending</div></div>
+</div>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Search titles and previews...">
+  <select id="filterStatus">
+    <option value="all">All Status</option>
+    <option value="pushed">Pushed</option>
+    <option value="skipped">Skipped</option>
+    <option value="rejected">Rejected</option>
+    <option value="pending">Pending</option>
+  </select>
+  <select id="filterTier">
+    <option value="all">All Tiers</option>
+    <option value="content">Content (500+)</option>
+    <option value="note">Note (200-499)</option>
+    <option value="spark">Spark (50-199)</option>
+    <option value="snippet">Snippet (&lt;50)</option>
+  </select>
+  <select id="filterLang">
+    <option value="all">All Languages</option>
+    <option value="zh">Chinese</option>
+    <option value="en">English</option>
+    <option value="es">Spanish</option>
+    <option value="vi">Vietnamese</option>
+    <option value="ja">Japanese</option>
+    <option value="th">Thai</option>
+    <option value="mixed">Mixed</option>
+  </select>
+</div>
+
+<table>
+<thead>
+<tr>
+  <th data-col="id" style="width:80px">ID <span class="arrow"></span></th>
+  <th data-col="title">Title <span class="arrow"></span></th>
+  <th data-col="date" class="active">Date <span class="arrow">&#9660;</span></th>
+  <th data-col="chars" style="width:70px">Chars <span class="arrow"></span></th>
+  <th data-col="tier" style="width:80px">Tier <span class="arrow"></span></th>
+  <th data-col="lang" style="width:60px">Lang <span class="arrow"></span></th>
+  <th data-col="status" style="width:90px">Status <span class="arrow"></span></th>
+  <th style="width:50px">Link</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+
+<div id="emptyMsg" class="empty" style="display:none">No notes match your filters.</div>
+<div class="footer">Generated by letterly-to-notion skill &bull; Refresh: run <code>ltl</code> in terminal</div>
+
+<script>
+const NOTES = [{"id": "2009967", "title": "氛围开发与传统企业内部开发的不同", "date": "2026-04-04", "chars": 1850, "tier": "content", "lang": "zh", "status": "pushed", "notion_url": "https://www.notion.so/338e1b43239381629b67e8a8430334db", "preview": "氛围开发传统企业内的内部的开发以及企业编程以及企业开发有很多的不同。作为AI时代的开发者，我们需要有以销售为导向、以变现为导向的开发思维...", "processed_date": "2026-04-04"}, {"id": "2009731", "title": "雇员与老板的思维模式对比", "date": "2026-04-04", "chars": 2100, "tier": "content", "lang": "zh", "status": "pushed", "notion_url": "https://www.notion.so/338e1b43239381c084fecc648e672de2", "preview": "一个好的员工要做的事情，和一个好的自由职业者是一样的。但当你是老板，做事情的能力要求是广泛的、分散的、相对初阶的...", "processed_date": "2026-04-04"}];
+let sortCol = 'date', sortDir = -1;
+let currentNotes = [...NOTES];
+
+function escHtml(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderTable(notes) {
+  const tbody = document.getElementById('tbody');
+  const empty = document.getElementById('emptyMsg');
+  if (!notes.length) {
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  tbody.innerHTML = notes.map(n => `
+    <tr>
+      <td>${escHtml(n.id)}</td>
+      <td>
+        <div class="title-cell">${escHtml(n.title)}</div>
+        ${n.preview ? `<div class="preview">${escHtml(n.preview)}</div>` : ''}
+      </td>
+      <td>${escHtml(n.date)}</td>
+      <td>${n.chars != null ? n.chars : '?'}</td>
+      <td><span class="badge ${n.tier}">${n.tier}</span></td>
+      <td>${escHtml(n.lang)}</td>
+      <td><span class="badge ${n.status}">${n.status}</span></td>
+      <td>${n.notion_url ? `<a class="link" href="${escHtml(n.notion_url)}" target="_blank">&#8599;</a>` : ''}</td>
+    </tr>
+  `).join('');
+}
+
+function getFilters() {
+  return {
+    query: document.getElementById('search').value.toLowerCase(),
+    status: document.getElementById('filterStatus').value,
+    tier: document.getElementById('filterTier').value,
+    lang: document.getElementById('filterLang').value,
+  };
+}
+
+function applyFilters() {
+  const f = getFilters();
+  let filtered = NOTES.filter(n => {
+    if (f.status !== 'all' && n.status !== f.status) return false;
+    if (f.tier !== 'all' && n.tier !== f.tier) return false;
+    if (f.lang !== 'all' && n.lang !== f.lang) return false;
+    if (f.query) {
+      const hay = (n.title + ' ' + (n.preview || '')).toLowerCase();
+      if (!hay.includes(f.query)) return false;
+    }
+    return true;
+  });
+  filtered.sort((a, b) => {
+    let va = a[sortCol], vb = b[sortCol];
+    if (sortCol === 'chars') {
+      va = va ?? -1; vb = vb ?? -1;
+      return (va - vb) * sortDir;
+    }
+    va = va ?? ''; vb = vb ?? '';
+    return va < vb ? -sortDir : va > vb ? sortDir : 0;
+  });
+  currentNotes = filtered;
+  renderTable(filtered);
+}
+
+document.getElementById('search').addEventListener('input', applyFilters);
+document.getElementById('filterStatus').addEventListener('change', applyFilters);
+document.getElementById('filterTier').addEventListener('change', applyFilters);
+document.getElementById('filterLang').addEventListener('change', applyFilters);
+
+document.querySelectorAll('th[data-col]').forEach(th => {
+  th.addEventListener('click', () => {
+    const col = th.dataset.col;
+    if (sortCol === col) sortDir *= -1;
+    else { sortCol = col; sortDir = -1; }
+    document.querySelectorAll('th').forEach(t => {
+      t.classList.remove('active');
+      t.querySelector('.arrow').textContent = '';
+    });
+    th.classList.add('active');
+    th.querySelector('.arrow').textContent = sortDir === -1 ? '\u25BC' : '\u25B2';
+    applyFilters();
+  });
+});
+
+applyFilters();
+</script>
+</body>
+</html>
