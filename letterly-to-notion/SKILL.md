@@ -1,21 +1,21 @@
 ---
 name: letterly-to-notion
-description: Pull voice notes from Letterly, selectively push to Notion Content[UB3_250711] as Ideas. Tracks processed notes via index.json. Trigger on "sync letterly", "push notes", "letterly", "process voice notes".
+description: Pull voice notes from Letterly, selectively push to a Notion Content database as Ideas. Tracks processed notes via index.json. Trigger on "sync letterly", "push notes", "letterly", "process voice notes".
 ---
 
 # Letterly → Notion Pipeline
 
 ## IDs
-- **Notion data_source_id**: `22ce1b43-2393-81f8-8fc6-000b9bba5c67`
+- **Notion data_source_id**: `YOUR_NOTION_DB_ID` — replace with your own database ID
 - **Index**: `~/.claude/skills/letterly-to-notion/index.json`
-- **PRD**: `tasks/prd-letterly-to-notion.md` (Cowork dir)
+- **PRD**: `references/prd.md`
 
 ## Prerequisites Check
 
 Before starting, verify both MCPs respond:
 1. `list_notes(page=1, page_size=1)` — if fails → "Connect Letterly MCP first"
 2. `get_user_info()` — confirms Letterly auth
-3. Notion: `notion-fetch` on `22ce1b43239381c1993ecf632dad6d2d` — if fails → "Share DB with Notion integration"
+3. Notion: `notion-fetch` on `YOUR_NOTION_DB_ID` — if fails → "Share DB with Notion integration"
 
 ## Workflow
 
@@ -44,11 +44,11 @@ Show **only NEW + SKIPPED** in a table. Include **word count** and **quality tie
 ```markdown
 | # | ID | Title | Date | Chars | Tier | Lang | Status |
 |---|---------|-------------------------------|------------|-------|---------|------|---------|
-| 1 | 2009967 | 氛围开发与传统企业内部开发的不同 | 2026-04-04 | 1850 | content | zh | NEW |
-| 2 | 2009731 | 雇员与老板的思维模式对比 | 2026-04-04 | 2100 | content | zh | NEW |
-| 3 | 2009958 | 个人开发者一定要以终为始 | 2026-04-04 | 30 | spark | zh | NEW |
-| 4 | 2010883 | 皮肤皱纹也少诶 | 2026-04-04 | 12 | snippet | zh | NEW |
-| 5 | 2006983 | 准备出发去买水果然后去座位 | 2026-04-03 | 45 | snippet | zh | NEW |
+| 1 | 1234567 | My voice note about topic A   | 2026-04-04 | 1850 | content | zh | NEW |
+| 2 | 1234568 | Another substantial note      | 2026-04-04 | 2100 | content | zh | NEW |
+| 3 | 1234569 | Short idea fragment           | 2026-04-04 | 30   | spark   | zh | NEW |
+| 4 | 1234570 | Trivial comment               | 2026-04-04 | 12   | snippet | zh | NEW |
+| 5 | 1234571 | Casual reminder to self       | 2026-04-03 | 45   | snippet | zh | NEW |
 ```
 
 **Quality Tiers** (based on character count of transcript):
@@ -85,7 +85,7 @@ dt = datetime.fromtimestamp(1775301031000/1000, tz=timezone.utc)
 
 **4e. Create Notion page** — exact call format in `references/notion-call.md`. Key params:
 ```
-parent: { data_source_id: "22ce1b43-2393-81f8-8fc6-000b9bba5c67" }
+parent: { data_source_id: "YOUR_NOTION_DB_ID" }
 properties:
   Name: "<note title>"
   Status: "Idea"
@@ -196,7 +196,7 @@ For es/en/mixed: show content sample and ask "What Tags for this note?"
 
 **Rebuild index from Notion:**
 ```
-notion-search(query="Letterly #", data_source_url="collection://22ce1b43-2393-81f8-8fc6-000b9bba5c67")
+notion-search(query="Letterly #", data_source_url="collection://YOUR_NOTION_DB_ID")
 ```
 Parse each result's `Source` field → extract note ID → add to index as `status: "pushed"`.
 

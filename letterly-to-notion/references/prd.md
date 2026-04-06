@@ -2,14 +2,14 @@
 
 ## 1. Introduction
 
-A Claude Code skill that bridges Letterly (voice transcription app) and Notion's Content[UB3_250711] database. It pulls voice notes from Letterly, presents them for selective approval, pushes approved ones to Notion as content ideas, and maintains a persistent index to prevent duplicates and track processing history.
+A Claude Code skill that bridges Letterly (voice transcription app) and Notion's Content Database database. It pulls voice notes from Letterly, presents them for selective approval, pushes approved ones to Notion as content ideas, and maintains a persistent index to prevent duplicates and track processing history.
 
 **This is a skill (SKILL.md) — not a deployed app.** It guides future Claude Code agents through the pipeline workflow.
 
 ## 2. Goals
 
 - Pull unprocessed Letterly notes and present them for user review
-- Push user-approved notes to Notion Content[UB3_250711] as "Idea" status entries
+- Push user-approved notes to Notion Content Database as "Idea" status entries
 - Maintain a JSON index tracking: note ID, title, processed date, Notion page URL
 - Support periodic sync (pull new, skip already-processed)
 - Batch operations: approve/reject multiple notes at once
@@ -82,7 +82,7 @@ A Claude Code skill that bridges Letterly (voice transcription app) and Notion's
 | Dependency | Type | Purpose |
 |---|---|---|
 | Letterly MCP | MCP server | Read notes, search, get details |
-| Notion MCP (`claude_ai_Notion`) | MCP server | Create pages in Content[UB3_250711] |
+| Notion MCP (`claude_ai_Notion`) | MCP server | Create pages in Content Database |
 | JSON index file | Local file | Track processing state |
 | notion-mcp-connector skill | Reference | Notion patterns and conventions |
 
@@ -123,17 +123,17 @@ No new packages needed. Pure MCP tool orchestration.
   "last_sync": "2026-04-04T12:00:00+08:00",
   "last_letterly_page": 1,
   "notes": {
-    "2010883": {
-      "title": "皮肤皱纹也少诶",
-      "letterly_created": "2026-08-02T10:30:31+08:00",
+    "1234567": {
+      "title": "My voice note title",
+      "letterly_created": "2026-04-02T10:30:31+08:00",
       "status": "pushed",
       "processed_date": "2026-04-04T12:05:00+08:00",
       "notion_url": "https://www.notion.so/...",
       "detected_language": "zh"
     },
-    "1995209": {
-      "title": "Noticias de salud y cocina",
-      "letterly_created": "2026-07-30T14:19:17+08:00",
+    "1234568": {
+      "title": "Another note title",
+      "letterly_created": "2026-04-01T14:19:17+08:00",
       "status": "skipped",
       "processed_date": "2026-04-04T12:06:00+08:00",
       "notion_url": null,
@@ -151,7 +151,7 @@ No new packages needed. Pure MCP tool orchestration.
 
 ## 9. Field Mapping Reference
 
-### Notion Content[UB3_250711] Target Fields
+### Notion Content Database Target Fields
 
 | Notion Property | Type | Source | Value |
 |---|---|---|---|
@@ -176,12 +176,12 @@ No new packages needed. Pure MCP tool orchestration.
 
 ### Data Source ID
 ```
-collection://22ce1b43-2393-81f8-8fc6-000b9bba5c67
+collection://YOUR_NOTION_DB_ID
 ```
 
 ### Database URL
 ```
-https://www.notion.so/22ce1b43239381c1993ecf632dad6d2d
+https://www.notion.so/YOUR_NOTION_DB_ID
 ```
 
 ## 10. Success Metrics

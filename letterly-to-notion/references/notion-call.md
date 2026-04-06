@@ -1,17 +1,19 @@
 # notion-create-pages Call Reference
 
-Exact MCP tool call format for pushing a Letterly note to the Notion Content[UB3_250711] database.
+Exact MCP tool call format for pushing a Letterly note to your Notion Content database.
 
 ## Tool
 
-`mcp__b465a3b1-186c-4ab2-aaeb-fd8e42672261__notion-create-pages`
+`mcp__YOUR_NOTION_MCP_UUID__notion-create-pages`
+
+> Replace `YOUR_NOTION_MCP_UUID` with the UUID from your own Notion MCP server connection.
 
 ## Parameters
 
 ```
 parent:
   type: "data_source_id"
-  data_source_id: "22ce1b43-2393-81f8-8fc6-000b9bba5c67"
+  data_source_id: "YOUR_NOTION_DB_ID"
 
 pages: (array of one page object)
   properties:
@@ -31,19 +33,19 @@ pages: (array of one page object)
 {
   "parent": {
     "type": "data_source_id",
-    "data_source_id": "22ce1b43-2393-81f8-8fc6-000b9bba5c67"
+    "data_source_id": "YOUR_NOTION_DB_ID"
   },
   "pages": [
     {
       "properties": {
-        "Name": "AI时代下的个人追求",
+        "Name": "My voice note title",
         "Status": "Idea",
         "Media Type": "[\"Audio\"]",
-        "Source": "Letterly #1894788",
+        "Source": "Letterly #1234567",
         "Tags": "[\"China\"]",
-        "date:Writtern date:start": "2026-07-17"
+        "date:Writtern date:start": "2026-04-02"
       },
-      "content": "今天我想聊一下在AI时代，我们作为个人应该追求什么。很多人觉得AI会取代一切，但我认为恰恰相反..."
+      "content": "Full transcript text goes here..."
     }
   ]
 }
@@ -54,7 +56,7 @@ pages: (array of one page object)
 The tool returns a page URL on success. Extract it for the index:
 
 ```
-notion_url: "https://www.notion.so/AI-1894788abc123..."
+notion_url: "https://www.notion.so/My-note-title-abc123..."
 ```
 
 Use this URL in the index entry under `notion_url`.
@@ -113,10 +115,10 @@ date:Writtern date:start
 
 ### Source field is for dedup tracking
 
-Format: `Letterly #<note_id>` (e.g., `Letterly #1894788`). Before creating, you can search for existing pages with the same Source value to avoid duplicates:
+Format: `Letterly #<note_id>` (e.g., `Letterly #1234567`). Before creating, you can search for existing pages with the same Source value to avoid duplicates:
 
 ```
-notion-search(query="Letterly #1894788", data_source_url="collection://22ce1b43-2393-81f8-8fc6-000b9bba5c67")
+notion-search(query="Letterly #1234567", data_source_url="collection://YOUR_NOTION_DB_ID")
 ```
 
 ### One page per call

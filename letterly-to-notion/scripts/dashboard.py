@@ -358,7 +358,7 @@ def handle_bulk(body):
 # --- Direct Notion Push ---
 
 NOTION_TOKEN = os.environ.get("NOTION_TOKEN", "")  # set via env: export NOTION_TOKEN=ntn_...
-NOTION_DB_ID = "22ce1b43239381c1993ecf632dad6d2d"
+NOTION_DB_ID = os.environ.get("NOTION_DB_ID", "")  # set via env: export NOTION_DB_ID=your_db_id
 NOTION_API = "https://api.notion.com/v1/pages"
 NOTION_VERSION = "2022-06-28"
 
