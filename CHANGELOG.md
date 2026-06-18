@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Antigravity two-layer activation reference (`sidecar.json` + `config.json` + `projects/<id>.json`) with a verification gate.
   - Catch-up, retry, and midnight-credit policy guidance.
   - Copyable cadence-card template with full field and status vocabulary.
-  - Zero-dependency `validate_cadence_card.py` (Python stdlib): checks required fields, status vocabulary, incremental-state completeness, and alias↔execution-root agreement.
+  - Zero-dependency `validate_cadence_card.py` (Python stdlib): checks required fields, status vocabulary, incremental-state completeness, and alias↔execution-root agreement. Fence-aware parsing so headings inside code blocks are skipped; covered by a stdlib `unittest` suite under `tests/`.
 
 ## [1.0.0] - 2026-03-05
 

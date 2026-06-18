@@ -46,8 +46,18 @@ scheduled-task-rescheduler/
 │   ├── antigravity-activation.md         # two-layer config activation + verification
 │   ├── cadence-card-template.md          # copyable record + field & status vocabulary
 │   └── catch-up-and-credit.md            # missed-run, retry, and credit-window policy
-└── scripts/
-    └── validate_cadence_card.py          # zero-dependency cadence-card validator
+├── scripts/
+│   └── validate_cadence_card.py          # zero-dependency cadence-card validator
+└── tests/
+    └── test_validate_cadence_card.py     # stdlib unittest suite for the validator
+```
+
+## Testing
+
+The validator ships with a dependency-free `unittest` suite (includes a regression guard so card headings inside fenced code blocks are never mis-parsed):
+
+```bash
+python3 -m unittest discover -s scheduled-task-rescheduler/tests
 ```
 
 ## License
