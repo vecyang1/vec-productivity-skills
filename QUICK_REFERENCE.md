@@ -23,6 +23,12 @@
 - **MCP**: ✅ Yes (Enhanced + Local)
 - **Use**: Notion automation, database management, workflows
 
+### 4. Scheduled Task Rescheduler
+- **Path**: `scheduled-task-rescheduler/`
+- **Type**: Workflow / Reliability
+- **MCP**: ❌ No
+- **Use**: Reschedule recurring agent tasks (Antigravity, cron, launchd, n8n) without losing checkpoints; two-layer Antigravity activation; catch-up & credit policy
+
 ## 🚀 Installation
 
 ```bash

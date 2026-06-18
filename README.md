@@ -93,6 +93,25 @@ Reliable batch downloading utility and skill for YouTube videos and audio.
 
 ---
 
+### 6. [Scheduled Task Rescheduler](./scheduled-task-rescheduler/)
+Safely reschedule, rename, rebuild, split, or merge recurring agent tasks without losing state — across Antigravity, Codex, Claude Code, LaunchAgent, cron, and n8n.
+
+**Features:**
+- Lineage-preserving reschedules (rename, new-ID, split, merge, runtime swap)
+- Incremental-by-default loop with checkpoints and success markers
+- Antigravity two-layer config activation with a verification gate
+- Deliberate catch-up and midnight-credit policy
+- Zero-dependency cadence-card validator
+
+**Use Cases:**
+- Moving a nightly job to a new time without orphaning its checkpoint
+- Activating Antigravity scheduled tasks via direct config editing
+- Deciding whether a missed run should catch up or be skipped
+
+[📖 Full Documentation](./scheduled-task-rescheduler/README.md)
+
+---
+
 ## 🚀 Quick Start
 
 ### Installation
@@ -198,6 +217,7 @@ Built for the Claude Code community. Special thanks to:
 | Notion MCP Connector | Integration | Medium | Python, requests | ✅ |
 | YouTube Channel Scraper | Data Extraction | Low | Python, yt-dlp | ❌ |
 | Video Downloader | Utility | Medium | Python, yt-dlp | ❌ |
+| Scheduled Task Rescheduler | Workflow | Low | Python (stdlib only) | ❌ |
 
 ---
 
@@ -205,7 +225,7 @@ Built for the Claude Code community. Special thanks to:
 
 Check [CHANGELOG.md](./CHANGELOG.md) for version history and updates.
 
-**Latest Version**: 1.0.0 (2026-03-05)
+**Latest Version**: 1.1.0 (2026-06-19)
 
 ---
 
