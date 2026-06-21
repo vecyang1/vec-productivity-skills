@@ -36,6 +36,7 @@ The CLI inherits Novamira credentials from `WP_API_URL`, `WP_API_USERNAME`, `WP_
 | Create/update contact | `upsert-contact` first without `--confirm-write`, then rerun with `--confirm-write` after checking payload |
 | Call a known read-only Novamira/FluentCRM ability | `ability <name> --params '{...}'` |
 | Inspect new plugin functions/classes/tables | `refresh-surface --output references/live-surface.json` |
+| Compare external FluentCRM MCP/trigger projects | read `references/external-fluent-tools.md` first |
 | Custom read-only query | `php "return ...;"`; write-like PHP requires `--confirm-write` |
 
 ## Safety Rules
@@ -82,8 +83,9 @@ When FluentCRM adds or changes functions, endpoints, tables, actions, or benchma
 
 1. Run `refresh-surface --output references/live-surface.json` against the live site.
 2. Check `references/fluentcrm-official-surface.md` for current official docs and update it if the docs changed.
-3. Add only reusable new commands/gotchas to this `SKILL.md`; put bulky schema/API detail in `references/`.
-4. Run the safe E2E and validation checks:
+3. Check `references/external-fluent-tools.md` before adding MCP or automation-trigger behavior; absorb patterns, not third-party source code.
+4. Add only reusable new commands/gotchas to this `SKILL.md`; put bulky schema/API detail in `references/`.
+5. Run the safe E2E and validation checks:
    ```bash
    python3 scripts/fluentcrm_ops.py self-test --refresh-surface
    python3 -m unittest discover -s tests
@@ -103,4 +105,5 @@ When FluentCRM adds or changes functions, endpoints, tables, actions, or benchma
 - `scripts/fluentcrm_ops.py`: CLI wrapper.
 - `references/fluentcrm-official-surface.md`: official docs and API surface notes.
 - `references/fluentcrm-repo-analysis.md`: repository directory structure, key models, and PHP API classes.
+- `references/external-fluent-tools.md`: third-party FluentCRM MCP and trigger projects worth checking before extending this skill.
 - `references/novamira-bridge.md`: bridge setup, credential lookup, and troubleshooting.
