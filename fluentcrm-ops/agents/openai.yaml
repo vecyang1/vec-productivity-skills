@@ -1,0 +1,4 @@
+interface:
+  display_name: "FluentCRM Ops"
+  short_description: "Operate FluentCRM via WordPress MCP"
+  default_prompt: "Use $fluentcrm-ops to run safe FluentCRM self-tests, health checks, counts, tags, lists, contacts, or automation surface refreshes."
