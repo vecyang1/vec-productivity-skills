@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "checks": [
+    {
+      "id": "squirrly-ops-contract",
+      "command": ["python3", "-B", "tests/test_contract.py"],
+      "cwd": ".",
+      "timeoutSeconds": 120,
+      "effects": []
+    },
+    {
+      "id": "squirrly-ops-api",
+      "command": ["python3", "-B", "tests/test_squirrly_api.py"],
+      "cwd": ".",
+      "timeoutSeconds": 120,
+      "effects": []
+    },
+    {
+      "id": "squirrly-ops-brand-targeting",
+      "command": ["python3", "-B", "tests/test_site_targeting.py"],
+      "cwd": ".",
+      "timeoutSeconds": 120,
+      "effects": []
+    },
+    {
+      "id": "squirrly-ops-cli",
+      "command": ["python3", "-B", "tests/test_cli.py"],
+      "cwd": ".",
+      "timeoutSeconds": 120,
+      "effects": []
+    }
+  ]
+}

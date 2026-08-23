@@ -1,0 +1,55 @@
+Vec's Productivity Skills
+Copyright (C) 2026 Vec Yang
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along
+with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+LICENSE HISTORY
+---------------
+
+This repository was published under the MIT License until 2026-08-17 and is
+AGPL-3.0-or-later from that date forward. Copies obtained before the change
+remain under the MIT terms they were received under; that grant is perpetual and
+is not revoked here.
+
+
+THIRD-PARTY AND SEPARATELY-LICENSED COMPONENTS
+----------------------------------------------
+
+The AGPL-3.0 terms above cover this repository's own work. The following
+subdirectories carry their own LICENSE file, and those terms govern that
+subdirectory instead. They are NOT relicensed by this file.
+
+  skill-creator/        Apache License 2.0  — see skill-creator/LICENSE.txt
+                        Third-party work, not authored here.
+
+  notion-mcp-connector/ MIT License         — see notion-mcp-connector/LICENSE
+                        Copyright (c) 2026 Vec Yang. Retained as MIT
+                        deliberately: it was published that way and is in use.
+
+If you redistribute this repository or any part of it, keep the corresponding
+LICENSE file with the subdirectory it belongs to.
+
+
+RESOLVED: skill-improver/
+-------------------------
+
+`skill-improver/` was previously listed above as third-party with unconfirmed
+provenance, because its MIT notice carried no named copyright holder. The author
+confirmed on 2026-08-17 that he wrote it; the missing holder line was an
+oversight, not evidence of outside authorship. Its carve-out LICENSE has been
+removed and the subdirectory is now covered by this repository's
+AGPL-3.0-or-later terms like the rest of the work.
+
+Copies of `skill-improver/` obtained before 2026-08-17 were received under MIT.
+That grant is perpetual and is not revoked here.

@@ -1,0 +1,11 @@
+{
+  "configs": {
+    "minimax_beijing": {
+      "name": "MiniMax Beijing (M2.5)",
+      "api_key": "c296d4dc-b842-43ef-8d60-25aecfc16c3f",
+      "url": "https://ark.cn-beijing.volces.com/api/coding/v3/chat/completions",
+      "model": "ark-code-latest"
+    }
+  },
+  "default": "minimax_beijing"
+}

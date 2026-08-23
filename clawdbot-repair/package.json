@@ -1,0 +1,18 @@
+{
+  "name": "clawdbot-repair",
+  "version": "1.1.0",
+  "description": "Expert guide for troubleshooting and repairing Clawdbot installations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "clawdbot",
+    "repair",
+    "troubleshooting",
+    "claude-code",
+    "skill"
+  ],
+  "author": "Vee",
+  "license": "MIT"
+}

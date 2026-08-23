@@ -1,0 +1,35 @@
+{
+  "_comment": [
+    "Template for the squirrly-ops brand registry. Copy to",
+    "~/.config/squirrly-ops/sites.json and chmod 600.",
+    "This file holds POINTERS ONLY - never paste a token into it.",
+    "credential_ref accepts:",
+    "  env://<VAR>                       read from the environment. Start here:",
+    "                                    portable, no extra machinery.",
+    "  op://<vault>/<item>/<field>      optional, resolved through a 1Password",
+    "                                    Service Account bridge. Needs a",
+    "                                    bridge_router module on",
+    "                                    SQUIRRLY_OPS_OP_BRIDGE_DIR.",
+    "A brand is writable only when mutation_policy.allow_writes is true AND the",
+    "command is given --confirm. Two locks, because a write here spends a",
+    "metered quota that resets monthly."
+  ],
+  "schema_version": 1,
+  "defaults": {
+    "timeout_seconds": 60
+  },
+  "sites": [
+    {
+      "site_id": "example",
+      "label": "Example Brand",
+      "site_url": "https://example.com",
+      "credential_ref": "env://SQUIRRLY_TOKEN_EXAMPLE",
+      "site_key_ref": "env://SQUIRRLY_SITE_KEY_EXAMPLE",
+      "blog_id": 0,
+      "notes": "Squirrly account is bound to this exact URL via the USER-URL header. site_key_ref + blog_id are REQUIRED once the site's plugin has completed its handshake; without them the server answers 403 signature_required, which reads like a bad token. Both come from wp_options sq_options (sq_site_key, sq_user_blog_id). Omit BOTH for a brand that has not handshaked; never one.",
+      "mutation_policy": {
+        "allow_writes": false
+      }
+    }
+  ]
+}

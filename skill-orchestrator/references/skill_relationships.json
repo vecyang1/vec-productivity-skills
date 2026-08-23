@@ -1,0 +1,5678 @@
+{
+  "skills": {
+    "content-research-writer": {
+      "name": "content-research-writer",
+      "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "pdf",
+        "design",
+        "ecommerce",
+        "content",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "youtube-thumbnail": {
+      "name": "youtube-thumbnail",
+      "description": "\"Skill for creating and editing Youtube thumbnails that are optimized for click-through rate. This skill should not be used directly, instead use the Thumbnail Designer subagent who can also invoke this skill. Use when the user asks to create a thumbnail from scratch or edit an existing thumbnail.\"",
+      "direct_references": [
+        "visual-prompt-engineer-patten"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "marketing",
+        "video",
+        "ai"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "skill-lookup": {
+      "name": "skill-lookup",
+      "description": "Activates when the user asks about Agent Skills, wants to find reusable AI capabilities, needs to install skills, or mentions skills for Claude. Use for discovering, retrieving, and installing skills.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "gemini-watermark-remover": {
+      "name": "gemini-watermark-remover",
+      "description": "Watermark removal toolkit \u2014 Gemini invisible watermark, NotebookLM PDF/image, Seedance/Douyin video, general inpainting.",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "video",
+        "ai"
+      ],
+      "tools": [
+        "ffmpeg",
+        "python"
+      ]
+    },
+    "Read-Media-Gemini": {
+      "name": "Read-Media-Gemini",
+      "description": "A specialized skill for Gemini 3 Flash and other models via Antigravity Local Proxy. Optimized for multimodal understanding. Supports local files, Google Drive URLs, and YouTube URLs. For spatial reasoning, counting, zooming, or programmatic image analysis, delegates to agentic-vision-gemini (agentic mode with code execution).",
+      "direct_references": [
+        "agentic-vision-gemini",
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai"
+      ]
+    },
+    "planning-with-files": {
+      "name": "planning-with-files",
+      "description": "Implements Manus-style file-based planning for complex tasks. Creates task_plan.md, findings.md, and progress.md. Use when starting complex multi-step tasks, research projects, or any task requiring >5 tool calls. user-invocable: true allowed-tools:   - Read   - Write   - Edit   - Bash   - Glob   - Grep   - WebFetch   - WebSearch",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "monetization-first-development": {
+      "name": "monetization-first-development",
+      "description": "{",
+      "direct_references": [
+        "opc-twitter",
+        "opc-reddit",
+        "executing-marketing-campaigns",
+        "performance-ads-writer",
+        "prd",
+        "frontend-design",
+        "market-sizing-analysis"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "wp-wpcli-and-ops": {
+      "name": "wp-wpcli-and-ops",
+      "description": "\"Use when working with WP-CLI (wp) for WordPress operations: safe search-replace, db export/import, plugin/theme/user/content management, cron, cache flushing, multisite, and scripting/automation with wp-cli.yml.\"",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "design",
+        "ecommerce",
+        "content",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "docker"
+      ]
+    },
+    "document-skills": {
+      "name": "document-skills",
+      "description": "Professional toolkit for PDF manipulation, Excel financial modeling, Word redlining/OOXML, and PPT automation.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "video",
+        "ai"
+      ],
+      "tools": []
+    },
+    "youtube-title": {
+      "name": "youtube-title",
+      "description": "\"Generate optimized YouTube video titles that maximize click-through rates by sparking curiosity and complementing thumbnails. This skill should be used when the user asks to create, improve, or brainstorm YouTube video titles, or when working on YouTube content that requires title optimization.\"",
+      "direct_references": [
+        "youtube-thumbnail"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "my-creative-writer": {
+      "name": "my-creative-writer",
+      "description": "\u4e00\u4e2a\u901a\u7528\u7684\u3001\u53ef\u5b66\u4e60\u7528\u6237\u98ce\u683c\u7684\u201c\u53bb AI \u5473\u201d\u5199\u4f5c\u52a9\u624b\u3002\u5b83\u4e0d\u5c40\u9650\u4e8e\u7279\u5b9a\u98ce\u683c\uff0c\u800c\u662f\u901a\u8fc7\u5206\u6790\u7528\u6237\u7684\u8fc7\u5f80\u4f5c\u54c1\u5efa\u7acb\u201c\u98ce\u683c\u6307\u7eb9\u201d\uff0c\u5e76\u7ed3\u5408\u4e25\u683c\u7684\u201c\u53cd AI \u8154\u201d\u6cd5\u5219\uff08\u62d2\u7edd\u9648\u8bcd\u6ee5\u8c03\u3001\u6559\u79d1\u4e66\u7ed3\u6784\uff09\uff0c\u4ea7\u51fa\u6781\u5177\u4eba\u60c5\u5473\u3001\u53d9\u4e8b\u611f\u548c\u4e2a\u4eba\u8272\u5f69\u7684\u9ad8\u8d28\u91cf\u6587\u7ae0\u3002\u9002\u7528\u4e8e\u4efb\u4f55\u5e0c\u671b\u6446\u8131 AI \u673a\u68b0\u611f\u7684\u521b\u4f5c\u8005\u3002",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "ai",
+        "content",
+        "design"
+      ],
+      "tools": []
+    },
+    "cross-border-product-selector": {
+      "name": "cross-border-product-selector",
+      "description": "\u8de8\u5883\u7535\u5546\u9009\u54c1\u4e13\u5bb6\u3002\u5e94\u7528\"\u8f7b\u5c0f\u4ef6 + \u9ad8\u6ea2\u4ef7 + \u60c5\u611f\u4ef7\u503c\"\u9009\u54c1\u903b\u8f91\uff0c\u5206\u6790\u4ea7\u54c1\u6f5c\u529b\u3001\u7ade\u54c1\u683c\u5c40\u3001\u4f9b\u5e94\u94fe\u7b56\u7565\uff0c\u5e76\u751f\u6210\u5177\u4f53\u7684\u884c\u52a8\u65b9\u6848\u3002\u5f53\u7528\u6237\u9700\u8981\u9009\u62e9\u8de8\u5883\u7535\u5546\u4ea7\u54c1\u3001\u8bc4\u4f30\u4ea7\u54c1\u673a\u4f1a\u3001\u5bfb\u627e\u84dd\u6d77\u54c1\u7c7b\u3001\u5206\u6790\u5b9a\u5236\u5316\u4ea7\u54c1\uff08\u6c34\u6676\u3001\u76f8\u518c\u3001\u9970\u54c1\u7b49\uff09\u3001\u7814\u7a76\u7ade\u54c1\u72ec\u7acb\u7ad9/\u4e9a\u9a6c\u900a\u54c1\u724c\u65f6\u4f7f\u7528\u3002",
+      "direct_references": [
+        "psychological-copywriter",
+        "etsy-seller-general",
+        "curation-expert",
+        "amazon-operations-director",
+        "competitive-ads-extractor",
+        "connect"
+      ],
+      "domains": [
+        "business",
+        "image",
+        "design",
+        "ecommerce",
+        "marketing",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": []
+    },
+    "site-url-extractor": {
+      "name": "site-url-extractor",
+      "description": "Extract all URLs from any website via sitemap parsing + optional crawl fallback",
+      "direct_references": [],
+      "domains": [
+        "ecommerce",
+        "ai",
+        "content"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "wpds": {
+      "name": "wpds",
+      "description": "\"Use when building UIs leveraging the WordPress Design System (WPDS) and its components, tokens, patterns, etc.\"",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "design",
+        "ecommerce",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "youtube-research-video-topic": {
+      "name": "youtube-research-video-topic",
+      "description": "Conduct pure research for YouTube video topics by analyzing competitors, identifying content gaps, and documenting strategic insights. Use when you need to research a video topic before planning. Produces concise, insight-focused research documents that identify the biggest opportunities for video performance.",
+      "direct_references": [
+        "youtube-plan-new-video"
+      ],
+      "domains": [
+        "pdf",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "manim-math-animator": {
+      "name": "Manim Math Animator",
+      "description": "Generate high-quality mathematical animations and visualizations using the Manim (Community Edition) Python library.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "content",
+        "video",
+        "ai"
+      ],
+      "tools": []
+    },
+    "gemini-cli-guide": {
+      "name": "Gemini CLI Guide",
+      "description": "Comprehensive guide for Google's Gemini CLI - features, configuration, MCP setup, and troubleshooting",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "ai"
+      ],
+      "tools": [
+        "npm",
+        "notion",
+        "chrome"
+      ]
+    },
+    "claude-cli-guide": {
+      "name": "Claude CLI Guide",
+      "description": "Comprehensive guide for Claude Code CLI \u2014 installation, configuration, architecture, memory system, hooks, and disaster recovery. The single source of truth for rebuilding a Claude Code environment from scratch.",
+      "direct_references": [
+        "planning-with-files",
+        "alias",
+        "memory:context-vault",
+        "evolver",
+        "visual-prompt-engineer-patten",
+        "notion-mcp-connector",
+        "vps-proxy-setup",
+        "connect",
+        "email-management"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai",
+        "notion",
+        "git",
+        "npm"
+      ]
+    },
+    "creating-financial-models": {
+      "name": "creating-financial-models",
+      "description": "This skill provides an advanced financial modeling suite with DCF analysis, sensitivity testing, Monte Carlo simulations, and scenario planning for investment decisions",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "godaddy-dns-manager": {
+      "name": "godaddy-dns-manager",
+      "description": "Manage GoDaddy DNS records via local MCP server using FastMCP.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "ai",
+        "design"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "alias": {
+      "name": "alias",
+      "description": "Reference for all custom shell aliases and functions in ~/.zshrc.",
+      "direct_references": [
+        "site-url-extractor",
+        "tts-elevenlabs",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "system-git-discovery-sync": {
+      "name": "system-git-discovery-sync",
+      "description": "Background engine for discovering, auditing, and synchronizing widespread local Git repositories. Features \"dirty state\" detection to prevent over-writing local changes and provides a visual dashboard of the local repository constellation.",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "git"
+      ]
+    },
+    "template-skill": {
+      "name": "template-skill",
+      "description": "Replace with description of the skill and when Claude should use it.",
+      "direct_references": [],
+      "domains": [
+        "ai"
+      ],
+      "tools": []
+    },
+    "consultant-friend": {
+      "name": "consultant-friend",
+      "description": "A strategic advisor who thinks like a McKinsey partner (MECE, structured) but speaks like a close friend (natural, candid, jargon-free). Use when the user needs deep problem analysis or strategic advice without the corporate stiff upper lip.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "ai",
+        "research",
+        "design"
+      ],
+      "tools": []
+    },
+    "teams-dashboard": {
+      "name": "teams-dashboard",
+      "description": "Real-time web dashboard for monitoring Claude Code Agent Teams. Displays teams, members, inbox messages, and tasks with live updates.",
+      "direct_references": [
+        "claude-code-agent-teams",
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "mermaid-visualizer": {
+      "name": "mermaid-visualizer",
+      "description": "Transform text content into professional Mermaid diagrams for presentations and documentation. Use when users ask to visualize concepts, create flowcharts, or make diagrams from text. Supports process flows, system architectures, comparisons, mindmaps, and more with built-in syntax error prevention.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "iterative-retrieval": {
+      "name": "iterative-retrieval",
+      "description": "Pattern for progressively refining context retrieval to solve the subagent context problem",
+      "direct_references": [
+        "continuous-learning"
+      ],
+      "domains": [
+        "development",
+        "ai",
+        "content",
+        "design"
+      ],
+      "tools": []
+    },
+    "videocut": {
+      "name": "videocut-Aroll",
+      "description": "Comprehensive video editing agent. Expert in transcribing, detecting bloopers/silences, generating review drafts, and programmatically cutting video based on text reviews. Use this skill when the user wants to \"cut\", \"edit\", \"shorten\", or \"caption\" a talking head (A-roll) video.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "image",
+        "content",
+        "video",
+        "ai"
+      ],
+      "tools": [
+        "ffmpeg",
+        "python",
+        "openai",
+        "imagemagick"
+      ]
+    },
+    "environment-manager": {
+      "name": "environment-manager",
+      "description": "Standardizes and maintains the local development environment for Agent skills. Use this skill when setting up a new machine, debugging missing dependencies, or ensuring all standard tools are installed.",
+      "direct_references": [
+        "skill-creator"
+      ],
+      "domains": [
+        "development",
+        "ai",
+        "image",
+        "design"
+      ],
+      "tools": [
+        "python",
+        "openai",
+        "git",
+        "npm",
+        "chrome",
+        "ffmpeg",
+        "imagemagick"
+      ]
+    },
+    "web-search-manager": {
+      "name": "web-search-manager",
+      "description": "Unified web search with Brave Search (1,000/month) + SerpAPI fallback (100/month). Privacy-focused, unbiased results.",
+      "direct_references": [
+        "mcp-flight-search"
+      ],
+      "domains": [
+        "development",
+        "ai",
+        "pdf",
+        "design"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "memory:context-vault": {
+      "name": "memory-vault",
+      "description": "Store and retrieve long-term context memories for users, businesses, writing projects, personas, and topics without overloading the context window. Use when the user asks to \"add memory\", \"save context\", \"remember this\", \"check memory\", \"load context\", \"what do you know about\", or when working with recurring contexts (specific businesses, writing styles, character profiles, audiences). Essential for content creators, authors, business consultants, and anyone working across multiple domains who needs AI to remember specific contexts between conversations.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "postgres-patterns": {
+      "name": "postgres-patterns",
+      "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.",
+      "direct_references": [
+        "backend-patterns",
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "ecommerce",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "rl-training-ppo": {
+      "name": "RL Training with PPO",
+      "description": "Comprehensive guide for training reinforcement learning agents using Proximal Policy Optimization (PPO) with Stable-Baselines3",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai"
+      ]
+    },
+    "video-downloader": {
+      "name": "youtube-downloader",
+      "description": "Download YouTube videos with customizable quality and format options. Use this skill when the user asks to download, save, or grab YouTube videos. Supports various quality settings (best, 1080p, 720p, 480p, 360p), multiple formats (mp4, webm, mkv), and audio-only downloads as MP3.",
+      "direct_references": [],
+      "domains": [
+        "design",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "theme-factory": {
+      "name": "theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "direct_references": [],
+      "domains": [
+        "ai",
+        "pdf",
+        "image",
+        "design"
+      ],
+      "tools": []
+    },
+    "stitch-enhance-prompt": {
+      "name": "enhance-prompt",
+      "description": "Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results. allowed-tools:   - \"Read\"   - \"Write\"",
+      "direct_references": [
+        "design-md",
+        "stitch",
+        "stitch-design-md",
+        "stitch-loop"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "wp-block-themes": {
+      "name": "wp-block-themes",
+      "description": "\"Use when developing WordPress block themes: theme.json (global settings/styles), templates and template parts, patterns, style variations, and Site Editor troubleshooting (style hierarchy, overrides, caching).\"",
+      "direct_references": [
+        "wp-project-triage"
+      ],
+      "domains": [
+        "design",
+        "ecommerce",
+        "video",
+        "wordpress",
+        "ai"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "svg-icon-search": {
+      "name": "svg-icon-search",
+      "description": "Search for elegant SVG icons (Lucide, Phosphor, Simple Icons) using the Iconify API. Returns raw SVG code ready for implementation.",
+      "direct_references": [],
+      "domains": [
+        "ecommerce",
+        "ai",
+        "development",
+        "design"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "wp-project-triage": {
+      "name": "wp-project-triage",
+      "description": "\"Use when you need a deterministic inspection of a WordPress repository (plugin/theme/block theme/WP core/Gutenberg/full site) including tooling/tests/version hints, and a structured JSON report to guide workflows and guardrails.\"",
+      "direct_references": [],
+      "domains": [
+        "wordpress",
+        "ai",
+        "design"
+      ],
+      "tools": []
+    },
+    "historical-mirror": {
+      "name": "historical-mirror",
+      "description": "A critical lens that evaluates modern phenomena by drawing sharp parallels to historical events, analyzing their backgrounds, theoretical underpinnings, and ultimate impacts. Use this when the user asks for deep social commentary, historical comparisons, or a \"truth bomb\" regarding current trends.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "wp-block-development": {
+      "name": "wp-block-development",
+      "description": "\"Use when developing WordPress (Gutenberg) blocks: block.json metadata, register_block_type(_from_metadata), attributes/serialization, supports, dynamic rendering (render.php/render_callback), deprecations/migrations, viewScript vs viewScriptModule, and @wordpress/scripts/@wordpress/create-block build and test workflows.\"",
+      "direct_references": [
+        "wp-project-triage",
+        "wp-interactivity-api"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "ecommerce",
+        "content",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "reference-photo-expander": {
+      "name": "reference-photo-expander",
+      "description": "Generates a series of consistent photos based on a single reference photo. Maintains subject identity, environment, styling, and \"film-level\" lighting quality while allowing variations in pose and expression. Use when a user wants to expand a single good photo into a full \"photoshoot\" series.",
+      "direct_references": [
+        "Nano-Banana"
+      ],
+      "domains": [
+        "ai",
+        "image",
+        "design"
+      ],
+      "tools": []
+    },
+    "coding-standards": {
+      "name": "coding-standards",
+      "description": "Universal coding standards, best practices, and patterns for TypeScript, JavaScript, React, and Node.js development.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "openai"
+      ]
+    },
+    "cloudflare-dns-manager": {
+      "name": "cloudflare-dns-manager",
+      "description": "Manage Cloudflare DNS records via local MCP server. CRUD operations on DNS records across all zones.",
+      "direct_references": [
+        "memory:context-vault"
+      ],
+      "domains": [
+        "development",
+        "ecommerce",
+        "content",
+        "business",
+        "wordpress",
+        "ai"
+      ],
+      "tools": []
+    },
+    "allowance-application-and-alignment-check": {
+      "name": "allowance-application-and-alignment-check",
+      "description": "Bokksu \u5065\u5eb7\u4fdd\u9669\u4f24\u75c5\u6d25\u8d34\u7533\u8bf7\u8868\u89c6\u89c9\u5bf9\u9f50\u68c0\u67e5 SOP\u3002\u4e3b\u8981\u7528\u4e8e\u68c0\u67e5\u7b2c 2 \u9875\u586b\u5199\u7684\u65e5\u671f\u4e0e\u7b2c 4 \u9875\u533b\u751f\u8bc1\u660e\u4fe1\u606f\u662f\u5426\u4e00\u81f4\uff0c\u786e\u4fdd\u4e2a\u4eba\u4fe1\u606f\u65e0\u8bef\uff0c\u4e14\u7533\u8bf7\u5468\u671f\u65e0\u7f1d\u8854\u63a5\u3002",
+      "direct_references": [
+        "agentic-vision-gemini"
+      ],
+      "domains": [
+        "development",
+        "ai",
+        "pdf",
+        "image"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "web-scraper-patterns": {
+      "name": "web-scraper-patterns",
+      "description": "Web scraping methodology with proven patterns for inspecting HTML structure, testing extraction logic, handling encoding (especially Chinese sites), rate limiting, and progress monitoring. Use when scraping websites, extracting content from HTML, or building data collection workflows.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "design",
+        "ecommerce",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "Post-Social-Media-With-GetLate-API-Repurpose-Distribute": {
+      "name": "Post Social Media Image/Video with GetLate API",
+      "description": "Automate social media posting via GetLate API. Use this skill when the user wants to post images or videos to multiple social media platforms (Twitter, LinkedIn, Instagram, etc.) simultaneously, repurposing content with platform-specific optimizations (\"tone\" or \"\u8c03\u6027\"). It handles connection verification, media uploading, and bulk publishing.",
+      "direct_references": [
+        "opc-twitter",
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "excalidraw-diagram": {
+      "name": "excalidraw-diagram",
+      "description": "Generate Excalidraw diagrams from text content for Obsidian. Use when user asks to create diagrams, flowcharts, mind maps, or visual representations in Excalidraw format. Triggers on \"Excalidraw\", \"\u753b\u56fe\", \"\u6d41\u7a0b\u56fe\", \"\u601d\u7ef4\u5bfc\u56fe\", \"\u53ef\u89c6\u5316\", \"diagram\".",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "remotion-ads-producer": {
+      "name": "remotion-ads-producer",
+      "description": "Create programmatic video ads using Remotion (React-based video framework). Best for SaaS, structured data visualization, and web-style promotional videos.",
+      "direct_references": [
+        "remotion"
+      ],
+      "domains": [
+        "image",
+        "design",
+        "ecommerce",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "psychological-copywriter": {
+      "name": "psychological-copywriter",
+      "description": "Generates high-value marketing copy using psychological principles like \"Premium Anchoring\" and \"Mental Accounting\" (\u5fc3\u7406\u8d26\u6237). Use this skill when the user wants to justify premium pricing, reframe a product's value, or write copy that shifts consumer perception from \"expense\" to \"investment\".",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "eval-harness": {
+      "name": "eval-harness",
+      "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "ecommerce",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "opc-twitter": {
+      "name": "twitter",
+      "description": "Search and retrieve content from Twitter/X. Get user info, tweets, replies, followers, communities, spaces, and trends via twitterapi.io. Use when user mentions Twitter, X, or tweets.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "design",
+        "content",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "team-composition-analysis": {
+      "name": "team-composition-analysis",
+      "description": "This skill should be used when the user asks to \"plan team structure\", \"determine hiring needs\", \"design org chart\", \"calculate compensation\", \"plan equity allocation\", or requests organizational design and headcount planning for a startup.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "notion",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "skill-orchestrator": {
+      "name": "skill-orchestrator",
+      "description": "Manage skill relationships, workflows, domain mapping, and design coherence. Use when you need to discover skills by domain/tags, find which skills work together, track workflow chains, ensure consistent design language across related skills, or audit skill dependencies. Handles skill relationship mapping, domain categorization, workflow orchestration, design language enforcement, and cross-skill coordination.",
+      "direct_references": [
+        "content-research-writer",
+        "youtube-thumbnail",
+        "skill-lookup",
+        "youtube-title",
+        "opc-twitter",
+        "skill-improver",
+        "model-intelligence",
+        "visual-prompt-engineer-patten",
+        "seedream-4-5",
+        "opc-banner-creator",
+        "knowledge-card-generator",
+        "skill-creator",
+        "performance-ads-writer",
+        "notion-mcp-connector",
+        "honest-deep-researcher",
+        "article-broll-illustrator",
+        "connect",
+        "opc-logo-creator",
+        "smart-illustrator",
+        "ecommerce-lp-generator",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "social",
+        "content",
+        "marketing",
+        "video",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "notion"
+      ]
+    },
+    "youtube-plan-new-video": {
+      "name": "youtube-plan-new-video",
+      "description": "Generate a complete video plan with optimized title, thumbnail, and hook concepts based on research. Orchestrates specialized skills (youtube-title, youtube-thumbnail, youtube-video-hook) to create production-ready video plans. Use after research is complete or when the user wants to plan a new video.",
+      "direct_references": [
+        "youtube-thumbnail",
+        "youtube-title",
+        "youtube-research-video-topic",
+        "youtube-video-hook"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "wp-rest-api": {
+      "name": "wp-rest-api",
+      "description": "\"Use when building, extending, or debugging WordPress REST API endpoints/routes: register_rest_route, WP_REST_Controller/controller classes, schema/argument validation, permission_callback/authentication, response shaping, register_rest_field/register_meta, or exposing CPTs/taxonomies via show_in_rest.\"",
+      "direct_references": [
+        "wp-project-triage"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "content",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "openai-codex-guide": {
+      "name": "OpenAI Codex Guide",
+      "description": "Comprehensive guide for OpenAI Codex CLI \u2014 installation, configuration, usage patterns, model selection, and best practices. The single source of truth for OpenAI Codex environment setup.",
+      "direct_references": [
+        "alias",
+        "connect",
+        "mcp-integration"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "business",
+        "ai"
+      ],
+      "tools": [
+        "python",
+        "openai",
+        "git"
+      ]
+    },
+    "polyamory-rules": {
+      "name": "polyamory-rules",
+      "description": "\u591a\u8fb9\u5173\u7cfb/\u5f00\u653e\u5173\u7cfb\u7684\u4e2a\u4eba\u884c\u4e3a\u51c6\u5219\u3002\u7528\u89c4\u5219\u6d88\u89e3\u4e0d\u5e73\u8861\uff0c\u4fdd\u62a4\u81ea\u6211\u80fd\u91cf\uff0c\u7ef4\u62a4\u6240\u6709\u4eba\u7684\u5c0a\u4e25\u4e0e\u6210\u957f\u3002",
+      "direct_references": [],
+      "domains": [
+        "design"
+      ],
+      "tools": []
+    },
+    "web-design-guidelines": {
+      "name": "web-design-guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "direct_references": [],
+      "domains": [
+        "ai",
+        "content",
+        "design"
+      ],
+      "tools": []
+    },
+    "wp-playground": {
+      "name": "wp-playground",
+      "description": "\"Use for WordPress Playground workflows: fast disposable WP instances in the browser or locally via @wp-playground/cli (server, run-blueprint, build-snapshot), auto-mounting plugins/themes, switching WP/PHP versions, blueprints, and debugging (Xdebug).\"",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "docker",
+        "npm"
+      ]
+    },
+    "skill-improver": {
+      "name": "Skill Improver",
+      "description": "A meta-skill for auditing, improving, refactoring, and verifying other Agent Skills. Handles script consolidation, error handling enhancement, documentation updates, and skill cleaning for public sharing.",
+      "direct_references": [
+        "memory:context-vault",
+        "skill-improver.backup.20260305_130024",
+        "skill-github-importer"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "reverse-prompt-engineer": {
+      "name": "reverse-prompt-engineer",
+      "description": "Generates detailed AI image generation prompts from descriptions or analysis of images/content. Use this skill when the user wants to recreate an image style, \"reverse engineer\" a prompt from an image, or turn a vague idea into a high-quality visualization prompt.",
+      "direct_references": [],
+      "domains": [
+        "image",
+        "design",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "creator-monetization-engine": {
+      "name": "creator-monetization-engine",
+      "description": "Comprehensive global creator monetization framework with multi-platform distribution, team-based content multiplication, local partnerships, and project-based planning. Use when planning creator business models, building distribution strategies across countries/platforms, setting up publisher matrices, diversifying income streams (courses, communities, services, affiliate marketing, local partnerships), or managing creator projects with revenue tracking. Covers platform courses (Skillshare, Coursera, Udemy), own-site LMS, paid/free communities, tutoring, consultation, local brand/scenic area partnerships, and content repurposing strategies.",
+      "direct_references": [
+        "content-research-writer",
+        "youtube-thumbnail",
+        "youtube-title",
+        "memory:context-vault",
+        "performance-ads-writer"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "design",
+        "ecommerce",
+        "social",
+        "content",
+        "marketing",
+        "video",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "opc-reddit": {
+      "name": "reddit",
+      "description": "Search and retrieve content from Reddit. Get posts, comments, subreddit info, and user profiles via the public JSON API. Use when user mentions Reddit, a subreddit, or r/ links.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "ai",
+        "content",
+        "design"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "context-engineering-collection": {
+      "name": "context-engineering-collection",
+      "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "git"
+      ]
+    },
+    "opc-producthunt": {
+      "name": "producthunt",
+      "description": "Search and retrieve content from Product Hunt. Get posts, topics, users, and collections via the GraphQL API. Use when user mentions Product Hunt, PH, or product launches.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "design",
+        "ecommerce",
+        "content",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "cache-components": {
+      "name": "cache-components",
+      "description": "|   Expert guidance for Next.js Cache Components and Partial Prerendering (PPR).    **PROACTIVE ACTIVATION**: Use this skill automatically when working in Next.js projects that have `cacheComponents: true` in their next.config.ts/next.config.js. When this config is detected, proactively apply Cache Components patterns and best practices to all React Server Component implementations.    **DETECTION**: At the start of a session in a Next.js project, check for `cacheComponents: true` in next.config. If enabled, this skill's patterns should guide all component authoring, data fetching, and caching decisions.    **USE CASES**: Implementing 'use cache' directive, configuring cache lifetimes with cacheLife(), tagging cached data with cacheTag(), invalidating caches with updateTag()/revalidateTag(), optimizing static vs dynamic content boundaries, debugging cache issues, and reviewing Cache Component implementations.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "design",
+        "ecommerce",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "gsd-framework-guide": {
+      "name": "gsd-framework-guide",
+      "description": "Complete reference for Get Shit Done (GSD) framework installed globally in ~/.claude. Use when user asks about GSD commands, workflows, patterns, or needs help with discuss/plan/execute/verify phases. Covers installation details, command reference, workflow patterns, and integration with existing setup.",
+      "direct_references": [
+        "content-research-writer",
+        "planning-with-files",
+        "seven-figure-course-builder",
+        "prd"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm",
+        "git"
+      ]
+    },
+    "image-enhancer": {
+      "name": "image-enhancer",
+      "description": "Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts.",
+      "direct_references": [
+        "opc-twitter"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "social",
+        "ai"
+      ],
+      "tools": []
+    },
+    "language-teacher": {
+      "name": "language-teacher",
+      "description": "Act as a language teacher to extract vocabulary and expressions from transcripts/recordings analysis.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "design",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "vps-manager-ssh": {
+      "name": "vps-manager-ssh",
+      "description": "name: vps-manager-ssh",
+      "direct_references": [
+        "alias",
+        "google-cloud-integration",
+        "chrome-devtools",
+        "bird",
+        "surecart-manager",
+        "wp-site-manager",
+        "connect",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "video",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "openai",
+        "gemini",
+        "git",
+        "chrome",
+        "docker"
+      ]
+    },
+    "etsy-seller-general": {
+      "name": "etsy-seller-general",
+      "description": "A comprehensive guide to researching, analyzing, and creating high-converting Etsy listings, focusing on platform, photo, and design tonality.",
+      "direct_references": [
+        "chrome-devtools"
+      ],
+      "domains": [
+        "business",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "chrome"
+      ]
+    },
+    "evolver": {
+      "name": "capability-evolver",
+      "description": "A self-evolution engine for AI agents. Analyzes runtime history to identify improvements and applies protocol-constrained evolution.",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "notion",
+        "design",
+        "ecommerce",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm",
+        "git"
+      ]
+    },
+    "wheel-check": {
+      "name": "wheel-check",
+      "description": "Search GitHub + npm for existing high-star solutions before building. Use when about to implement something that likely has a popular open-source equivalent (HTTP clients, auth, parsers, ORMs, CLI frameworks, API wrappers, etc.). Skip for simple glue scripts or one-off transforms.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "design",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "npm"
+      ]
+    },
+    "general-analysis-5w1h": {
+      "name": "general-analysis-5w1h",
+      "description": "A universal 5W1H (What/Why/Who/When/Where/How) analysis framework for deconstructing any new technology, product, concept, or project into a structured, actionable model. Use this skill when asked to perform a deep, structured analysis or to provide a comprehensive overivew of a new topic.",
+      "direct_references": [],
+      "domains": [
+        "design",
+        "ecommerce",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "claude-code-agile-updater": {
+      "name": "claude-code-agile-updater",
+      "description": "Agile, asynchronous auto-update system for Claude Code. Intelligently checks for updates every hour, logs all activity, sends notifications, and provides status monitoring. More responsive and transparent than simple cron-based updates. user-invocable: true allowed-tools:   - Bash   - Read   - Write",
+      "direct_references": [
+        "claude-cli-guide",
+        "system-git-discovery-sync",
+        "environment-manager"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "git"
+      ]
+    },
+    "site-accessibility-judge-China-oversea": {
+      "name": "site-accessibility-judge",
+      "description": "Analyze if a website is accessible from Global (Overseas) and China locations. Provides IP, GeoIP, and connectivity details. Use this skill when the user asks \"is this site visitable from China\", \"check site accessibility\", \"is [url] blocked in China\", or wants to see IP/Location info for a site.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "qingdouyun-manual": {
+      "name": "qingdouyun-manual",
+      "description": "\u9752\u8c46\u4e91 v1.3.21 \u7528\u6237\u64cd\u4f5c\u624b\u518c\u6280\u80fd\u5305\u3002\u5305\u542b\u6d88\u606f\u53d1\u9001\u8005\u6807\u8bc6\u3001\u6210\u5458\u6392\u73ed\u3001\u4eba\u5de5\u4f18\u5148\u63a5\u5f85\u5f00\u5173\u53ca\u6570\u636e\u6a21\u5757\u91cd\u6784\u7b49\u6838\u5fc3\u529f\u80fd\u7684\u8be6\u7ec6\u8bf4\u660e\u4e0e\u64cd\u4f5c\u6307\u5357\u3002",
+      "direct_references": [],
+      "domains": [
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "music-video-title-generator": {
+      "name": "music-video-title-generator",
+      "description": "Generate optimized titles and descriptions for music cover videos (singing/guitar) that trigger platform algorithms and audience psychology. Use when the user asks to create titles, captions, or descriptions for their music videos, covers, or performances, or mentions optimizing for Bilibili, YouTube, Douyin, or TikTok. Also use when the user provides a song name and wants content generated for posting.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "content",
+        "marketing",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "prompt-lookup": {
+      "name": "prompt-lookup",
+      "description": "Activates when the user asks about AI prompts, needs prompt templates, wants to search for prompts, or mentions prompts.chat. Use for discovering, retrieving, and improving prompts.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "content",
+        "video",
+        "ai"
+      ],
+      "tools": []
+    },
+    "model-intelligence": {
+      "name": "model-intelligence",
+      "description": "Comprehensive model selection, benchmarking, and recommendation system. Provides up-to-date information on AI models with human-judged quality (Arena.ai), automated benchmarks (Vals AI, AA API), and weighted scoring across use cases. Use for model recommendations, benchmark queries, and latest model data.",
+      "direct_references": [
+        "alias"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai"
+      ]
+    },
+    "visual-prompt-engineer-patten": {
+      "name": "visual-prompt-engineer",
+      "description": "\u4e13\u4e1a\u7684 AI \u89c6\u9891/\u56fe\u50cf\u63d0\u793a\u8bcd\u5de5\u7a0b\u5e08 (Visual Prompt Engineer)\uff0c\u4e13\u6ce8\u4e8e Seedance 2.0 (\u5373\u68a6/Dreamina) \u7b49\u5148\u8fdb\u89c6\u9891\u6a21\u578b\u7684\u63d0\u793a\u8bcd\u751f\u6210\u4e0e\u4f18\u5316\u3002\u64c5\u957f\u8fd0\u955c\u63a7\u5236\u3001\u5206\u955c\u8bbe\u8ba1\u3001\u89d2\u8272\u4e00\u81f4\u6027\u4fdd\u6301\u53ca\u201c\u7206\u6b3e\u590d\u5236\u201d\u7b56\u7565\u3002",
+      "direct_references": [
+        "agentic-vision-gemini",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "scientific-business-guide": {
+      "name": "Scientific Business Guide",
+      "description": "An expert business advisor skill based on the 'Scientific Entrepreneurship' methodology and psychological naming strategies.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "ai",
+        "pdf",
+        "design"
+      ],
+      "tools": []
+    },
+    "visa-itinerary-pro": {
+      "name": "visa-itinerary-pro",
+      "description": "\"Generate reliable, humanized, and consistent visa itineraries/invitation letters for ANY country. Strictly anti-AI tone, evidence-based (OCR), and formatted for clarity (Markdown/DOCX).\"",
+      "direct_references": [
+        "memory:context-vault",
+        "connect"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "transcribe-media": {
+      "name": "transcribe-media",
+      "description": "Transcribe video or audio files into text using Google's Gemini 3 Flash. Preserves original language, identifies speakers, cleans noise, and formats for readability without timestamps.",
+      "direct_references": [],
+      "domains": [
+        "video",
+        "development",
+        "ai",
+        "design"
+      ],
+      "tools": [
+        "ffmpeg",
+        "gemini",
+        "python"
+      ]
+    },
+    "seven-figure-course-builder": {
+      "name": "seven-figure-course-builder",
+      "description": "Complete SOP for building, launching, and scaling seven-figure online courses. Use when the user wants to create an online course, digital product, knowledge business, launch educational content, set up course infrastructure, run webinars, or scale with paid advertising. Covers market research, product creation, legal setup, email funnels, webinar sales, Facebook ads, and automation.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "to-notebooklm-artifacts": {
+      "name": "media-to-notebooklm-artifacts",
+      "description": "Full pipeline \u2014 convert any local media/PDF/text/docs into a NotebookLM notebook, then auto-generate slide deck, data table, infographic, video overview, and mind map in the source material's language.",
+      "direct_references": [
+        "notebooklm-py",
+        "media-to-notebooklm-artifacts"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "ffmpeg",
+        "python",
+        "imagemagick"
+      ]
+    },
+    "wp-plugin-development": {
+      "name": "wp-plugin-development",
+      "description": "\"Use when developing WordPress plugins: architecture and hooks, activation/deactivation/uninstall, admin UI and Settings API, data storage, cron/tasks, security (nonces/capabilities/sanitization/escaping), and release packaging.\"",
+      "direct_references": [
+        "wp-project-triage"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "ecommerce",
+        "content",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "topaz-photo-ai-upscaler": {
+      "name": "Topaz Photo AI Upscaler",
+      "description": "Professional AI-powered image upscaling using Topaz Photo AI CLI. Better quality than Upscayl for camera photos, with intelligent autopilot and manual controls.",
+      "direct_references": [],
+      "domains": [
+        "ai",
+        "content",
+        "image",
+        "design"
+      ],
+      "tools": []
+    },
+    "seller-browser-safe": {
+      "name": "seller-browser-safe",
+      "description": "\u8de8\u5883\u5356\u5bb6\u591a\u5e97\u94fa\u5b89\u5168\u6d4f\u89c8\u5668\u7ba1\u7406\u3002\u5f53\u7528\u6237\u9700\u8981\u7ba1\u7406\u591a\u4e2a\u8de8\u5883\u7535\u5546\u5e97\u94fa\u8d26\u53f7\u3001\u9632\u6b62\u8d26\u53f7\u5173\u8054\u3001\u9009\u62e9\u6307\u7eb9\u6d4f\u89c8\u5668\u6216\u4ee3\u7406IP\u65b9\u6848\u65f6\u4f7f\u7528\u3002\u652f\u6301\u4e2d\u56fd\u5356\u5bb6\u5728\u56fd\u5185/\u6d77\u5916\u5207\u6362\u573a\u666f\u3002",
+      "direct_references": [],
+      "domains": [
+        "marketing"
+      ],
+      "tools": []
+    },
+    "google-cloud-integration": {
+      "name": "Google Cloud Integration",
+      "description": "Official integration for Google Cloud Platform (GCP) services via MCP and gcloud CLI. managing authentication, remote MCP connections (BigQuery, Compute, etc.), and environment stability.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "ecommerce",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "codex-config": {
+      "name": "codex-config",
+      "description": "OpenAI Codex CLI configuration reference. Use when setting up or troubleshooting Codex defaults, approval mode, sandbox, or model settings.",
+      "direct_references": [
+        "alias"
+      ],
+      "domains": [
+        "ai",
+        "design"
+      ],
+      "tools": [
+        "openai"
+      ]
+    },
+    "lifestyle-aesthetic-designer": {
+      "name": "Lifestyle Aesthetic Designer",
+      "description": "Proactive coaching and day-design based on the \"Life Aesthetic\" philosophy (Inner Glow, 60% Energy Rule, Dance Linkage).",
+      "direct_references": [
+        "memory:context-vault"
+      ],
+      "domains": [
+        "business",
+        "ecommerce",
+        "ai",
+        "design"
+      ],
+      "tools": []
+    },
+    "stitch-shadcn-ui": {
+      "name": "shadcn-ui",
+      "description": "Expert guidance for integrating and building applications with shadcn/ui components, including component discovery, installation, customization, and best practices. allowed-tools:   - \"shadcn*:*\"   - \"mcp_shadcn*\"   - \"Read\"   - \"Write\"   - \"Bash\"   - \"web_fetch\"",
+      "direct_references": [
+        "alias"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "opc-domain-hunter": {
+      "name": "domain-hunter",
+      "description": "Search domains, compare prices, find promo codes, get purchase recommendations. Use when user wants to buy a domain, check domain prices, find domain deals, compare registrars, or search for .ai/.com domains.",
+      "direct_references": [
+        "opc-twitter",
+        "opc-reddit"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "backend-patterns": {
+      "name": "backend-patterns",
+      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "zstmfhy-zlibrary-to-notebooklm": {
+      "name": "zlibrary-to-notebooklm",
+      "description": "\u81ea\u52a8\u4ece Z-Library \u4e0b\u8f7d\u4e66\u7c4d\u5e76\u4e0a\u4f20\u5230 Google NotebookLM\u3002\u652f\u6301 PDF/EPUB \u683c\u5f0f\uff0c\u81ea\u52a8\u8f6c\u6362\uff0c\u4e00\u952e\u521b\u5efa\u77e5\u8bc6\u5e93\u3002",
+      "direct_references": [
+        "notebooklm-py"
+      ],
+      "domains": [
+        "ai",
+        "pdf",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "wp-cli-expert": {
+      "name": "wp-cli-expert",
+      "description": "Expert WordPress management using WP-CLI. Use when the user wants to manage WordPress sites via command line, automate tasks, fix errors (WSOD), bulk update plugins, modify database entries safely, manage multisite networks, configure wp cron jobs, set up wp-cli.yml, or create automation scripts. Triggers include \"wp cli\", \"manage wordpress\", \"install plugin\", \"search replace db\", \"create user\", \"multisite\", \"wp cron\", \"wp-cli.yml\", \"automation script\".",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "lan-connection-manager": {
+      "name": "lan-connection-manager",
+      "description": "Manage LAN network connections (SMB/NFS shares) with stored credentials and quick connect/disconnect. Use when the user needs to connect to network shares, manage LAN connections, save connection credentials, or work with SMB/NFS mounts on macOS.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "trademark-guard-brand-name-domain": {
+      "name": "trademark-guard",
+      "description": "Comprehensive intellectual property protection system covering trademarks, copyright, patents, domain price comparison, promo codes, and defensive strategies to prevent legal conflicts and build defensible product lines.",
+      "direct_references": [
+        "opc-twitter",
+        "opc-reddit",
+        "opc-domain-hunter"
+      ],
+      "domains": [
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "marketing",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "npm"
+      ]
+    },
+    "seedream-4-5": {
+      "name": "seedream-4-5",
+      "description": "Advanced 4K image generation and semantic editing (material changes, pose preservation) using Seedream 4.5. Use when standard tools fail or for complex editing tasks requiring the 4.5 Edit model.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "marketing",
+        "video",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "skill-improver.backup.20260305_130024": {
+      "name": "Skill Improver",
+      "description": "A meta-skill for auditing, improving, refactoring, and verifying other Agent Skills. Handles script consolidation, error handling enhancement, and documentation updates.",
+      "direct_references": [
+        "memory:context-vault",
+        "skill-improver",
+        "skill-github-importer"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "notebooklm-py": {
+      "name": "notebooklm-py",
+      "description": "Advanced Python API and CLI for Google NotebookLM. Supports deep research, multi-format content generation (podcasts, videos, quizzes), and batch artifact downloading.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "git"
+      ]
+    },
+    "youtube-video-hook": {
+      "name": "youtube-video-hook",
+      "description": "Skill for creating optimized YouTube video opening hooks (first 5-30 seconds) that maximize viewer retention and watch time. Use when planning video scripts, reviewing video openings, or optimizing existing content for better retention metrics.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "ai"
+      ],
+      "tools": []
+    },
+    "opc-banner-creator": {
+      "name": "banner-creator",
+      "description": "Create banners using AI image generation. Discuss format/style, generate variations, iterate with user feedback, crop to target ratio. Use when user wants to create a banner, header, hero image, cover image, GitHub banner, Twitter header, or readme banner.",
+      "direct_references": [
+        "opc-twitter",
+        "visual-prompt-engineer-patten",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "content",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "agentic-vision-gemini": {
+      "name": "agentic-vision-gemini",
+      "description": "Google Gemini 3 Flash Agentic Vision \u2014 model writes and executes Python code to process images (zoom, crop, count, measure). Use when user needs spatial reasoning over images, NOT just description. Triggers on: \"zoom into X\", \"count Y in image\", \"measure Z\", \"compare regions\", or any task requiring programmatic image analysis.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai"
+      ]
+    },
+    "personal-asset-manager": {
+      "name": "personal-asset-manager",
+      "description": "Analyze, organize, and leverage personal assets (Skills, Languages, Connections) to maximize potential. Integrated with Notion and Memory Vault.",
+      "direct_references": [
+        "memory:context-vault",
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "ecommerce",
+        "business",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "curation-expert": {
+      "name": "curation-expert",
+      "description": "Curation Director & Brand Alchemist. Transforms generic products into high-value concepts, bundles, and emotional experiences using strategies like Theme Engineering and Value Stacking. Use when the user wants to curate products, design gift sets, elevate brand concepts, or apply \"Bokksu/Sugoi Mart\" style marketing.",
+      "direct_references": [],
+      "domains": [
+        "image",
+        "design",
+        "ecommerce",
+        "marketing",
+        "social"
+      ],
+      "tools": []
+    },
+    "executing-marketing-campaigns": {
+      "name": "executing-marketing-campaigns",
+      "description": "Plans, creates, and optimizes marketing campaigns including content strategy, social media, email, and analytics. Helps develop go-to-market strategies, campaign messaging, and performance measurement.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "interview-to-article": {
+      "name": "Interview-to-Article",
+      "description": "An interactive interview agent that acts as a reporter/editor to extract your thoughts and ghostwrite high-quality articles. Use it when the user has a rough idea but struggles to start writing, or wants to turn a conversation into a polished post.",
+      "direct_references": [],
+      "domains": [
+        "ai",
+        "content",
+        "design"
+      ],
+      "tools": []
+    },
+    "design-md": {
+      "name": "design-md",
+      "description": "Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files allowed-tools:   - \"stitch*:*\"   - \"Read\"   - \"Write\"   - \"web_fetch\"",
+      "direct_references": [
+        "stitch"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "life-trajectory-deduction": {
+      "name": "life-trajectory-deduction",
+      "description": "A \"Fate Modeler\" skill that performs a long-term causal deduction of a user's life trajectory (1-50 years). It analyzes current states, choices, and hidden costs to project future outcomes across four key stages (35-40, 40-50, 50-60, 60+), concluding with a \"Life Balance Sheet\" of assets versus irreversible debts.",
+      "direct_references": [],
+      "domains": [
+        "ai"
+      ],
+      "tools": []
+    },
+    "startup-metrics-framework": {
+      "name": "startup-metrics-framework",
+      "description": "This skill should be used when the user asks about \"key startup metrics\", \"SaaS metrics\", \"CAC and LTV\", \"unit economics\", \"burn multiple\", \"rule of 40\", \"marketplace metrics\", or requests guidance on tracking and optimizing business performance metrics.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "design",
+        "ecommerce",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "baoyang-guide": {
+      "name": "baoyang-guide",
+      "description": "\u5305\u517b\u5173\u7cfb\u6df1\u5ea6\u89e3\u6790\u6280\u80fd\u3002\u5f53\u7528\u6237\u8be2\u95ee\u5305\u517b\u3001\u7cd6\u5b9d\u3001\u91d1\u4e3b\u3001Sugar Baby/Sugar Daddy\u76f8\u5173\u8bdd\u9898\u65f6\u4f7f\u7528\u3002\u63d0\u4f9b\u5e02\u573a\u884c\u60c5\u3001\u53cc\u65b9\u9700\u6c42\u3001\u4ef7\u683c\u4f53\u7cfb\u3001\u5bfb\u627e\u6e20\u9053\u3001\u6cd5\u5f8b\u8fb9\u754c\u4e0e\u60c5\u611f\u98ce\u9669\u7684\u5168\u9762\u5206\u6790\u3002",
+      "direct_references": [],
+      "domains": [],
+      "tools": []
+    },
+    "vercel-deployment-guide": {
+      "name": "vercel-deployment-guide",
+      "description": "A comprehensive skill for deploying projects to Vercel and understanding pricing, limits, and accessibility considerations.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "business",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm",
+        "git"
+      ]
+    },
+    "general-song-writer": {
+      "name": "general-song-writer",
+      "description": "Hit songwriter agent. Generates catchy, emotional, and memorable lyrics (hooks/spreadable points) and provides specific prompts for AI music generation (Suno/Udio). Use when the user asks to write a song, lyrics, or describes a music vibe.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "marketing",
+        "ai"
+      ],
+      "tools": [
+        "openai"
+      ]
+    },
+    "stitch-react-components": {
+      "name": "react:components",
+      "description": "Converts Stitch designs into modular Vite and React components using system-level networking and AST-based validation. allowed-tools:   - \"stitch*:*\"   - \"Bash\"   - \"Read\"   - \"Write\"   - \"web_fetch\"",
+      "direct_references": [
+        "stitch"
+      ],
+      "domains": [
+        "image",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "stitch-react-components 2": {
+      "name": "react:components",
+      "description": "Converts Stitch designs into modular Vite and React components using system-level networking and AST-based validation. allowed-tools:   - \"stitch*:*\"   - \"Bash\"   - \"Read\"   - \"Write\"   - \"web_fetch\"",
+      "direct_references": [
+        "stitch"
+      ],
+      "domains": [
+        "image",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "academic-navigator": {
+      "name": "academic-navigator",
+      "description": "\u4e00\u4e2a\u9876\u5c16\u7684\u7ec8\u8eab\u5b66\u4e60\u4e0e\u5b66\u4e1a\u89c4\u5212\u6280\u80fd\uff0c\u65e8\u5728\u6253\u7834\u4fe1\u606f\u5dee\u3002\u5b83\u6db5\u76d6\u4ece\u5c0f\u5b66\u5230\u535a\u58eb\u7684\u89c4\u5212\uff0c\u6839\u636e\u5b66\u751f\u80cc\u666f\u3001\u5bb6\u5ead\u7ecf\u6d4e\u72b6\u51b5\u548c\u957f\u671f\u76ee\u6807\u63d0\u4f9b\u6218\u7565\u5efa\u8bae\u3002\u9002\u7528\u4e8e\u7528\u6237\u8be2\u95ee\u5b66\u4e1a\u89c4\u5212\u3001\u7559\u5b66\u5efa\u8bae\u3001\u804c\u4e1a\u8def\u5f84\u8bbe\u8ba1\u6216\u6559\u80b2\u7b56\u7565\u65f6\u3002",
+      "direct_references": [
+        "memory:context-vault",
+        "skill-improver",
+        "skill-improver.backup.20260305_130024"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "japan-med-content-matrix": {
+      "name": "japan-med-content-matrix",
+      "description": "Strategy and content generator for Japan Medical/Insurance niche. Use for creating product matrices, video scripts (YouTube/IG), and sales funnel copy targeting expats/global audience.",
+      "direct_references": [],
+      "domains": [
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "repair-old-photos": {
+      "name": "repair-old-photo",
+      "description": "Restore and repair old, damaged, or low-quality photos. Use when the user provides an old photo and asks to \"fix\", \"repair\", or \"restore\" it while keeping the content (faces, clothes, poses) 100% identical.",
+      "direct_references": [
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "xhs-note-creator-template": {
+      "name": "xhs-note-creator",
+      "description": "\u5c0f\u7ea2\u4e66\u7b14\u8bb0\u7d20\u6750\u521b\u4f5c\u6280\u80fd\u3002\u5f53\u7528\u6237\u9700\u8981\u521b\u5efa\u5c0f\u7ea2\u4e66\u7b14\u8bb0\u7d20\u6750\u65f6\u4f7f\u7528\u8fd9\u4e2a\u6280\u80fd\u3002\u6280\u80fd\u5305\u542b\uff1a\u6839\u636e\u7528\u6237\u7684\u9700\u6c42\u548c\u63d0\u4f9b\u7684\u8d44\u6599\uff0c\u64b0\u5199\u5c0f\u7ea2\u4e66\u7b14\u8bb0\u5185\u5bb9\uff08\u6807\u9898+\u6b63\u6587\uff09\uff0c\u751f\u6210\u56fe\u7247\u5361\u7247\uff08\u5c01\u9762+\u6b63\u6587\u5361\u7247\uff09\uff0c\u4ee5\u53ca\u53d1\u5e03\u5c0f\u7ea2\u4e66\u7b14\u8bb0\u3002",
+      "direct_references": [],
+      "domains": [
+        "image",
+        "notion",
+        "content",
+        "marketing",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "knowledge-card-generator": {
+      "name": "knowledge-card-generator",
+      "description": "Generate consistent-style knowledge cards (infographics) for self-media using Nano Banana. Claude Code generates design docs directly (no API calls). 3-step workflow - build prompt \u2192 Claude generates design \u2192 batch generation. 30 layouts, 10 styles. Auto-detects image count from content. Defaults to Nano Banana 2 (Flash model). Cost-optimized ($0.0174/image via taobao flash).",
+      "direct_references": [
+        "visual-prompt-engineer-patten",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "internal-comms": {
+      "name": "internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Agent should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "direct_references": [],
+      "domains": [
+        "content",
+        "design"
+      ],
+      "tools": []
+    },
+    "amazon-operations-director": {
+      "name": "amazon-operations-director",
+      "description": "Expert Amazon Operations Director skill (FBA & FBM). Helps with product development (cost/pricing/audience/supply chain), listing creation (SEO title, bullets, description), visual strategy (designer briefs), and customer service emails. Use when developing new Amazon products or optimizing listings/operations for any marketplace.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "skill-creator": {
+      "name": "skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "ecommerce-kv": {
+      "name": "ecommerce-kv",
+      "description": "\u7535\u5546\u8425\u9500\u6d77\u62a5(KV)\u751f\u6210\u4e13\u5bb6\u3002\u5f53\u7528\u6237\u9700\u8981\u4e3a\u4ea7\u54c1\u751f\u6210\u5e26\u6709\u6a21\u7279\u3001\u7279\u5b9a\u573a\u666f\u3001\u8425\u9500\u6587\u6848\u7684\u9ad8\u7ea7\u5ba3\u4f20\u6d77\u62a5\u65f6\u4f7f\u7528\u3002\u667a\u80fd\u5206\u6790\u4ea7\u54c1\u5c5e\u6027\uff0c\u81ea\u52a8\u5339\u914d\u6a21\u7279\u4e0e\u573a\u666f\uff0c\u5168\u7a0b\u4e25\u683c\u4fdd\u6301\u4ea7\u54c1\u539f\u59cb\u7ed3\u6784\u3002",
+      "direct_references": [
+        "Nano-Banana"
+      ],
+      "domains": [
+        "image",
+        "design",
+        "ecommerce",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "serpapi-mcp": {
+      "name": "serpapi-mcp",
+      "description": "> **Purpose**: Enables real-time web search when Claude Code's built-in WebSearch is unavailable (e.g., China API providers).",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "ai",
+        "research",
+        "design"
+      ],
+      "tools": []
+    },
+    "chrome-devtools": {
+      "name": "chrome-devtools",
+      "description": "Control and inspect Chrome browser instances using Chrome DevTools Protocol via MCP.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "ecommerce",
+        "ai",
+        "content"
+      ],
+      "tools": [
+        "chrome"
+      ]
+    },
+    "theme-serial-gen": {
+      "name": "theme-serial-gen",
+      "description": "Generate a consistent series of images (default 4) based on a theme/topic using Nano Banana Pro. Use this when the user wants multiple cohesive images for a story, presentation, or concept.",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "marketing",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "performance-ads-writer": {
+      "name": "performance-ads-writer",
+      "description": "Writes high-conversion ads for Google Ads and Meta Ads (Facebook/Instagram). Performs deep research on target URLs to extract selling points, pain points, and customer personas. Generates platform-optimized copy with strict adherence to character limits and best practices (CTR/CVR focus). Also generates structured visual briefs using Nano Banana 2/Pro model selection logic for AI-powered creative assets \u2014 covering prompt engineering, creative volume strategy, and Asset Studio workflow.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "cross-border-ai-strategist": {
+      "name": "cross-border-ai-strategist",
+      "description": "\u8de8\u5883\u7535\u5546\u591a\u533a\u57df AI \u7b56\u7565\u987e\u95ee\u3002\u7528\u6237\u8f93\u5165\u4ea7\u54c1\u6216\u60f3\u6cd5\uff0c\u8f93\u51fa\uff1a\u5e02\u573a\u9002\u914d\u8bc4\u5206\u3001\u5957\u5229\u7a7a\u95f4\u5206\u6790\uff08\u4fe1\u606f\u5dee/\u89c6\u89c9\u5dee/\u7ade\u4e89\u5dee\uff09\u3001AI \u56fe\u50cf\u751f\u6210\u7b56\u7565\uff08Nano Banana 2/Pro \u9009\u578b + \u63d0\u793a\u8bcd\u6846\u67b6\uff09\u3001\u5404\u8bed\u79cd\u5e02\u573a\u4f18\u5148\u7ea7\u6392\u5e8f\u4e0e\u5feb\u901f\u542f\u52a8\u884c\u52a8\u8ba1\u5212\u3002\u8986\u76d6\u82f1/\u5fb7/\u65e5/\u6cd5/\u963f\u62c9\u4f2f/\u897f\u73ed\u7259\u8bed\u516d\u5927\u8bed\u79cd\u5e02\u573a\u3002",
+      "direct_references": [
+        "cross-border-product-selector",
+        "videocut",
+        "web-search-manager",
+        "memory:context-vault",
+        "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+        "creator-monetization-engine",
+        "seller-browser-safe",
+        "executing-marketing-campaigns",
+        "xhs-note-creator-template",
+        "ecommerce-kv",
+        "performance-ads-writer",
+        "dtc-brand-library",
+        "ecommerce-product-refine",
+        "aippt-enterprise",
+        "opc-seo-geo",
+        "naturalize-text-localize",
+        "ecommerce-lp-generator"
+      ],
+      "domains": [
+        "development",
+        "ecommerce",
+        "marketing",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": []
+    },
+    "bird": {
+      "name": "bird",
+      "description": "X/Twitter CLI for reading, searching, and posting via cookies or Sweetistics.",
+      "direct_references": [],
+      "domains": [
+        "social",
+        "development",
+        "design"
+      ],
+      "tools": []
+    },
+    "302ai-integration": {
+      "name": "302ai-integration",
+      "description": "Use this skill to integrate or execute 302.ai APIs (LLM, Image, Video, Audio). Supports code generation AND direct execution from the CLI.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai"
+      ]
+    },
+    "skill-github-importer": {
+      "name": "skill-install",
+      "description": "Install Claude skills from GitHub repositories with automated security scanning. Triggers when users want to install skills from a GitHub URL, need to browse available skills in a repository, or want to safely add new skills to their Claude environment.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "design",
+        "ecommerce",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "notion-mcp-connector": {
+      "name": "notion-mcp-connector",
+      "description": "Guide and tools for interacting with Notion via the Model Context Protocol (MCP) or Direct API. Use this skill when you need to read, search, edit, or automate workflows within a Notion workspace, including handling databases, pages, and specific integrations like Expense tracking.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "notion"
+      ]
+    },
+    "wp-world-inspire-lab-wi": {
+      "name": "world-inspire-lab",
+      "description": "\"Global Developer capability for World Inspire Lab. Handles Frontend Design , Marketing Page generation, and Responsiveness updates via WordPress API.\"",
+      "direct_references": [
+        "memory:context-vault",
+        "chrome-devtools"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "chrome"
+      ]
+    },
+    "stitch": {
+      "name": "stitch",
+      "description": "Unified router for all Stitch workflows. Use when the user wants to design UI, generate pages, convert designs to code, or build multi-page sites with Stitch. allowed-tools:   - \"stitch*:*\"   - \"mcp__stitch__*\"   - \"Bash\"   - \"Read\"   - \"Write\"",
+      "direct_references": [
+        "stitch-enhance-prompt",
+        "design-md",
+        "stitch-design-md",
+        "stitch-loop",
+        "stitch-enhance-prompt2"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "ai"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "city-cost-compare-nomad": {
+      "name": "city-cost-compare-nomad",
+      "description": "Compare cost of living across cities using live Numbeo data. Fetches rent, meals, utilities, transport, and salary. Groups by country with flag headers in markdown output.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "media-to-notebooklm-artifacts": {
+      "name": "media-to-notebooklm-artifacts",
+      "description": "Full pipeline \u2014 convert any local media/PDF/text/docs into a NotebookLM notebook, then auto-generate slide deck, data table, infographic, video overview, and mind map in the source material's language.",
+      "direct_references": [
+        "to-notebooklm-artifacts",
+        "notebooklm-py",
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "ffmpeg",
+        "python",
+        "imagemagick"
+      ]
+    },
+    "claude-code-agent-teams": {
+      "name": "claude-code-agent-teams",
+      "description": "Definitive reference for Claude Code's built-in Agent Teams system. Use when orchestrating multi-agent work \u2014 spawning teammates, assigning tasks, messaging, broadcasting, and coordinating parallel execution. Essential reading for any LLM engine (Claude, Gemini, GLM, OpenAI) powering Claude Code that needs to use teams.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "design",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai",
+        "git"
+      ]
+    },
+    "obsidian-canvas-creator": {
+      "name": "obsidian-canvas-creator",
+      "description": "Create Obsidian Canvas files from text content, supporting both MindMap and freeform layouts. Use this skill when users want to visualize content as an interactive canvas, create mind maps, or organize information spatially in Obsidian format.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "ai"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "honest-deep-researcher": {
+      "name": "Honest Deep Researcher",
+      "description": "A research specialist that prioritizes factual accuracy, data validation, and transparent reporting. It actively saves intermediate work, cross-validates findings, and produces high-quality, interactive HTML/Markdown reports.",
+      "direct_references": [
+        "memory:context-vault",
+        "google-deep-research",
+        "competitive-ads-extractor",
+        "market-sizing-analysis"
+      ],
+      "domains": [
+        "business",
+        "pdf",
+        "notion",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "openai",
+        "imagemagick"
+      ]
+    },
+    "surecart-manager": {
+      "name": "SureCart Manager",
+      "description": "Full ecommerce automation for SureCart \u2014 catalog, orders, subscriptions, fulfillment, coupons, webhooks, analytics, licensing, affiliates, and WordPress PHP integration via REST API.",
+      "direct_references": [
+        "skill-improver",
+        "amazon-operations-director",
+        "wp-site-manager"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "google-deep-research": {
+      "name": "google-deep-research",
+      "description": "Conduct deep research using Google NotebookLM (and optionally Gemini Web). Automates web searching, source gathering, notebook creation, and report synthesis.",
+      "direct_references": [
+        "notebooklm-py"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "ecommerce",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "heif-converter": {
+      "name": "heif-converter",
+      "description": "Expert tool for converting HEIF/HIF images to compatible formats (PNG/JPG) while managing color profiles (sRGB/P3). Best for preparing Sony A7S3/iPhone footage for AI upscaling or social sharing.",
+      "direct_references": [],
+      "domains": [
+        "image",
+        "design",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "changelog-generator": {
+      "name": "changelog-generator",
+      "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "imagemagick",
+        "git"
+      ]
+    },
+    "svg-generator": {
+      "name": "svg-generator",
+      "description": "Generates high-quality, scalable vector graphics (SVG) code for icons, diagrams, and illustrations. Can save directly to .svg files.",
+      "direct_references": [],
+      "domains": [
+        "ai",
+        "image",
+        "research",
+        "design"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "firewall-manager": {
+      "name": "firewall-manager",
+      "description": "Comprehensive firewall management for Little Snitch, LuLu, and macOS built-in firewall. Designed for users with cracked/hacked apps who need to block update checks and license verification.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "continuous-learning": {
+      "name": "continuous-learning-v2",
+      "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents.",
+      "direct_references": [
+        "skill-creator",
+        "continuous-learning-v2"
+      ],
+      "domains": [
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "git"
+      ]
+    },
+    "continuous-learning-v2": {
+      "name": "continuous-learning-v2",
+      "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents.",
+      "direct_references": [
+        "skill-creator",
+        "continuous-learning"
+      ],
+      "domains": [
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "git"
+      ]
+    },
+    "stitch-design-md": {
+      "name": "design-md",
+      "description": "Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files allowed-tools:   - \"stitch*:*\"   - \"Read\"   - \"Write\"   - \"web_fetch\"",
+      "direct_references": [
+        "stitch"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "imagemagick"
+      ]
+    },
+    "elon-musk-life-coach": {
+      "name": "elon-musk-life-coach",
+      "description": "Life coaching from Elon Musk's perspective. Use when the user asks for life advice, career guidance, problem-solving strategies, productivity tips, or wants to think through challenges using first principles. Mimics Elon's direct communication style and his philosophies on work, innovation, simplicity, and execution. Triggered by phrases like \"what would Elon do\", \"life coach\", \"career advice\", \"first principles\", \"how to approach [problem]\", or mentions of productivity/effectiveness.",
+      "direct_references": [
+        "memory:context-vault",
+        "connect"
+      ],
+      "domains": [
+        "business",
+        "ecommerce",
+        "ai",
+        "design"
+      ],
+      "tools": []
+    },
+    "prd": {
+      "name": "prd",
+      "description": "\"Generate a Product Requirements Document (PRD) for a new feature. Use when planning a feature, starting a new project, or when asked to create a PRD. Triggers on: create a prd, write prd for, plan this feature, requirements for, spec out.\"",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "competitive-ads-extractor": {
+      "name": "competitive-ads-extractor",
+      "description": "Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "dtc-brand-library": {
+      "name": "dtc-brand-library",
+      "description": "DTC\u72ec\u7acb\u7ad9\u54c1\u724c\u5e93\u7ba1\u7406\u7cfb\u7edf\u3002\u81ea\u52a8\u641c\u7d22\u3001\u5206\u6790\u548c\u5b58\u50a8\u4f18\u79c0DTC\u54c1\u724c\u6848\u4f8b\uff0c\u7528\u4e8e\u8de8\u5883\u7535\u5546\u72ec\u7acb\u7ad9\u53c2\u8003\u3002\u652f\u6301\u6309niche/\u54c1\u724c\u540d\u79f0\u67e5\u8be2\u3001\u81ea\u52a8\u7f51\u9875\u5206\u6790\u3001\u7ed3\u6784\u5316\u5b58\u50a8\u5230Notion\u3001\u6df1\u5ea6\u6d41\u91cf\u548c\u8f6c\u5316\u7b56\u7565\u5206\u6790\u3002\u5f53\u7528\u6237\u9700\u8981\u7814\u7a76DTC\u54c1\u724c\u3001\u5206\u6790\u72ec\u7acb\u7ad9\u6848\u4f8b\u3001\u5bfb\u627e\u67d0\u4e2aniche\u7684\u6807\u6746\u54c1\u724c\u3001\u4e86\u89e3\u6d41\u91cf\u7ed3\u6784\u6216\u8f6c\u5316\u903b\u8f91\u65f6\u4f7f\u7528\u3002\u89e6\u53d1\u8bcd\u5305\u62ec\uff1a\"\u7814\u7a76XX\u54c1\u724c\"\u3001\"\u627e\u4e00\u4e9b\u505aXX\u7684\u72ec\u7acb\u7ad9\"\u3001\"\u5206\u6790XX\u7684\u6d41\u91cf\u7ed3\u6784\"\u3001\"\u6dfb\u52a0XX\u54c1\u724c\u5230\u5e93\u91cc\"\u3001\"\u6709\u4ec0\u4e48\u597d\u7684\u5bb6\u5c45\u72ec\u7acb\u7ad9\"\u3001\"DTC\u6848\u4f8b\"\u3001\"\u72ec\u7acb\u7ad9\u53c2\u8003\"\u3002",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "notion",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "notion"
+      ]
+    },
+    "file-organizer": {
+      "name": "file-organizer",
+      "description": "Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "content",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "verification-loop": {
+      "name": "verification-loop",
+      "description": "A comprehensive verification system for Claude Code sessions.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "ai",
+        "design"
+      ],
+      "tools": [
+        "npm",
+        "git"
+      ]
+    },
+    "tdd-workflow": {
+      "name": "tdd-workflow",
+      "description": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "ecommerce",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "openai",
+        "npm"
+      ]
+    },
+    "wp-phpstan": {
+      "name": "wp-phpstan",
+      "description": "\"Use when configuring, running, or fixing PHPStan static analysis in WordPress projects (plugins/themes/sites): phpstan.neon setup, baselines, WordPress-specific typing, and handling third-party plugin classes.\"",
+      "direct_references": [
+        "wp-project-triage"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "remove-bg": {
+      "name": "remove-bg",
+      "description": "Removes white backgrounds from images to create transparent PNGs. Use this for logos, product shots, or icons. If an image has a complex background, this skill first uses Antigravity IDE's built-in nano banana (generate_image tool) to regenerate it with a pure white background before applying transparency.",
+      "direct_references": [
+        "Nano-Banana"
+      ],
+      "domains": [
+        "image",
+        "design",
+        "ecommerce",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "media-organizer": {
+      "name": "Media Organizer",
+      "description": "High-performance, multi-threaded toolkit for media ingestion, smart deduplication, and integrity validation.",
+      "direct_references": [],
+      "domains": [
+        "video",
+        "ai",
+        "image",
+        "design"
+      ],
+      "tools": [
+        "ffmpeg",
+        "python"
+      ]
+    },
+    "principle-driven-framework": {
+      "name": "principle-driven-framework",
+      "description": "\u539f\u5219\u548c\u521d\u8877\u9a71\u52a8\u6846\u67b6\u3002Ensures all project docs (specs, rules, marketing, design) are rooted in and linked to core principles/vision/brand story \u2014 like constitutional law powering normal law. Use when starting a project, auditing existing docs, or when a doc/decision seems to drift from original intent. Triggers on: \"\u539f\u5219\", \"\u521d\u8877\", \"principles\", \"vision doc\", \"brand story\", \"doc linkage\", \"why are we doing this\", \"drift from intent\", \"principle audit\".",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "pdf",
+        "design",
+        "marketing",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "local-store-promotion": {
+      "name": "local-store-promotion",
+      "description": "\u672c\u5730\u5b9e\u4f53\u95e8\u5e97\u5168\u6e20\u9053\u63a8\u5e7f\u6280\u80fd\u3002\u9002\u7528\u4e8e\u9910\u996e\u3001\u5a5a\u7eb1\u3001\u7f8e\u5bb9\u3001\u96f6\u552e\u7b49\u672c\u5730\u5546\u5bb6\uff0c\u8986\u76d6\u5c0f\u7ea2\u4e66/\u6296\u97f3/\u5fae\u4fe1/\u5927\u4f17\u70b9\u8bc4/\u7f8e\u56e2\u7b49\u5e73\u53f0\u7684\u5185\u5bb9\u7b56\u5212\u3001\u53d1\u5e03\u8282\u594f\u3001\u6d3b\u52a8\u8bbe\u8ba1\u4e0e\u6570\u636e\u590d\u76d8\u3002",
+      "direct_references": [],
+      "domains": [
+        "ecommerce",
+        "content"
+      ],
+      "tools": []
+    },
+    "clawdbot-repair": {
+      "name": "clawdbot-repair",
+      "description": "Expert guide for troubleshooting and repairing Clawdbot installations. Use this skill when Clawdbot is not working, the agent is missing from the UI, or there are connection/authentication errors.",
+      "direct_references": [
+        "alias",
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "docker",
+        "python",
+        "openai",
+        "npm"
+      ]
+    },
+    "skill-from-code": {
+      "name": "skill-seekers",
+      "description": "Generate LLM skills from documentation, codebases, and GitHub repositories",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "obsidian-cli": {
+      "name": "obsidian-cli",
+      "description": "> Official Obsidian CLI (v1.12.4) \u2014 complete reference from https://help.obsidian.md/cli",
+      "direct_references": [
+        "alias"
+      ],
+      "domains": [
+        "ai",
+        "content",
+        "pdf",
+        "design"
+      ],
+      "tools": [
+        "python",
+        "git"
+      ]
+    },
+    "guitar-learning": {
+      "name": "guitar-learning",
+      "description": "\u5409\u4ed6\u5b66\u4e60\u6280\u80fd\uff0c\u6db5\u76d6\u548c\u5f26\u7406\u8bba\u3001\u6307\u6cd5\u7ec3\u4e60\u3001\u97f3\u9636\u8bad\u7ec3\u3001\u8282\u594f\u578b\u3001\u8c03\u5f0f\u7406\u8bba\u548c\u5b9e\u6218\u66f2\u76ee\u3002\u9002\u7528\u4e8e\u521d\u5b66\u8005\u5230\u4e2d\u7ea7\u5b66\u4e60\u8005\u3002\u5f53\u7528\u6237\u8be2\u95ee\u5409\u4ed6\u5b66\u4e60\u3001\u548c\u5f26\u6784\u6210\u3001\u6307\u6cd5\u3001\u97f3\u9636\u3001\u8282\u594f\u578b\u3001\u7ec3\u4e60\u66f2\u76ee\u3001\u8c03\u5f0f\u7406\u8bba\u6216\u5409\u4ed6\u6280\u5de7\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "design"
+      ],
+      "tools": []
+    },
+    "know-an-industry-fast": {
+      "name": "know-an-industry-fast",
+      "description": "\"A systematic workflow to quickly master a new industry or topic by identifying and analyzing three key types of information sources: Frontier Practitioners (KOLs), Educators (Systematizers), and Observers (Analysts). Use this skill when you need to rapidly build a high-quality, 'Information High Ground' understanding of a specific domain.\"",
+      "direct_references": [
+        "opc-twitter",
+        "connect"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "onecontext-manager": {
+      "name": "onecontext-manager",
+      "description": "Manage OneContext (aline-ai) \u2014 agent session trajectory tracker with TUI dashboard, git-based versioning, and Claude Code Stop hook integration.",
+      "direct_references": [
+        "planning-with-files",
+        "alias",
+        "memory:context-vault"
+      ],
+      "domains": [
+        "business",
+        "notion",
+        "design",
+        "ecommerce",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm",
+        "git"
+      ]
+    },
+    "article-broll-illustrator": {
+      "name": "youtube-broll-illustrator",
+      "description": "Generate consistent, timeline-mapped B-roll images for YouTube videos. Analyzes video scripts (text/audio/video), understands audience context, and produces professionally organized B-roll with visual consistency. Use when user asks to \"create B-roll for video\", \"illustrate video script\", or \"generate YouTube B-roll\".",
+      "direct_references": [
+        "planning-with-files",
+        "visual-prompt-engineer-patten",
+        "transcribe-media",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "business",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "ecommerce-product-refine": {
+      "name": "ecommerce-product-refine",
+      "description": "\u7535\u5546\u4ea7\u54c1\u7cbe\u4fee\u4e0e\u767d\u5e95\u56fe\u5236\u4f5c\u4e13\u5bb6\u3002\u62e5\u6709 5 \u5e74\u7535\u5546\u4ea7\u54c1\u7cbe\u4fee\u7ecf\u9a8c\uff0c\u4e13\u7cbe\u7f8e\u5986\u3001\u53a8\u5177\u3001\u670d\u9970\u3001\u6570\u7801\u7b49\u5168\u54c1\u7c7b\u3002\u5f53\u7528\u6237\u9700\u8981\u5904\u7406\u4ea7\u54c1\u56fe\u7247\uff0c\u8fdb\u884c\u6750\u8d28\u4f18\u5316\u3001\u53bb\u7455\u75b5\u3001\u751f\u6210\u7b26\u5408\u7535\u5546\u6807\u51c6\u7684\u7eaf\u51c0\u767d\u5e95\u56fe\uff08RGB:255,255,255\uff09\u65f6\u4f7f\u7528\u6b64\u6280\u80fd\u3002",
+      "direct_references": [
+        "Nano-Banana"
+      ],
+      "domains": [
+        "business",
+        "ecommerce",
+        "ai"
+      ],
+      "tools": []
+    },
+    "japan-tax-planning": {
+      "name": "japan-tax-planning",
+      "description": "Japan \u78ba\u5b9a\u7533\u544a (final tax return) planning and calculation for salary earners, freelancers, foreigners, and overseas residents. Covers deductions, furusato nozei, overseas dependents, residency status, and e-Tax filing.",
+      "direct_references": [],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "business",
+        "ai"
+      ],
+      "tools": []
+    },
+    "frontend-design": {
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "ai"
+      ],
+      "tools": []
+    },
+    "vps-proxy-setup": {
+      "name": "vps-proxy-setup",
+      "description": "\u81ea\u52a8\u4e3a\u60a8\u65b0\u8d2d\u4e70\u7684\u5ec9\u4ef7 VPS \u90e8\u7f72 3x-ui + VLESS-Reality\uff0c\u5e76\u6ce8\u5165 Clash Verge / ClashMi iOS",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "ai",
+        "content",
+        "design"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "init-blast-method": {
+      "name": "init-blast-method",
+      "description": "Initializes a workspace with the B.L.A.S.T. (Blueprint, Link, Architect, Stylize, Trigger) system architecture. Use this when starting a new automation or coding project to ensure reliability and self-healing capabilities.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "ecommerce",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "travel-deal-hunter": {
+      "name": "travel-deal-hunter",
+      "description": "\u667a\u80fd\u627e\u623f\u4e0e\u65c5\u884c\u5957\u9910\u730e\u624b\u3002\u5206\u5c42\u8ba2\u623f\u7b56\u7565\uff0c\u5e2e\u52a9\u6570\u5b57\u6e38\u6c11\u5728\u4e2d\u56fd\u5927\u9646\u3001\u8d8a\u5357\u53ca\u5168\u7403\u627e\u5230\u6700\u5b9e\u60e0\u7684\u4f4f\u5bbf\u548c\u673a\u7968\u65b9\u6848\u3002\u6838\u5fc3\u903b\u8f91\uff1a\u5e73\u53f0\u53ea\u7528\u6765\u641c\u7d22\uff0c\u771f\u6b63\u4f4e\u4ef7\u5728\u79c1\u57df\u548c\u957f\u79df\u6298\u6263\u91cc\u3002\u5f53\u7528\u6237\u9700\u8981\u627e\u623f\u3001\u8ba2\u9152\u5e97\u3001\u6bd4\u8f83\u673a\u7968\u6216\u89c4\u5212\u65c5\u884c\u9884\u7b97\u65f6\u4f7f\u7528\u3002",
+      "direct_references": [],
+      "domains": [
+        "social",
+        "ai"
+      ],
+      "tools": []
+    },
+    "stitch-loop": {
+      "name": "stitch-loop",
+      "description": "Teaches agents to iteratively build websites using Stitch with an autonomous baton-passing loop pattern allowed-tools:   - \"stitch*:*\"   - \"chrome*:*\"   - \"Read\"   - \"Write\"   - \"Bash\"",
+      "direct_references": [
+        "design-md",
+        "stitch",
+        "stitch-design-md"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai"
+      ],
+      "tools": [
+        "chrome"
+      ]
+    },
+    "music-video-prep": {
+      "name": "music-video-prep",
+      "description": "Professional music video quality assurance and guidance skill. Acts as an audio engineering consultant to analyze recordings and provide step-by-step instructions for processing in Logic Pro or Adobe Audition. Use when the user wants to understand audio quality issues in music videos, covers, or performances, and learn how to fix them properly in a DAW. Addresses low volume, excessive stereo width (\u73af\u7ed5\u58f0\u592a\u5927), thin sound (\u5355\u8584), breathing instability (\u6c14\u606f\u4e0d\u7a33), pitch correction (\u8d70\u97f3), and lack of reverb with detailed DAW-specific guidance.",
+      "direct_references": [
+        "music-video-title-generator",
+        "transcribe-media",
+        "gyroflow-stabilizer"
+      ],
+      "domains": [
+        "design",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "ffmpeg",
+        "python"
+      ]
+    },
+    "market-sizing-analysis": {
+      "name": "market-sizing-analysis",
+      "description": "This skill should be used when the user asks to \"calculate TAM\", \"determine SAM\", \"estimate SOM\", \"size the market\", \"calculate market opportunity\", \"what's the total addressable market\", or requests market sizing analysis for a startup or business opportunity.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "business",
+        "pdf",
+        "notion",
+        "design",
+        "ecommerce",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "company-asset-isolation": {
+      "name": "company-asset-isolation",
+      "description": "\u516c\u53f8\u67b6\u6784\u4e0e\u8d44\u4ea7\u9694\u79bb\u4e13\u5bb6\u3002\u8bb2\u89e3\u5982\u4f55\u901a\u8fc7SPV\uff08\u7279\u6b8a\u76ee\u7684\u5b9e\u4f53\uff09\u3001\u4e3b\u4f53\u5206\u79bb\u3001\u63a7\u80a1\u67b6\u6784\u7b49\u5408\u6cd5\u624b\u6bb5\u4fdd\u62a4\u6838\u5fc3\u8d44\u4ea7\u3001\u9694\u79bb\u7ecf\u8425\u98ce\u9669\u3002\u5f53\u7528\u6237\u60f3\u4e86\u89e3\u516c\u53f8\u67b6\u6784\u8bbe\u8ba1\u3001\u8d44\u4ea7\u4fdd\u62a4\u3001\u98ce\u9669\u9694\u79bb\u3001\u6216\u5206\u6790\u67d0\u516c\u53f8\u5982\u4f55\u505a\u4e3b\u4f53\u9694\u79bb\u65f6\u4f7f\u7528\u3002",
+      "direct_references": [],
+      "domains": [],
+      "tools": []
+    },
+    "model-library-generator": {
+      "name": "model-library-generator",
+      "description": "**Use this skill when**: The user wants to create, manage, or reference a library of consistent character models for image generation, especially for e-commerce, branding, or content that needs human ",
+      "direct_references": [
+        "reference-photo-expander",
+        "visual-prompt-engineer-patten",
+        "ecommerce-kv"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "gyroflow-stabilizer": {
+      "name": "gyroflow-stabilizer",
+      "description": "Stabilize video footage (especially Sony S-Log3 with gyro data) using Gyroflow CLI. Supports batch processing, custom strength (smoothness), and high-quality output. Use when user asks to \"stabilize video\", \"use gyroflow\", or \"process slog3 footage\".",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "wp-interactivity-api": {
+      "name": "wp-interactivity-api",
+      "description": "\"Use when building or debugging WordPress Interactivity API features (data-wp-* directives, @wordpress/interactivity store/state/actions, block viewScriptModule integration, wp_interactivity_*()) including performance, hydration, and directive behavior.\"",
+      "direct_references": [
+        "wp-project-triage"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "init-vault-method": {
+      "name": "init-vault-method",
+      "description": "\"Initializes a project with the V.A.U.L.T. (Vision, Audit, Update, Link, Transfer) knowledge management system. Designed for business projects (e-commerce, product dev, research) where multiple AI agents work across sessions. Solves context amnesia, data rot, and contradiction drift.\"",
+      "direct_references": [
+        "planning-with-files"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "ecommerce",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "vercel-react-best-practices": {
+      "name": "vercel-react-best-practices",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "aippt-enterprise": {
+      "name": "aippt",
+      "description": "AIPPT - \u57fa\u4e8e\u6a21\u677f\u5b9a\u5236\u5316\u751f\u6210 PPT\u3002\u57ab\u56fe\u7ea6\u675f\u98ce\u683c \u2192 Kie's nano banana pro \u66ff\u6362\u5185\u5bb9 \u2192 Antigravity IDE \u751f\u6210\u6bcf\u4e00\u9875 \u2192 \u6253\u5305 PPTX\u3002",
+      "direct_references": [
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "ai",
+        "image"
+      ],
+      "tools": [
+        "python",
+        "npm"
+      ]
+    },
+    "business-model-xray": {
+      "name": "business-model-xray",
+      "description": "\u5546\u4e1a\u6a21\u5f0f X \u5149\u5ba1\u8ba1\u5e08\u3002\u7528\u4e8e\u8bc4\u4f30\u3001\u62c6\u89e3\u3001\u538b\u529b\u6d4b\u8bd5\u4efb\u4f55\u5546\u4e1a\u6a21\u5f0f\u6216\u521b\u4e1a\u60f3\u6cd5\u3002\u8bc6\u522b\u8d44\u91d1\u76d8\u3001\u9006\u5411\u9009\u62e9\u3001\u8fb9\u9645\u6210\u672c\u9677\u9631\u3001SPV\u4e3b\u4f53\u9694\u79bb\u7ea2\u65d7\u3001\u5d29\u76d8\u524d\u6b7b\u4ea1\u4fe1\u53f7\u7b49\u81f4\u547d\u6f0f\u6d1e\u3002\u5f53\u7528\u6237\u60f3\u9a8c\u8bc1\u4e00\u4e2a\u5546\u4e1a\u6a21\u5f0f\u3001\u5224\u65ad\u9879\u76ee\u662f\u5426\u53ef\u884c\u3001\u6216\u5206\u6790\u67d0\u4e2a\u5e73\u53f0\u4e3a\u4f55\u66b4\u96f7\u65f6\u4f7f\u7528\u3002",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "ai"
+      ],
+      "tools": [
+        "openai"
+      ]
+    },
+    "wp-site-manager": {
+      "name": "wp-site-manager",
+      "description": "Generic WordPress site management \u2014 deploy pages, manage media, execute WP-CLI remotely, site operations, safety protocols. Triggers include \"deploy page\", \"upload media\", \"wp remote\", \"site operations\", \"wp safety\", \"sitemap sync\".",
+      "direct_references": [
+        "wp-block-themes",
+        "wp-block-development",
+        "wp-rest-api",
+        "wp-plugin-development",
+        "wp-cli-expert",
+        "chrome-devtools",
+        "wp-phpstan",
+        "wp-interactivity-api",
+        "connect",
+        "wordpress-router",
+        "wp-performance"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "social",
+        "content",
+        "marketing",
+        "video",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "chrome"
+      ]
+    },
+    "package-tracker": {
+      "name": "Package Tracker",
+      "description": "A universal CLI tool and skill to track packages globally. Automatically scrapes supported carriers (Japan Post) and provides smart deep-links for all others (Universal).",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "ai",
+        "content"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "connect": {
+      "name": "connect",
+      "description": "Connect Claude to any app. Send emails, create issues, post messages, update databases - take real actions across Gmail, Slack, GitHub, Notion, and 1000+ services.",
+      "direct_references": [
+        "opc-twitter",
+        "opc-reddit"
+      ],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "content",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai",
+        "npm"
+      ]
+    },
+    "opc-seo-geo": {
+      "name": "seo-geo",
+      "description": "SEO & GEO (Generative Engine Optimization) for websites. Analyze keywords, generate schema markup, optimize for AI search engines (ChatGPT, Perplexity, Gemini, Copilot, Claude) and traditional search (Google, Bing). Use when user wants to improve search visibility, search optimization, search ranking, AI visibility, ChatGPT ranking, Google AI Overview, indexing, JSON-LD, meta tags, or keyword research.",
+      "direct_references": [
+        "opc-twitter",
+        "opc-reddit"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai"
+      ]
+    },
+    "frontend-patterns": {
+      "name": "frontend-patterns",
+      "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "ecommerce",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "model-authenticity-verifier": {
+      "name": "model-authenticity-verifier",
+      "description": "Verifies if the current Claude environment is genuine or a shadow API substitution. Use when user suspects their API provider is using cheaper models (GLM-4, DeepSeek) instead of real Claude Sonnet 4.6.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "ai",
+        "research",
+        "design"
+      ],
+      "tools": []
+    },
+    "mcp-builder": {
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "wordpress-router": {
+      "name": "wordpress-router",
+      "description": "\"Use when the user asks about WordPress codebases (plugins, themes, block themes, Gutenberg blocks, WP core checkouts) and you need to quickly classify the repo and route to the correct workflow/skill (blocks, theme.json, REST API, WP-CLI, performance, security, testing, release packaging).\"",
+      "direct_references": [
+        "wp-project-triage"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "content",
+        "wordpress",
+        "ai"
+      ],
+      "tools": []
+    },
+    "tampermonkey": {
+      "name": "tampermonkey",
+      "description": "Expert Tampermonkey/Greasemonkey userscript development for browser automation and web enhancement.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "mcp-integration": {
+      "name": "MCP Integration",
+      "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${ANTIGRAVITY_SKILL_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Antigravity plugins for external tool and service integration.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm",
+        "git"
+      ]
+    },
+    "family-health-guardian": {
+      "name": "family-health-guardian",
+      "description": "Act as a trusted Family Doctor and Health Guardian. Manage family health profiles, provide authentic medical advice considering budget/insurance, and track health history. Integration with memory-vault. Use when user mentions health, sickness, medical advice, family members' well-being, or \"\u6863\u6848\" (health records).",
+      "direct_references": [
+        "memory:context-vault"
+      ],
+      "domains": [
+        "design",
+        "ecommerce",
+        "content",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "email-management": {
+      "name": "email-management",
+      "description": ">   Multi-account email configuration manager. Stores SMTP/IMAP/MX settings for all   accounts, detects misconfigurations (wrong MX, port changes, provider drift), and   auto-corrects configs by querying live DNS. Priority focus on business domains:   worldinspirelab.com, globalgrowthco.com, glintmuse.com, belovedpals.com, xinchaovi.com.   Use when: checking email health, adding/updating accounts, diagnosing delivery issues,   syncing configs after provider changes.",
+      "direct_references": [
+        "alias",
+        "cloudflare-dns-manager",
+        "connect"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "ecommerce",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "life-learning-companion": {
+      "name": "Life Learning Companion",
+      "description": "A strategic partner for life analysis. Summarizes experiences, extracts principles, and logs them to Notion.",
+      "direct_references": [
+        "memory:context-vault",
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "naturalize-text-localize": {
+      "name": "naturalize-text",
+      "description": "\u5168\u8bed\u8a00\u901a\u7528\u7ffb\u8bd1\u4e0e\u6587\u672c\u4eba\u6027\u5316\u3002\u7528\u4e8e\u8de8\u8bed\u8a00\u7ffb\u8bd1\u3001\u6da6\u8272\u6216\u6539\u5199\u4efb\u4f55\u8bed\u8a00\u7684\u6587\u672c\uff0c\u91cd\u70b9\u5728\u4e8e\u4f7f\u5176\u5730\u9053\u3001\u81ea\u7136\uff0c\u79fb\u9664 AI \u5473\uff08\u5957\u8bdd\u3001\u514d\u8d23\u58f0\u660e\u3001\u8fc7\u6e21\u8bcd\uff09\uff0c\u5e76\u901a\u8fc7\u7b80\u5316\u8bcd\u6c47\u3001\u77ed\u53e5\u5316\u3001\u60c5\u611f\u7ec6\u8282\u548c\u53d7\u4f17\u5bf9\u9f50\u6765\u63d0\u5347\u53ef\u4fe1\u5ea6\u3002",
+      "direct_references": [
+        "memory:context-vault"
+      ],
+      "domains": [
+        "ai",
+        "content",
+        "pdf",
+        "design"
+      ],
+      "tools": []
+    },
+    "opc-logo-creator": {
+      "name": "logo-creator",
+      "description": "Create logos using AI image generation. Discuss style/ratio, generate variations, iterate with user feedback, crop, remove background, and export as SVG. Use when user wants to create a logo, icon, favicon, brand mark, mascot, emblem, or design a logo.",
+      "direct_references": [
+        "visual-prompt-engineer-patten",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "ai",
+        "image",
+        "design"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "remotion": {
+      "name": "remotion",
+      "description": "Generate walkthrough videos from Stitch projects using Remotion with smooth transitions, zooming, and text overlays allowed-tools:   - \"stitch*:*\"   - \"remotion*:*\"   - \"Bash\"   - \"Read\"   - \"Write\"   - \"web_fetch\"",
+      "direct_references": [
+        "stitch",
+        "connect"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "npm"
+      ]
+    },
+    "web-metadata-extractor": {
+      "name": "web-metadata-extractor",
+      "description": "name: web-metadata-extractor",
+      "direct_references": [
+        "opc-twitter"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "marketing",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "china-global-deployment": {
+      "name": "china-global-deployment",
+      "description": "A comprehensive skill for deploying static sites accessible from both China and globally, with emphasis on global performance while maintaining China accessibility.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "docker",
+        "npm",
+        "git"
+      ]
+    },
+    "best-minds": {
+      "name": "best-minds",
+      "description": "\u6a21\u62df\u5668\u601d\u7ef4\uff1a\u901a\u8fc7\u6a21\u62df\u9886\u57df\u9876\u7ea7\u4e13\u5bb6\u6216\u751f\u6d3b\u6559\u7ec3\u7684\u89c6\u89d2\u6765\u56de\u7b54\u95ee\u9898\u3002\u89e6\u53d1\u8bcd\uff1a\u6700\u5f3a\u5927\u8111\u3001\u9876\u7ea7\u4e13\u5bb6\u3001\u4e16\u754c\u7ea7\u3001best minds\u3001\u8c01\u6700\u61c2\u8fd9\u4e2a\u3001life-coach\u3001\u751f\u6d3b\u6559\u7ec3",
+      "direct_references": [],
+      "domains": [
+        "ai"
+      ],
+      "tools": []
+    },
+    "youtube-channel-scraper": {
+      "name": "youtube-channel-scraper",
+      "description": "Scrape all video metadata from a YouTube channel including titles, views, duration, and publish dates.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "design",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "mcp-flight-search": {
+      "name": "Flight Search",
+      "description": "Quick flight search using SerpAPI Google Flights. Real-time pricing from airlines.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "design",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "stitch-enhance-prompt2": {
+      "name": "enhance-prompt",
+      "description": "Transforms vague UI ideas into polished, Stitch-optimized prompts. Enhances specificity, adds UI/UX keywords, injects design system context, and structures output for better generation results. allowed-tools:   - \"Read\"   - \"Write\"",
+      "direct_references": [
+        "design-md",
+        "stitch",
+        "stitch-design-md",
+        "stitch-loop"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "security-review": {
+      "name": "security-review",
+      "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "openai",
+        "npm",
+        "git"
+      ]
+    },
+    "clash-verge-guide": {
+      "name": "clash-verge-guide",
+      "description": "Manage Clash Verge configuration and rules.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "pdf",
+        "notion",
+        "design",
+        "image",
+        "ecommerce",
+        "content",
+        "marketing",
+        "video",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai",
+        "git"
+      ]
+    },
+    "interview-user": {
+      "name": "interview-user",
+      "description": "\"A specialized skill to guide the user when a task is unclear, but prioritizing proactive solution proposals. Use this skill to front-load clarifications at the START of a task, proposing a 'Best Guess' plan first to maintain agentic momentum and avoid mid-task interruptions.\"",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "development",
+        "notion",
+        "design",
+        "marketing",
+        "ai"
+      ],
+      "tools": []
+    },
+    "smart-illustrator": {
+      "name": "smart-illustrator",
+      "description": "\u667a\u80fd\u914d\u56fe\u4e0e PPT \u4fe1\u606f\u56fe\u751f\u6210\u5668\u3002\u652f\u6301\u4e09\u79cd\u6a21\u5f0f\uff1a(1) \u6587\u7ae0\u914d\u56fe\u6a21\u5f0f - \u5206\u6790\u6587\u7ae0\u5185\u5bb9\uff0c\u751f\u6210\u63d2\u56fe\uff1b(2) PPT/Slides \u6a21\u5f0f - \u751f\u6210\u6279\u91cf\u4fe1\u606f\u56fe\uff1b(3) Cover \u6a21\u5f0f - \u751f\u6210\u5c01\u9762\u56fe\u3002\u6240\u6709\u6a21\u5f0f\u9ed8\u8ba4\u751f\u6210\u56fe\u7247\uff0c`--prompt-only` \u53ea\u8f93\u51fa prompt\u3002\u652f\u6301 Bento Grid \u529f\u80fd\u5c55\u793a\u56fe\u98ce\u683c\uff08--style bento\uff09\u3002\u89e6\u53d1\u8bcd\uff1a\u914d\u56fe\u3001\u63d2\u56fe\u3001PPT\u3001slides\u3001\u5c01\u9762\u56fe\u3001thumbnail\u3001cover\u3001bento grid\u3001\u529f\u80fd\u5c55\u793a\u56fe\u3001feature showcase\u3002",
+      "direct_references": [
+        "opc-twitter",
+        "visual-prompt-engineer-patten",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "development",
+        "image",
+        "design",
+        "content",
+        "video",
+        "social",
+        "ai"
+      ],
+      "tools": [
+        "gemini",
+        "python"
+      ]
+    },
+    "strategic-compact": {
+      "name": "strategic-compact",
+      "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
+      "direct_references": [],
+      "domains": [
+        "business",
+        "ai",
+        "research",
+        "design"
+      ],
+      "tools": []
+    },
+    "wp-performance": {
+      "name": "wp-performance",
+      "description": "\"Use when investigating or improving WordPress performance (backend-only agent): profiling and measurement (WP-CLI profile/doctor, Server-Timing, Query Monitor via REST headers), database/query optimization, autoloaded options, object caching, cron, HTTP API calls, and safe verification.\"",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "notion",
+        "design",
+        "ecommerce",
+        "content",
+        "wordpress",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "ecommerce-lp-generator": {
+      "name": "ecommerce-lp-generator",
+      "description": "\u4e13\u4e1a\u7684\u7535\u5546\u8be6\u60c5\u9875(Landing Page)\u751f\u6210\u6280\u80fd,\u91c7\u7528\u7f51\u683c\u751f\u6210\u6280\u672f\u786e\u4fdd\u4e00\u81f4\u6027\u548c\u6548\u7387\u3002\u8f93\u5165\u4ea7\u54c1\u56fe\u7247 -> \u8f93\u51fa\u4e00\u7cfb\u5217\u5207\u7247\u7684\u9ad8\u6e05\u8be6\u60c5\u9875\u8bbe\u8ba1\u56fe\u3002",
+      "direct_references": [
+        "Read-Media-Gemini",
+        "visual-prompt-engineer-patten",
+        "Nano-Banana"
+      ],
+      "domains": [
+        "business",
+        "development",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "marketing",
+        "social",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "obsidian-json-canvas": {
+      "name": "json-canvas",
+      "description": "Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "pdf",
+        "image",
+        "design",
+        "content",
+        "marketing",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": []
+    },
+    "neck-care-specialist": {
+      "name": "neck-care-specialist",
+      "description": "name: neck-care-specialist",
+      "direct_references": [
+        "memory:context-vault"
+      ],
+      "domains": [
+        "development",
+        "content",
+        "marketing",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "sora2-video-gen": {
+      "name": "sora2-gen",
+      "description": "Generate videos using the Sora 2 model via APIMart. Use this skill when the user wants to create videos from text prompts or images using Sora 2.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "video",
+        "ai"
+      ],
+      "tools": [
+        "python"
+      ]
+    },
+    "tts-elevenlabs": {
+      "name": "tts-elevenlabs",
+      "description": "Text-to-speech using ElevenLabs. Vivid, human-like voice output. Use when user wants to speak text aloud, generate audio, or convert text to speech.",
+      "direct_references": [],
+      "domains": [
+        "social",
+        "ai",
+        "development"
+      ],
+      "tools": [
+        "python",
+        "imagemagick"
+      ]
+    },
+    "social-dynamics-mastery": {
+      "name": "Social Dynamics Mastery",
+      "description": "An expert dating and social dynamics coach. Combines confident communication patterns with deep evolutionary psychology and attraction logic. Capable of analyzing complex social situations and generating \"Chat Bible\" responses.",
+      "direct_references": [
+        "connect"
+      ],
+      "domains": [
+        "development",
+        "design",
+        "content",
+        "social",
+        "ai"
+      ],
+      "tools": []
+    },
+    "google-docs-mcp-server": {
+      "name": "google-docs-mcp-server",
+      "description": "MCP server for Google Docs, Sheets, and Drive integration. Allows reading, writing, and managing Google Docs and Sheets, as well as file management in Drive.",
+      "direct_references": [],
+      "domains": [
+        "development",
+        "ai",
+        "content",
+        "design"
+      ],
+      "tools": []
+    },
+    "Nano-Banana": {
+      "name": "Nano-Banana",
+      "description": "name: Nano-Banana",
+      "direct_references": [
+        "visual-prompt-engineer-patten"
+      ],
+      "domains": [
+        "development",
+        "pdf",
+        "image",
+        "design",
+        "ecommerce",
+        "content",
+        "business",
+        "video",
+        "ai",
+        "research"
+      ],
+      "tools": [
+        "python",
+        "openai"
+      ]
+    }
+  },
+  "domain_clusters": {
+    "pdf": [
+      "content-research-writer",
+      "youtube-thumbnail",
+      "skill-lookup",
+      "gemini-watermark-remover",
+      "planning-with-files",
+      "monetization-first-development",
+      "wp-wpcli-and-ops",
+      "document-skills",
+      "youtube-title",
+      "wpds",
+      "youtube-research-video-topic",
+      "gemini-cli-guide",
+      "claude-cli-guide",
+      "creating-financial-models",
+      "alias",
+      "system-git-discovery-sync",
+      "teams-dashboard",
+      "mermaid-visualizer",
+      "web-search-manager",
+      "rl-training-ppo",
+      "theme-factory",
+      "stitch-enhance-prompt",
+      "historical-mirror",
+      "coding-standards",
+      "allowance-application-and-alignment-check",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "excalidraw-diagram",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "openai-codex-guide",
+      "skill-improver",
+      "creator-monetization-engine",
+      "context-engineering-collection",
+      "gsd-framework-guide",
+      "image-enhancer",
+      "vps-manager-ssh",
+      "evolver",
+      "claude-code-agile-updater",
+      "model-intelligence",
+      "visual-prompt-engineer-patten",
+      "scientific-business-guide",
+      "visa-itinerary-pro",
+      "to-notebooklm-artifacts",
+      "google-cloud-integration",
+      "stitch-shadcn-ui",
+      "zstmfhy-zlibrary-to-notebooklm",
+      "lan-connection-manager",
+      "trademark-guard-brand-name-domain",
+      "seedream-4-5",
+      "skill-improver.backup.20260305_130024",
+      "notebooklm-py",
+      "agentic-vision-gemini",
+      "executing-marketing-campaigns",
+      "design-md",
+      "knowledge-card-generator",
+      "skill-creator",
+      "theme-serial-gen",
+      "302ai-integration",
+      "stitch",
+      "media-to-notebooklm-artifacts",
+      "claude-code-agent-teams",
+      "obsidian-canvas-creator",
+      "honest-deep-researcher",
+      "surecart-manager",
+      "changelog-generator",
+      "stitch-design-md",
+      "prd",
+      "competitive-ads-extractor",
+      "file-organizer",
+      "tdd-workflow",
+      "wp-phpstan",
+      "principle-driven-framework",
+      "skill-from-code",
+      "obsidian-cli",
+      "guitar-learning",
+      "article-broll-illustrator",
+      "japan-tax-planning",
+      "init-blast-method",
+      "stitch-loop",
+      "market-sizing-analysis",
+      "model-library-generator",
+      "init-vault-method",
+      "vercel-react-best-practices",
+      "wp-site-manager",
+      "opc-seo-geo",
+      "frontend-patterns",
+      "mcp-builder",
+      "tampermonkey",
+      "mcp-integration",
+      "email-management",
+      "naturalize-text-localize",
+      "remotion",
+      "web-metadata-extractor",
+      "china-global-deployment",
+      "stitch-enhance-prompt2",
+      "clash-verge-guide",
+      "obsidian-json-canvas",
+      "sora2-video-gen",
+      "Nano-Banana"
+    ],
+    "design": [
+      "content-research-writer",
+      "youtube-thumbnail",
+      "skill-lookup",
+      "gemini-watermark-remover",
+      "Read-Media-Gemini",
+      "planning-with-files",
+      "monetization-first-development",
+      "wp-wpcli-and-ops",
+      "youtube-title",
+      "my-creative-writer",
+      "cross-border-product-selector",
+      "wpds",
+      "youtube-research-video-topic",
+      "manim-math-animator",
+      "gemini-cli-guide",
+      "claude-cli-guide",
+      "creating-financial-models",
+      "godaddy-dns-manager",
+      "alias",
+      "system-git-discovery-sync",
+      "consultant-friend",
+      "teams-dashboard",
+      "mermaid-visualizer",
+      "iterative-retrieval",
+      "videocut",
+      "environment-manager",
+      "web-search-manager",
+      "memory:context-vault",
+      "postgres-patterns",
+      "rl-training-ppo",
+      "video-downloader",
+      "theme-factory",
+      "stitch-enhance-prompt",
+      "wp-block-themes",
+      "svg-icon-search",
+      "wp-project-triage",
+      "historical-mirror",
+      "wp-block-development",
+      "reference-photo-expander",
+      "coding-standards",
+      "web-scraper-patterns",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "excalidraw-diagram",
+      "remotion-ads-producer",
+      "psychological-copywriter",
+      "eval-harness",
+      "opc-twitter",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "wp-rest-api",
+      "openai-codex-guide",
+      "polyamory-rules",
+      "web-design-guidelines",
+      "wp-playground",
+      "skill-improver",
+      "reverse-prompt-engineer",
+      "creator-monetization-engine",
+      "opc-reddit",
+      "context-engineering-collection",
+      "opc-producthunt",
+      "cache-components",
+      "gsd-framework-guide",
+      "image-enhancer",
+      "language-teacher",
+      "vps-manager-ssh",
+      "etsy-seller-general",
+      "evolver",
+      "wheel-check",
+      "general-analysis-5w1h",
+      "claude-code-agile-updater",
+      "music-video-title-generator",
+      "prompt-lookup",
+      "model-intelligence",
+      "visual-prompt-engineer-patten",
+      "scientific-business-guide",
+      "visa-itinerary-pro",
+      "transcribe-media",
+      "seven-figure-course-builder",
+      "to-notebooklm-artifacts",
+      "wp-plugin-development",
+      "topaz-photo-ai-upscaler",
+      "google-cloud-integration",
+      "codex-config",
+      "lifestyle-aesthetic-designer",
+      "stitch-shadcn-ui",
+      "opc-domain-hunter",
+      "backend-patterns",
+      "wp-cli-expert",
+      "lan-connection-manager",
+      "trademark-guard-brand-name-domain",
+      "seedream-4-5",
+      "skill-improver.backup.20260305_130024",
+      "notebooklm-py",
+      "youtube-video-hook",
+      "opc-banner-creator",
+      "agentic-vision-gemini",
+      "personal-asset-manager",
+      "curation-expert",
+      "executing-marketing-campaigns",
+      "interview-to-article",
+      "design-md",
+      "startup-metrics-framework",
+      "vercel-deployment-guide",
+      "general-song-writer",
+      "stitch-react-components",
+      "stitch-react-components 2",
+      "academic-navigator",
+      "japan-med-content-matrix",
+      "repair-old-photos",
+      "knowledge-card-generator",
+      "internal-comms",
+      "amazon-operations-director",
+      "skill-creator",
+      "ecommerce-kv",
+      "serpapi-mcp",
+      "theme-serial-gen",
+      "performance-ads-writer",
+      "bird",
+      "302ai-integration",
+      "skill-github-importer",
+      "notion-mcp-connector",
+      "wp-world-inspire-lab-wi",
+      "stitch",
+      "media-to-notebooklm-artifacts",
+      "claude-code-agent-teams",
+      "obsidian-canvas-creator",
+      "honest-deep-researcher",
+      "surecart-manager",
+      "google-deep-research",
+      "heif-converter",
+      "changelog-generator",
+      "svg-generator",
+      "firewall-manager",
+      "continuous-learning",
+      "continuous-learning-v2",
+      "stitch-design-md",
+      "elon-musk-life-coach",
+      "prd",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "file-organizer",
+      "verification-loop",
+      "tdd-workflow",
+      "wp-phpstan",
+      "remove-bg",
+      "media-organizer",
+      "principle-driven-framework",
+      "clawdbot-repair",
+      "skill-from-code",
+      "obsidian-cli",
+      "guitar-learning",
+      "know-an-industry-fast",
+      "onecontext-manager",
+      "article-broll-illustrator",
+      "japan-tax-planning",
+      "frontend-design",
+      "vps-proxy-setup",
+      "init-blast-method",
+      "stitch-loop",
+      "music-video-prep",
+      "market-sizing-analysis",
+      "model-library-generator",
+      "gyroflow-stabilizer",
+      "wp-interactivity-api",
+      "init-vault-method",
+      "vercel-react-best-practices",
+      "wp-site-manager",
+      "connect",
+      "opc-seo-geo",
+      "frontend-patterns",
+      "model-authenticity-verifier",
+      "mcp-builder",
+      "wordpress-router",
+      "tampermonkey",
+      "mcp-integration",
+      "family-health-guardian",
+      "email-management",
+      "life-learning-companion",
+      "naturalize-text-localize",
+      "opc-logo-creator",
+      "remotion",
+      "web-metadata-extractor",
+      "china-global-deployment",
+      "youtube-channel-scraper",
+      "mcp-flight-search",
+      "stitch-enhance-prompt2",
+      "security-review",
+      "clash-verge-guide",
+      "interview-user",
+      "smart-illustrator",
+      "strategic-compact",
+      "wp-performance",
+      "ecommerce-lp-generator",
+      "obsidian-json-canvas",
+      "sora2-video-gen",
+      "social-dynamics-mastery",
+      "google-docs-mcp-server",
+      "Nano-Banana"
+    ],
+    "ecommerce": [
+      "content-research-writer",
+      "planning-with-files",
+      "monetization-first-development",
+      "wp-wpcli-and-ops",
+      "youtube-title",
+      "cross-border-product-selector",
+      "site-url-extractor",
+      "wpds",
+      "youtube-research-video-topic",
+      "claude-cli-guide",
+      "memory:context-vault",
+      "postgres-patterns",
+      "wp-block-themes",
+      "svg-icon-search",
+      "wp-block-development",
+      "cloudflare-dns-manager",
+      "web-scraper-patterns",
+      "remotion-ads-producer",
+      "psychological-copywriter",
+      "eval-harness",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "wp-playground",
+      "skill-improver",
+      "creator-monetization-engine",
+      "context-engineering-collection",
+      "opc-producthunt",
+      "cache-components",
+      "gsd-framework-guide",
+      "vps-manager-ssh",
+      "etsy-seller-general",
+      "evolver",
+      "general-analysis-5w1h",
+      "model-intelligence",
+      "visa-itinerary-pro",
+      "seven-figure-course-builder",
+      "wp-plugin-development",
+      "google-cloud-integration",
+      "lifestyle-aesthetic-designer",
+      "stitch-shadcn-ui",
+      "wp-cli-expert",
+      "lan-connection-manager",
+      "trademark-guard-brand-name-domain",
+      "skill-improver.backup.20260305_130024",
+      "youtube-video-hook",
+      "personal-asset-manager",
+      "curation-expert",
+      "executing-marketing-campaigns",
+      "startup-metrics-framework",
+      "vercel-deployment-guide",
+      "general-song-writer",
+      "japan-med-content-matrix",
+      "repair-old-photos",
+      "knowledge-card-generator",
+      "amazon-operations-director",
+      "skill-creator",
+      "ecommerce-kv",
+      "chrome-devtools",
+      "performance-ads-writer",
+      "cross-border-ai-strategist",
+      "skill-github-importer",
+      "wp-world-inspire-lab-wi",
+      "stitch",
+      "media-to-notebooklm-artifacts",
+      "honest-deep-researcher",
+      "surecart-manager",
+      "google-deep-research",
+      "changelog-generator",
+      "firewall-manager",
+      "continuous-learning",
+      "continuous-learning-v2",
+      "elon-musk-life-coach",
+      "prd",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "tdd-workflow",
+      "remove-bg",
+      "local-store-promotion",
+      "clawdbot-repair",
+      "know-an-industry-fast",
+      "onecontext-manager",
+      "ecommerce-product-refine",
+      "frontend-design",
+      "init-blast-method",
+      "stitch-loop",
+      "market-sizing-analysis",
+      "model-library-generator",
+      "wp-interactivity-api",
+      "init-vault-method",
+      "vercel-react-best-practices",
+      "wp-site-manager",
+      "opc-seo-geo",
+      "frontend-patterns",
+      "family-health-guardian",
+      "email-management",
+      "remotion",
+      "china-global-deployment",
+      "security-review",
+      "clash-verge-guide",
+      "wp-performance",
+      "ecommerce-lp-generator",
+      "Nano-Banana"
+    ],
+    "content": [
+      "content-research-writer",
+      "skill-lookup",
+      "planning-with-files",
+      "monetization-first-development",
+      "wp-wpcli-and-ops",
+      "youtube-title",
+      "my-creative-writer",
+      "site-url-extractor",
+      "youtube-research-video-topic",
+      "manim-math-animator",
+      "claude-cli-guide",
+      "system-git-discovery-sync",
+      "mermaid-visualizer",
+      "iterative-retrieval",
+      "videocut",
+      "memory:context-vault",
+      "postgres-patterns",
+      "stitch-enhance-prompt",
+      "wp-block-development",
+      "cloudflare-dns-manager",
+      "web-scraper-patterns",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "excalidraw-diagram",
+      "psychological-copywriter",
+      "opc-twitter",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "wp-rest-api",
+      "web-design-guidelines",
+      "wp-playground",
+      "skill-improver",
+      "reverse-prompt-engineer",
+      "creator-monetization-engine",
+      "opc-reddit",
+      "context-engineering-collection",
+      "opc-producthunt",
+      "cache-components",
+      "gsd-framework-guide",
+      "image-enhancer",
+      "language-teacher",
+      "etsy-seller-general",
+      "music-video-title-generator",
+      "prompt-lookup",
+      "model-intelligence",
+      "visa-itinerary-pro",
+      "seven-figure-course-builder",
+      "wp-plugin-development",
+      "topaz-photo-ai-upscaler",
+      "stitch-shadcn-ui",
+      "wp-cli-expert",
+      "trademark-guard-brand-name-domain",
+      "skill-improver.backup.20260305_130024",
+      "notebooklm-py",
+      "youtube-video-hook",
+      "opc-banner-creator",
+      "executing-marketing-campaigns",
+      "interview-to-article",
+      "design-md",
+      "stitch-react-components",
+      "stitch-react-components 2",
+      "academic-navigator",
+      "japan-med-content-matrix",
+      "repair-old-photos",
+      "xhs-note-creator-template",
+      "knowledge-card-generator",
+      "internal-comms",
+      "amazon-operations-director",
+      "skill-creator",
+      "chrome-devtools",
+      "theme-serial-gen",
+      "performance-ads-writer",
+      "302ai-integration",
+      "skill-github-importer",
+      "notion-mcp-connector",
+      "wp-world-inspire-lab-wi",
+      "claude-code-agent-teams",
+      "obsidian-canvas-creator",
+      "honest-deep-researcher",
+      "surecart-manager",
+      "changelog-generator",
+      "continuous-learning",
+      "continuous-learning-v2",
+      "stitch-design-md",
+      "prd",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "file-organizer",
+      "tdd-workflow",
+      "local-store-promotion",
+      "clawdbot-repair",
+      "skill-from-code",
+      "obsidian-cli",
+      "know-an-industry-fast",
+      "article-broll-illustrator",
+      "vps-proxy-setup",
+      "stitch-loop",
+      "model-library-generator",
+      "wp-interactivity-api",
+      "vercel-react-best-practices",
+      "wp-site-manager",
+      "package-tracker",
+      "connect",
+      "opc-seo-geo",
+      "frontend-patterns",
+      "mcp-builder",
+      "wordpress-router",
+      "tampermonkey",
+      "family-health-guardian",
+      "life-learning-companion",
+      "naturalize-text-localize",
+      "remotion",
+      "web-metadata-extractor",
+      "china-global-deployment",
+      "stitch-enhance-prompt2",
+      "security-review",
+      "clash-verge-guide",
+      "smart-illustrator",
+      "wp-performance",
+      "ecommerce-lp-generator",
+      "obsidian-json-canvas",
+      "neck-care-specialist",
+      "social-dynamics-mastery",
+      "google-docs-mcp-server",
+      "Nano-Banana"
+    ],
+    "social": [
+      "content-research-writer",
+      "monetization-first-development",
+      "cross-border-product-selector",
+      "memory:context-vault",
+      "stitch-enhance-prompt",
+      "historical-mirror",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "opc-twitter",
+      "skill-orchestrator",
+      "creator-monetization-engine",
+      "image-enhancer",
+      "site-accessibility-judge-China-oversea",
+      "music-video-title-generator",
+      "seven-figure-course-builder",
+      "opc-domain-hunter",
+      "trademark-guard-brand-name-domain",
+      "opc-banner-creator",
+      "personal-asset-manager",
+      "curation-expert",
+      "executing-marketing-campaigns",
+      "japan-med-content-matrix",
+      "knowledge-card-generator",
+      "performance-ads-writer",
+      "cross-border-ai-strategist",
+      "bird",
+      "heif-converter",
+      "changelog-generator",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "know-an-industry-fast",
+      "article-broll-illustrator",
+      "travel-deal-hunter",
+      "music-video-prep",
+      "wp-site-manager",
+      "connect",
+      "opc-seo-geo",
+      "remotion",
+      "web-metadata-extractor",
+      "stitch-enhance-prompt2",
+      "clash-verge-guide",
+      "smart-illustrator",
+      "ecommerce-lp-generator",
+      "tts-elevenlabs",
+      "social-dynamics-mastery"
+    ],
+    "ai": [
+      "content-research-writer",
+      "youtube-thumbnail",
+      "skill-lookup",
+      "gemini-watermark-remover",
+      "Read-Media-Gemini",
+      "planning-with-files",
+      "monetization-first-development",
+      "wp-wpcli-and-ops",
+      "document-skills",
+      "youtube-title",
+      "my-creative-writer",
+      "cross-border-product-selector",
+      "site-url-extractor",
+      "wpds",
+      "youtube-research-video-topic",
+      "manim-math-animator",
+      "gemini-cli-guide",
+      "claude-cli-guide",
+      "creating-financial-models",
+      "godaddy-dns-manager",
+      "alias",
+      "system-git-discovery-sync",
+      "template-skill",
+      "consultant-friend",
+      "teams-dashboard",
+      "mermaid-visualizer",
+      "iterative-retrieval",
+      "videocut",
+      "environment-manager",
+      "web-search-manager",
+      "memory:context-vault",
+      "postgres-patterns",
+      "rl-training-ppo",
+      "video-downloader",
+      "theme-factory",
+      "stitch-enhance-prompt",
+      "wp-block-themes",
+      "svg-icon-search",
+      "wp-project-triage",
+      "historical-mirror",
+      "wp-block-development",
+      "reference-photo-expander",
+      "coding-standards",
+      "cloudflare-dns-manager",
+      "allowance-application-and-alignment-check",
+      "web-scraper-patterns",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "excalidraw-diagram",
+      "remotion-ads-producer",
+      "psychological-copywriter",
+      "eval-harness",
+      "opc-twitter",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "wp-rest-api",
+      "openai-codex-guide",
+      "web-design-guidelines",
+      "wp-playground",
+      "skill-improver",
+      "reverse-prompt-engineer",
+      "creator-monetization-engine",
+      "opc-reddit",
+      "context-engineering-collection",
+      "opc-producthunt",
+      "cache-components",
+      "gsd-framework-guide",
+      "image-enhancer",
+      "language-teacher",
+      "vps-manager-ssh",
+      "etsy-seller-general",
+      "evolver",
+      "wheel-check",
+      "general-analysis-5w1h",
+      "claude-code-agile-updater",
+      "site-accessibility-judge-China-oversea",
+      "qingdouyun-manual",
+      "music-video-title-generator",
+      "prompt-lookup",
+      "model-intelligence",
+      "visual-prompt-engineer-patten",
+      "scientific-business-guide",
+      "visa-itinerary-pro",
+      "transcribe-media",
+      "seven-figure-course-builder",
+      "to-notebooklm-artifacts",
+      "wp-plugin-development",
+      "topaz-photo-ai-upscaler",
+      "google-cloud-integration",
+      "codex-config",
+      "lifestyle-aesthetic-designer",
+      "stitch-shadcn-ui",
+      "opc-domain-hunter",
+      "backend-patterns",
+      "zstmfhy-zlibrary-to-notebooklm",
+      "wp-cli-expert",
+      "lan-connection-manager",
+      "trademark-guard-brand-name-domain",
+      "seedream-4-5",
+      "skill-improver.backup.20260305_130024",
+      "notebooklm-py",
+      "youtube-video-hook",
+      "opc-banner-creator",
+      "agentic-vision-gemini",
+      "personal-asset-manager",
+      "executing-marketing-campaigns",
+      "interview-to-article",
+      "design-md",
+      "life-trajectory-deduction",
+      "startup-metrics-framework",
+      "vercel-deployment-guide",
+      "general-song-writer",
+      "stitch-react-components",
+      "stitch-react-components 2",
+      "academic-navigator",
+      "japan-med-content-matrix",
+      "repair-old-photos",
+      "xhs-note-creator-template",
+      "knowledge-card-generator",
+      "amazon-operations-director",
+      "skill-creator",
+      "ecommerce-kv",
+      "serpapi-mcp",
+      "chrome-devtools",
+      "theme-serial-gen",
+      "performance-ads-writer",
+      "cross-border-ai-strategist",
+      "302ai-integration",
+      "skill-github-importer",
+      "notion-mcp-connector",
+      "wp-world-inspire-lab-wi",
+      "stitch",
+      "city-cost-compare-nomad",
+      "media-to-notebooklm-artifacts",
+      "claude-code-agent-teams",
+      "obsidian-canvas-creator",
+      "honest-deep-researcher",
+      "surecart-manager",
+      "google-deep-research",
+      "heif-converter",
+      "changelog-generator",
+      "svg-generator",
+      "firewall-manager",
+      "continuous-learning",
+      "continuous-learning-v2",
+      "stitch-design-md",
+      "elon-musk-life-coach",
+      "prd",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "file-organizer",
+      "verification-loop",
+      "tdd-workflow",
+      "wp-phpstan",
+      "remove-bg",
+      "media-organizer",
+      "principle-driven-framework",
+      "clawdbot-repair",
+      "skill-from-code",
+      "obsidian-cli",
+      "know-an-industry-fast",
+      "onecontext-manager",
+      "article-broll-illustrator",
+      "ecommerce-product-refine",
+      "japan-tax-planning",
+      "frontend-design",
+      "vps-proxy-setup",
+      "init-blast-method",
+      "travel-deal-hunter",
+      "stitch-loop",
+      "music-video-prep",
+      "market-sizing-analysis",
+      "model-library-generator",
+      "gyroflow-stabilizer",
+      "wp-interactivity-api",
+      "init-vault-method",
+      "vercel-react-best-practices",
+      "aippt-enterprise",
+      "business-model-xray",
+      "wp-site-manager",
+      "package-tracker",
+      "connect",
+      "opc-seo-geo",
+      "frontend-patterns",
+      "model-authenticity-verifier",
+      "mcp-builder",
+      "wordpress-router",
+      "tampermonkey",
+      "mcp-integration",
+      "family-health-guardian",
+      "email-management",
+      "life-learning-companion",
+      "naturalize-text-localize",
+      "opc-logo-creator",
+      "remotion",
+      "web-metadata-extractor",
+      "china-global-deployment",
+      "best-minds",
+      "youtube-channel-scraper",
+      "mcp-flight-search",
+      "stitch-enhance-prompt2",
+      "security-review",
+      "clash-verge-guide",
+      "interview-user",
+      "smart-illustrator",
+      "strategic-compact",
+      "wp-performance",
+      "ecommerce-lp-generator",
+      "obsidian-json-canvas",
+      "neck-care-specialist",
+      "sora2-video-gen",
+      "tts-elevenlabs",
+      "social-dynamics-mastery",
+      "google-docs-mcp-server",
+      "Nano-Banana"
+    ],
+    "research": [
+      "content-research-writer",
+      "skill-lookup",
+      "Read-Media-Gemini",
+      "planning-with-files",
+      "monetization-first-development",
+      "wp-wpcli-and-ops",
+      "youtube-title",
+      "wpds",
+      "youtube-research-video-topic",
+      "claude-cli-guide",
+      "creating-financial-models",
+      "alias",
+      "system-git-discovery-sync",
+      "consultant-friend",
+      "teams-dashboard",
+      "mermaid-visualizer",
+      "memory:context-vault",
+      "postgres-patterns",
+      "rl-training-ppo",
+      "video-downloader",
+      "historical-mirror",
+      "wp-block-development",
+      "coding-standards",
+      "web-scraper-patterns",
+      "excalidraw-diagram",
+      "remotion-ads-producer",
+      "psychological-copywriter",
+      "eval-harness",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "wp-rest-api",
+      "wp-playground",
+      "skill-improver",
+      "reverse-prompt-engineer",
+      "creator-monetization-engine",
+      "context-engineering-collection",
+      "cache-components",
+      "gsd-framework-guide",
+      "language-teacher",
+      "vps-manager-ssh",
+      "etsy-seller-general",
+      "evolver",
+      "wheel-check",
+      "general-analysis-5w1h",
+      "claude-code-agile-updater",
+      "site-accessibility-judge-China-oversea",
+      "qingdouyun-manual",
+      "music-video-title-generator",
+      "model-intelligence",
+      "visual-prompt-engineer-patten",
+      "visa-itinerary-pro",
+      "seven-figure-course-builder",
+      "to-notebooklm-artifacts",
+      "wp-plugin-development",
+      "stitch-shadcn-ui",
+      "opc-domain-hunter",
+      "backend-patterns",
+      "zstmfhy-zlibrary-to-notebooklm",
+      "wp-cli-expert",
+      "trademark-guard-brand-name-domain",
+      "skill-improver.backup.20260305_130024",
+      "notebooklm-py",
+      "agentic-vision-gemini",
+      "personal-asset-manager",
+      "executing-marketing-campaigns",
+      "design-md",
+      "startup-metrics-framework",
+      "vercel-deployment-guide",
+      "stitch-react-components",
+      "stitch-react-components 2",
+      "academic-navigator",
+      "repair-old-photos",
+      "amazon-operations-director",
+      "skill-creator",
+      "ecommerce-kv",
+      "serpapi-mcp",
+      "performance-ads-writer",
+      "302ai-integration",
+      "skill-github-importer",
+      "notion-mcp-connector",
+      "wp-world-inspire-lab-wi",
+      "city-cost-compare-nomad",
+      "media-to-notebooklm-artifacts",
+      "claude-code-agent-teams",
+      "honest-deep-researcher",
+      "surecart-manager",
+      "google-deep-research",
+      "svg-generator",
+      "continuous-learning",
+      "continuous-learning-v2",
+      "stitch-design-md",
+      "prd",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "file-organizer",
+      "tdd-workflow",
+      "wp-phpstan",
+      "remove-bg",
+      "clawdbot-repair",
+      "skill-from-code",
+      "know-an-industry-fast",
+      "onecontext-manager",
+      "article-broll-illustrator",
+      "init-blast-method",
+      "music-video-prep",
+      "market-sizing-analysis",
+      "model-library-generator",
+      "gyroflow-stabilizer",
+      "wp-interactivity-api",
+      "init-vault-method",
+      "vercel-react-best-practices",
+      "wp-site-manager",
+      "connect",
+      "opc-seo-geo",
+      "frontend-patterns",
+      "model-authenticity-verifier",
+      "mcp-builder",
+      "tampermonkey",
+      "mcp-integration",
+      "family-health-guardian",
+      "email-management",
+      "life-learning-companion",
+      "remotion",
+      "web-metadata-extractor",
+      "china-global-deployment",
+      "youtube-channel-scraper",
+      "mcp-flight-search",
+      "security-review",
+      "clash-verge-guide",
+      "strategic-compact",
+      "wp-performance",
+      "ecommerce-lp-generator",
+      "obsidian-json-canvas",
+      "neck-care-specialist",
+      "Nano-Banana"
+    ],
+    "image": [
+      "youtube-thumbnail",
+      "gemini-watermark-remover",
+      "Read-Media-Gemini",
+      "planning-with-files",
+      "monetization-first-development",
+      "document-skills",
+      "youtube-title",
+      "cross-border-product-selector",
+      "manim-math-animator",
+      "claude-cli-guide",
+      "creating-financial-models",
+      "alias",
+      "system-git-discovery-sync",
+      "teams-dashboard",
+      "mermaid-visualizer",
+      "videocut",
+      "environment-manager",
+      "rl-training-ppo",
+      "theme-factory",
+      "stitch-enhance-prompt",
+      "reference-photo-expander",
+      "allowance-application-and-alignment-check",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "excalidraw-diagram",
+      "remotion-ads-producer",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "wp-playground",
+      "skill-improver",
+      "reverse-prompt-engineer",
+      "context-engineering-collection",
+      "gsd-framework-guide",
+      "image-enhancer",
+      "vps-manager-ssh",
+      "etsy-seller-general",
+      "music-video-title-generator",
+      "prompt-lookup",
+      "model-intelligence",
+      "visual-prompt-engineer-patten",
+      "visa-itinerary-pro",
+      "to-notebooklm-artifacts",
+      "topaz-photo-ai-upscaler",
+      "stitch-shadcn-ui",
+      "wp-cli-expert",
+      "lan-connection-manager",
+      "trademark-guard-brand-name-domain",
+      "seedream-4-5",
+      "skill-improver.backup.20260305_130024",
+      "notebooklm-py",
+      "youtube-video-hook",
+      "opc-banner-creator",
+      "agentic-vision-gemini",
+      "curation-expert",
+      "executing-marketing-campaigns",
+      "design-md",
+      "vercel-deployment-guide",
+      "general-song-writer",
+      "stitch-react-components",
+      "stitch-react-components 2",
+      "japan-med-content-matrix",
+      "repair-old-photos",
+      "xhs-note-creator-template",
+      "knowledge-card-generator",
+      "amazon-operations-director",
+      "skill-creator",
+      "ecommerce-kv",
+      "theme-serial-gen",
+      "performance-ads-writer",
+      "302ai-integration",
+      "wp-world-inspire-lab-wi",
+      "stitch",
+      "media-to-notebooklm-artifacts",
+      "obsidian-canvas-creator",
+      "surecart-manager",
+      "heif-converter",
+      "changelog-generator",
+      "svg-generator",
+      "firewall-manager",
+      "stitch-design-md",
+      "prd",
+      "competitive-ads-extractor",
+      "file-organizer",
+      "remove-bg",
+      "media-organizer",
+      "know-an-industry-fast",
+      "article-broll-illustrator",
+      "japan-tax-planning",
+      "frontend-design",
+      "stitch-loop",
+      "model-library-generator",
+      "aippt-enterprise",
+      "wp-site-manager",
+      "opc-seo-geo",
+      "tampermonkey",
+      "opc-logo-creator",
+      "remotion",
+      "web-metadata-extractor",
+      "china-global-deployment",
+      "stitch-enhance-prompt2",
+      "security-review",
+      "clash-verge-guide",
+      "smart-illustrator",
+      "ecommerce-lp-generator",
+      "obsidian-json-canvas",
+      "sora2-video-gen",
+      "Nano-Banana"
+    ],
+    "marketing": [
+      "youtube-thumbnail",
+      "monetization-first-development",
+      "cross-border-product-selector",
+      "system-git-discovery-sync",
+      "memory:context-vault",
+      "rl-training-ppo",
+      "video-downloader",
+      "remotion-ads-producer",
+      "psychological-copywriter",
+      "eval-harness",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "creator-monetization-engine",
+      "context-engineering-collection",
+      "language-teacher",
+      "etsy-seller-general",
+      "wheel-check",
+      "music-video-title-generator",
+      "model-intelligence",
+      "seven-figure-course-builder",
+      "seller-browser-safe",
+      "stitch-shadcn-ui",
+      "trademark-guard-brand-name-domain",
+      "seedream-4-5",
+      "agentic-vision-gemini",
+      "curation-expert",
+      "executing-marketing-campaigns",
+      "startup-metrics-framework",
+      "general-song-writer",
+      "xhs-note-creator-template",
+      "amazon-operations-director",
+      "skill-creator",
+      "theme-serial-gen",
+      "performance-ads-writer",
+      "cross-border-ai-strategist",
+      "wp-world-inspire-lab-wi",
+      "media-to-notebooklm-artifacts",
+      "claude-code-agent-teams",
+      "honest-deep-researcher",
+      "surecart-manager",
+      "continuous-learning",
+      "continuous-learning-v2",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "file-organizer",
+      "principle-driven-framework",
+      "clawdbot-repair",
+      "know-an-industry-fast",
+      "onecontext-manager",
+      "stitch-loop",
+      "market-sizing-analysis",
+      "model-library-generator",
+      "wp-interactivity-api",
+      "init-vault-method",
+      "vercel-react-best-practices",
+      "wp-site-manager",
+      "opc-seo-geo",
+      "tampermonkey",
+      "mcp-integration",
+      "email-management",
+      "web-metadata-extractor",
+      "mcp-flight-search",
+      "security-review",
+      "clash-verge-guide",
+      "interview-user",
+      "ecommerce-lp-generator",
+      "obsidian-json-canvas",
+      "neck-care-specialist"
+    ],
+    "video": [
+      "youtube-thumbnail",
+      "gemini-watermark-remover",
+      "Read-Media-Gemini",
+      "document-skills",
+      "youtube-title",
+      "cross-border-product-selector",
+      "youtube-research-video-topic",
+      "manim-math-animator",
+      "videocut",
+      "video-downloader",
+      "stitch-enhance-prompt",
+      "wp-block-themes",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "excalidraw-diagram",
+      "remotion-ads-producer",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "creator-monetization-engine",
+      "gsd-framework-guide",
+      "vps-manager-ssh",
+      "etsy-seller-general",
+      "site-accessibility-judge-China-oversea",
+      "music-video-title-generator",
+      "prompt-lookup",
+      "model-intelligence",
+      "visa-itinerary-pro",
+      "transcribe-media",
+      "seven-figure-course-builder",
+      "to-notebooklm-artifacts",
+      "seedream-4-5",
+      "notebooklm-py",
+      "youtube-video-hook",
+      "opc-banner-creator",
+      "vercel-deployment-guide",
+      "japan-med-content-matrix",
+      "skill-creator",
+      "cross-border-ai-strategist",
+      "302ai-integration",
+      "wp-world-inspire-lab-wi",
+      "media-to-notebooklm-artifacts",
+      "heif-converter",
+      "prd",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "file-organizer",
+      "media-organizer",
+      "know-an-industry-fast",
+      "onecontext-manager",
+      "article-broll-illustrator",
+      "music-video-prep",
+      "gyroflow-stabilizer",
+      "wp-site-manager",
+      "remotion",
+      "web-metadata-extractor",
+      "youtube-channel-scraper",
+      "stitch-enhance-prompt2",
+      "clash-verge-guide",
+      "smart-illustrator",
+      "obsidian-json-canvas",
+      "sora2-video-gen",
+      "Nano-Banana"
+    ],
+    "development": [
+      "skill-lookup",
+      "Read-Media-Gemini",
+      "planning-with-files",
+      "monetization-first-development",
+      "document-skills",
+      "youtube-title",
+      "manim-math-animator",
+      "gemini-cli-guide",
+      "claude-cli-guide",
+      "creating-financial-models",
+      "godaddy-dns-manager",
+      "alias",
+      "teams-dashboard",
+      "mermaid-visualizer",
+      "iterative-retrieval",
+      "videocut",
+      "environment-manager",
+      "web-search-manager",
+      "postgres-patterns",
+      "rl-training-ppo",
+      "svg-icon-search",
+      "historical-mirror",
+      "wp-block-development",
+      "coding-standards",
+      "cloudflare-dns-manager",
+      "allowance-application-and-alignment-check",
+      "web-scraper-patterns",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "eval-harness",
+      "opc-twitter",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "wp-rest-api",
+      "openai-codex-guide",
+      "skill-improver",
+      "creator-monetization-engine",
+      "opc-reddit",
+      "context-engineering-collection",
+      "opc-producthunt",
+      "cache-components",
+      "gsd-framework-guide",
+      "vps-manager-ssh",
+      "wheel-check",
+      "claude-code-agile-updater",
+      "music-video-title-generator",
+      "prompt-lookup",
+      "model-intelligence",
+      "transcribe-media",
+      "seven-figure-course-builder",
+      "wp-plugin-development",
+      "google-cloud-integration",
+      "opc-domain-hunter",
+      "backend-patterns",
+      "seedream-4-5",
+      "notebooklm-py",
+      "youtube-video-hook",
+      "opc-banner-creator",
+      "agentic-vision-gemini",
+      "personal-asset-manager",
+      "executing-marketing-campaigns",
+      "vercel-deployment-guide",
+      "general-song-writer",
+      "academic-navigator",
+      "repair-old-photos",
+      "knowledge-card-generator",
+      "amazon-operations-director",
+      "skill-creator",
+      "serpapi-mcp",
+      "performance-ads-writer",
+      "cross-border-ai-strategist",
+      "bird",
+      "302ai-integration",
+      "skill-github-importer",
+      "notion-mcp-connector",
+      "wp-world-inspire-lab-wi",
+      "city-cost-compare-nomad",
+      "media-to-notebooklm-artifacts",
+      "claude-code-agent-teams",
+      "obsidian-canvas-creator",
+      "surecart-manager",
+      "google-deep-research",
+      "firewall-manager",
+      "prd",
+      "verification-loop",
+      "tdd-workflow",
+      "wp-phpstan",
+      "clawdbot-repair",
+      "skill-from-code",
+      "know-an-industry-fast",
+      "article-broll-illustrator",
+      "frontend-design",
+      "vps-proxy-setup",
+      "init-blast-method",
+      "stitch-loop",
+      "model-library-generator",
+      "gyroflow-stabilizer",
+      "wp-interactivity-api",
+      "init-vault-method",
+      "vercel-react-best-practices",
+      "aippt-enterprise",
+      "business-model-xray",
+      "wp-site-manager",
+      "package-tracker",
+      "connect",
+      "opc-seo-geo",
+      "frontend-patterns",
+      "model-authenticity-verifier",
+      "mcp-builder",
+      "wordpress-router",
+      "tampermonkey",
+      "mcp-integration",
+      "email-management",
+      "life-learning-companion",
+      "opc-logo-creator",
+      "web-metadata-extractor",
+      "china-global-deployment",
+      "youtube-channel-scraper",
+      "mcp-flight-search",
+      "security-review",
+      "clash-verge-guide",
+      "interview-user",
+      "smart-illustrator",
+      "wp-performance",
+      "ecommerce-lp-generator",
+      "neck-care-specialist",
+      "sora2-video-gen",
+      "tts-elevenlabs",
+      "social-dynamics-mastery",
+      "google-docs-mcp-server",
+      "Nano-Banana"
+    ],
+    "business": [
+      "planning-with-files",
+      "my-creative-writer",
+      "cross-border-product-selector",
+      "youtube-research-video-topic",
+      "claude-cli-guide",
+      "creating-financial-models",
+      "mermaid-visualizer",
+      "memory:context-vault",
+      "rl-training-ppo",
+      "cloudflare-dns-manager",
+      "psychological-copywriter",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "youtube-plan-new-video",
+      "openai-codex-guide",
+      "skill-improver",
+      "creator-monetization-engine",
+      "gsd-framework-guide",
+      "etsy-seller-general",
+      "evolver",
+      "general-analysis-5w1h",
+      "claude-code-agile-updater",
+      "model-intelligence",
+      "scientific-business-guide",
+      "visa-itinerary-pro",
+      "seven-figure-course-builder",
+      "lifestyle-aesthetic-designer",
+      "backend-patterns",
+      "skill-improver.backup.20260305_130024",
+      "youtube-video-hook",
+      "personal-asset-manager",
+      "executing-marketing-campaigns",
+      "design-md",
+      "startup-metrics-framework",
+      "vercel-deployment-guide",
+      "general-song-writer",
+      "stitch-react-components",
+      "stitch-react-components 2",
+      "academic-navigator",
+      "japan-med-content-matrix",
+      "knowledge-card-generator",
+      "amazon-operations-director",
+      "skill-creator",
+      "ecommerce-kv",
+      "performance-ads-writer",
+      "wp-world-inspire-lab-wi",
+      "claude-code-agent-teams",
+      "honest-deep-researcher",
+      "surecart-manager",
+      "stitch-design-md",
+      "elon-musk-life-coach",
+      "prd",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "principle-driven-framework",
+      "skill-from-code",
+      "know-an-industry-fast",
+      "onecontext-manager",
+      "article-broll-illustrator",
+      "ecommerce-product-refine",
+      "japan-tax-planning",
+      "init-blast-method",
+      "market-sizing-analysis",
+      "model-library-generator",
+      "init-vault-method",
+      "wp-site-manager",
+      "package-tracker",
+      "mcp-builder",
+      "email-management",
+      "life-learning-companion",
+      "remotion",
+      "china-global-deployment",
+      "clash-verge-guide",
+      "interview-user",
+      "strategic-compact",
+      "ecommerce-lp-generator",
+      "Nano-Banana"
+    ],
+    "wordpress": [
+      "wp-wpcli-and-ops",
+      "wpds",
+      "wp-block-themes",
+      "wp-project-triage",
+      "wp-block-development",
+      "cloudflare-dns-manager",
+      "skill-orchestrator",
+      "wp-rest-api",
+      "wp-playground",
+      "creator-monetization-engine",
+      "vps-manager-ssh",
+      "wp-plugin-development",
+      "wp-cli-expert",
+      "wp-world-inspire-lab-wi",
+      "surecart-manager",
+      "wp-phpstan",
+      "wp-interactivity-api",
+      "wp-site-manager",
+      "wordpress-router",
+      "wp-performance"
+    ],
+    "notion": [
+      "gemini-cli-guide",
+      "claude-cli-guide",
+      "videocut",
+      "postgres-patterns",
+      "coding-standards",
+      "eval-harness",
+      "team-composition-analysis",
+      "skill-orchestrator",
+      "skill-improver",
+      "vps-manager-ssh",
+      "evolver",
+      "model-intelligence",
+      "backend-patterns",
+      "wp-cli-expert",
+      "trademark-guard-brand-name-domain",
+      "personal-asset-manager",
+      "xhs-note-creator-template",
+      "skill-creator",
+      "notion-mcp-connector",
+      "honest-deep-researcher",
+      "changelog-generator",
+      "prd",
+      "competitive-ads-extractor",
+      "dtc-brand-library",
+      "file-organizer",
+      "tdd-workflow",
+      "wp-phpstan",
+      "clawdbot-repair",
+      "onecontext-manager",
+      "init-blast-method",
+      "market-sizing-analysis",
+      "gyroflow-stabilizer",
+      "init-vault-method",
+      "wp-site-manager",
+      "connect",
+      "mcp-integration",
+      "email-management",
+      "life-learning-companion",
+      "security-review",
+      "clash-verge-guide",
+      "interview-user",
+      "wp-performance"
+    ]
+  },
+  "tool_ecosystems": {
+    "imagemagick": [
+      "youtube-thumbnail",
+      "monetization-first-development",
+      "alias",
+      "mermaid-visualizer",
+      "videocut",
+      "environment-manager",
+      "wp-block-themes",
+      "excalidraw-diagram",
+      "skill-improver",
+      "seven-figure-course-builder",
+      "to-notebooklm-artifacts",
+      "skill-improver.backup.20260305_130024",
+      "design-md",
+      "japan-med-content-matrix",
+      "amazon-operations-director",
+      "performance-ads-writer",
+      "stitch",
+      "city-cost-compare-nomad",
+      "media-to-notebooklm-artifacts",
+      "obsidian-canvas-creator",
+      "honest-deep-researcher",
+      "heif-converter",
+      "changelog-generator",
+      "svg-generator",
+      "stitch-design-md",
+      "remove-bg",
+      "article-broll-illustrator",
+      "email-management",
+      "opc-logo-creator",
+      "web-metadata-extractor",
+      "tts-elevenlabs"
+    ],
+    "ffmpeg": [
+      "gemini-watermark-remover",
+      "videocut",
+      "environment-manager",
+      "transcribe-media",
+      "to-notebooklm-artifacts",
+      "media-to-notebooklm-artifacts",
+      "media-organizer",
+      "music-video-prep"
+    ],
+    "python": [
+      "gemini-watermark-remover",
+      "Read-Media-Gemini",
+      "site-url-extractor",
+      "claude-cli-guide",
+      "godaddy-dns-manager",
+      "videocut",
+      "environment-manager",
+      "web-search-manager",
+      "memory:context-vault",
+      "rl-training-ppo",
+      "stitch-enhance-prompt",
+      "svg-icon-search",
+      "allowance-application-and-alignment-check",
+      "web-scraper-patterns",
+      "Post-Social-Media-With-GetLate-API-Repurpose-Distribute",
+      "opc-twitter",
+      "skill-orchestrator",
+      "openai-codex-guide",
+      "skill-improver",
+      "creator-monetization-engine",
+      "opc-reddit",
+      "context-engineering-collection",
+      "opc-producthunt",
+      "language-teacher",
+      "wheel-check",
+      "site-accessibility-judge-China-oversea",
+      "model-intelligence",
+      "visual-prompt-engineer-patten",
+      "transcribe-media",
+      "to-notebooklm-artifacts",
+      "google-cloud-integration",
+      "opc-domain-hunter",
+      "backend-patterns",
+      "zstmfhy-zlibrary-to-notebooklm",
+      "wp-cli-expert",
+      "lan-connection-manager",
+      "trademark-guard-brand-name-domain",
+      "seedream-4-5",
+      "skill-improver.backup.20260305_130024",
+      "notebooklm-py",
+      "opc-banner-creator",
+      "agentic-vision-gemini",
+      "startup-metrics-framework",
+      "academic-navigator",
+      "repair-old-photos",
+      "xhs-note-creator-template",
+      "knowledge-card-generator",
+      "skill-creator",
+      "theme-serial-gen",
+      "302ai-integration",
+      "notion-mcp-connector",
+      "wp-world-inspire-lab-wi",
+      "city-cost-compare-nomad",
+      "media-to-notebooklm-artifacts",
+      "claude-code-agent-teams",
+      "surecart-manager",
+      "heif-converter",
+      "firewall-manager",
+      "remove-bg",
+      "media-organizer",
+      "principle-driven-framework",
+      "clawdbot-repair",
+      "skill-from-code",
+      "obsidian-cli",
+      "article-broll-illustrator",
+      "vps-proxy-setup",
+      "init-blast-method",
+      "music-video-prep",
+      "model-library-generator",
+      "gyroflow-stabilizer",
+      "init-vault-method",
+      "aippt-enterprise",
+      "package-tracker",
+      "connect",
+      "opc-seo-geo",
+      "family-health-guardian",
+      "email-management",
+      "opc-logo-creator",
+      "web-metadata-extractor",
+      "youtube-channel-scraper",
+      "mcp-flight-search",
+      "stitch-enhance-prompt2",
+      "clash-verge-guide",
+      "smart-illustrator",
+      "ecommerce-lp-generator",
+      "neck-care-specialist",
+      "sora2-video-gen",
+      "tts-elevenlabs",
+      "Nano-Banana"
+    ],
+    "openai": [
+      "Read-Media-Gemini",
+      "claude-cli-guide",
+      "videocut",
+      "environment-manager",
+      "rl-training-ppo",
+      "coding-standards",
+      "openai-codex-guide",
+      "vps-manager-ssh",
+      "model-intelligence",
+      "codex-config",
+      "agentic-vision-gemini",
+      "general-song-writer",
+      "302ai-integration",
+      "claude-code-agent-teams",
+      "honest-deep-researcher",
+      "tdd-workflow",
+      "clawdbot-repair",
+      "business-model-xray",
+      "connect",
+      "opc-seo-geo",
+      "security-review",
+      "clash-verge-guide",
+      "Nano-Banana"
+    ],
+    "docker": [
+      "wp-wpcli-and-ops",
+      "wp-playground",
+      "vps-manager-ssh",
+      "clawdbot-repair",
+      "china-global-deployment"
+    ],
+    "npm": [
+      "gemini-cli-guide",
+      "claude-cli-guide",
+      "teams-dashboard",
+      "environment-manager",
+      "wp-block-development",
+      "eval-harness",
+      "wp-playground",
+      "gsd-framework-guide",
+      "evolver",
+      "wheel-check",
+      "visa-itinerary-pro",
+      "trademark-guard-brand-name-domain",
+      "vercel-deployment-guide",
+      "stitch-react-components",
+      "stitch-react-components 2",
+      "prd",
+      "verification-loop",
+      "tdd-workflow",
+      "clawdbot-repair",
+      "onecontext-manager",
+      "aippt-enterprise",
+      "connect",
+      "mcp-builder",
+      "mcp-integration",
+      "remotion",
+      "china-global-deployment",
+      "security-review"
+    ],
+    "notion": [
+      "gemini-cli-guide",
+      "claude-cli-guide",
+      "skill-orchestrator",
+      "notion-mcp-connector",
+      "dtc-brand-library"
+    ],
+    "chrome": [
+      "gemini-cli-guide",
+      "environment-manager",
+      "vps-manager-ssh",
+      "etsy-seller-general",
+      "chrome-devtools",
+      "wp-world-inspire-lab-wi",
+      "stitch-loop",
+      "wp-site-manager"
+    ],
+    "git": [
+      "claude-cli-guide",
+      "system-git-discovery-sync",
+      "environment-manager",
+      "openai-codex-guide",
+      "context-engineering-collection",
+      "gsd-framework-guide",
+      "vps-manager-ssh",
+      "evolver",
+      "claude-code-agile-updater",
+      "notebooklm-py",
+      "vercel-deployment-guide",
+      "claude-code-agent-teams",
+      "changelog-generator",
+      "continuous-learning",
+      "continuous-learning-v2",
+      "verification-loop",
+      "obsidian-cli",
+      "onecontext-manager",
+      "mcp-integration",
+      "china-global-deployment",
+      "security-review",
+      "clash-verge-guide"
+    ],
+    "gemini": [
+      "vps-manager-ssh",
+      "transcribe-media",
+      "smart-illustrator"
+    ]
+  },
+  "metadata": {
+    "total_skills": 224,
+    "total_domains": 14,
+    "total_tools": 10
+  }
+}

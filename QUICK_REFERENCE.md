@@ -1,0 +1,72 @@
+# Vec's Productivity Skills - Quick Reference
+
+## 📦 Repository
+**Main Repo**: https://github.com/vecyang1/vec-productivity-skills
+
+## 🎯 Included Skills
+
+### 1. Agent Teams Dashboard
+- **Path**: `agent-teams-dashboard/`
+- **Type**: Management & Coordination
+- **MCP**: ✅ Yes
+- **Use**: Team monitoring, task distribution, performance analytics
+
+### 2. Skill Improver
+- **Path**: `skill-improver/`
+- **Type**: Meta-skill
+- **MCP**: ❌ No
+- **Use**: Skill quality assessment, optimization, documentation
+
+### 3. Notion MCP Connector
+- **Path**: `notion-mcp-connector/`
+- **Type**: Integration
+- **MCP**: ✅ Yes (Enhanced + Local)
+- **Use**: Notion automation, database management, workflows
+
+### 4. Scheduled Task Rescheduler
+- **Path**: `scheduled-task-rescheduler/`
+- **Type**: Workflow / Reliability
+- **MCP**: ❌ No
+- **Use**: Reschedule recurring agent tasks (Antigravity, cron, launchd, n8n) without losing checkpoints; two-layer Antigravity activation; catch-up & credit policy
+
+## 🚀 Installation
+
+```bash
+# Clone the unified collection
+git clone https://github.com/vecyang1/vec-productivity-skills.git ~/vec-productivity-skills
+
+# Install all skills
+ln -s ~/vec-productivity-skills/* ~/.claude/skills/
+
+# Or install individual skills
+ln -s ~/vec-productivity-skills/notion-mcp-connector ~/.claude/skills/notion-mcp-connector
+```
+
+## 📝 Local Setup
+
+Your current setup:
+- **Unified Collection**: `~/Documents/Shared/vec-productivity-skills/`
+- **Symlinks**: `~/.claude/skills/` → points to unified collection
+- **Original Skills**: `~/.gemini/antigravity/skills/` (keep as backup)
+
+## 🔄 Updates
+
+```bash
+cd ~/Documents/Shared/vec-productivity-skills
+git pull origin main
+```
+
+## 🌐 Public URLs
+
+- **Main Collection**: https://github.com/vecyang1/vec-productivity-skills
+- **Agent Teams**: https://github.com/vecyang1/agent-teams-dashboard (standalone)
+- **Skill Improver**: https://github.com/vecyang1/skill-improver (standalone)
+- **Notion Connector**: https://github.com/vecyang1/notion-mcp-connector (deprecated, redirects to collection)
+
+## ✅ Migration Complete
+
+All three skills are now unified in one repository with:
+- Consistent structure and documentation
+- Easy installation and updates
+- Community-ready with proper licensing
+- Deprecation notices on old repos
