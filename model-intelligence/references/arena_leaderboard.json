@@ -1,0 +1,65 @@
+{
+  "text": {
+    "category": "text",
+    "url": "https://arena.ai/leaderboard/text",
+    "last_updated": "2026-03-11T19:08:52.035471",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  },
+  "code": {
+    "category": "code",
+    "url": "https://arena.ai/leaderboard/code",
+    "last_updated": "2026-03-11T19:08:52.035480",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  },
+  "vision": {
+    "category": "vision",
+    "url": "https://arena.ai/leaderboard/vision",
+    "last_updated": "2026-03-11T19:08:52.035484",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  },
+  "document": {
+    "category": "document",
+    "url": "https://arena.ai/leaderboard/document",
+    "last_updated": "2026-03-11T19:08:52.035487",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  },
+  "text-to-image": {
+    "category": "text-to-image",
+    "url": "https://arena.ai/leaderboard/text-to-image",
+    "last_updated": "2026-03-11T19:08:52.035489",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  },
+  "image-edit": {
+    "category": "image-edit",
+    "url": "https://arena.ai/leaderboard/image-edit",
+    "last_updated": "2026-03-11T19:08:52.035492",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  },
+  "search": {
+    "category": "search",
+    "url": "https://arena.ai/leaderboard/search",
+    "last_updated": "2026-03-11T19:08:52.035497",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  },
+  "text-to-video": {
+    "category": "text-to-video",
+    "url": "https://arena.ai/leaderboard/text-to-video",
+    "last_updated": "2026-03-11T19:08:52.035499",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  },
+  "image-to-video": {
+    "category": "image-to-video",
+    "url": "https://arena.ai/leaderboard/image-to-video",
+    "last_updated": "2026-03-11T19:08:52.035501",
+    "top_models": [],
+    "fetch_method": "manual_webfetch_required"
+  }
+}

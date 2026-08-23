@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zernio Social Publisher"
+  short_description: "Publish approved social posts with explicit safeguards."
+  default_prompt: "Use $post-social-media-with-zernio-api to preflight exact destinations, dry-run the approved post, and publish only after explicit confirmation."

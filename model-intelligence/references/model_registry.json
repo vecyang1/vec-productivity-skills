@@ -1,0 +1,572 @@
+{
+  "openai": [
+    {
+      "name": "gpt-5.4",
+      "tier": "powerful",
+      "description": "Latest GPT-5 model (March 2026). +17% on BrowseComp over GPT-5.2. Strong web research and information retrieval.",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 272000,
+      "max_output": 128000,
+      "knowledge_cutoff": "2025-12",
+      "release_date": "2026-03-05",
+      "cost": {
+        "input": 2.5,
+        "cached_input": 0.25,
+        "output": 15.0
+      }
+    },
+    {
+      "name": "gpt-5.4-pro",
+      "tier": "powerful-reasoning",
+      "description": "GPT-5.4 Pro tier. Extended reasoning (medium/high/xhigh). Responses API only. Complex problems may take minutes.",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 1050000,
+      "max_output": 128000,
+      "knowledge_cutoff": "2025-08-31",
+      "release_date": "2026-03-05",
+      "cost": {
+        "input": 30.0,
+        "output": 180.0
+      }
+    },
+    {
+      "name": "gpt-5.3-codex-xhigh",
+      "tier": "powerful-coding",
+      "description": "Top coding model (AA Intelligence: 54.0)",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 272000,
+      "max_output": 128000
+    },
+    {
+      "name": "gpt-5.2-xhigh",
+      "tier": "powerful",
+      "description": "Flagship model (AA Intelligence: 51.3)",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 272000,
+      "max_output": 128000,
+      "cost": {
+        "input": 1.75,
+        "cached_input": 0.175,
+        "output": 14.0
+      }
+    },
+    {
+      "name": "gpt-5-pro",
+      "tier": "powerful-reasoning",
+      "description": "Extended reasoning capability, Pro tier only",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 400000,
+      "max_output": 272000,
+      "cost": {
+        "input": 15.0,
+        "output": 120.0
+      }
+    },
+    {
+      "name": "gpt-5",
+      "tier": "balanced",
+      "description": "Original GPT-5 release, API available",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 272000,
+      "max_output": 128000,
+      "cost": {
+        "input": 1.25,
+        "output": 10.0
+      }
+    },
+    {
+      "name": "gpt-5-mini",
+      "tier": "cheap",
+      "description": "Fast, cost-efficient GPT-5 variant (~$0.15-0.60/M tokens)",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 272000,
+      "max_output": 128000,
+      "cost": {
+        "input": 0.25,
+        "output": 2.0
+      }
+    },
+    {
+      "name": "gpt-5-nano",
+      "tier": "cheap",
+      "description": "Lowest cost, high throughput (~$0.05/M tokens)",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 272000,
+      "max_output": 128000,
+      "cost": {
+        "input": 0.049999999999999996,
+        "output": 0.39999999999999997
+      }
+    },
+    {
+      "name": "o3",
+      "tier": "reasoning",
+      "description": "Latest reasoning model for complex logical tasks",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": false,
+      "context_window": 200000,
+      "max_output": 100000,
+      "cost": {
+        "input": 2.0,
+        "output": 8.0
+      }
+    },
+    {
+      "name": "o3-mini",
+      "tier": "reasoning-cheap",
+      "description": "Cost-efficient reasoning model",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": false,
+      "context_window": 200000,
+      "max_output": 100000,
+      "cost": {
+        "input": 1.1,
+        "output": 4.4
+      }
+    },
+    {
+      "name": "gpt-5.3-instant",
+      "tier": "balanced",
+      "description": "Default ChatGPT model (March 2026). Improved day-to-day interactions, reduced refusals, enhanced web integration.",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 400000,
+      "max_output": 128000
+    },
+    {
+      "name": "gpt-realtime-1.5",
+      "tier": "specialized",
+      "description": "Real-time audio/voice model (Feb 2026). Azure OpenAI.",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": false,
+      "context_window": 200000,
+      "max_output": 64000
+    },
+    {
+      "name": "gpt-audio-1.5",
+      "tier": "specialized",
+      "description": "Audio processing model (Feb 2026). Azure OpenAI.",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": false,
+      "context_window": 200000,
+      "max_output": 64000
+    },
+    {
+      "name": "gpt-image-1.5",
+      "tier": "image-generation",
+      "description": "State-of-the-art image generation (2026). Improved instruction following.",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": true,
+      "context_window": 200000,
+      "max_output": 64000
+    },
+    {
+      "name": "o4-mini",
+      "tier": "reasoning-cheap",
+      "description": "Reasoning model (2026). Cost-efficient reasoning.",
+      "api_base": "https://api.openai.com/v1/",
+      "vision": false,
+      "context_window": 200000,
+      "max_output": 100000
+    },
+    {
+      "name": "gpt-5.3-codex-spark",
+      "tier": "balanced",
+      "description": "Coding-optimized variant"
+    },
+    {
+      "name": "gpt-5.3-codex",
+      "tier": "balanced",
+      "description": "Coding specialist model"
+    },
+    {
+      "name": "gpt-5.2",
+      "tier": "powerful",
+      "description": "Previous flagship model"
+    },
+    {
+      "name": "gpt-5.2-codex",
+      "tier": "balanced",
+      "description": "Coding variant of 5.2"
+    },
+    {
+      "name": "gpt-5.1-codex-max",
+      "tier": "balanced",
+      "description": "Extended codex variant"
+    }
+  ],
+  "anthropic": [
+    {
+      "name": "claude-opus-4-6",
+      "tier": "powerful-agentic",
+      "description": "Most intelligent model (Feb 2026). 1M context, 128K output. Extended thinking, agent teams.",
+      "api_base": "https://api.anthropic.com/v1/",
+      "vision": true,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "knowledge_cutoff": "2025-08",
+      "agent_performance": {
+        "gdpval_aa_elo": 1606,
+        "vending_bench_2_balance": 8017.59,
+        "best_for": [
+          "long-horizon tasks",
+          "supplier negotiation",
+          "complex reasoning",
+          "professional work"
+        ],
+        "strengths": [
+          "consistent tool use",
+          "effective sourcing",
+          "maintains coherence over 60-100M tokens"
+        ]
+      }
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "tier": "balanced",
+      "description": "Balanced model with 1M context, 128K output. Web search, extended thinking.",
+      "api_base": "https://api.anthropic.com/v1/",
+      "vision": true,
+      "context_window": 200000,
+      "max_output": 64000,
+      "knowledge_cutoff": "2025-08",
+      "agent_performance": {
+        "gdpval_aa_elo": 1633,
+        "vending_bench_2_balance": 7204.14,
+        "best_for": [
+          "productivity tasks",
+          "agentic workflows",
+          "balanced cost-performance",
+          "real-world tasks"
+        ],
+        "strengths": [
+          "#1 on GDPval-AA",
+          "strong long-term coherence",
+          "cost-effective for agents"
+        ]
+      }
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "tier": "cheap",
+      "description": "90% of Sonnet capability at 3x cost savings. 200K context (1M beta), 64K output.",
+      "api_base": "https://api.anthropic.com/v1/",
+      "vision": true,
+      "context_window": 200000,
+      "max_output": 64000,
+      "knowledge_cutoff": "2025-07"
+    },
+    {
+      "name": "claude-opus-4-5",
+      "tier": "powerful",
+      "description": "Previous Opus generation"
+    },
+    {
+      "name": "claude-sonnet-4-5-20250929",
+      "tier": "balanced",
+      "description": "Previous Sonnet generation"
+    },
+    {
+      "name": "claude-opus-4-6-thinking",
+      "tier": "reasoning",
+      "description": "Latest Opus with extended thinking"
+    },
+    {
+      "name": "claude-opus-4-5-thinking",
+      "tier": "reasoning",
+      "description": "Previous Opus with extended thinking"
+    }
+  ],
+  "gemini": [
+    {
+      "name": "gemini-3.1-pro-preview",
+      "tier": "powerful-agentic",
+      "description": "Latest Gemini 3.1 model with advanced reasoning and multimodal understanding. 1M context, 64K output.",
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "vision": true,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "knowledge_cutoff": "2025-01",
+      "status": "preview",
+      "agent_performance": {
+        "vending_bench_2_balance": 5478.16,
+        "best_for": [
+          "negotiation tasks",
+          "persistent workflows",
+          "supplier management"
+        ],
+        "strengths": [
+          "persistent negotiator",
+          "finds reasonable offers",
+          "good long-term coherence"
+        ]
+      }
+    },
+    {
+      "name": "gemini-3-pro-preview",
+      "tier": "powerful-agentic",
+      "description": "SOTA reasoning and multimodal understanding. Controlled thinking, Computer Use tool.",
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "vision": true,
+      "context_window": 1048576,
+      "status": "deprecated",
+      "agent_performance": {
+        "vending_bench_2_balance": 5478.16,
+        "best_for": [
+          "negotiation tasks",
+          "persistent workflows",
+          "supplier management"
+        ],
+        "strengths": [
+          "persistent negotiator",
+          "finds reasonable offers"
+        ]
+      },
+      "max_output": 65535
+    },
+    {
+      "name": "gemini-3-flash-preview",
+      "tier": "cheap-agentic",
+      "description": "Pro-level intelligence at Flash speeds. Controlled thinking support.",
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "vision": true,
+      "context_window": 1048576,
+      "status": "preview",
+      "max_output": 65535
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "tier": "powerful",
+      "description": "Multimodal model with 1M token context (expandable to 2M). Thinking capabilities.",
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "vision": true,
+      "context_window": 1048576,
+      "max_output": 65535
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "tier": "cheap",
+      "description": "Fast, efficient model with thinking capabilities. 1M token context.",
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "vision": true,
+      "context_window": 1048576,
+      "max_output": 65535
+    },
+    {
+      "name": "gemini-2.0-flash",
+      "tier": "cheap",
+      "description": "Latest fast model with 1M input tokens, 8K output.",
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "vision": true,
+      "context_window": 1048576,
+      "max_output": 8192
+    },
+    {
+      "name": "gemini-3-flash-kie",
+      "tier": "specialized-multimodal",
+      "description": "Kie.ai hosted Gemini 3 Flash. PAID SERVICE. Use ONLY for Video/Audio reading.",
+      "api_base": "https://api.kie.ai/gemini-3-flash/v1/",
+      "vision": true,
+      "cost": {
+        "input": 0.15,
+        "output": 0.9
+      }
+    },
+    {
+      "name": "gemini-3.1-flash-image-preview",
+      "tier": "image-generation",
+      "description": "Nano Banana 2 (DEFAULT) - Fast image generation model (March 2026). 99.6% quality of deprecated Pro, 2.1x faster, 25-65% cheaper. 4K support. Replaces deprecated gemini-3-pro-image-preview.",
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/",
+      "vision": false,
+      "image_generation": true,
+      "max_resolution": "4K",
+      "status": "recommended",
+      "cost": {
+        "0.5K": 0.045,
+        "1K": 0.067,
+        "2K": 0.101,
+        "4K": 0.151
+      },
+      "context_window": 65536,
+      "max_output": 32768
+    },
+    {
+      "name": "gemini-3.1-flash-lite",
+      "tier": "cheap",
+      "description": "Latest lite model (Mar 3, 2026), 2.5x faster TTFT"
+    },
+    {
+      "name": "gemini-2.5-flash-lite",
+      "tier": "cheap",
+      "description": "Fastest budget multimodal in 2.5 family"
+    },
+    {
+      "name": "gemini-3.1-flash-lite-preview",
+      "tier": "cheap",
+      "description": "Latest lite model"
+    },
+    {
+      "name": "gemini-3-flash",
+      "tier": "balanced",
+      "description": "Flash model (12/25)"
+    }
+  ],
+  "last_updated": "2026-03-13",
+  "evaluation_sources": {
+    "artificial_analysis": {
+      "url": "https://artificialanalysis.ai/models",
+      "description": "Model intelligence index and performance metrics. API-based (reliable). Includes GDPval-AA for agent/productivity evaluation.",
+      "metric": "Intelligence score, GDPval-AA ELO",
+      "last_checked": "2026-03-06",
+      "fetchable": "yes_api",
+      "priority": "high"
+    },
+    "arena_ai": {
+      "url": "https://arena.ai/leaderboard",
+      "description": "Human-judged quality across text, code, vision, document, and more via crowdsourced voting",
+      "metric": "ELO score (human voting)",
+      "last_checked": "2026-03-06",
+      "fetchable": "yes_webfetch",
+      "priority": "high"
+    },
+    "vals_ai": {
+      "url": "https://www.vals.ai/benchmarks",
+      "description": "Comprehensive automated benchmarks across finance, law, coding, healthcare, and academic domains",
+      "metric": "Accuracy (0-100%)",
+      "last_checked": "2026-03-06",
+      "fetchable": "yes_webfetch",
+      "priority": "high"
+    },
+    "apex_agents": {
+      "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+      "description": "Professional work scenarios (lawyer, banker, consultant) across 33 worlds with 480 tasks",
+      "metric": "Pass@1 and Mean Score (0-60% scale)",
+      "last_checked": "2026-03-06",
+      "fetchable": "yes_webfetch",
+      "priority": "high"
+    },
+    "vending_bench_2": {
+      "url": "https://andonlabs.com/evals/vending-bench-2",
+      "description": "1-year vending machine business simulation (3000-6000 messages, 60-100M tokens). Direct money creation indicator.",
+      "metric": "Money balance after 1 year (higher is better)",
+      "last_checked": "2026-03-06",
+      "fetchable": "yes_webfetch",
+      "priority": "high"
+    }
+  },
+  "image_gen": [
+    {
+      "name": "gemini-3-pro-image-preview",
+      "tier": "powerful",
+      "description": "Nano Banana Pro, professional asset production"
+    },
+    {
+      "name": "gemini-2.5-flash-image",
+      "tier": "balanced",
+      "description": "Earlier Nano Banana version"
+    }
+  ],
+  "models": [
+    {
+      "name": "minimax-m2.5",
+      "provider": "minimax",
+      "last_speed_test": {
+        "timestamp": "2026-03-11T19:18:39.079988",
+        "throughput": 22.1,
+        "rating": "moderate"
+      },
+      "concurrency_tests": {
+        "timestamp": "2026-03-11T20:05:18.985458",
+        "tests": [
+          {
+            "parallel": 1,
+            "avg_tps": 22.1,
+            "total_tps": 22.1
+          },
+          {
+            "parallel": 3,
+            "avg_tps": 19.3,
+            "total_tps": 57.9
+          },
+          {
+            "parallel": 4,
+            "avg_tps": 13.4,
+            "total_tps": 53.6
+          },
+          {
+            "parallel": 5,
+            "avg_tps": 13.7,
+            "total_tps": 68.5
+          },
+          {
+            "parallel": 6,
+            "avg_tps": 12.5,
+            "total_tps": 75.0
+          },
+          {
+            "parallel": 7,
+            "avg_tps": 14.4,
+            "total_tps": 100.8
+          },
+          {
+            "parallel": 8,
+            "avg_tps": 16.0,
+            "total_tps": 128.0
+          },
+          {
+            "parallel": 10,
+            "avg_tps": 13.9,
+            "total_tps": 139.0
+          },
+          {
+            "parallel": 50,
+            "avg_tps": 13.05,
+            "total_tps": 652.5
+          }
+        ],
+        "critical_point": "4 concurrent requests",
+        "recommendation": {
+          "fast_response": "2-3 agents",
+          "max_throughput": "5-6 agents",
+          "balanced": "3 agents"
+        }
+      }
+    }
+  ],
+  "zhipu": [
+    {
+      "name": "glm-5",
+      "tier": "balanced",
+      "description": "Zhipu AI flagship model (智谱GLM-5). Tested 2026-03-13. Good speed (~30-36 t/s), responsive TTFT (~2s).",
+      "api_base": "https://open.bigmodel.cn/api/paas/v4/",
+      "vision": true,
+      "context_window": 128000,
+      "max_output": 4096,
+      "release_date": "2026-03-13",
+      "concurrency": {
+        "safe_limit": 6,
+        "max_tested": 12,
+        "throughput_normal": "28-36 t/s",
+        "throughput_throttled": "14-16 t/s",
+        "degradation_factor": 2.5,
+        "notes": "High concurrency causes 50% throughput degradation for 25% of requests"
+      },
+      "agent_performance": {
+        "best_for": [
+          "general tasks",
+          "Chinese language",
+          "cost-effective"
+        ],
+        "parallel_safe": 6
+      }
+    }
+  ]
+}

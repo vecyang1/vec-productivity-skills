@@ -1,0 +1,34 @@
+{
+  "last_updated": "2026-03-11",
+  "environment": "Local Antigravity Proxy (127.0.0.1:8045)",
+  "benchmarks": [
+    {
+      "model": "gemini-3.1-pro-high",
+      "ttft_sec": 3.90,
+      "throughput_tps": 30.2,
+      "avg_latency_sec": 20.45,
+      "tier": "powerful-reasoning"
+    },
+    {
+      "model": "gemini-3.1-pro-low",
+      "ttft_sec": 3.07,
+      "throughput_tps": 33.8,
+      "avg_latency_sec": 42.02,
+      "tier": "balanced"
+    },
+    {
+      "model": "gemini-3-flash",
+      "ttft_sec": 2.44,
+      "throughput_tps": 50.4,
+      "avg_latency_sec": 12.41,
+      "tier": "cheap-fast"
+    },
+    {
+      "model": "gemini-2.5-flash-thinking",
+      "ttft_sec": 4.30,
+      "throughput_tps": 87.9,
+      "avg_latency_sec": 7.06,
+      "tier": "reasoning-flash"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+Loading model registry...
+Found 19 current models
+
+Scanning skills...
+
+⚠ Found 71 potentially outdated model references:
+
+  gemini-watermark-remover: gemini-watermark-remover
+  gemini-cli-guide: gemini-cli
+  claude-cli-guide: claude-code
+  claude-cli-guide: gemini-rules-sync
+  claude-cli-guide: claude-cli-guide
+  claude-cli-guide: Gemini-specific
+  alias: gemini-3-pro-high
+  alias: gemini-3-flash
+  teams-dashboard: claude-code
+  teams-dashboard: claude-sonnet-4-5
+  teams-dashboard: claude-code-agent-teams
+  videocut: text-based
+  videocut: text-Aware
+  excalidraw-diagram: Text-Specific
+  skill-improver: text-vault
+  creator-monetization-engine: text-vault
+  context-engineering-collection: text-related
+  context-engineering-collection: text-engineering-collection
+  context-engineering-collection: text-optimization
+  context-engineering-collection: text-degradation
+  context-engineering-collection: text-fundamentals
+  context-engineering-collection: text-compression
+  gsd-framework-guide: text-annotator
+  gsd-framework-guide: text-monitor
+  language-teacher: text-driven
+  vps-manager-ssh: gpt-4
+  vps-manager-ssh: gemini-3-flash
+  vps-manager-ssh: gemini-cli
+  vps-manager-ssh: gemini-2
+  vps-manager-ssh: claude-sonnet-4-5
+  vps-manager-ssh: gemini-cli-auth
+  vps-manager-ssh: gemini-2-pro
+  vps-manager-ssh: gemini-3
+  claude-code-agile-updater: claude-cli-guide
+  claude-code-agile-updater: claude-code-agile-updater
+  model-intelligence: gemini-1
+  model-intelligence: text-min
+  model-intelligence: gpt-4o
+  model-intelligence: gpt-4o-mini
+  visa-itinerary-pro: text-vault
+  stitch-shadcn-ui: text-primary-foreground
+  seedream-4-5: Text-to-Image
+  skill-improver.backup.20260305_130024: text-vault
+  academic-navigator: text-vault
+  knowledge-card-generator: Gemini-native
+  knowledge-card-generator: gemini-3
+  skill-creator: text-based
+  cross-border-ai-strategist: text-localize
+  cross-border-ai-strategist: text-vault
+  302ai-integration: GPT-4
+  claude-code-agent-teams: claude-code-agent-teams
+  clawdbot-repair: gemini-3-pro-high
+  clawdbot-repair: gemini-3-flash
+  clawdbot-repair: gemini-3
+  onecontext-manager: text-manager
+  onecontext-manager: claude-code
+  onecontext-manager: text-ai
+  article-broll-illustrator: text-analysis
+  frontend-design: text-specific
+  connect: claude-agent-sdk
+  mcp-integration: claude-code
+  family-health-guardian: text-vault
+  remotion: text-to-speech
+  china-global-deployment: text-protocol
+  neck-care-specialist: text-vault
+  tts-elevenlabs: Text-to-speech
+  Nano-Banana: Gemini-native
+  Nano-Banana: Text-based
+  Nano-Banana: Text-to-Video
+  Nano-Banana: gemini-3-pro-image-preview
+  Nano-Banana: gemini-3
+
+Run with --update to update these references (requires permission)

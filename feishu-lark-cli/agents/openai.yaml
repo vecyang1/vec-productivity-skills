@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feishu / Lark CLI"
+  short_description: "Operate Feishu/Lark via the official lark-cli, and route Base Block or tenant-access problems correctly."
+  default_prompt: "Use $feishu-lark-cli to search my Feishu docs, fetch the right document, and make safe CLI-backed updates with a dry run before any risky write."

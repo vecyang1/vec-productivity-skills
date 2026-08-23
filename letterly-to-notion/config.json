@@ -1,0 +1,8 @@
+{
+  "port": 5588,
+  "refresh_interval_seconds": 10,
+  "default_sort": "date",
+  "default_sort_dir": "desc",
+  "default_filter_status": "all",
+  "default_filter_tier": "all"
+}
