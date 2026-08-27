@@ -288,6 +288,7 @@ Real-time global aircraft radar, flight telemetry (ADS-B), airport arrivals/depa
 | Feishu / Lark CLI Operator | Integration | Low | Node.js 18+, `@larksuite/cli` | ❌ |
 | Squirrly SEO Operations | Integration | Medium | Python (stdlib only) | ❌ |
 | OpenSky Network CLI | Aviation / Radar | Medium | Python (stdlib only) | ❌ |
+| Yopu CLI | Music / Chords | Low | Python (stdlib only) | ❌ |
 
 ---
 

@@ -14,6 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   LICENSE files and are not relicensed — see [NOTICE](./NOTICE).
 
 ### Added
+- **Yopu CLI ( / )**: Production-ready CLI and Python SDK for fetching, parsing, transposing, and exporting guitar & ukulele chord sheets from Yopu.co (有谱么).
+  - Fetches scores by URL or score ID with anti-blocking headers.
+  - Full chromatic music theory engine supporting transposition by semitones, target keys, and capo adjustment.
+  - Multi-format export: Terminal lead sheet, ChordPro standard, Markdown, Plain Text, and JSON.
+  - 11 unit tests covering transposition, parsing, and formatting.
+  - Licensed under AGPL-3.0.
 - **OpenSky Network CLI (`opensky-network-cli`)**: Production-ready CLI and Python SDK for the OpenSky Network REST API.
   - Live aircraft radar telemetry (`/states/all`), bounding-box / callsign / country filters, velocity / altitude / vertical rate parsing.
   - Airport arrival/departure flight tracking (`/flights/*`) and aircraft trajectory waypoints (`/tracks/all`).
@@ -45,6 +51,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2026-06-19
 
 ### Added
+- **Yopu CLI ( / )**: Production-ready CLI and Python SDK for fetching, parsing, transposing, and exporting guitar & ukulele chord sheets from Yopu.co (有谱么).
+  - Fetches scores by URL or score ID with anti-blocking headers.
+  - Full chromatic music theory engine supporting transposition by semitones, target keys, and capo adjustment.
+  - Multi-format export: Terminal lead sheet, ChordPro standard, Markdown, Plain Text, and JSON.
+  - 11 unit tests covering transposition, parsing, and formatting.
+  - Licensed under AGPL-3.0.
 - **Scheduled Task Rescheduler**: Safely reschedule, rename, rebuild, split, or merge recurring agent tasks (Antigravity, Codex, Claude Code, LaunchAgent, cron, n8n) without losing checkpoints, success markers, runtime IDs, output owners, or catch-up policy. Treats the scheduler trigger as an alarm clock and a durable Markdown cadence card as the source of truth.
   - Reschedule/rebuild lineage rules with worked examples (rename, new-ID, split, merge, runtime swap).
   - Antigravity two-layer activation reference (`sidecar.json` + `config.json` + `projects/<id>.json`) with a verification gate.
@@ -55,6 +67,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2026-03-05
 
 ### Added
+- **Yopu CLI ( / )**: Production-ready CLI and Python SDK for fetching, parsing, transposing, and exporting guitar & ukulele chord sheets from Yopu.co (有谱么).
+  - Fetches scores by URL or score ID with anti-blocking headers.
+  - Full chromatic music theory engine supporting transposition by semitones, target keys, and capo adjustment.
+  - Multi-format export: Terminal lead sheet, ChordPro standard, Markdown, Plain Text, and JSON.
+  - 11 unit tests covering transposition, parsing, and formatting.
+  - Licensed under AGPL-3.0.
 - Initial release of unified skills collection
 - **Agent Teams Dashboard**: Team management and coordination system
 - **Skill Improver**: Meta-skill for skill quality assurance
