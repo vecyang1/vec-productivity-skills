@@ -257,6 +257,24 @@ Built for the Claude Code community. Special thanks to:
 
 ---
 
+### [OpenSky Network CLI](./opensky-network-cli/)
+Real-time global aircraft radar, flight telemetry (ADS-B), airport arrivals/departures, and flight track history.
+
+**Features:**
+- Real-time aircraft positions, altitude, speed, heading, and climb/descent rates
+- Bounding-box geographic queries, callsign search, and country filtering
+- OAuth2 token management with 30-minute caching and daily credit ledger (4,000/day)
+- Built-in DNS self-healing fallback for reliable connectivity
+- 1Password CLI resolver and zero-network offline test suite
+
+**Use Cases:**
+- Real-time airspace monitoring and flight radar
+- Flight trajectory analysis and airport arrival boards
+
+[📖 Full Documentation](./opensky-network-cli/README.md)
+
+---
+
 ## 📊 Skill Comparison
 
 | Skill | Type | Complexity | Dependencies | MCP Support |
@@ -269,6 +287,7 @@ Built for the Claude Code community. Special thanks to:
 | Scheduled Task Rescheduler | Workflow | Low | Python (stdlib only) | ❌ |
 | Feishu / Lark CLI Operator | Integration | Low | Node.js 18+, `@larksuite/cli` | ❌ |
 | Squirrly SEO Operations | Integration | Medium | Python (stdlib only) | ❌ |
+| OpenSky Network CLI | Aviation / Radar | Medium | Python (stdlib only) | ❌ |
 
 ---
 
