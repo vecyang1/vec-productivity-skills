@@ -14,6 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   LICENSE files and are not relicensed — see [NOTICE](./NOTICE).
 
 ### Added
+- **OpenSky Network CLI (`opensky-network-cli`)**: Production-ready CLI and Python SDK for the OpenSky Network REST API.
+  - Live aircraft radar telemetry (`/states/all`), bounding-box / callsign / country filters, velocity / altitude / vertical rate parsing.
+  - Airport arrival/departure flight tracking (`/flights/*`) and aircraft trajectory waypoints (`/tracks/all`).
+  - OAuth2 Client Credentials lifecycle with automatic 30-minute token caching, live `X-Rate-Limit-Remaining` daily credit accounting (4,000 credits/day standard tier), and transparent public DNS fallback (`1.1.1.1` / `8.8.8.8`).
+  - 1Password automated credential resolution (`op://Agent Automation/OpenSky Network/username`) with graceful fallback to anonymous mode.
+  - 6 deterministic offline unit tests with 0 network dependency.
 - **Squirrly SEO Operations**: multi-brand CLI over the undocumented Squirrly
   SEO cloud API (`api.squirrly.co/v2`), with 76 endpoint/verb pairs mapped from
   the vendor's WordPress plugin source and confirmed against the live server.
