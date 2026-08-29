@@ -14,7 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   LICENSE files and are not relicensed — see [NOTICE](./NOTICE).
 
 ### Added
-- **Yopu CLI ( / )**: Production-ready CLI and Python SDK for fetching, parsing, transposing, and exporting guitar & ukulele chord sheets from Yopu.co (有谱么).
+- **Discord CLI Adapter**: Safe, local-first Discord operator skill for authorized server/channel discovery, forum thread sweeping, history sync, and local analytics.
+  - Hardened credential lane: enforces environment-injected `DISCORD_TOKEN` and blocks upstream plaintext token auto-extraction paths.
+  - Forum thread discovery & sweeping (`scripts/forum_sweep.py`) to bypass Discord's thread-hiding limitations in `/guilds/{id}/channels`.
+  - Isolated E2E check suite and schema contract validation.
+- **Yopu CLI (`yopu-cli` / `yp`)**: Production-ready CLI and Python SDK for fetching, parsing, transposing, and exporting guitar & ukulele chord sheets from Yopu.co (有谱么).
   - Fetches scores by URL or score ID with anti-blocking headers.
   - Full chromatic music theory engine supporting transposition by semitones, target keys, and capo adjustment.
   - Multi-format export: Terminal lead sheet, ChordPro standard, Markdown, Plain Text, and JSON.

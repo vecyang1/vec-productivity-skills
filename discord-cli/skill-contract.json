@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "checks": [
+    ["python3", "tests/test_contract.py"],
+    ["python3", "tests/test_forum_sweep.py"]
+  ],
+  "effects": ["read-only"]
+}
