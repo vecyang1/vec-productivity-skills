@@ -132,21 +132,35 @@ Route Feishu/Lark work through the official `lark-cli` — Docs, Drive, Base, Sh
 ---
 
 ### 8. [Squirrly SEO Operations](./squirrly-ops/)
-A multi-brand CLI over the Squirrly SEO cloud API — built by reading the vendor's WordPress plugin source, because **Squirrly publishes no API documentation**. The endpoint map here may be the only written description of this interface.
+A multi-brand CLI over the Squirrly SEO cloud API — built by reading the vendor's WordPress plugin source.
 
 **Features:**
 - 76 endpoint/verb pairs documented with parameters, response shape and risk
-- Brand registry holding *pointers* to credentials, never credentials; `env://` or 1Password Service Account
-- Writes behind two independent locks, because the quota is metered and real
-- Entitlement-blocked endpoints stay listed with a `gate` and a reason, so "my plan cannot" never gets misread as "this API cannot"
+- Brand registry holding pointers to credentials, never credentials
 - 105 hermetic unit tests plus a red-capable 10-stage live e2e check
 
 **Use Cases:**
 - Reading SEO health checks, keyword briefcase, focus pages and AI-visibility across several brands
 - Auditing what a WordPress SEO plugin is actually emitting on live pages
-- Any undocumented-vendor-API project — the gotchas section is largely transferable
 
 [📖 Full Documentation](./squirrly-ops/SKILL.md)
+
+---
+
+### 9. [Discord CLI Adapter](./discord-cli/)
+Safe, local-first Discord operator skill for authorized server/channel discovery, forum thread sweeping, history sync, and local analytics.
+
+**Features:**
+- Hardened credential lane (env-injected `DISCORD_TOKEN`, blocks token extraction)
+- Forum thread discovery & sweeping (`scripts/forum_sweep.py`)
+- Isolated E2E test harness and schema contract validation
+- Redacted receipts protecting private message bodies
+
+**Use Cases:**
+- Safe Discord community research and thread analysis for AI Coding Assistants
+- Syncing and searching authorized channel history locally
+
+[📖 Full Documentation](./discord-cli/SKILL.md)
 
 ---
 
@@ -289,6 +303,7 @@ Real-time global aircraft radar, flight telemetry (ADS-B), airport arrivals/depa
 | Squirrly SEO Operations | Integration | Medium | Python (stdlib only) | ❌ |
 | OpenSky Network CLI | Aviation / Radar | Medium | Python (stdlib only) | ❌ |
 | Yopu CLI | Music / Chords | Low | Python (stdlib only) | ❌ |
+| Discord CLI Adapter | Integration | Medium | Python, kabi-discord-cli | ❌ |
 
 ---
 
