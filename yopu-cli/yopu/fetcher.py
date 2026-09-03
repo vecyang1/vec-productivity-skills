@@ -10,6 +10,13 @@ Features:
 from __future__ import annotations
 
 import base64
+
+def safe_b64decode(data: bytes) -> bytes:
+    clean = b"".join(data.split())
+    pad = len(clean) % 4
+    if pad:
+        clean += b"=" * (4 - pad)
+    return base64.b64decode(clean)
 import http.cookiejar
 import json
 import os
@@ -145,7 +152,7 @@ class YopuClient:
             )
             if proc.returncode != 0 and not proc.stdout:
                 raise RuntimeError(f"SSH relay to {host} failed: {proc.stderr.decode('utf-8', 'replace')}")
-            raw = base64.b64decode(proc.stdout)
+            raw = safe_b64decode(proc.stdout)
             status, _, body = self._parse_http_dump(raw)
             if status != 200:
                 raise ConnectionError(f"Egress {host} returned HTTP {status} for {url}")
@@ -200,7 +207,7 @@ rm -f "$J"
             )
             if proc.returncode != 0 and not proc.stdout:
                 raise RuntimeError(f"SSH relay to {host} failed: {proc.stderr.decode('utf-8', 'replace')}")
-            raw = base64.b64decode(proc.stdout)
+            raw = safe_b64decode(proc.stdout)
             status, _, body = self._parse_http_dump(raw)
             if status != 200:
                 raise ConnectionError(f"Egress {host} returned HTTP {status} for {target_z_path}")
