@@ -185,3 +185,115 @@ def parse_yopu_html(html_text: str, canonical_url: str = "") -> SongScore:
         lines=lines,
         raw_article=raw_article,
     )
+
+
+def parse_yopu_sheet_data(data: dict, canonical_url: str = "") -> SongScore:
+    """
+    Parses decrypted Yopu sheet data (from /api/sheet and scoreUrlV4) into a SongScore.
+    """
+    score_id = data.get("id") or (canonical_url.split("/")[-1] if canonical_url else "")
+    title = data.get("title", "Untitled")
+    artist = data.get("artist", "")
+    key = data.get("key", "")
+    capo = data.get("capo", 0)
+    instrument = data.get("type", "guitar")
+
+    meta = ScoreMetadata(
+        title=title,
+        artist=artist,
+        instrument=instrument,
+        key=key,
+        capo=capo,
+        source_url=canonical_url or f"https://yopu.co/view/{score_id}",
+        score_id=score_id,
+        description=f"{title} - {artist} {instrument} lead sheet",
+    )
+
+    all_chords_ordered: List[str] = []
+    seen = set()
+    for c in data.get("chords", []):
+        clean_c = c.strip("[]")
+        if clean_c and clean_c not in seen:
+            seen.add(clean_c)
+            all_chords_ordered.append(clean_c)
+
+    lines: List[ScoreLine] = []
+
+    # Check for sections from v4_data masterBars
+    v4_sections = []
+    if "v4_data" in data and isinstance(data["v4_data"], dict):
+        for mb in data["v4_data"].get("masterBars", []):
+            sec = mb.get("section", {}).get("text")
+            if sec and sec not in v4_sections:
+                v4_sections.append(sec)
+
+    # Parse lyrics into lines
+    raw_lyrics = data.get("lyrics", "")
+    if raw_lyrics:
+        # Split by sentences / phrases
+        sentences = [s.strip() for s in re.split(r"[，。！？\n\r]+", raw_lyrics) if s.strip()]
+        chord_idx = 0
+        chord_count = len(all_chords_ordered)
+
+        # If sections exist, intersperse them
+        sec_idx = 0
+        if v4_sections and sec_idx < len(v4_sections):
+            lines.append(ScoreLine(
+                raw_text=f"[{v4_sections[sec_idx]}]",
+                is_section_header=True,
+                section_name=v4_sections[sec_idx],
+                chords=all_chords_ordered[:min(4, chord_count)],
+            ))
+            sec_idx += 1
+
+        for i, sent in enumerate(sentences):
+            # Intersperse section headers every few lines
+            if i > 0 and i % 4 == 0 and sec_idx < len(v4_sections):
+                lines.append(ScoreLine(
+                    raw_text=f"[{v4_sections[sec_idx]}]",
+                    is_section_header=True,
+                    section_name=v4_sections[sec_idx],
+                    chords=[],
+                ))
+                sec_idx += 1
+
+            line_chords = []
+            inline = []
+            if chord_count > 0:
+                c1 = all_chords_ordered[chord_idx % chord_count]
+                line_chords.append(c1)
+                inline.append((0, c1))
+                chord_idx += 1
+                if len(sent) > 8:
+                    c2 = all_chords_ordered[chord_idx % chord_count]
+                    line_chords.append(c2)
+                    inline.append((len(sent) // 2, c2))
+                    chord_idx += 1
+
+            lines.append(ScoreLine(
+                raw_text=sent,
+                chords=line_chords,
+                lyrics=sent,
+                inline_chords=inline,
+            ))
+    else:
+        # If no lyrics, output chords as chord-only lines
+        chunk_size = 4
+        for i in range(0, len(all_chords_ordered), chunk_size):
+            chunk = all_chords_ordered[i:i + chunk_size]
+            lines.append(ScoreLine(
+                raw_text="  ".join(chunk),
+                is_chord_only=True,
+                chords=chunk,
+                lyrics="",
+            ))
+
+    if not meta.key and all_chords_ordered:
+        meta.key = all_chords_ordered[0]
+
+    return SongScore(
+        meta=meta,
+        all_chords=all_chords_ordered,
+        lines=lines,
+        raw_article=raw_lyrics,
+    )
