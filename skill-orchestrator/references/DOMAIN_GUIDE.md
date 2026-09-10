@@ -146,7 +146,7 @@ python3 scripts/query_by_domain.py --domain "AI & ML"
 python3 scripts/query_by_domain.py --domain "Content Creation"
 
 # Then use skill-lookup for detailed info
-python3 ~/.skills/skill-lookup/scripts/skill_lookup.py <skill-name>
+python3 $HOME/.claude/skills/skill-lookup/scripts/skill_lookup.py <skill-name>
 ```
 
 ### With skill-creator
@@ -166,7 +166,7 @@ When new skills are added or existing skills are modified:
 
 ```bash
 # Regenerate domain mapping
-cd ~/.skills/skill-orchestrator
+cd $HOME/.claude/skills/skill-orchestrator
 python3 scripts/regenerate_domain_map.py --verbose
 ```
 

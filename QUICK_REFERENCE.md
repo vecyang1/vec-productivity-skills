@@ -36,23 +36,23 @@
 git clone https://github.com/vecyang1/vec-productivity-skills.git ~/vec-productivity-skills
 
 # Install all skills
-ln -s ~/vec-productivity-skills/* ~/.skills/
+ln -s ~/vec-productivity-skills/* $HOME/.claude/skills/
 
 # Or install individual skills
-ln -s ~/vec-productivity-skills/notion-mcp-connector ~/.skills/notion-mcp-connector
+ln -s ~/vec-productivity-skills/notion-mcp-connector $HOME/.claude/skills/notion-mcp-connector
 ```
 
 ## 📝 Local Setup
 
 Your current setup:
-- **Unified Collection**: `~/projects/vec-productivity-skills/`
-- **Symlinks**: `~/.skills/` → points to unified collection
-- **Original Skills**: `~/.skills/` (keep as backup)
+- **Unified Collection**: `$HOME/Documents/Shared/vec-productivity-skills/`
+- **Symlinks**: `$HOME/.claude/skills/` → points to unified collection
+- **Original Skills**: `$HOME/.gemini/antigravity/skills/` (keep as backup)
 
 ## 🔄 Updates
 
 ```bash
-cd ~/projects/vec-productivity-skills
+cd $HOME/Documents/Shared/vec-productivity-skills
 git pull origin main
 ```
 

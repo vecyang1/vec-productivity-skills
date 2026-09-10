@@ -1,6 +1,6 @@
 #!/bin/bash
 # Weekly model reference scanner
-# Add to crontab: 0 9 * * 1 ~/.skills/skill-orchestrator/scripts/schedule_model_scan.sh
+# Add to crontab: 0 9 * * 1 $HOME/.gemini/antigravity/skills/skill-orchestrator/scripts/schedule_model_scan.sh
 
 SCRIPT_DIR="$HOME/.gemini/antigravity/skills/skill-orchestrator/scripts"
 LOG_DIR="$HOME/.gemini/antigravity/skills/skill-orchestrator/references"

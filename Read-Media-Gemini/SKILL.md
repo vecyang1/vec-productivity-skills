@@ -29,7 +29,7 @@ Direct integration with Google Drive API:
 
 **Authentication** (tried in order):
 1. **gcloud**: `~/.config/gcloud/application_default_credentials.json`
-2. **OAuth**: `~/.config/oauth_creds.json` (browser auth on first use)
+2. **OAuth**: `$HOME/.gemini/oauth_creds.json` (browser auth on first use)
 3. **Token cache**: `~/.gdrive_token.json` (auto-saved)
 
 **Supported formats**:
@@ -82,12 +82,12 @@ This skill uses Gemini Developer API (via Antigravity proxy), which doesn't supp
 **Rule**: If the task requires spatial reasoning, iteration, or programmatic image manipulation → delegate to `agentic-vision-gemini`:
 
 ```bash
-python3 ~/.skills/agentic-vision-gemini/scripts/agentic_vision.py \
+python3 $HOME/.gemini/antigravity/skills/agentic-vision-gemini/scripts/agentic_vision.py \
   --image "/path/to/image.jpg" \
   --prompt "Zoom into the label and read the serial number"
 ```
 
-See full agentic docs: `~/.skills/agentic-vision-gemini/SKILL.md`
+See full agentic docs: `$HOME/.gemini/antigravity/skills/agentic-vision-gemini/SKILL.md`
 
 ## Capabilities
 

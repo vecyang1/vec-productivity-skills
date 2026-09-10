@@ -132,13 +132,13 @@ def generate_report():
             report.append(f"**Action:** DELETE `{skill1}` (symlink duplicate)\n\n")
             report.append(f"**Reason:** This is a symlink pointing to external location. The canonical version `{skill2}` should be used.\n\n")
             report.append(f"**Impact:** None - symlink removal has no functional impact.\n\n")
-            report.append(f"**Command:**\n```bash\nrm ~/.skills/{skill1}\n```\n\n")
+            report.append(f"**Command:**\n```bash\nrm $HOME/.gemini/antigravity/skills/{skill1}\n```\n\n")
 
         elif "deprecated" in reason.lower() or "older" in reason.lower():
             report.append(f"**Action:** DELETE `{skill1}` (deprecated/older version)\n\n")
             report.append(f"**Reason:** Superseded by `{skill2}` which has better architecture/features.\n\n")
             report.append(f"**Impact:** Low - users should migrate to newer version.\n\n")
-            report.append(f"**Command:**\n```bash\nrm -rf ~/.skills/{skill1}\n```\n\n")
+            report.append(f"**Command:**\n```bash\nrm -rf $HOME/.gemini/antigravity/skills/{skill1}\n```\n\n")
 
         report.append("---\n\n")
 

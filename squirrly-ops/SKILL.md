@@ -34,9 +34,9 @@ an independent literal parse, and confirmed against the live server.
 
 ```bash
 git clone https://github.com/vecyang1/vec-productivity-skills
-cp -r vec-productivity-skills/squirrly-ops ~/.skills/
+cp -r vec-productivity-skills/squirrly-ops $HOME/.claude/skills/
 mkdir -p ~/.config/squirrly-ops
-cp ~/.skills/squirrly-ops/config.example.json ~/.config/squirrly-ops/sites.json
+cp $HOME/.claude/skills/squirrly-ops/config.example.json ~/.config/squirrly-ops/sites.json
 chmod 600 ~/.config/squirrly-ops/sites.json
 ```
 
@@ -58,8 +58,8 @@ Put it wherever you keep secrets, export it, and point the registry at it:
 ## First move
 
 ```bash
-python3 ~/.skills/squirrly-ops/scripts/squirrly_ops.py sites
-python3 ~/.skills/squirrly-ops/scripts/squirrly_ops.py doctor --site <brand>
+python3 $HOME/.claude/skills/squirrly-ops/scripts/squirrly_ops.py sites
+python3 $HOME/.claude/skills/squirrly-ops/scripts/squirrly_ops.py doctor --site <brand>
 ```
 
 **`--site` is not optional, ever — not even with one brand configured.** A
@@ -201,7 +201,7 @@ unused item; a successful connect with an unstored key strands the blog.
 ## Verification
 
 ```bash
-cd ~/.skills/squirrly-ops
+cd $HOME/.claude/skills/squirrly-ops
 python3 -B -m unittest discover -s tests -p 'test_*.py'   # 105 tests, no network
 python3 scripts/e2e_check.py --site <brand>               # 10 stages, live
 ```

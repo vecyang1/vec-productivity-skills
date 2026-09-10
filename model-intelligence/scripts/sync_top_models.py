@@ -6,8 +6,8 @@ import json
 import os
 from datetime import datetime
 
-REGISTRY_PATH = os.path.expanduser('~/.skills/model-intelligence/references/model_registry.json')
-MEMORY_PATH = os.path.expanduser('~/.memory/MEMORY.md')
+REGISTRY_PATH = os.path.expanduser('$HOME/.claude/skills/model-intelligence/references/model_registry.json')
+MEMORY_PATH = os.path.expanduser('$HOME/.claude/projects/-Users-developer/memory/MEMORY.md')
 
 # Top models to track (manually curated)
 TOP_MODELS = {

@@ -12,8 +12,8 @@ Operate FluentCRM as a general WordPress CRM system. Prefer the bundled CLI for 
 Run read-only checks before changing CRM state:
 
 ```bash
-python3 ~/.skills/fluentcrm-ops/scripts/fluentcrm_ops.py doctor
-python3 ~/.skills/fluentcrm-ops/scripts/fluentcrm_ops.py counts
+python3 $HOME/.codex/skills/fluentcrm-ops/scripts/fluentcrm_ops.py doctor
+python3 $HOME/.codex/skills/fluentcrm-ops/scripts/fluentcrm_ops.py counts
 ```
 
 If the Codex symlink is missing, run from the source skill:

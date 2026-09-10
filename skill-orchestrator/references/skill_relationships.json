@@ -1171,7 +1171,7 @@
     },
     "gsd-framework-guide": {
       "name": "gsd-framework-guide",
-      "description": "Complete reference for Get Shit Done (GSD) framework installed globally in ~/.skills. Use when user asks about GSD commands, workflows, patterns, or needs help with discuss/plan/execute/verify phases. Covers installation details, command reference, workflow patterns, and integration with existing setup.",
+      "description": "Complete reference for Get Shit Done (GSD) framework installed globally in $HOME/.claude. Use when user asks about GSD commands, workflows, patterns, or needs help with discuss/plan/execute/verify phases. Covers installation details, command reference, workflow patterns, and integration with existing setup.",
       "direct_references": [
         "content-research-writer",
         "planning-with-files",

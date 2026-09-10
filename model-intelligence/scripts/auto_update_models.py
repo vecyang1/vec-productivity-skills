@@ -10,7 +10,7 @@ from datetime import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REGISTRY_PATH = os.path.join(SCRIPT_DIR, '../references/model_registry.json')
-MEMORY_PATH = os.path.expanduser('~/.memory/MEMORY.md')
+MEMORY_PATH = os.path.expanduser('$HOME/.claude/projects/-Users-developer/memory/MEMORY.md')
 
 def load_registry():
     with open(REGISTRY_PATH, 'r') as f:

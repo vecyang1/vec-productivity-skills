@@ -10,7 +10,7 @@ A unified, production-grade CLI and Python SDK for querying real-time flight rad
 ## Skill Metadata
 
 - **Origin:** `local`
-- **Source:** `~/.skills/opensky-network-cli`
+- **Source:** `$HOME/.gemini/antigravity/skills/opensky-network-cli`
 - **Author:** V
 - **Created:** 2026-08-27
 - **Updated:** 2026-08-27
@@ -20,7 +20,7 @@ A unified, production-grade CLI and Python SDK for querying real-time flight rad
 
 ```bash
 # Navigate to skill directory
-cd ~/.skills/opensky-network-cli
+cd $HOME/.gemini/antigravity/skills/opensky-network-cli
 
 # 1. Health & Quota Check (inspect credentials, token & remaining credits)
 python3 opensky_cli.py auth-check
@@ -71,10 +71,10 @@ print(f"Remaining credits: {status.remaining_credits} / {status.daily_allowance}
 
 ```bash
 # Run 100% offline deterministic test suite (6/6 tests passing)
-python3 -m unittest discover -s ~/.skills/opensky-network-cli/tests
+python3 -m unittest discover -s $HOME/.gemini/antigravity/skills/opensky-network-cli/tests
 ```
 
-## 🌐 Knowledge Base Travel & Aviation Ecosystem Workflow
+## 🌐 Travel & Aviation Ecosystem Workflow
 
 | Step | Tool / Skill | Role |
 | :--- | :--- | :--- |

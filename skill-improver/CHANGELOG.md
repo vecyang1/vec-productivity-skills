@@ -4,7 +4,7 @@
 ### Added
 - **Skill Cleaning Mode**: New `--clean` flag for preparing skills for public sharing
   - Removes API tokens, secrets, and credentials (OpenAI, Notion, Bearer tokens)
-  - Sanitizes personal paths and usernames (`/Users/example/` → `/Users/example/`)
+  - Sanitizes personal paths and usernames (`$HOME/` → `$HOME/`)
   - Replaces database IDs with placeholders (Notion IDs, UUIDs)
   - Removes personal data (emails, identifiers)
   - Generates template files (`.env.example`, `databases.md.template`, `config.example.json`)

@@ -7,7 +7,7 @@ import os
 import subprocess
 from datetime import datetime
 
-REGISTRY_PATH = os.path.expanduser('~/.skills/model-intelligence/references/model_registry.json')
+REGISTRY_PATH = os.path.expanduser('$HOME/.claude/skills/model-intelligence/references/model_registry.json')
 API_KEY = os.getenv("AA_API_KEY")
 
 def fetch_top_models():

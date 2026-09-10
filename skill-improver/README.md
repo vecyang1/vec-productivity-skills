@@ -75,7 +75,7 @@ Propose a plan to the user if the changes are significant.
 1.  **Update CHANGELOG.md**:
     *   Log date, author (Agent), and specific changes (e.g., "Consolidated 3 scripts into CLI", "Added error handling").
 2.  **Update Installation Log**:
-    *   If applicable, append to `~/.skills/installation_log.md` with "Improved [Skill Name]".
+    *   If applicable, append to `$HOME/.gemini/antigravity/skills/installation_log.md` with "Improved [Skill Name]".
 3.  **Final Report**: Summarize the improvements to the user.
 
 ### Phase 6: The Inception (Autopoiesis Injection)

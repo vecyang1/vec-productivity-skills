@@ -4,28 +4,28 @@
 - **Total Skills**: 239
 - **Domains**: 13
 - **Tags**: 29
-- **Location**: `~/.skills/skill-orchestrator/references/`
+- **Location**: `$HOME/.claude/skills/skill-orchestrator/references/`
 
 ## 🚀 Quick Commands
 
 ```bash
 # List all domains
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --list-domains
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --list-domains
 
 # List all tags
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --list-tags
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --list-tags
 
 # Find skills by domain
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --domain "AI & ML"
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --domain "AI & ML"
 
 # Find skills by tag (OR logic)
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --tag python
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --tag python
 
 # Find skills with ALL tags (AND logic)
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --tag python --tag automation --all
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --tag python --tag automation --all
 
 # Interactive browser
-python3 ~/.skills/skill-orchestrator/scripts/browse_domains.py
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/browse_domains.py
 ```
 
 ## 📁 13 Domains
@@ -96,7 +96,7 @@ Works with:
 ## 📝 Files
 
 ```
-~/.skills/skill-orchestrator/
+$HOME/.claude/skills/skill-orchestrator/
 ├── references/
 │   ├── skill_domain_map.json          # Main database
 │   ├── DOMAIN_GUIDE.md                # Full documentation

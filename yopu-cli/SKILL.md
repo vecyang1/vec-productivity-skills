@@ -10,7 +10,7 @@ A zero-dependency CLI and Python SDK for fetching, extracting, transposing, and 
 ## Skill Metadata
 
 - **Origin:** `local`
-- **Source:** `~/.skills/yopu-cli`
+- **Source:** `$HOME/.gemini/antigravity/skills/yopu-cli`
 - **Author:** V
 - **Created:** 2026-08-27
 - **Updated:** 2026-08-27

@@ -12,14 +12,14 @@ The system auto-syncs models daily from:
 crontab -e
 
 # Add this line:
-0 9,21 * * * ~/.skills/model-intelligence/scripts/daily_sync.sh
+0 9,21 * * * $HOME/.claude/skills/model-intelligence/scripts/daily_sync.sh
 ```
 
 ## Logs
 
 Sync logs are stored in:
 ```
-~/projects/latest-ai-model-sync/model-sync-YYYYMMDD-HHMM.log
+$HOME/Documents/A-coding/latest-ai-model-sync/model-sync-YYYYMMDD-HHMM.log
 ```
 
 ## What Gets Updated
@@ -29,7 +29,7 @@ Sync logs are stored in:
    - Pricing (input/output per 1M tokens)
    - Model availability
 
-2. **Memory** (`~/.memory/MEMORY.md`):
+2. **Memory** (`$HOME/.claude/projects/-Users-developer/memory/MEMORY.md`):
    - Last updated timestamp
    - Top agent model rankings
 
@@ -37,7 +37,7 @@ Sync logs are stored in:
 
 Create `.env` file:
 ```bash
-echo "AA_API_KEY=<your-artificialanalysis-api-key>" > ~/.skills/model-intelligence/.env
+echo "AA_API_KEY=<your-artificialanalysis-api-key>" > $HOME/.claude/skills/model-intelligence/.env
 ```
 
 ## Logs

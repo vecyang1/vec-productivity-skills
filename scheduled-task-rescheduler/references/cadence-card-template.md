@@ -104,7 +104,7 @@ Copy this card, change the values, keep the field names. It passes `validate_cad
 | Network Required | `false` |
 | Manual Paste Required | `false` |
 | Manual Paste Payload | `not_required_config_enabled_project_bound` |
-| Source Refs | `predecessor: none; runtime: ~/.config/sidecars/example-digest/sidecar.json` |
+| Source Refs | `predecessor: none; runtime: $HOME/.gemini/config/sidecars/example-digest/sidecar.json` |
 
 ### Saved Prompt (kept with the card)
 

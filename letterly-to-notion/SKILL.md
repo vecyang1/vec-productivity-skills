@@ -7,7 +7,7 @@ description: Pull voice notes from Letterly, selectively push to a Notion Conten
 
 ## IDs
 - **Notion data_source_id**: `YOUR_NOTION_DB_ID` — replace with your own database ID
-- **Index**: `~/.skills/letterly-to-notion/index.json`
+- **Index**: `$HOME/.claude/skills/letterly-to-notion/index.json`
 - **PRD**: `references/prd.md`
 
 ## Prerequisites Check
@@ -20,7 +20,7 @@ Before starting, verify both MCPs respond:
 ## Workflow
 
 ### Step 1: Load Index
-Read `~/.skills/letterly-to-notion/index.json`. If missing, init:
+Read `$HOME/.claude/skills/letterly-to-notion/index.json`. If missing, init:
 ```json
 {"version":1,"last_sync":null,"notes":{}}
 ```
@@ -124,7 +124,7 @@ This ensures Notion's search finds these pages when searching "Letterly" or note
 ### Step 4h: Process Dashboard Queue
 Before Step 5, check `action_queue.json` for notes queued via the web dashboard:
 ```
-Read: ~/.skills/letterly-to-notion/action_queue.json
+Read: $HOME/.claude/skills/letterly-to-notion/action_queue.json
 ```
 For each `action: "push"` entry: execute Steps 4a-4g for that note_id. After processing, clear the queue. Notes queued via dashboard may have `tags_override` in index — use those tags instead of auto-detect.
 
@@ -239,7 +239,7 @@ Parse each result's `Source` field → extract note ID → add to index as `stat
 
 ```bash
 # Shell alias (in ~/.zshrc)
-alias ltl='python3 ~/.skills/letterly-to-notion/scripts/dashboard.py &; sleep 1 && open http://localhost:5588'
+alias ltl='python3 $HOME/.claude/skills/letterly-to-notion/scripts/dashboard.py &; sleep 1 && open http://localhost:5588'
 ```
 
 **Features:**

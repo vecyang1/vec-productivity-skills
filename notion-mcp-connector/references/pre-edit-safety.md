@@ -17,7 +17,7 @@
 
 ## 2. Local Cache
 
-**Location**: `~/.skills/notion-mcp-connector/cache/`
+**Location**: `$HOME/.claude/skills/notion-mcp-connector/cache/`
 
 **File naming**:
 - `{id}.page.json` — page properties snapshot

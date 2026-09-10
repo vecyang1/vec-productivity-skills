@@ -89,7 +89,7 @@ def get_drive_credentials():
                 text=True,
                 check=True
             )
-            access_token = result.stdout.strip()
+            access_token = (result.stdout.strip())
             if access_token:
                 creds = Credentials(token=access_token)
                 logging.info("Using gcloud credentials")

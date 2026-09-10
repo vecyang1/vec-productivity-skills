@@ -6,18 +6,18 @@ Scrape all video metadata from a YouTube channel including titles, views, durati
 
 ```bash
 # Scrape all videos from a channel
-python3 ~/.skills/youtube-channel-scraper/scripts/scrape_channel.py \
+python3 $HOME/.claude/skills/youtube-channel-scraper/scripts/scrape_channel.py \
   --url "https://www.youtube.com/@ZJSTV-Music/videos" \
   --output channel_data.csv
 
 # Limit number of videos
-python3 ~/.skills/youtube-channel-scraper/scripts/scrape_channel.py \
+python3 $HOME/.claude/skills/youtube-channel-scraper/scripts/scrape_channel.py \
   --url "https://www.youtube.com/@ZJSTV-Music/videos" \
   --limit 100 \
   --output recent_videos.csv
 
 # JSON output format
-python3 ~/.skills/youtube-channel-scraper/scripts/scrape_channel.py \
+python3 $HOME/.claude/skills/youtube-channel-scraper/scripts/scrape_channel.py \
   --url "https://www.youtube.com/@ZJSTV-Music/videos" \
   --format json \
   --output channel_data.json

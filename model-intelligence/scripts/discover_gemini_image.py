@@ -13,7 +13,7 @@ except ImportError:
     sys.exit(1)
 
 # Load API key from Nano-Banana
-load_dotenv(os.path.expanduser('~/.skills/Nano-Banana/.env'))
+load_dotenv(os.path.expanduser('$HOME/.claude/skills/Nano-Banana/.env'))
 api_key = os.getenv('GOOGLE_API_KEY')
 
 if not api_key:

@@ -11,7 +11,7 @@ failures and are actually tenant-identity failures.
 ```bash
 git clone https://github.com/vecyang1/vec-productivity-skills.git
 ln -s "$(pwd)/vec-productivity-skills/feishu-lark-cli" \
-  ~/.skills/feishu-lark-cli
+  $HOME/.claude/skills/feishu-lark-cli
 ```
 
 Then install the CLI itself:

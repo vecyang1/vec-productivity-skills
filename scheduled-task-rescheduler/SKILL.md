@@ -77,9 +77,9 @@ An Antigravity scheduled task is **not** active just because a sidecar file exis
 
 | File | Owns |
 |---|---|
-| `~/.config/sidecars/<slug>/sidecar.json` | schedule, display name, command, saved prompt |
-| `~/.config/config.json` → `sidecars.<slug>` | `enabled: true` and `projectId` |
-| `~/.config/projects/<projectId>.json` | UI project label + real folder URI |
+| `$HOME/.gemini/config/sidecars/<slug>/sidecar.json` | schedule, display name, command, saved prompt |
+| `$HOME/.gemini/config/config.json` → `sidecars.<slug>` | `enabled: true` and `projectId` |
+| `$HOME/.gemini/config/projects/<projectId>.json` | UI project label + real folder URI |
 
 The UI project label is **only a label**. The prompt must contain an explicit `cd "/absolute/execution/root"` because the project dropdown can be broader than the folder the task should run in.
 

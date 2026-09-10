@@ -113,7 +113,7 @@ No new packages needed. Pure MCP tool orchestration.
 
 ### 8.1 File Location
 ```
-~/.skills/letterly-to-notion/index.json
+$HOME/.claude/skills/letterly-to-notion/index.json
 ```
 
 ### 8.2 Schema

@@ -245,7 +245,7 @@ def generate_index():
     report.append("### By Relationship\n")
     report.append("Use `skill-orchestrator` to discover skill relationships:\n")
     report.append("```bash\n")
-    report.append("python3 ~/.skills/skill-orchestrator/scripts/query_relationships.py <skill-name>\n")
+    report.append("python3 $HOME/.gemini/antigravity/skills/skill-orchestrator/scripts/query_relationships.py <skill-name>\n")
     report.append("```\n\n")
 
     return "".join(report)

@@ -8,9 +8,9 @@ An Antigravity scheduled task is **not** active just because a sidecar file exis
 
 | File | Owns |
 |---|---|
-| `~/.config/sidecars/<slug>/sidecar.json` | schedule, display name, command, saved prompt |
-| `~/.config/config.json` → `sidecars.<slug>` | `enabled` flag and `projectId` binding |
-| `~/.config/projects/<projectId>.json` | UI project label and the real folder URI |
+| `$HOME/.gemini/config/sidecars/<slug>/sidecar.json` | schedule, display name, command, saved prompt |
+| `$HOME/.gemini/config/config.json` → `sidecars.<slug>` | `enabled` flag and `projectId` binding |
+| `$HOME/.gemini/config/projects/<projectId>.json` | UI project label and the real folder URI |
 
 ### 1. Sidecar definition — `sidecars/<slug>/sidecar.json`
 

@@ -53,7 +53,7 @@ If preparing a skill for public distribution:
 
 **What Gets Cleaned**:
 - API tokens and secrets → placeholders (`your_api_key_here`)
-- Personal paths → generic paths (`/Users/example/`)
+- Personal paths → generic paths (`$HOME/`)
 - Database IDs → template IDs (`your-database-id-here`)
 - Email addresses → example emails (`your-email@example.com`)
 - Creates `.env.example`, `databases.md.template`, `config.example.json`
@@ -111,7 +111,7 @@ Propose a plan to the user if the changes are significant.
 1.  **Update CHANGELOG.md**:
     *   Log date, author (Agent), and specific changes (e.g., "Consolidated 3 scripts into CLI", "Added error handling").
 2.  **Update Installation Log**:
-    *   If applicable, append to `~/.skills/installation_log.md` with "Improved [Skill Name]".
+    *   If applicable, append to `$HOME/.gemini/antigravity/skills/installation_log.md` with "Improved [Skill Name]".
 3.  **Final Report**: Summarize the improvements to the user.
 
 ### Phase 6: The Inception (Autopoiesis Injection)
@@ -140,8 +140,8 @@ Propose a plan to the user if the changes are significant.
         ```markdown
         ## 💾 Memory Integration
         This skill benefits from `memory:context-vault` for persisting recurring contexts across sessions.
-        - Save: `python3 ~/.skills/memory:context-vault/scripts/memory_manager.py save <name> <category> --content "..."`
-        - Load: `python3 ~/.skills/memory:context-vault/scripts/memory_manager.py load <name>`
+        - Save: `python3 $HOME/.claude/skills/memory:context-vault/scripts/memory_manager.py save <name> <category> --content "..."`
+        - Load: `python3 $HOME/.claude/skills/memory:context-vault/scripts/memory_manager.py load <name>`
         - Use when: user references a known persona, project, or style that should persist.
         ```
     *   **If no** (one-shot tools, converters, formatters): skip.

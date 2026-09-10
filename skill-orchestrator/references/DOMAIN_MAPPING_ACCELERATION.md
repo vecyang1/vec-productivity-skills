@@ -6,7 +6,7 @@ When you need to work with skill domain mapping or regenerate it:
 
 ```bash
 # Regenerate entire domain mapping database
-cd ~/.skills/skill-orchestrator
+cd $HOME/.claude/skills/skill-orchestrator
 python3 scripts/regenerate_domain_map.py --verbose
 
 # Query skills by domain
@@ -30,7 +30,7 @@ python3 scripts/browse_domains.py
 ## How It Works
 
 ### 1. Scanning
-- Scans `~/.skills/` and `~/.skills/`
+- Scans `$HOME/.gemini/antigravity/skills/` and `$HOME/.claude/skills/`
 - Reads each `SKILL.md` file
 - Extracts description from frontmatter or first paragraph
 
@@ -140,7 +140,7 @@ TAG_PATTERNS = {
 ## Files Structure
 
 ```
-~/.skills/skill-orchestrator/
+$HOME/.claude/skills/skill-orchestrator/
 ├── scripts/
 │   ├── regenerate_domain_map.py       # Main regeneration script
 │   ├── query_by_domain.py             # Query tool
@@ -161,7 +161,7 @@ TAG_PATTERNS = {
 # (skills automatically sync to Claude via skill-symlink-sync)
 
 # 2. Regenerate domain mapping
-cd ~/.skills/skill-orchestrator
+cd $HOME/.claude/skills/skill-orchestrator
 python3 scripts/regenerate_domain_map.py --verbose
 
 # 3. Verify new skills are classified
@@ -197,7 +197,7 @@ python3 scripts/browse_domains.py
 ## Memory Update
 
 This capability has been added to global memory at:
-`~/.memory/MEMORY.md`
+`$HOME/.claude/projects/-Users-developer/memory/MEMORY.md`
 
 Under "Skill-Specific Rules" → "skill-orchestrator"
 

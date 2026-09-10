@@ -30,7 +30,7 @@ def find_in_registry(model_id, registry):
     return None
 
 # Load API key from Nano-Banana
-load_dotenv(os.path.expanduser('~/.skills/Nano-Banana/.env'))
+load_dotenv(os.path.expanduser('$HOME/.claude/skills/Nano-Banana/.env'))
 api_key = os.getenv('GOOGLE_API_KEY')
 
 if not api_key:

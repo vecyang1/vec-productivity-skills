@@ -325,7 +325,7 @@ On VPS, OpenClaw runs as Docker containers via `~/openclaw/docker-compose.yml`:
 - `openclaw-gateway` → `config/`
 - `openclaw-bot1` → `config-bot1/`
 - `openclaw-bot3` through `openclaw-bot9` → `config-bot3/` … `config-bot9/`
-- Each container mounts its own config dir at `/home/node/.openclaw`
+- Each container mounts its own config dir at `$HOME/.openclaw`
 
 ### Adding Skills: Per-Bot vs Global
 
@@ -336,11 +336,11 @@ Copy skill into each `config-botX/skills/` — causes drift, no centralized lear
 1. Create shared dir: `mkdir -p ~/openclaw/skills-global/<skill-name>`
 2. Add volume to **every** service in `docker-compose.yml`:
    ```yaml
-   - ./skills-global:/home/node/.openclaw/skills-global:ro
+   - ./skills-global:$HOME/.openclaw/skills-global:ro
    ```
 3. Add `skills.load.extraDirs` to each `openclaw.json`:
    ```json
-   "skills": { "load": { "extraDirs": ["/home/node/.openclaw/skills-global"] } }
+   "skills": { "load": { "extraDirs": ["$HOME/.openclaw/skills-global"] } }
    ```
 4. `docker compose restart`
 

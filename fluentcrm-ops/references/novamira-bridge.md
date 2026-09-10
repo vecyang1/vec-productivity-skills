@@ -8,7 +8,7 @@ This skill uses the existing `novamira-ops` bridge instead of reimplementing Wor
 
 1. Current environment: `WP_API_URL`, `WP_API_USERNAME`, `WP_API_PASSWORD`
 2. Local `.env`
-3. `~/.config/mcp_config.json`, choosing a server name containing `novamira` or `wordpress`
+3. `$HOME/.gemini/antigravity/mcp_config.json`, choosing a server name containing `novamira` or `wordpress`
 
 Use `NOVAMIRA_WP_OPS=/path/to/wp_ops.py` if the bridge is installed somewhere else.
 
@@ -25,6 +25,6 @@ Antigravity may expose Novamira as MCP tools, but Codex sessions often need a sh
 ## Troubleshooting
 
 - Missing bridge: install or symlink `novamira-ops`, or set `NOVAMIRA_WP_OPS`.
-- Missing credentials: check environment, `.env`, then `~/.config/mcp_config.json`.
+- Missing credentials: check environment, `.env`, then `$HOME/.gemini/antigravity/mcp_config.json`.
 - `Missing Mcp-Session-Id header`: do not call the endpoint directly; use the bridge.
 - PHP crash/safe mode: use the `novamira-ops` troubleshooting reference and avoid writing PHP files unless needed.

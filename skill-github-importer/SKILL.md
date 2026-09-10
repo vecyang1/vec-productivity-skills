@@ -115,9 +115,9 @@ Based on the security scan results:
 
 ### Step 7: Install Skills
 
-For approved skills, install to `~/.skills/`:
+For approved skills, install to `$HOME/.gemini/antigravity/skills/`:
 
-1. Create the skill directory: `~/.skills/{skill_name}/`
+1. Create the skill directory: `$HOME/.gemini/antigravity/skills/{skill_name}/`
 2. Write all skill files maintaining the directory structure
 3. Ensure proper file permissions (executable for scripts)
 4. Verify SKILL.md exists and has valid frontmatter
@@ -129,7 +129,7 @@ Use the `write_to_file` tool to create files.
 After installation, provide a summary:
 - List of successfully installed skills
 - List of skipped skills (if any) with reasons
-- Location: `~/.skills/`
+- Location: `$HOME/.gemini/antigravity/skills/`
 - Next steps: "The skills are now available."
 
 ## Example Usage
@@ -143,7 +143,7 @@ After installation, provide a summary:
 4. Performs security scan on each skill
 5. skill-a: SAFE - proceeds to install
 6. skill-b: WARNING (makes HTTP request) - asks user for confirmation
-7. Installs approved skills to ~/.skills/
+7. Installs approved skills to $HOME/.gemini/antigravity/skills/
 8. Confirms: "Successfully installed: skill-a, skill-b"
 
 ## Security Notes

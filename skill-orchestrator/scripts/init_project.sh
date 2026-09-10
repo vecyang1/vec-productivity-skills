@@ -4,7 +4,7 @@
 
 if [ -z "$1" ]; then
   echo "Usage:   $0 <project_directory>"
-  echo "Example: $0 '$HOME/Projects/Cowork/Projects Cowork/my-knowledge-cards'"
+  echo "Example: $0 '$HOME/Projects/my-knowledge-cards'"
   exit 1
 fi
 

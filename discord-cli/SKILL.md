@@ -42,7 +42,7 @@ Before any live call, confirm the account and server scope are authorized. Use a
 Resolved route on this machine — a 1Password item in the automation vault, injected by the `1password` skill's fixed-command adapter:
 
 ```bash
-python3 ~/.skills/1password/scripts/unattended_env.py --spec <spec.json>
+python3 $HOME/.agents/skills/1password/scripts/unattended_env.py --spec <spec.json>
 ```
 
 The spec names the `op://` reference and one absolute executable. Three constraints that are easy to get wrong:

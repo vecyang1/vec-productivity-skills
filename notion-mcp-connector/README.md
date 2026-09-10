@@ -36,10 +36,10 @@ A comprehensive skill for interacting with Notion via the Model Context Protocol
 
 ```bash
 # Copy to your skills directory
-cp -r notion-mcp-connector ~/.skills/
+cp -r notion-mcp-connector $HOME/.claude/skills/
 
 # Or symlink
-ln -s /path/to/notion-mcp-connector ~/.skills/notion-mcp-connector
+ln -s /path/to/notion-mcp-connector $HOME/.claude/skills/notion-mcp-connector
 ```
 
 ### Dependencies

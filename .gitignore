@@ -33,3 +33,22 @@ Thumbs.db
 .env
 logs/
 .venv
+
+# Private files & local state
+graphify-out/
+PROJECT_LINKS.md
+CLAUDE.md
+GEMINI.md
+CODEX.md
+VAULT.md
+decisions.md
+progress.md
+task_plan.md
+handoff.md
+FILE_MAP_INDEX.md
+PRINCIPLES.md
+MEMORY.md
+.planning/
+.specify/
+.agent/
+.claude/

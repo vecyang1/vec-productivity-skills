@@ -86,7 +86,7 @@ python3 scripts/regenerate_domain_map.py --verbose
 ```
 
 **What it does**:
-1. Scans both `~/.skills/` and `~/.skills/`
+1. Scans both `$HOME/.gemini/antigravity/skills/` and `$HOME/.claude/skills/`
 2. Extracts metadata from each `SKILL.md` file
 3. Classifies skills into domains using regex pattern matching
 4. Extracts tags (technology, platform, use case, content type)
@@ -235,7 +235,7 @@ Creates index with 10 categories:
 - AI & Model Integration (12 skills)
 - Meta & System (15 skills)
 
-**Output:** `~/.skills/CATEGORIES.md`
+**Output:** `$HOME/.gemini/antigravity/skills/CATEGORIES.md`
 
 ## Quick Commands
 
@@ -271,7 +271,7 @@ Generates detailed comparison of duplicate skill candidates.
 
 ### Browse by Category
 ```bash
-cat ~/.skills/CATEGORIES.md
+cat $HOME/.gemini/antigravity/skills/CATEGORIES.md
 ```
 Browse all skills organized by category.
 

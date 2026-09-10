@@ -174,7 +174,7 @@ Safe, local-first Discord operator skill for authorized server/channel discovery
 git clone https://github.com/vecyang1/vec-productivity-skills.git
 
 # Symlink to Claude skills directory
-ln -s $(pwd)/vec-productivity-skills/* ~/.skills/
+ln -s $(pwd)/vec-productivity-skills/* $HOME/.claude/skills/
 ```
 
 #### Option 2: Install Individual Skills
@@ -183,7 +183,7 @@ ln -s $(pwd)/vec-productivity-skills/* ~/.skills/
 git clone https://github.com/vecyang1/vec-productivity-skills.git
 
 # Symlink specific skill
-ln -s $(pwd)/vec-productivity-skills/notion-mcp-connector ~/.skills/notion-mcp-connector
+ln -s $(pwd)/vec-productivity-skills/notion-mcp-connector $HOME/.claude/skills/notion-mcp-connector
 ```
 
 ### Usage

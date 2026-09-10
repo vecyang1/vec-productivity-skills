@@ -118,5 +118,5 @@ March 1, 2026
 ## Query Tool
 Use the query script to find models by capabilities:
 ```bash
-python3 ~/.skills/model-intelligence/scripts/query_models.py --recommend "your query"
+python3 $HOME/.claude/skills/model-intelligence/scripts/query_models.py --recommend "your query"
 ```

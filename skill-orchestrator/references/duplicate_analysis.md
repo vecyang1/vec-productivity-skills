@@ -41,7 +41,7 @@ This report analyzes 5 duplicate/redundant skill candidates:
 
 **Command:**
 ```bash
-rm ~/.skills/stitch-enhance-prompt2
+rm $HOME/.gemini/antigravity/skills/stitch-enhance-prompt2
 ```
 
 ---
@@ -77,7 +77,7 @@ rm ~/.skills/stitch-enhance-prompt2
 
 **Command:**
 ```bash
-rm ~/.skills/stitch-react-components 2
+rm $HOME/.gemini/antigravity/skills/stitch-react-components 2
 ```
 
 ---
@@ -107,7 +107,7 @@ rm ~/.skills/stitch-react-components 2
 
 **Command:**
 ```bash
-rm ~/.skills/heic-converter
+rm $HOME/.gemini/antigravity/skills/heic-converter
 ```
 
 ---
@@ -116,7 +116,7 @@ rm ~/.skills/heic-converter
 
 **Duplicate Type:** deprecated version
 
-**continuous-learning** is a symlink → `~/.skills/external/everything-claude-code/skills/continuous-learning-v2`
+**continuous-learning** is a symlink → `$HOME/.gemini/antigravity/external/everything-claude-code/skills/continuous-learning-v2`
 
 ### Directory Structure Comparison
 
@@ -143,7 +143,7 @@ rm ~/.skills/heic-converter
 
 **Command:**
 ```bash
-rm -rf ~/.skills/continuous-learning
+rm -rf $HOME/.gemini/antigravity/skills/continuous-learning
 ```
 
 ---
@@ -177,7 +177,7 @@ rm -rf ~/.skills/continuous-learning
 
 **Command:**
 ```bash
-rm -rf ~/.skills/to-notebooklm-artifacts
+rm -rf $HOME/.gemini/antigravity/skills/to-notebooklm-artifacts
 ```
 
 ---

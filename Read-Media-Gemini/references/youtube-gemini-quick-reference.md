@@ -5,7 +5,7 @@
 ### Method 1: Using Read-Media-Gemini Skill (Recommended)
 
 ```bash
-cd ~/.skills/Read-Media-Gemini
+cd $HOME/.gemini/antigravity/skills/Read-Media-Gemini
 ./scripts/run.sh "Your question here" --file "YOUTUBE_URL"
 ```
 

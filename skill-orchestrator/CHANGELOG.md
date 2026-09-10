@@ -70,7 +70,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Infrastructure & DevOps (11 skills)
   - AI & Model Integration (12 skills)
   - Meta & System (15 skills)
-  - Generates browsable index at `~/.skills/CATEGORIES.md`
+  - Generates browsable index at `$HOME/.gemini/antigravity/skills/CATEGORIES.md`
 
 ### Changed
 - Updated SKILL.md with new analysis capabilities
@@ -81,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `references/duplicate_analysis.md` - Detailed duplicate skill comparison
 - `references/skill_overlaps.md` - Functional overlap documentation
 - `references/workflow_cooperation.md` - Workflow cooperation maps
-- `~/.skills/CATEGORIES.md` - Browsable category index
+- `$HOME/.gemini/antigravity/skills/CATEGORIES.md` - Browsable category index
 
 ## [1.0.0] - 2026-03-02
 

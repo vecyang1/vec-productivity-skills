@@ -10,7 +10,7 @@ Successfully scanned all 239 skills across Gemini and Claude directories, catego
 ## Deliverables
 
 ### 1. Domain Mapping Database
-**File**: `~/.skills/skill-orchestrator/references/skill_domain_map.json`
+**File**: `$HOME/.claude/skills/skill-orchestrator/references/skill_domain_map.json`
 
 - **Total Skills**: 239
 - **Domains**: 13
@@ -20,7 +20,7 @@ Successfully scanned all 239 skills across Gemini and Claude directories, catego
 ### 2. Query Tools
 
 #### query_by_domain.py
-**Location**: `~/.skills/skill-orchestrator/scripts/query_by_domain.py`
+**Location**: `$HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py`
 
 **Features**:
 - List all domains with skill counts
@@ -41,7 +41,7 @@ python3 scripts/query_by_domain.py --tag python --tag automation --all
 ```
 
 #### browse_domains.py
-**Location**: `~/.skills/skill-orchestrator/scripts/browse_domains.py`
+**Location**: `$HOME/.claude/skills/skill-orchestrator/scripts/browse_domains.py`
 
 **Features**:
 - Interactive domain browser
@@ -56,7 +56,7 @@ python3 scripts/browse_domains.py
 ### 3. Documentation
 
 #### DOMAIN_GUIDE.md
-**Location**: `~/.skills/skill-orchestrator/references/DOMAIN_GUIDE.md`
+**Location**: `$HOME/.claude/skills/skill-orchestrator/references/DOMAIN_GUIDE.md`
 
 **Contents**:
 - Complete domain taxonomy (13 domains)
@@ -66,7 +66,7 @@ python3 scripts/browse_domains.py
 - Integration with other tools
 
 #### Updated SKILL.md
-**Location**: `~/.skills/skill-orchestrator/SKILL.md`
+**Location**: `$HOME/.claude/skills/skill-orchestrator/SKILL.md`
 
 **Changes**:
 - Added domain mapping section
@@ -133,8 +133,8 @@ python3 scripts/browse_domains.py
 ## Team Execution
 
 ### Agents Spawned
-1. **gemini-scanner** - Scanned 239 skills in ~/.skills/
-2. **claude-scanner** - Scanned 213 skills in ~/.skills/
+1. **gemini-scanner** - Scanned 239 skills in $HOME/.gemini/antigravity/skills/
+2. **claude-scanner** - Scanned 213 skills in $HOME/.claude/skills/
 3. **taxonomy-designer** - Created domain taxonomy (completed manually)
 
 ### Tasks Completed
@@ -162,7 +162,7 @@ When skills are added/modified:
 
 ```bash
 # Re-scan and regenerate (future enhancement)
-cd ~/.skills/skill-orchestrator
+cd $HOME/.claude/skills/skill-orchestrator
 python3 scripts/regenerate_domain_map.py
 ```
 
@@ -178,7 +178,7 @@ Currently, re-run the scanning agents to update metadata.
 ## Files Created
 
 ```
-~/.skills/skill-orchestrator/
+$HOME/.claude/skills/skill-orchestrator/
 ├── references/
 │   ├── skill_domain_map.json          # Main database (239 skills)
 │   └── DOMAIN_GUIDE.md                # Complete documentation
@@ -192,19 +192,19 @@ Currently, re-run the scanning agents to update metadata.
 
 ```bash
 # List domains
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --list-domains
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --list-domains
 
 # List tags
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --list-tags
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --list-tags
 
 # Query by domain
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --domain "Content Creation"
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --domain "Content Creation"
 
 # Query by tag
-python3 ~/.skills/skill-orchestrator/scripts/query_by_domain.py --tag python
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/query_by_domain.py --tag python
 
 # Interactive browser
-python3 ~/.skills/skill-orchestrator/scripts/browse_domains.py
+python3 $HOME/.claude/skills/skill-orchestrator/scripts/browse_domains.py
 ```
 
 ## Success Metrics

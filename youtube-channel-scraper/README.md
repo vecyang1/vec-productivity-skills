@@ -12,18 +12,18 @@ Scrape all video metadata from any YouTube channel including titles, views (播�
 
 ```bash
 # Scrape all videos from a channel
-python3 ~/.skills/youtube-channel-scraper/scripts/scrape_channel.py \
+python3 $HOME/.claude/skills/youtube-channel-scraper/scripts/scrape_channel.py \
   --url "https://www.youtube.com/@ZJSTV-Music/videos" \
   --output channel_data.csv
 
 # Limit to recent videos
-python3 ~/.skills/youtube-channel-scraper/scripts/scrape_channel.py \
+python3 $HOME/.claude/skills/youtube-channel-scraper/scripts/scrape_channel.py \
   --url "https://www.youtube.com/@ZJSTV-Music/videos" \
   --limit 100 \
   --output recent_videos.csv
 
 # JSON output
-python3 ~/.skills/youtube-channel-scraper/scripts/scrape_channel.py \
+python3 $HOME/.claude/skills/youtube-channel-scraper/scripts/scrape_channel.py \
   --url "https://www.youtube.com/@ZJSTV-Music/videos" \
   --format json \
   --output channel_data.json
@@ -66,7 +66,7 @@ lHBuTqNdt8o,【歌荒必听】2月霸榜热曲推荐！...,https://...,963,1:29:
 
 ```bash
 # ZJSTV-Music channel - 100 videos scraped
-python3 ~/.skills/youtube-channel-scraper/scripts/scrape_channel.py \
+python3 $HOME/.claude/skills/youtube-channel-scraper/scripts/scrape_channel.py \
   --url "https://www.youtube.com/@ZJSTV-Music/videos" \
   --limit 100 \
   --output "zjstv_videos.csv"

@@ -9,7 +9,7 @@ standard library and defaults to read-only or dry-run actions.
 ```bash
 git clone https://github.com/vecyang1/vec-productivity-skills.git
 ln -s "$(pwd)/vec-productivity-skills/post-social-media-with-zernio-api" \
-  ~/.skills/post-social-media-with-zernio-api
+  $HOME/.claude/skills/post-social-media-with-zernio-api
 ```
 
 Set `ZERNIO_API_KEY` in the environment supplied by your secret manager. Do
