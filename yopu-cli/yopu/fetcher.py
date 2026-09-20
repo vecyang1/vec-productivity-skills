@@ -29,7 +29,7 @@ import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from .codec import encode_z, decode_search_response, decode_sheet_payload
+from .codec import encode_z, decode_search_response, decode_sheet_payload, decode_data_model
 
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -45,25 +45,44 @@ DEFAULT_CONFIG_PATHS = [
 
 def resolve_egress(cli_egress: Optional[str] = None) -> Optional[str]:
     """
-    Resolve egress spec: CLI flag > YOPU_EGRESS / YOPU_PDF_EGRESS env > config file.
+    Resolve egress spec: CLI flag > YOPU_EGRESS env > config file.
     Returns None for direct connection.
+    If ~/.config/yopu/egress exists, it is authoritative (does not bleed into yopu-pdf).
     """
     if cli_egress and cli_egress.strip():
-        return cli_egress.strip()
+        val = cli_egress.strip()
+        return None if val.lower() == "direct" else val
 
-    env_val = os.environ.get("YOPU_EGRESS") or os.environ.get("YOPU_PDF_EGRESS")
+    env_val = os.environ.get("YOPU_EGRESS")
     if env_val and env_val.strip():
-        return env_val.strip()
+        val = env_val.strip()
+        return None if val.lower() == "direct" else val
 
-    for p in DEFAULT_CONFIG_PATHS:
-        if p.exists():
-            try:
-                for line in p.read_text(encoding="utf-8").splitlines():
-                    line = line.strip()
-                    if line and not line.startswith("#"):
-                        return line
-            except OSError:
-                pass
+    # Primary config: ~/.config/yopu/egress
+    primary = Path.home() / ".config" / "yopu" / "egress"
+    if primary.exists():
+        try:
+            for line in primary.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    return None if line.lower() == "direct" else line
+            # If the primary config exists, it is authoritative!
+            # All lines commented or blank -> explicit direct!
+            return None
+        except OSError:
+            pass
+
+    # Secondary fallback ONLY if primary config does not exist
+    sec = Path.home() / ".config" / "yopu-pdf" / "egress"
+    if sec.exists():
+        try:
+            for line in sec.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    return None if line.lower() == "direct" else line
+        except OSError:
+            pass
+
     return None
 
 
@@ -145,26 +164,44 @@ class YopuClient:
         # 1. If explicit SSH egress configured
         if self.egress and self.egress.lower().startswith("ssh:"):
             host = self.egress[4:].strip()
-            cmd = f"curl -s --no-keepalive --compressed -D - -H {shlex.quote(f'User-Agent: {USER_AGENT}')} -H {shlex.quote(f'Referer: {referer}')} -H 'Accept: */*' {shlex.quote(url)} | base64"
-            proc = subprocess.run(
-                ["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=10", host, cmd],
-                capture_output=True, timeout=60
-            )
-            if proc.returncode != 0 and not proc.stdout:
-                raise RuntimeError(f"SSH relay to {host} failed: {proc.stderr.decode('utf-8', 'replace')}")
-            raw = safe_b64decode(proc.stdout)
-            status, _, body = self._parse_http_dump(raw)
-            if status != 200:
-                raise ConnectionError(f"Egress {host} returned HTTP {status} for {url}")
-            return body
+            fallback_needed = False
+            fallback_reason = ""
+            try:
+                cmd = f"curl -s --no-keepalive --compressed -D - -H {shlex.quote(f'User-Agent: {USER_AGENT}')} -H {shlex.quote(f'Referer: {referer}')} -H 'Accept: */*' {shlex.quote(url)} | base64"
+                proc = subprocess.run(
+                    ["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=10", host, cmd],
+                    capture_output=True, timeout=15
+                )
+                if proc.returncode == 0 and proc.stdout:
+                    raw = safe_b64decode(proc.stdout)
+                    status, _, body = self._parse_http_dump(raw)
+                    if status == 200:
+                        return body
+                    fallback_needed = True
+                    fallback_reason = f"returned HTTP {status}"
+                else:
+                    fallback_needed = True
+                    err_msg = proc.stderr.decode("utf-8", errors="replace").strip() if proc.stderr else f"exit code {proc.returncode}"
+                    fallback_reason = f"ssh failed ({err_msg})"
+            except Exception as e:
+                fallback_needed = True
+                fallback_reason = str(e)
+
+            if fallback_needed:
+                import sys
+                print(f"⚠️ [yopu-cli] Egress {host} failed ({fallback_reason}) for {url}, falling back to direct...", file=sys.stderr)
 
         # 2. If explicit HTTP/SOCKS proxy egress configured
         if self.egress and (self.egress.startswith("http") or self.egress.startswith("socks")):
-            handler = urllib.request.ProxyHandler({"http": self.egress, "https": self.egress})
-            opener = urllib.request.build_opener(handler, urllib.request.HTTPCookieProcessor(self.jar))
-            req = urllib.request.Request(url, headers=headers)
-            with opener.open(req, timeout=self.timeout) as resp:
-                return resp.read()
+            try:
+                handler = urllib.request.ProxyHandler({"http": self.egress, "https": self.egress})
+                opener = urllib.request.build_opener(handler, urllib.request.HTTPCookieProcessor(self.jar))
+                req = urllib.request.Request(url, headers=headers)
+                with opener.open(req, timeout=self.timeout) as resp:
+                    return resp.read()
+            except Exception as e:
+                import sys
+                print(f"⚠️ [yopu-cli] Proxy egress failed ({e}), falling back to direct...", file=sys.stderr)
 
         # 3. Direct fetch
         req = urllib.request.Request(url, headers=headers)
@@ -195,32 +232,50 @@ class YopuClient:
         if self.egress and self.egress.lower().startswith("ssh:"):
             host = self.egress[4:].strip()
             target_url = urllib.parse.urljoin("https://yopu.co", target_z_path)
-            cmd = f"""
+            fallback_needed = False
+            fallback_reason = ""
+            try:
+                cmd = f"""
 J=$(mktemp)
 curl -s --no-keepalive -c "$J" {shlex.quote(init_url)} > /dev/null
 curl -s --no-keepalive --compressed -D - -b "$J" -H {shlex.quote(f'User-Agent: {USER_AGENT}')} -H {shlex.quote(f'Referer: {referer}')} -H 'Accept: */*' {shlex.quote(target_url)} | base64
 rm -f "$J"
 """
-            proc = subprocess.run(
-                ["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=10", host, cmd],
-                capture_output=True, timeout=60
-            )
-            if proc.returncode != 0 and not proc.stdout:
-                raise RuntimeError(f"SSH relay to {host} failed: {proc.stderr.decode('utf-8', 'replace')}")
-            raw = safe_b64decode(proc.stdout)
-            status, _, body = self._parse_http_dump(raw)
-            if status != 200:
-                raise ConnectionError(f"Egress {host} returned HTTP {status} for {target_z_path}")
-            return body
+                proc = subprocess.run(
+                    ["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=10", host, cmd],
+                    capture_output=True, timeout=15
+                )
+                if proc.returncode == 0 and proc.stdout:
+                    raw = safe_b64decode(proc.stdout)
+                    status, _, body = self._parse_http_dump(raw)
+                    if status == 200:
+                        return body
+                    fallback_needed = True
+                    fallback_reason = f"returned HTTP {status}"
+                else:
+                    fallback_needed = True
+                    err_msg = proc.stderr.decode("utf-8", errors="replace").strip() if proc.stderr else f"exit code {proc.returncode}"
+                    fallback_reason = f"ssh failed ({err_msg})"
+            except Exception as e:
+                fallback_needed = True
+                fallback_reason = str(e)
+
+            if fallback_needed:
+                import sys
+                print(f"⚠️ [yopu-cli] Egress {host} failed ({fallback_reason}) for {target_z_path}, falling back to direct...", file=sys.stderr)
 
         # 2. Proxy egress
         if self.egress and (self.egress.startswith("http") or self.egress.startswith("socks")):
-            handler = urllib.request.ProxyHandler({"http": self.egress, "https": self.egress})
-            opener = urllib.request.build_opener(handler, urllib.request.HTTPCookieProcessor(self.jar))
-            opener.open(urllib.request.Request(init_url, headers=headers), timeout=self.timeout)
-            target_url = urllib.parse.urljoin("https://yopu.co", target_z_path)
-            with opener.open(urllib.request.Request(target_url, headers=headers), timeout=self.timeout) as resp:
-                return resp.read()
+            try:
+                handler = urllib.request.ProxyHandler({"http": self.egress, "https": self.egress})
+                opener = urllib.request.build_opener(handler, urllib.request.HTTPCookieProcessor(self.jar))
+                opener.open(urllib.request.Request(init_url, headers=headers), timeout=self.timeout)
+                target_url = urllib.parse.urljoin("https://yopu.co", target_z_path)
+                with opener.open(urllib.request.Request(target_url, headers=headers), timeout=self.timeout) as resp:
+                    return resp.read()
+            except Exception as e:
+                import sys
+                print(f"⚠️ [yopu-cli] Proxy egress failed ({e}), falling back to direct...", file=sys.stderr)
 
         # 3. Direct
         try:
@@ -305,7 +360,21 @@ rm -f "$J"
         """
         score_id = extract_score_id(score_id_or_url)
         view_url = f"https://yopu.co/view/{score_id}"
+
+        # Fetch HTML from view_url to extract dynamic query token `st`
+        token_t = None
+        try:
+            raw_html = self.fetch_url(view_url, referer="https://yopu.co/").decode("utf-8", errors="replace")
+            m = re.search(r'data-model="([^"]+)"', raw_html)
+            if m:
+                model_data = decode_data_model(m.group(1))
+                token_t = model_data.get("st")
+        except Exception:
+            pass
+
         api_path = f"/api/sheet?code={score_id}&screen=1"
+        if token_t:
+            api_path += f"&t={token_t}"
         z_path = encode_z(api_path)
 
         raw_bytes = self.fetch_with_session(

@@ -126,3 +126,73 @@ def decode_sheet_payload(raw_bytes: bytes) -> Dict[str, Any]:
 
     output_text = proc.stdout.decode("utf-8", errors="replace")
     return json.loads(output_text)
+
+
+_L_CONST = "ə\vĀ"
+_R_CONST = ord(_L_CONST[0])  # 601
+_G_CONST = ord(_L_CONST[1])  # 11
+_U_CONST = ord(_L_CONST[2]) * ord(_L_CONST[2])  # 65536
+
+
+def _h_const() -> int:
+    e, i = _U_CONST, _z_mod(_R_CONST, _U_CONST)
+    o, r = 0, 1
+    while i != 0:
+        u = e // i
+        e, i = i, e - u * i
+        o, r = r, o - u * r
+    return _z_mod(o, _U_CONST)
+
+
+_H_CONST = _h_const()
+
+
+def _pow_mod(t: int, n: int, e: int) -> int:
+    i = 1
+    o = _z_mod(t, e)
+    while n > 0:
+        t_val = _z_mod(n, 2)
+        n = n // 2
+        if t_val == 1:
+            i = _z_mod(i * o, e)
+        o = _z_mod(o * o, e)
+    return i
+
+
+class _PermPRNG:
+    def __init__(self, t: int = 1):
+        self.n = _z_mod(t, _U_CONST)
+
+    def s(self) -> float:
+        return self.n / _U_CONST
+
+    def t_step(self) -> None:
+        self.n = _z_mod(_H_CONST * (self.n - _G_CONST), _U_CONST)
+
+    def x_step(self, t: int) -> None:
+        e = ((_pow_mod(_R_CONST, t, _R_CONST * _U_CONST - _U_CONST) - 1) // (_R_CONST - 1)) * _G_CONST
+        i = _pow_mod(_R_CONST, t, _U_CONST) * self.n
+        self.n = _z_mod(e + i, _U_CONST)
+
+
+def _permute_v(arr: bytearray) -> None:
+    n = len(arr)
+    prng = _PermPRNG(n)
+    prng.x_step(n)
+    for r in range(1, n):
+        prng.t_step()
+        i = int(prng.s() * (r + 1))
+        arr[r], arr[i] = arr[i], arr[r]
+
+
+def decode_data_model(encoded_str: str) -> Dict[str, Any]:
+    """
+    Decodes the URL-encoded and obfuscated `data-model` attribute embedded in Yopu score HTML.
+    Extracts session tokens such as `model.st` required for /api/sheet requests.
+    """
+    import urllib.parse
+    unquoted = urllib.parse.unquote(encoded_str)
+    raw = bytearray(ord(c) ^ 171 for c in unquoted)
+    _permute_v(raw)
+    return json.loads(raw.decode("utf-8", errors="replace"))
+

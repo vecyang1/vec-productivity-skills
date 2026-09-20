@@ -5,6 +5,15 @@ All notable changes to Vec's Productivity Skills will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2026-09-12] - 2026-09-12
+
+### Features
+- Repair /z/ obfuscation, XOR 157 decoding, Brotli q7 decompression and atomic egress relay (`5b7eced`)
+
+### Fixes
+- Sanitize local machine paths, private tokens, and credentials across skills (`db68222`)
+- Add safe_b64decode with auto-padding support (`cde04fb`)
+
 ## [Unreleased]
 
 ### Changed
