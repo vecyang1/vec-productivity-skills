@@ -55,3 +55,4 @@ MEMORY.md
 .claude/
 .venv/
 */.venv/
+.pytest_cache/
