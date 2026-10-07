@@ -14,7 +14,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sanitize local machine paths, private tokens, and credentials across skills (`db68222`)
 - Add safe_b64decode with auto-padding support (`cde04fb`)
 
-## [Unreleased]
+## [2026-10-08] - 2026-10-08
+
+### Added
+- **`opencli-radar`**: Multi-source ecosystem radar and diagnostic-first audit tool for OpenCLI plugins across GitHub (opencli-plugin-*, opencli-adapter-*, high-star repos), NPM, official OpenCLI-Hub, and local estate. Includes license triage (OSS vs Unlicensed All Rights Reserved) and supply chain `--ignore-scripts` safety checks.
+
+## [2026-10-04] - 2026-10-04
+
+### Fixes
+- Sanitize speed test api key, virtualize estate domains, and ignore private markers (`26f922d`)
+
+### Maintenance
+- Add .env.example template (`f84ca79`)
+- Ignore .pytest_cache in gitignore (`94bb40d`)
 
 ### Changed
 - **License: MIT → AGPL-3.0-or-later** (2026-08-17). Copies obtained before this

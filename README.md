@@ -289,6 +289,24 @@ Real-time global aircraft radar, flight telemetry (ADS-B), airport arrivals/depa
 
 ---
 
+### [OpenCLI Radar](./opencli-radar/)
+Multi-source ecosystem radar, pagination verifier, and diagnostic-first audit tool for OpenCLI plugins.
+
+**Features:**
+- Multi-source discovery across GitHub, NPM, official OpenCLI-Hub, and local estate
+- Diagnostic-First triage: outputs exact actionable command (`REUSE_LOCAL`, `INSTALL`, `FORK_AND_VENDOR`, `READ_ONLY`, `BUILD_NEW`)
+- License & compliance classification: segregates open-source vs. unlicensed (All Rights Reserved) repositories
+- Supply chain defense: enforces `--ignore-scripts` installation and egress audits
+- Full pagination traversal across 199+ community plugins
+
+**Use Cases:**
+- Discovering existing community adapters before writing code (Anti-Fragmentation)
+- Verifying site support, plugin safety, and license compliance
+
+[📖 Full Documentation](./opencli-radar/README.md)
+
+---
+
 ## 📊 Skill Comparison
 
 | Skill | Type | Complexity | Dependencies | MCP Support |
@@ -304,6 +322,7 @@ Real-time global aircraft radar, flight telemetry (ADS-B), airport arrivals/depa
 | OpenSky Network CLI | Aviation / Radar | Medium | Python (stdlib only) | ❌ |
 | Yopu CLI | Music / Chords | Low | Python (stdlib only) | ❌ |
 | Discord CLI Adapter | Integration | Medium | Python, kabi-discord-cli | ❌ |
+| OpenCLI Radar | Ecosystem / Radar | Medium | Python (stdlib only) | ❌ |
 
 ---
 
