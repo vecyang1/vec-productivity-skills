@@ -1,6 +1,16 @@
 # Changelog
 
 ### [2026-10-12] - Upstream Vendor Capability Expansion (Discovered)
+- **Upstream Announcement**: New channel: iMessage (2026-09-24 16:19)
+- **Detected Capabilities**: Messaging API (SMS/MMS/RCS/iMessage)
+- **Roadmap Candidate**: 💡 在关联技能【post-social-media-with-zernio-api】中评估扩充支持：Messaging API (SMS/MMS/RCS/iMessage)；更新 CHANGELOG 并让本地 Agent 保持新能力感知。
+
+### [2026-10-12] - Upstream Vendor Capability Expansion (Discovered)
+- **Upstream Announcement**: New: RCS, branded calling, and one API for every ad pixel (2026-10-01 16:21)
+- **Detected Capabilities**: Messaging API (SMS/MMS/RCS/iMessage), Unified Ad Pixel API, Branded Calling
+- **Roadmap Candidate**: 💡 在关联技能【post-social-media-with-zernio-api】中评估扩充支持：Messaging API (SMS/MMS/RCS/iMessage), Unified Ad Pixel API, Branded Calling；更新 CHANGELOG 并让本地 Agent 保持新能力感知。
+
+### [2026-10-12] - Upstream Vendor Capability Expansion (Discovered)
 - **Upstream Announcement**: Meet the new Zernio (2026-10-05 21:31)
 - **Detected Capabilities**: General Capability / Feature Update
 - **Roadmap Candidate**: 💡 在关联技能【post-social-media-with-zernio-api】中评估扩充支持：General Capability / Feature Update；更新 CHANGELOG 并让本地 Agent 保持新能力感知。

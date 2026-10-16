@@ -73,6 +73,8 @@ class SongScore:
         return {
             "meta": self.meta.to_dict(),
             "all_chords": self.all_chords,
+            "chords": self.all_chords,
             "lines": [line.to_dict() for line in self.lines],
             "raw_article": self.raw_article,
         }
+

@@ -219,40 +219,260 @@ def parse_yopu_sheet_data(data: dict, canonical_url: str = "") -> SongScore:
 
     lines: List[ScoreLine] = []
 
-    # Check for sections from v4_data masterBars
-    v4_sections = []
-    if "v4_data" in data and isinstance(data["v4_data"], dict):
+    # 1. Handle browser fallback measures directly if present
+    if "browser_measures" in data:
+        for bm in data["browser_measures"]:
+            if bm.get("section"):
+                lines.append(ScoreLine(
+                    raw_text=f"[{bm['section']}]",
+                    is_section_header=True,
+                    section_name=bm["section"],
+                    chords=bm.get("chords", []),
+                ))
+            lyrics = bm.get("lyrics", "").strip()
+            chords = bm.get("chords", [])
+            if lyrics or chords:
+                inline = []
+                if chords and lyrics:
+                    inline.append((0, chords[0]))
+                    if len(chords) > 1 and len(lyrics) > 4:
+                        inline.append((len(lyrics) // 2, chords[1]))
+                lines.append(ScoreLine(
+                    raw_text=lyrics or "  ".join(chords),
+                    is_chord_only=not bool(lyrics),
+                    chords=chords,
+                    lyrics=lyrics,
+                    inline_chords=inline,
+                ))
+        if not meta.key and all_chords_ordered:
+            meta.key = all_chords_ordered[0]
+        return SongScore(
+            meta=meta,
+            all_chords=all_chords_ordered,
+            lines=lines,
+            raw_article="\n".join(bm.get("lyrics", "") for bm in data["browser_measures"]),
+        )
+
+    # 2. Check for multi-track score model (score.t2g and score.r8q)
+    score_data = data.get("score") if isinstance(data.get("score"), dict) else {}
+    r8q = score_data.get("r8q", [])
+    t2g = score_data.get("t2g", [])
+
+    chord_track = None
+    vocal_track = None
+    for tr in t2g:
+        jdw = tr.get("jdw", [])
+        if jdw and isinstance(jdw[0], dict) and "i1f" in jdw[0]:
+            chord_track = jdw[0]
+        if jdw and isinstance(jdw[0], dict):
+            has_lyrics = any(
+                "c8u" in b
+                for bar in jdw[0].get("k3i", [])
+                for b in bar.get("g78", [{}])[0].get("swk", [])
+                if isinstance(b, dict)
+            )
+            if has_lyrics:
+                vocal_track = jdw[0]
+
+    if chord_track and r8q:
+        i1f = chord_track.get("i1f", {})
+        k0 = chord_track.get("k3i", [])
+        k1 = vocal_track.get("k3i", []) if vocal_track else []
+        num_bars = len(r8q)
+
+        # Re-derive all_chords_ordered directly from chord_track if available
+        derived_chords: List[str] = []
+        d_seen = set()
+        for bar in k0:
+            for beat in bar.get("g78", [{}])[0].get("swk", []):
+                sg = beat.get("sg8")
+                if sg is not None and str(sg) in i1f:
+                    c = i1f[str(sg)].get("uld")
+                    if c and c not in d_seen:
+                        d_seen.add(c)
+                        derived_chords.append(c)
+        if derived_chords:
+            all_chords_ordered = derived_chords
+
+        def _get_bar_lyrics(b: int) -> List[List[str]]:
+            if not k1 or b >= len(k1):
+                return []
+            return [
+                beat.get("c8u")
+                for beat in k1[b].get("g78", [{}])[0].get("swk", [])
+                if isinstance(beat, dict) and beat.get("c8u")
+            ]
+
+        def _get_bar_chords(b: int) -> List[str]:
+            b_chords = []
+            if b < len(k0):
+                for beat in k0[b].get("g78", [{}])[0].get("swk", []):
+                    sg = beat.get("sg8")
+                    if sg is not None and str(sg) in i1f:
+                        c = i1f[str(sg)].get("uld")
+                        if c and (not b_chords or b_chords[-1] != c):
+                            b_chords.append(c)
+            return b_chords
+
+        b_idx = 0
+        pending_pickup: List[List[str]] = []
+        while b_idx < num_bars:
+            # Section Header check
+            sec = r8q[b_idx].get("e9q", {}).get("pp4") if isinstance(r8q[b_idx], dict) else None
+            if sec:
+                lines.append(ScoreLine(
+                    raw_text=f"[{sec}]",
+                    is_section_header=True,
+                    section_name=sec,
+                ))
+
+            b_lyric_beats = _get_bar_lyrics(b_idx)
+            next_sec = r8q[b_idx + 1].get("e9q", {}).get("pp4") if b_idx + 1 < num_bars else None
+            flat_lyr = "".join(c[0] for c in b_lyric_beats)
+            is_pure_pickup = bool(b_lyric_beats and len(flat_lyr) <= 3 and next_sec)
+
+            if not b_lyric_beats or is_pure_pickup:
+                # Group consecutive instrumental bars (Intro / Solo / Interlude / Outro)
+                inst_measures = []
+                while b_idx < num_bars:
+                    cur_sec = r8q[b_idx].get("e9q", {}).get("pp4") if isinstance(r8q[b_idx], dict) else None
+                    if cur_sec and inst_measures:
+                        break
+                    cur_lyr = _get_bar_lyrics(b_idx)
+                    cur_flat = "".join(c[0] for c in cur_lyr)
+                    cur_next_sec = r8q[b_idx + 1].get("e9q", {}).get("pp4") if b_idx + 1 < num_bars else None
+                    if cur_lyr and not (len(cur_flat) <= 3 and cur_next_sec):
+                        break
+
+                    b_chords = _get_bar_chords(b_idx)
+                    inst_measures.append(" ".join(b_chords) if b_chords else "-")
+                    if cur_lyr and len(cur_flat) <= 3 and cur_next_sec:
+                        pending_pickup = cur_lyr
+                        b_idx += 1
+                        break
+                    b_idx += 1
+                    if len(inst_measures) == 4:
+                        break
+
+                if inst_measures:
+                    chunk_text = "| " + " | ".join(inst_measures) + " |"
+                    inst_chords = [c for m in inst_measures for c in m.split() if c != "-"]
+                    lines.append(ScoreLine(
+                        raw_text=chunk_text,
+                        is_chord_only=True,
+                        chords=inst_chords,
+                    ))
+            else:
+                # Lyrical phrase bars (group 1 or 2 bars per line)
+                phrase_bars = [b_idx]
+                b_idx += 1
+                while b_idx < num_bars and len(phrase_bars) < 2:
+                    if r8q[b_idx].get("e9q", {}).get("pp4"):
+                        break
+                    cur_lyr = _get_bar_lyrics(b_idx)
+                    if not cur_lyr:
+                        break
+                    phrase_bars.append(b_idx)
+                    b_idx += 1
+
+                max_strophes = 1
+                for pb in phrase_bars:
+                    for c8u in _get_bar_lyrics(pb):
+                        if len(c8u) > max_strophes:
+                            max_strophes = len(c8u)
+
+                # Check trailing pickup on last bar of phrase
+                last_pb = phrase_bars[-1]
+                last_pb_next_sec = r8q[last_pb + 1].get("e9q", {}).get("pp4") if last_pb + 1 < num_bars else None
+                last_lyr_beats = _get_bar_lyrics(last_pb)
+                cut_bi = None
+                for bi, beat in enumerate(last_lyr_beats):
+                    c0 = beat[0] if beat else ""
+                    if "。" in c0 or "！" in c0:
+                        cut_bi = bi + 1
+
+                next_pending: List[List[str]] = []
+                if cut_bi is not None and cut_bi < len(last_lyr_beats):
+                    next_pending = last_lyr_beats[cut_bi:]
+
+                strophe_lines_seen = set()
+                for s in range(max_strophes):
+                    p_prefix = "".join(c[s] if s < len(c) else c[0] for c in pending_pickup).strip()
+                    line_lyrics = (p_prefix + " ") if p_prefix else ""
+                    inline: List[Tuple[int, str]] = []
+                    line_chords: List[str] = []
+
+                    for pb in phrase_bars:
+                        pb_chords_in_beats = _get_bar_chords(pb)
+                        beats = _get_bar_lyrics(pb)
+                        if pb == last_pb and cut_bi is not None and cut_bi < len(beats):
+                            beats = beats[:cut_bi]
+
+                        bar_chars = [c[s] if s < len(c) else "" for c in beats]
+                        bar_lyr = "".join(bar_chars)
+
+                        # Associate chords with lyric positions
+                        if pb_chords_in_beats:
+                            for ci, c in enumerate(pb_chords_in_beats):
+                                pos = len(line_lyrics) + (len(bar_lyr) * ci // len(pb_chords_in_beats) if bar_lyr else 0)
+                                inline.append((pos, c))
+                                if c not in line_chords:
+                                    line_chords.append(c)
+                        line_lyrics += bar_lyr
+                        if bar_lyr and not bar_lyr.endswith(("，", "。", " ")):
+                            line_lyrics += " "
+
+                    clean_lyrics = line_lyrics.strip()
+                    if clean_lyrics and clean_lyrics not in strophe_lines_seen:
+                        strophe_lines_seen.add(clean_lyrics)
+                        lines.append(ScoreLine(
+                            raw_text=clean_lyrics,
+                            chords=line_chords,
+                            lyrics=clean_lyrics,
+                            inline_chords=inline,
+                        ))
+
+                pending_pickup = next_pending
+
+        if not meta.key and all_chords_ordered:
+            meta.key = all_chords_ordered[0]
+
+        return SongScore(
+            meta=meta,
+            all_chords=all_chords_ordered,
+            lines=lines,
+            raw_article="\n".join(l.raw_text for l in lines),
+        )
+
+    # 3. Fallback: Parse lyrics into lines if v2 multi-track score model is absent
+    raw_lyrics = data.get("lyrics", "")
+    sections = []
+    if not sections and "v4_data" in data and isinstance(data["v4_data"], dict):
         for mb in data["v4_data"].get("masterBars", []):
             sec = mb.get("section", {}).get("text")
-            if sec and sec not in v4_sections:
-                v4_sections.append(sec)
+            if sec and sec not in sections:
+                sections.append(sec)
 
-    # Parse lyrics into lines
-    raw_lyrics = data.get("lyrics", "")
     if raw_lyrics:
-        # Split by sentences / phrases
         sentences = [s.strip() for s in re.split(r"[，。！？\n\r]+", raw_lyrics) if s.strip()]
         chord_idx = 0
         chord_count = len(all_chords_ordered)
-
-        # If sections exist, intersperse them
         sec_idx = 0
-        if v4_sections and sec_idx < len(v4_sections):
+        if sections and sec_idx < len(sections):
             lines.append(ScoreLine(
-                raw_text=f"[{v4_sections[sec_idx]}]",
+                raw_text=f"[{sections[sec_idx]}]",
                 is_section_header=True,
-                section_name=v4_sections[sec_idx],
+                section_name=sections[sec_idx],
                 chords=all_chords_ordered[:min(4, chord_count)],
             ))
             sec_idx += 1
 
         for i, sent in enumerate(sentences):
-            # Intersperse section headers every few lines
-            if i > 0 and i % 4 == 0 and sec_idx < len(v4_sections):
+            if i > 0 and i % 4 == 0 and sec_idx < len(sections):
                 lines.append(ScoreLine(
-                    raw_text=f"[{v4_sections[sec_idx]}]",
+                    raw_text=f"[{sections[sec_idx]}]",
                     is_section_header=True,
-                    section_name=v4_sections[sec_idx],
+                    section_name=sections[sec_idx],
                     chords=[],
                 ))
                 sec_idx += 1
@@ -277,7 +497,6 @@ def parse_yopu_sheet_data(data: dict, canonical_url: str = "") -> SongScore:
                 inline_chords=inline,
             ))
     else:
-        # If no lyrics, output chords as chord-only lines
         chunk_size = 4
         for i in range(0, len(all_chords_ordered), chunk_size):
             chunk = all_chords_ordered[i:i + chunk_size]

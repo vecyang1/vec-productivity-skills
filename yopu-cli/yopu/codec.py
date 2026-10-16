@@ -97,6 +97,83 @@ def encode_z(path: str) -> str:
     return "/z/" + "".join(out)
 
 
+def decode_z(z_path: str) -> str:
+    """
+    Decodes an obfuscated '/z/<token>' path back into its internal endpoint path.
+    """
+    token = z_path[3:] if z_path.startswith("/z/") else z_path
+    b64_map = {c: i for i, c in enumerate(_B64_ALPHABET)}
+    vals = [b64_map[c] for c in token if c in b64_map]
+    raw = bytearray()
+    i = 0
+    while i < len(vals):
+        o = vals[i]
+        a = vals[i + 1] if i + 1 < len(vals) else 0
+        s = vals[i + 2] if i + 2 < len(vals) else 0
+        h = vals[i + 3] if i + 3 < len(vals) else 0
+        raw.append((o << 2) | (a >> 4))
+        if i + 2 < len(vals):
+            raw.append(((15 & a) << 4) | (s >> 2))
+        if i + 3 < len(vals):
+            raw.append(((3 & s) << 6) | h)
+        i += 4
+
+    length = len(raw)
+    prng = _ZPRNG(length)
+    swaps = []
+    for r in range(length - 1, 0, -1):
+        prng.u()
+        swaps.append((r, int(prng.rnd() * (r + 1))))
+    for r, target in reversed(swaps):
+        raw[r], raw[target] = raw[target], raw[r]
+
+    for idx in range(len(raw)):
+        raw[idx] ^= 92
+
+    return raw.decode("utf-8", errors="replace")
+
+
+def compute_sheet_t(st: str, key: str = "SdZWq_H3OXnrFgPLwk9kow") -> str:
+    """
+    Computes the dynamic query token `t` required for `/api/sheet?...&t=...&v=2`
+    from the session token `st` extracted from HTML `data-model`.
+    Algorithm: XOR with repeating key, W-permutation, custom URL-safe Base64.
+    """
+    raw = bytearray(st.encode("utf-8"))
+    k_bytes = key.encode("utf-8")
+    for i in range(len(raw)):
+        raw[i] ^= k_bytes[i % len(k_bytes)]
+
+    # W-permutation
+    length = len(raw)
+    prng = _z_mod(length, _Z_K)
+    for i in range(length - 1, 0, -1):
+        prng = _z_mod(_Z_J * prng + _Z_W, _Z_K)
+        target = int((prng / _Z_K) * (i + 1))
+        raw[i], raw[target] = raw[target], raw[i]
+
+    # Custom base64 encode
+    out = []
+    i = 0
+    while i < length:
+        has_next = (i + 1) < length
+        has_third = (i + 2) < length
+        o = raw[i]
+        a = raw[i + 1] if has_next else 0
+        s = raw[i + 2] if has_third else 0
+        out.append(_B64_ALPHABET[o >> 2])
+        out.append(_B64_ALPHABET[((3 & o) << 4) | (a >> 4)])
+        if not has_next:
+            break
+        out.append(_B64_ALPHABET[((15 & a) << 2) | (s >> 6)])
+        if not has_third:
+            break
+        out.append(_B64_ALPHABET[63 & s])
+        i += 3
+    return "".join(out)
+
+
+
 def decode_search_response(raw_bytes: bytes) -> Dict[str, Any]:
     """
     Decodes the XOR 157 (0x9D) obfuscated search response payload from Yopu.co.

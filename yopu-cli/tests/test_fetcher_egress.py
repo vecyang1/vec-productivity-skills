@@ -3,11 +3,15 @@ Unit tests for yopu.fetcher egress resolution and automatic fallback to direct c
 """
 import io
 import os
+import sys
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch, MagicMock
 
+# Ensure yopu package is importable regardless of working directory
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from unittest.mock import patch, MagicMock
 from yopu.fetcher import resolve_egress, YopuClient
 
 

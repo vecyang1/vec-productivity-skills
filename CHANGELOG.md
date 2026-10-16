@@ -5,6 +5,16 @@ All notable changes to Vec's Productivity Skills will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2026-10-16] - 2026-10-16
+
+### Fixes
+- **Privacy Compliance**: Sanitized local machine absolute paths and personal email addresses in `yopu-cli/SKILL.md` and `yopu-cli/yopu/fetcher.py` for open-source pre-publish compliance.
+
+## [2026-10-13] - 2026-10-13
+
+### Documentation
+- Sync upstream Calling API capability expansion to CHANGELOG (`dc0b8e7`)
+
 ## [2026-09-12] - 2026-09-12
 
 ### Features

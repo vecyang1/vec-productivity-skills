@@ -2,8 +2,14 @@
 Formatters for rendering Yopu chord scores in terminal, Markdown, ChordPro, and JSON.
 """
 import json
+import unicodedata
 from typing import Optional
 from .models import SongScore
+
+
+def get_display_width(text: str) -> int:
+    """Calculates visual terminal column width accounting for CJK fullwidth characters."""
+    return sum(2 if unicodedata.east_asian_width(c) in ("W", "F") else 1 for c in text)
 
 
 # ANSI escape sequences for clean terminal colors
@@ -66,12 +72,16 @@ def format_terminal(score: SongScore, colorize: bool = True) -> str:
         elif line.is_chord_only:
             out.append(f"  {c_bold}{c_yellow}{raw}{c_reset}")
         elif line.inline_chords:
-            # Render chords aligned above lyrics
-            chord_line_chars = [" "] * (len(line.lyrics) * 2 + 10)
-            for char_idx, chord_name in line.inline_chords:
-                pos = min(char_idx * 2, len(chord_line_chars) - len(chord_name) - 1)
+            # Render chords aligned above lyrics without collisions using visual display width
+            chord_line_chars = [" "] * (get_display_width(line.lyrics) + 30)
+            last_end = 0
+            for char_idx, chord_name in sorted(line.inline_chords, key=lambda x: x[0]):
+                vis_col = get_display_width(line.lyrics[:char_idx])
+                pos = max(vis_col, last_end + 1)
+                pos = min(pos, len(chord_line_chars) - len(chord_name) - 1)
                 for ci, char in enumerate(chord_name):
                     chord_line_chars[pos + ci] = char
+                last_end = pos + len(chord_name)
             chord_str = "".join(chord_line_chars).rstrip()
             out.append(f"  {c_bold}{c_yellow}{chord_str}{c_reset}")
             out.append(f"  {line.lyrics}")
@@ -106,7 +116,7 @@ def format_chordpro(score: SongScore) -> str:
         if line.is_section_header:
             out.append(f"{{comment: {line.raw_text}}}")
         elif line.is_chord_only:
-            chords_pro = " ".join([f"[{c}]" for c in line.chords])
+            chords_pro = " ".join([f"[{c}]" for c in line.chords]) if line.chords else line.raw_text
             out.append(chords_pro)
         elif line.inline_chords:
             # Interleave inline chords into lyrics
@@ -146,7 +156,26 @@ def format_markdown(score: SongScore) -> str:
         
     out.append("### Score")
     out.append("```text")
-    out.append(score.raw_article)
+    for line in score.lines:
+        if line.is_section_header:
+            out.append(f"\n{line.raw_text}")
+        elif line.is_chord_only:
+            out.append(f"  {line.raw_text}")
+        elif line.inline_chords:
+            chord_line_chars = [" "] * (get_display_width(line.lyrics) + 30)
+            last_end = 0
+            for char_idx, chord_name in sorted(line.inline_chords, key=lambda x: x[0]):
+                vis_col = get_display_width(line.lyrics[:char_idx])
+                pos = max(vis_col, last_end + 1)
+                pos = min(pos, len(chord_line_chars) - len(chord_name) - 1)
+                for ci, char in enumerate(chord_name):
+                    chord_line_chars[pos + ci] = char
+                last_end = pos + len(chord_name)
+            chord_str = "".join(chord_line_chars).rstrip()
+            out.append(f"  {chord_str}")
+            out.append(f"  {line.lyrics}")
+        else:
+            out.append(f"  {line.lyrics}")
     out.append("```")
     return "\n".join(out)
 

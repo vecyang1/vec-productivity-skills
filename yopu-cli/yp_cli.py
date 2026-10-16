@@ -50,6 +50,8 @@ Examples:
     )
     parser.add_argument(
         "query",
+        nargs="?",
+        default="",
         help="Yopu score URL, ID, or search query (e.g. 'search 再见青春' or 'aXYaaOXZ')",
     )
     parser.add_argument(
@@ -68,9 +70,14 @@ Examples:
     )
     parser.add_argument(
         "-f", "--format",
-        choices=["terminal", "chordpro", "md", "markdown", "json", "text", "chords"],
+        choices=["terminal", "chordpro", "md", "markdown", "json", "text", "chords", "pdf"],
         default="terminal",
         help="Output format (default: terminal)",
+    )
+    parser.add_argument(
+        "--pdf",
+        action="store_true",
+        help="Download or export vector-text PDF sheet via yopu-pdf",
     )
     parser.add_argument(
         "-t", "--transpose",
@@ -107,9 +114,19 @@ Examples:
         help="Path to save the output file",
     )
     parser.add_argument(
+        "-d", "--download",
+        action="store_true",
+        help="Download and save score directly to a file named after the song",
+    )
+    parser.add_argument(
         "--json",
         action="store_true",
         help="Shortcut for --format json",
+    )
+    parser.add_argument(
+        "--refresh-auth",
+        action="store_true",
+        help="Force re-extraction of login session cookies from Chrome / 1Password",
     )
     parser.add_argument(
         "-v", "--version",
@@ -193,7 +210,24 @@ def fetch_and_render(args):
             prefer_flat=prefer_flat,
         )
 
-    # 3. Render output
+    # 3. Handle PDF format
+    if fmt == "pdf" or getattr(args, "pdf", False):
+        import subprocess
+        yopu_pdf_bin = Path.home() / "Documents/A-coding/26.08.18-yopu-pdf/yopu-pdf"
+        if yopu_pdf_bin.exists():
+            cmd = [str(yopu_pdf_bin)]
+            if args.output:
+                cmd.extend(["-o", str(Path(args.output).resolve())])
+            else:
+                cmd.extend(["-d", str(Path.cwd())])
+            if args.egress:
+                cmd.extend(["--egress", args.egress])
+            cmd.append(canonical_url)
+            p = subprocess.run(cmd)
+            if p.returncode == 0:
+                return
+
+    # 4. Render output
     if fmt == "json":
         result = format_json(score)
     elif fmt == "chordpro":
@@ -209,22 +243,73 @@ def fetch_and_render(args):
         result = format_terminal(score, colorize=colorize)
 
     # 4. Write to file or stdout
-    if args.output:
-        out_path = Path(args.output).resolve()
+    target_out = args.output
+    if not target_out and getattr(args, "download", False):
+        import re
+        ext_map = {
+            "json": "json",
+            "md": "md",
+            "markdown": "md",
+            "chordpro": "cho",
+            "chords": "chords.txt",
+            "text": "txt",
+            "terminal": "txt",
+        }
+        ext = ext_map.get(fmt, "txt")
+        safe_title = re.sub(r'[\\/*?:"<>|]', "", score.meta.title or "score").strip()
+        safe_artist = re.sub(r'[\\/*?:"<>|]', "", score.meta.artist or "").strip()
+        if safe_artist:
+            target_out = f"{safe_title} - {safe_artist}.{ext}"
+        else:
+            target_out = f"{safe_title}.{ext}"
+
+    if target_out:
+        out_path = Path(target_out).resolve()
         out_path.parent.mkdir(parents=True, exist_ok=True)
+        file_content = result
+        if fmt == "terminal":
+            file_content = format_terminal(score, colorize=False)
         with open(out_path, "w", encoding="utf-8") as f:
-            f.write(result)
+            f.write(file_content)
             f.write("\n")
-        print(f"✅ Saved score to {out_path}")
+        print(result)
+        print(f"\n✅ Saved score to {out_path}")
     else:
         print(result)
 
 
 def main():
     args = parse_args()
+
+    if getattr(args, "refresh_auth", False) or args.query.lower() in ("login", "auth", "refresh-auth"):
+        from yopu.fetcher import load_yopu_cookies
+        cookies = load_yopu_cookies(auto_extract=True, force_refresh=True)
+        if cookies and cookies.get("connect.sid"):
+            print("🔑 Successfully re-synchronized Yopu session cookies from Chrome / 1Password.")
+        else:
+            print("⚠️ No authenticated session cookies found in Chrome or 1Password.")
+        if not args.query or args.query.lower() in ("login", "auth", "refresh-auth"):
+            return
+        if args.extra_terms:
+            args.query = args.extra_terms[0]
+            args.extra_terms = args.extra_terms[1:]
     q = args.query.strip()
+    if not q:
+        print("❌ Please provide a song title, score ID, or URL (e.g. yp https://yopu.co/view/aXYV48kP or yp search '再见青春')", file=sys.stderr)
+        sys.exit(1)
 
     try:
+        # Handle download mode: 'download <url>' or 'dl <url>'
+        if q.lower() in ("download", "dl", "get"):
+            if not args.extra_terms:
+                print("❌ Please provide a score URL or ID to download (e.g. yp download https://yopu.co/view/aXYV48kP)", file=sys.stderr)
+                sys.exit(1)
+            args.query = args.extra_terms[0]
+            args.extra_terms = args.extra_terms[1:]
+            args.download = True
+            fetch_and_render(args)
+            return
+
         # Handle search mode: 'search <term>' or 'find <term>'
         if q.lower() in ("search", "find", "s"):
             terms = " ".join(args.extra_terms).strip()
@@ -240,7 +325,14 @@ def main():
             return
 
         clean_id = extract_score_id(q)
-        if "/" in q or (len(clean_id) == 8 and clean_id.isalnum() and not any('\u4e00' <= char <= '\u9fff' for char in clean_id)):
+        is_url = q.startswith("http://") or q.startswith("https://") or "yopu.co" in q
+        is_score_id = "/" in q or (len(clean_id) == 8 and clean_id.isalnum() and not any('\u4e00' <= char <= '\u9fff' for char in clean_id))
+
+        if is_url:
+            # Auto-enable download when given a Yopu URL
+            args.download = True
+            fetch_and_render(args)
+        elif is_score_id:
             fetch_and_render(args)
         else:
             handle_search(q, args)
@@ -248,6 +340,7 @@ def main():
     except Exception as e:
         print(f"❌ Error: {e}", file=sys.stderr)
         sys.exit(1)
+
 
 
 if __name__ == "__main__":
