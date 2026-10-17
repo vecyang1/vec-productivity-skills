@@ -5,6 +5,13 @@ All notable changes to Vec's Productivity Skills will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-10-17
+
+### Added
+- **`opencli-radar`**: Multi-source ecosystem radar and diagnostic-first audit tool for OpenCLI plugins across GitHub, NPM, official OpenCLI-Hub, and local estate.
+- Added comprehensive pre-publish privacy audit compliance and path sanitization.
+- Upstream vendor capability expansions synchronized across social and messaging skills.
+
 ## [2026-10-16] - 2026-10-16
 
 ### Fixes

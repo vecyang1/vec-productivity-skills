@@ -1,5 +1,25 @@
 # Changelog
 
+All notable changes to `post-social-media-with-zernio-api` will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to Semantic Versioning.
+
+### [2026-10-17] - Upstream Vendor Capability Expansion (Discovered)
+- **Upstream Announcement**: Zernio API Changelog Rollup (30 new features, 7 breaking changes; latest: DELETE /v1/inbox/conversations/{conversationId}, GET /v1/support/runs) (2026-10-15 12:43)
+- **Detected Capabilities**: 30 New API Features & 7 Breaking Changes, DELETE /v1/inbox/conversations/{conversationId}, GET /v1/support/runs, GET /v1/ads/targeting/browse, GET /v1/ads/targeting/search
+- **Roadmap Candidate**: 💡 在关联技能【post-social-media-with-zernio-api】中核对新增端点 (DELETE /v1/inbox/conversations/{conversationId}, GET /v1/support/runs, GET /v1/ads/targeting/browse) 与 7 项 Breaking Changes，保持 API 客户端契约同步。
+
+### [2026-10-16] - Upstream Vendor Capability Expansion (Discovered)
+- **Upstream Announcement**: New: Reddit Ads, Commerce API and support from your code (2026-10-15 15:35)
+- **Detected Capabilities**: Reddit Ads API, Commerce API (Shopify & WooCommerce), In-Code Support Agent API
+- **Roadmap Candidate**: 💡 在关联技能【post-social-media-with-zernio-api】中评估扩充支持：Reddit Ads API, Commerce API (Shopify & WooCommerce), In-Code Support Agent API；更新 CHANGELOG 并让本地 Agent 保持新能力感知。
+
+### [2026-10-16] - Upstream Vendor Capability Expansion (Discovered)
+- **Upstream Announcement**: Zernio API Changelog Rollup (31 new features, 8 breaking changes; latest: DELETE /v1/inbox/conversations/{conversationId}, GET /v1/support/runs) (2026-10-15 12:43)
+- **Detected Capabilities**: 31 New API Features & 8 Breaking Changes, DELETE /v1/inbox/conversations/{conversationId}, GET /v1/support/runs, GET /v1/ads/targeting/browse, GET /v1/ads/targeting/search
+- **Roadmap Candidate**: 💡 在关联技能【post-social-media-with-zernio-api】中核对新增端点 (DELETE /v1/inbox/conversations/{conversationId}, GET /v1/support/runs, GET /v1/ads/targeting/browse) 与 8 项 Breaking Changes，保持 API 客户端契约同步。
+
 ### [2026-10-12] - Upstream Vendor Capability Expansion (Discovered)
 - **Upstream Announcement**: New channel: iMessage (2026-09-24 16:19)
 - **Detected Capabilities**: Messaging API (SMS/MMS/RCS/iMessage)
@@ -24,11 +44,6 @@
 - **Upstream Announcement**: Give your agent a phone number to call (2026-10-07 16:10)
 - **Detected Capabilities**: Calling API (Voice Inbound/Outbound & AI Phone Calls), AI Agent Integration
 - **Roadmap Candidate**: 💡 在关联技能【post-social-media-with-zernio-api】中评估扩充支持：Calling API (Voice Inbound/Outbound & AI Phone Calls), AI Agent Integration；更新 CHANGELOG 并让本地 Agent 保持新能力感知。
-
-All notable changes to `post-social-media-with-zernio-api` will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to Semantic Versioning.
 
 ## [Unreleased]
 
